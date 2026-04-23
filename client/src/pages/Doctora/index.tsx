@@ -1,7 +1,7 @@
 import { SEO } from "@/components/seo";
 import { BaseLayout } from "@/layout/base-layout";
 import { useLanguage } from "@/i18n";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Quote } from "lucide-react";
 import { Link } from "wouter";
@@ -25,24 +25,32 @@ function RevealSection({ children, className = "" }: { children: React.ReactNode
 export default function Doctora() {
   const { t } = useLanguage();
   const d = t.doctora;
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
+  const heroBgY = useTransform(scrollYProgress, [0, 1], ["0%", "28%"]);
+  const heroTextY = useTransform(scrollYProgress, [0, 1], ["0%", "14%"]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+  const heroCardY = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
 
   return (
     <BaseLayout>
       <SEO title={d.seo_title} description={d.seo_desc} canonicalPath="/doctora" />
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex items-end overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,22%,9%)] via-[hsl(35,20%,12%)] to-[hsl(82,14%,16%)]" />
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage: `radial-gradient(ellipse at 60% 40%, hsl(35,40%,60%) 0%, transparent 55%), radial-gradient(ellipse at 20% 70%, hsl(82,28%,50%) 0%, transparent 50%)`,
-          }}
-        />
+      <section ref={heroRef} className="relative min-h-screen flex items-end overflow-hidden">
+        <motion.div className="absolute inset-0" style={{ y: heroBgY }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,22%,9%)] via-[hsl(35,20%,12%)] to-[hsl(82,14%,16%)]" />
+          <div
+            className="absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage: `radial-gradient(ellipse at 60% 40%, hsl(35,40%,60%) 0%, transparent 55%), radial-gradient(ellipse at 20% 70%, hsl(82,28%,50%) 0%, transparent 50%)`,
+            }}
+          />
+        </motion.div>
 
         <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-16 pt-40 pb-24 w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-end">
-            <div>
+            <motion.div style={{ y: heroTextY, opacity: heroOpacity }}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -71,12 +79,13 @@ export default function Doctora() {
               >
                 {t.about.specialty}
               </motion.p>
-            </div>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
+              style={{ y: heroCardY }}
               className="hidden lg:block"
             >
               <div className="border border-white/8 p-10 bg-white/[0.02]">

@@ -1,7 +1,7 @@
 import { SEO } from "@/components/seo";
 import { BaseLayout } from "@/layout/base-layout";
 import { useLanguage } from "@/i18n";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
@@ -34,22 +34,32 @@ const gradients = [
 export default function Tratamientos() {
   const { t } = useLanguage();
   const tp = t.tratamientosPage;
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
+  const heroBgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const heroTextY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
     <BaseLayout>
       <SEO title={tp.seo_title} description={tp.seo_desc} canonicalPath="/tratamientos" />
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,22%,10%)] via-[hsl(35,18%,13%)] to-[hsl(82,12%,15%)]" />
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage: `radial-gradient(ellipse at 70% 50%, hsl(35,40%,65%) 0%, transparent 50%), radial-gradient(ellipse at 25% 70%, hsl(82,28%,55%) 0%, transparent 45%)`,
-          }}
-        />
+      <section ref={heroRef} className="relative min-h-[75vh] flex items-center overflow-hidden">
+        <motion.div className="absolute inset-0" style={{ y: heroBgY }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,22%,10%)] via-[hsl(35,18%,13%)] to-[hsl(82,12%,15%)]" />
+          <div
+            className="absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage: `radial-gradient(ellipse at 70% 50%, hsl(35,40%,65%) 0%, transparent 50%), radial-gradient(ellipse at 25% 70%, hsl(82,28%,55%) 0%, transparent 45%)`,
+            }}
+          />
+        </motion.div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-16 pt-36 pb-24">
+        <motion.div
+          style={{ y: heroTextY, opacity: heroOpacity }}
+          className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-16 pt-36 pb-24"
+        >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -80,7 +90,7 @@ export default function Tratamientos() {
           >
             {tp.hero_subtitle}
           </motion.p>
-        </div>
+        </motion.div>
 
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(35,28%,97%)] to-transparent" />
       </section>

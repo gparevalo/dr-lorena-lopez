@@ -6,6 +6,15 @@ import { Link } from "wouter";
 export function Footer() {
   const { t } = useLanguage();
 
+  const navLinks = [
+    { href: "/", label: t.nav.home },
+    { href: "/tratamientos", label: t.nav.tratamientos },
+    { href: "/doctora", label: t.nav.doctora },
+    { href: "/galeria", label: t.nav.galeria },
+    { href: "/pacientes-internacionales", label: t.nav.internacionales },
+    { href: "/consulta", label: t.nav.agendar },
+  ];
+
   return (
     <footer className="bg-[hsl(25,20%,10%)] border-t border-white/5 py-16 px-6 lg:px-10 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
@@ -14,7 +23,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 mb-12">
           <motion.div
-            className="lg:col-span-6"
+            className="lg:col-span-5"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -42,7 +51,7 @@ export function Footer() {
           </motion.div>
 
           <motion.div
-            className="lg:col-span-3"
+            className="lg:col-span-4"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -52,14 +61,14 @@ export function Footer() {
               {t.footer.architect_label}
             </h4>
 
-            <div className="flex flex-col gap-4">
-              {[{ href: "/", label: t.nav.home }].map((item) => (
+            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+              {navLinks.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="group flex items-center gap-3 text-white/35 hover:text-white transition-all duration-400 text-[11px] uppercase tracking-[0.3em] font-semibold"
+                  className="group flex items-center gap-3 text-white/35 hover:text-white transition-all duration-400 text-[11px] uppercase tracking-[0.25em] font-semibold"
                 >
-                  <span className="w-1.5 h-1.5 bg-primary/25 group-hover:bg-primary transition-colors" />
+                  <span className="w-1.5 h-1.5 bg-primary/25 group-hover:bg-primary transition-colors flex-shrink-0" />
                   {item.label}
                 </Link>
               ))}

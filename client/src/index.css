@@ -42,6 +42,18 @@
   --chart-3: 200 50% 45%;
   --chart-4: 280 40% 55%;
   --chart-5: 30 65% 50%;
+  /* ── Luxury color palette ── */
+  --olive: 82 28% 32%;
+  --olive-light: 82 22% 50%;
+  --sage: 82 18% 62%;
+  --sage-muted: 82 12% 72%;
+  --nude: 35 22% 88%;
+  --ivory: 35 28% 97%;
+  --champagne: 35 38% 74%;
+  --champagne-dark: 35 32% 60%;
+  --warm-stone: 25 16% 58%;
+  --warm-stone-dark: 25 18% 40%;
+
   --font-sans: 'Reddit Sans', sans-serif;
   --font-heading: 'Playfair Display', serif;
   --font-serif: 'Playfair Display', serif;
@@ -276,6 +288,23 @@
 
   .bg-sage-light {
     background-color: hsl(82 18% 92%);
+  }
+
+  /* ── Luxury editorial palette ── */
+  .bg-olive {
+    background-color: hsl(var(--olive));
+  }
+  .text-olive {
+    color: hsl(var(--olive));
+  }
+  .bg-sage {
+    background-color: hsl(var(--sage));
+  }
+  .bg-champagne {
+    background-color: hsl(var(--champagne));
+  }
+  .bg-warm-stone {
+    background-color: hsl(var(--warm-stone));
   }
 }
 

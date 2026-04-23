@@ -6,6 +6,9 @@
   "nav": {
     "home": "Home",
     "tratamientos": "Treatments",
+    "doctora": "The Doctor",
+    "galeria": "Gallery",
+    "internacionales": "International Patients",
     "nosotros": "About",
     "contacto": "Contact",
     "agendar": "Book Consultation",
@@ -40,6 +43,7 @@
     "label": "Exclusive Treatments",
     "title": "High-precision procedures",
     "subtitle": "A curated selection of advanced aesthetic treatments, designed for natural and sophisticated results.",
+    "cta": "View all treatments",
     "items": [
       { "name": "Endolift", "tagline": "Redefinition without surgery", "description": "Minimally invasive laser lifting for deep skin tissue regeneration with natural, lasting results." },
       { "name": "Botulinum Toxin", "tagline": "Expression, refined", "description": "Precision medical application to soften expression lines while preserving the face's natural authenticity." },
@@ -121,6 +125,345 @@
       "label": "Medical Presence",
       "title": "Reference in Aesthetic Medicine",
       "description": "Dr. Lore López is recognized in the field of advanced aesthetic medicine."
+    }
+  },
+  "consultaPage": {
+    "seo_title": "Premium Consultation | Dr. Lore López",
+    "seo_desc": "Book your aesthetic medicine consultation with Dr. Lore López. A high-level, personalized, and private medical experience.",
+    "hero_label": "Premium Medical Consultation",
+    "hero_headline_1": "Your first consultation",
+    "hero_headline_2": "is a medical event,",
+    "hero_headline_3": "not an ordinary appointment",
+    "hero_subtitle": "Reserved for patients who seek real results with medical excellence.",
+    "what_label": "The Experience",
+    "what_title": "What your consultation includes",
+    "what_subtitle": "Every minute of your consultation has a clinical purpose. This is high-level aesthetic medicine.",
+    "steps": [
+      { "icon": "scan", "title": "Advanced Facial Analysis", "description": "Three-dimensional evaluation of your bone structure, facial volumes, skin quality, and asymmetry. A complete medical reading of your face." },
+      { "icon": "history", "title": "In-Depth Clinical History", "description": "Detailed review of your medical history, previous treatments, lifestyle habits, and systemic factors that directly influence your skin." },
+      { "icon": "protocol", "title": "Protocol Design", "description": "Creation of your personalized treatment plan: what to do, in what order, with which technique, and when to expect visible results." },
+      { "icon": "care", "title": "Total Care Experience", "description": "A clinical environment designed for your privacy and comfort, where you can ask all your questions without rush and with full information." }
+    ],
+    "value_label": "Why it's different",
+    "value_title": "We don't sell treatments. We design protocols.",
+    "value_body": "The difference between an ordinary consultation and one with Dr. Lore López is the level of analysis, the depth of clinical judgment, and the absolute commitment to your final result. There are no predefined packages or standard protocols here. Every plan is a personalized medical work.",
+    "form_label": "Request Consultation",
+    "form_title": "Start here",
+    "form_subtitle": "Tell us briefly about yourself and we'll contact you to coordinate your appointment.",
+    "form_name": "Full name",
+    "form_email": "Email address",
+    "form_phone": "WhatsApp / Phone",
+    "form_interest": "What would you like to treat?",
+    "form_message": "Message (optional)",
+    "form_submit": "Request My Consultation",
+    "form_note": "Limited spots · Guaranteed privacy",
+    "form_location": "City / Country of origin",
+    "form_success_title": "Your request was received",
+    "form_success_body": "We will contact you within the next 24 hours to coordinate your consultation.",
+    "trust_1": "Complete facial analysis included",
+    "trust_2": "No purchase commitment",
+    "trust_3": "Full medical privacy"
+  },
+  "tratamientosPage": {
+    "seo_title": "Aesthetic Treatments | Dr. Lore López",
+    "seo_desc": "Endolift, Botulinum Toxin, Primex, Hyaluronic Acid and Biostimulation. Advanced aesthetic medicine treatments with Dr. Lore López.",
+    "hero_label": "Medical Procedures",
+    "hero_headline_1": "Every treatment,",
+    "hero_headline_2": "a work of precision",
+    "hero_subtitle": "A curated selection of the world's most advanced aesthetic procedures, executed with medical judgment and artistic sensibility.",
+    "cta": "View Treatment",
+    "cta_consulta": "Book Consultation",
+    "treatments": [
+      {
+        "slug": "endolift",
+        "name": "Endolift",
+        "tagline": "Lifting without a scalpel",
+        "summary": "The gold standard in minimally invasive facial lifting. Fiber-optic laser technology that remodels tissue from within.",
+        "highlight": "No surgery · No scars · No recovery time",
+        "position": "right"
+      },
+      {
+        "slug": "toxina-botulinica",
+        "name": "Botulinum Toxin",
+        "tagline": "Natural expression, refined",
+        "summary": "The difference between a natural and artificial result lies in the hands that apply it. Medical precision for authentic expression.",
+        "highlight": "Micro-dose technique · Natural result · Immediate recovery",
+        "position": "left"
+      },
+      {
+        "slug": "primex",
+        "name": "Primex",
+        "tagline": "Next-generation biostimulation",
+        "summary": "State-of-the-art cellular stimulation protocol that activates collagen production from the deepest layers of the skin.",
+        "highlight": "Deep regeneration · Natural collagen · No toxins",
+        "position": "right"
+      },
+      {
+        "slug": "acido-hialuronico",
+        "name": "Structural Hyaluronic Acid",
+        "tagline": "Volume with architecture",
+        "summary": "Not filler — facial sculpture. Volume restoration and contour definition with high-precision injection vector techniques.",
+        "highlight": "Immediate results · Reversible · Natural",
+        "position": "left"
+      },
+      {
+        "slug": "bioestimulacion",
+        "name": "Facial & Body Biostimulation",
+        "tagline": "Rejuvenation from within",
+        "summary": "Activation of the skin's natural regeneration mechanisms. More luminosity, firmness, and vitality without invasive intervention.",
+        "highlight": "100% biocompatible · Luminosity · Firmness",
+        "position": "right"
+      }
+    ]
+  },
+  "doctora": {
+    "seo_title": "The Doctor | Dr. Lore López",
+    "seo_desc": "Meet Dr. Lore López, specialist physician in advanced aesthetic medicine. International training, natural results philosophy.",
+    "hero_label": "The Doctor",
+    "hero_statement": "I don't practice aesthetic medicine to change faces. I practice it to reveal what was always there.",
+    "hero_name": "Dr. Lore López",
+    "opening_label": "The Beginning",
+    "opening_title": "A physician who chose the art of preserving",
+    "opening_body_1": "There are doctors who choose aesthetics out of vanity and doctors who choose it out of conviction. Dr. Lore López belongs to the second category. From her medical training to her international specialization, her motivation was always the same: to help people feel good in their own skin — not someone else's.",
+    "opening_body_2": "What began as a fascination with facial anatomy became a mastery in reading faces, in understanding that every curve, every volume, every expression has its own language. And her work is to listen to it.",
+    "timeline_label": "Career",
+    "timeline_title": "A training without shortcuts",
+    "timeline": [
+      { "year": "Medicine", "title": "Complete Medical Education", "body": "Graduated with honors in general medicine. Rigorous scientific foundation that distinguishes her clinical judgment." },
+      { "year": "Specialization", "title": "International Postgraduate in Aesthetic Medicine", "body": "Advanced training at world-reference centers. Exposure to the most innovative facial rejuvenation techniques." },
+      { "year": "Laser & Surgery", "title": "Laser Technology Certification", "body": "Specialized training in the highest-precision laser systems available, including Endolift and biostimulation technologies." },
+      { "year": "Today", "title": "Private Practice of Excellence", "body": "Exclusive care for patients seeking real results with medical judgment. Complex cases, personalized protocols, natural results." }
+    ],
+    "philosophy_label": "Philosophy",
+    "philosophy_title": "The principle of minimal intervention",
+    "philosophy_quote": "The most sophisticated aesthetic medicine is the kind nobody notices. The goal isn't to look like you had something done — the goal is to look the way you always wanted to look.",
+    "philosophy_body": "This philosophy guides every diagnosis, every protocol, every injecting hand. Dr. López works with the principle of minimum effective intervention: the least stimulus needed to achieve the greatest natural result possible.",
+    "human_label": "The Person",
+    "human_title": "Beyond the clinic",
+    "human_body": "Behind the medical instruments is a person who knows what it means to look in the mirror with doubts. This empathy is not a marketing resource — it's the reason her patients return and why many of them become long-term friends.",
+    "cta_label": "Know your protocol",
+    "cta_title": "Ready to begin?",
+    "cta_body": "The first consultation is the start of an honest medical conversation about what you want and what is possible to achieve for you.",
+    "cta_button": "Book My Consultation"
+  },
+  "galeriaPage": {
+    "seo_title": "Gallery | Dr. Lore López",
+    "seo_desc": "Gallery of results, clinical environment, and moments from Dr. Lore López's practice. Advanced aesthetic medicine with natural results.",
+    "hero_label": "The Gallery",
+    "hero_headline_1": "Results that",
+    "hero_headline_2": "speak for themselves",
+    "hero_subtitle": "An editorial curation of results, clinical environment, and the essence of what we do.",
+    "filter_all": "All",
+    "filter_results": "Results",
+    "filter_clinic": "Clinic",
+    "filter_doctor": "Doctor",
+    "note": "Individual results. All interventions are documented with informed consent.",
+    "categories": [
+      { "id": "results", "label": "Results" },
+      { "id": "clinic", "label": "Clinical Environment" },
+      { "id": "doctor", "label": "The Doctor" }
+    ],
+    "items": [
+      { "id": 1, "category": "results", "title": "Endolift · Natural Result", "subtitle": "Facial oval redefinition", "treatment": "Endolift" },
+      { "id": 2, "category": "doctor", "title": "Dr. Lore López", "subtitle": "Personalized consultation", "treatment": "" },
+      { "id": 3, "category": "clinic", "title": "Clinical Environment", "subtitle": "Privacy and comfort", "treatment": "" },
+      { "id": 4, "category": "results", "title": "Botulinum Toxin · Natural Expression", "subtitle": "Expression line softening", "treatment": "Botulinum Toxin" },
+      { "id": 5, "category": "results", "title": "Hyaluronic Acid · Volume", "subtitle": "Lip and cheekbone definition", "treatment": "Hyaluronic Acid" },
+      { "id": 6, "category": "clinic", "title": "The Consultation Room", "subtitle": "Designed for your privacy", "treatment": "" },
+      { "id": 7, "category": "results", "title": "Biostimulation · Luminosity", "subtitle": "Deep skin regeneration", "treatment": "Biostimulation" },
+      { "id": 8, "category": "doctor", "title": "In Process", "subtitle": "Precision in every procedure", "treatment": "" },
+      { "id": 9, "category": "results", "title": "Primex · Firmness", "subtitle": "Next-gen biostimulation", "treatment": "Primex" }
+    ]
+  },
+  "internacionales": {
+    "seo_title": "International Patients | Dr. Lore López",
+    "seo_desc": "Luxury aesthetic medicine for patients from USA, Miami, Panama, and Dubai. Virtual consultation, medical tourism, and concierge care.",
+    "hero_label": "International Patients",
+    "hero_headline_1": "Medical excellence",
+    "hero_headline_2": "has no borders",
+    "hero_subtitle": "International-level aesthetic medicine care for patients worldwide. Virtual or in-person — the protocol reaches wherever you are.",
+    "virtual_label": "Virtual Consultation",
+    "virtual_title": "Your protocol, wherever you are",
+    "virtual_subtitle": "The process begins with a complete virtual consultation. No prior travel, no wasted time.",
+    "virtual_steps": [
+      { "step": "01", "title": "Online intake", "body": "You complete a detailed medical intake form with front, profile, and ¾ photographs. All information is reviewed before your first session." },
+      { "step": "02", "title": "Video consultation", "body": "A 45-minute session with Dr. López. Complete facial analysis, medical diagnosis, questions, and preliminary protocol design." },
+      { "step": "03", "title": "Protocol proposal", "body": "You receive your personalized treatment plan with procedures, timelines, costs, and logistics recommendations for your visit." },
+      { "step": "04", "title": "Concierge clinical visit", "body": "We coordinate everything for your arrival: schedule, transfers, recommended accommodation, and post-procedure follow-up from your home country." }
+    ],
+    "markets_label": "Origin markets",
+    "markets_title": "Connecting with the world",
+    "markets": [
+      { "city": "Miami · USA", "body": "High-profile Latino community seeking natural results with European medical standards. Virtual consultation available in EST hours." },
+      { "city": "Panama", "body": "Direct access with connecting flights. Intensive 2-3 day protocol available for Panamanian patients with virtual follow-up." },
+      { "city": "Dubai · UAE", "body": "For the luxury clientele of the Middle East, we offer international schedule coordination and high-fidelity protocol management." },
+      { "city": "Latin America", "body": "Argentina, Colombia, Venezuela, Mexico. Communities that know Dr. López's standard and travel to experience it." }
+    ],
+    "concierge_label": "Concierge Service",
+    "concierge_title": "Everything coordinated for you",
+    "concierge_body": "For international patients, the medical journey is an extension of the clinical experience. We coordinate accommodation recommendations, dense schedules to optimize the trip, remote follow-up, and direct communication with Dr. López before, during, and after your visit.",
+    "cta_label": "Start the process",
+    "cta_title": "Where are you writing from?",
+    "cta_subtitle": "Tell us your situation and we'll respond with all the information to begin your process.",
+    "cta_button": "Request Information",
+    "cta_note": "Response within 24 hours · Guaranteed privacy",
+    "form_success_title": "Request received",
+    "form_success_body": "We will contact you within 24 hours."
+  },
+  "treatmentDetail": {
+    "back": "Back to Treatments",
+    "not_found": "Treatment not found",
+    "view_all": "View all treatments",
+    "candidate_label": "Ideal Candidate",
+    "process_label": "The Process",
+    "benefits_label": "Key Benefits",
+    "cta_label": "Is this treatment for you?",
+    "cta_button": "Book a Diagnostic Consultation",
+    "cta_note": "In the consultation we will determine whether this treatment is right for you.",
+    "endolift": {
+      "hero_label": "Minimally Invasive Laser",
+      "name": "Endolift",
+      "tagline": "The art of lifting without surgery",
+      "positioning": "Endolift is not simply a laser treatment — it is a redefinition of the lifting concept. Through a fiber optic the thickness of a hair, laser energy is delivered directly to the deep layers of tissue, causing a contraction and regeneration that no cream or external device can achieve.",
+      "candidate_title": "Who is it designed for?",
+      "candidate_body": "The ideal candidate for Endolift is someone seeking visible facial redefinition results without the risks, recovery time, or scars of conventional surgery. It is the solution for those who want to look natural, without it being obvious that anything was done.",
+      "candidate_points": [
+        "Moderate skin laxity on the face or neck",
+        "Loss of facial oval definition",
+        "Excess tissue under the chin (early double chin)",
+        "Those seeking a real alternative to surgery",
+        "Patients aged 35–65 with good residual skin elasticity"
+      ],
+      "process_steps": [
+        { "num": "01", "title": "Preparation and marking", "body": "Treatment areas are marked. Topical local anesthesia is applied. No pain, no sedation." },
+        { "num": "02", "title": "Fiber introduction", "body": "A needle-sized microcannula guides the fiber optic beneath the skin. The process is minimally invasive." },
+        { "num": "03", "title": "Laser energy emission", "body": "Laser energy acts on two planes: immediate tissue contraction and long-term neocollagenesis stimulation." },
+        { "num": "04", "title": "Recovery and result", "body": "Return to activities in 24–48 hours. Visible results from the first weeks, progressive over 3–6 months." }
+      ],
+      "benefits": [
+        "Visible facial oval redefinition",
+        "Long-term natural collagen stimulation",
+        "No scars, no general anesthesia",
+        "Ultra-fast recovery: 24–48 hours",
+        "Natural and lasting results",
+        "Procedure under 90 minutes"
+      ]
+    },
+    "toxina-botulinica": {
+      "hero_label": "Medical Neuromodulator",
+      "name": "Botulinum Toxin",
+      "tagline": "The right expression, in the right hands",
+      "positioning": "Botulinum toxin is the most frequent aesthetic medical treatment in the world — and also the most misunderstood. In incorrect hands it produces frozen faces. In Dr. López's hands, it produces exactly the opposite: refined expressiveness, total naturalness, and the feeling of being very well rested.",
+      "candidate_title": "Who is it indicated for?",
+      "candidate_body": "For anyone who wants to soften expression lines without losing their naturalness. The goal is not to eliminate expressions — it is to refine them.",
+      "candidate_points": [
+        "Expression lines on forehead, glabella, and crow's feet",
+        "Eyebrows that look heavy or drooping",
+        "Those seeking a subtle lifting effect of the upper third",
+        "Patients seeking to prevent aging from ages 28–30",
+        "As a complement to other treatments in an integral protocol"
+      ],
+      "process_steps": [
+        { "num": "01", "title": "Facial dynamics analysis", "body": "The natural movement of your face at rest and in expression is evaluated. Each application point is decided with medical judgment." },
+        { "num": "02", "title": "Microdose application", "body": "Ultra-fine needle micro-dotting technique. No anesthesia, minimal discomfort. Duration: 15–20 minutes." },
+        { "num": "03", "title": "Two-week evaluation", "body": "The final result is evaluated at 14 days. Precise adjustments are made if necessary." },
+        { "num": "04", "title": "Strategic maintenance", "body": "With regular treatments, the dose needed decreases over time. A smart long-term strategy." }
+      ],
+      "benefits": [
+        "Natural result nobody notices",
+        "No recovery time",
+        "Progressive effect in 3–7 days",
+        "Reversible over time",
+        "Prevention of premature aging",
+        "Ideal complement to other protocols"
+      ]
+    },
+    "primex": {
+      "hero_label": "Premium Biostimulation",
+      "name": "Primex",
+      "tagline": "Next-generation cellular regeneration",
+      "positioning": "Primex is the next-generation biostimulation protocol that activates collagen and elastin production from the deepest layers of the skin. It is not a filler, it is not a neuromodulator — it is the treatment that makes your skin regenerate itself, with more quality and vitality.",
+      "candidate_title": "Who benefits from Primex?",
+      "candidate_body": "The ideal candidate is someone who notices loss of luminosity, uneven texture, dull skin, or loss of firmness without volumetric deformity.",
+      "candidate_points": [
+        "Skin without luminosity or firmness",
+        "Fine superficial wrinkles and loss of texture",
+        "Skin that looks tired for no apparent reason",
+        "As preparation for other procedures",
+        "Maintenance and optimization of previous treatments"
+      ],
+      "process_steps": [
+        { "num": "01", "title": "Skin preparation", "body": "Medical cleansing and application of topical anesthesia for maximum comfort during the procedure." },
+        { "num": "02", "title": "Primex protocol application", "body": "Intradermal injection of the biostimulating complex at multiple planes according to the treatment map designed for you." },
+        { "num": "03", "title": "Activation and recovery", "body": "Practically immediate recovery. There may be minimal redness in the first hours." },
+        { "num": "04", "title": "Progressive results", "body": "Regeneration occurs gradually. Optimal results from 4–6 weeks with continuous improvement." }
+      ],
+      "benefits": [
+        "Activation of own collagen and elastin",
+        "Visible improvement in luminosity",
+        "No foreign substances",
+        "Immediate recovery",
+        "Ideal complement to other treatments",
+        "Cumulative effect with regular sessions"
+      ]
+    },
+    "acido-hialuronico": {
+      "hero_label": "Structural Filler",
+      "name": "Structural Hyaluronic Acid",
+      "tagline": "Facial sculpture with medical precision",
+      "positioning": "Structural hyaluronic acid is not a cosmetic filler — it is facial architecture. In Dr. López's hands, each cc of product is placed with precise anatomical intent: restoring the volume that time diminished, defining contours that gravity displaced, and creating harmony that looks completely natural.",
+      "candidate_title": "Who is this treatment for?",
+      "candidate_body": "For those who have noticed facial volume loss, flattening of cheekbones, nasolabial folds, loss of lip definition, or a facial oval that has lost its original architecture.",
+      "candidate_points": [
+        "Volume loss in cheekbones and temples",
+        "Nasolabial folds or marionette lines",
+        "Lips with loss of definition or volume",
+        "Chin or jaw without definition",
+        "Those seeking an immediate and reversible result"
+      ],
+      "process_steps": [
+        { "num": "01", "title": "Anatomical facial mapping", "body": "Volume loss vectors and structural support points are evaluated. Precise planning before any injection." },
+        { "num": "02", "title": "Product selection", "body": "Not all hyaluronic acids are equal. The ideal density and rheology is selected for each area to be treated." },
+        { "num": "03", "title": "Cannula or needle injection", "body": "Injection technique depends on the area: blunt cannula for greater vascular safety in risk zones, fine needle for precise definition." },
+        { "num": "04", "title": "Immediate result and follow-up", "body": "The result is visible immediately. Two-week evaluation for adjustments. Duration: 12 to 18 months depending on the area." }
+      ],
+      "benefits": [
+        "Result visible from day one",
+        "Completely reversible with hyaluronidase",
+        "No significant recovery time",
+        "Additional deep hydration",
+        "Customizable in volume and area",
+        "Duration of 12 to 18 months"
+      ]
+    },
+    "bioestimulacion": {
+      "hero_label": "Natural Regeneration",
+      "name": "Facial & Body Biostimulation",
+      "tagline": "Your skin, in its best version",
+      "positioning": "Biostimulation is the aesthetic medicine treatment closest to Dr. López's philosophy: activating what the body already knows how to do, so it does it better. No foreign substances, no artificial volumes — just real regeneration from within.",
+      "candidate_title": "Who is this treatment for?",
+      "candidate_body": "For anyone who wants to improve the overall quality of their skin: firmness, luminosity, texture, hydration, and elasticity.",
+      "candidate_points": [
+        "Dull skin without luminosity or vitality",
+        "Diffuse loss of firmness and elasticity",
+        "Fine wrinkles and irregular texture",
+        "As a preventive treatment from age 30",
+        "For body areas: neck, décolleté, hands, abdomen"
+      ],
+      "process_steps": [
+        { "num": "01", "title": "Skin diagnosis", "body": "Evaluation of the current skin condition, diagnosis of priority areas, and selection of the most appropriate biostimulation protocol." },
+        { "num": "02", "title": "Preparation and application", "body": "Clean and prepared skin. Application of the biostimulant via superficial microinjections distributed across the treatment area." },
+        { "num": "03", "title": "Regenerative process activation", "body": "The active substances initiate the gradual synthesis of endogenous collagen, elastin, and hyaluronic acid." },
+        { "num": "04", "title": "Progressive and cumulative result", "body": "Visible improvement from 4 weeks. Standard protocol: 3 sessions. Results improve over time." }
+      ],
+      "benefits": [
+        "Activation of endogenous collagen",
+        "Improved luminosity and texture",
+        "Applicable to face and body",
+        "No recovery time",
+        "100% biocompatible",
+        "Long-term preventive and regenerative effect"
+      ]
     }
   }
 }

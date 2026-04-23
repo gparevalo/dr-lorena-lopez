@@ -6,6 +6,9 @@
   "nav": {
     "home": "Inicio",
     "tratamientos": "Tratamientos",
+    "doctora": "La Doctora",
+    "galeria": "Galería",
+    "internacionales": "Pacientes Internacionales",
     "nosotros": "Sobre Mí",
     "contacto": "Contacto",
     "agendar": "Agendar Consulta",
@@ -40,6 +43,7 @@
     "label": "Tratamientos Exclusivos",
     "title": "Procedimientos de alta precisión",
     "subtitle": "Una selección curada de tratamientos estéticos avanzados, diseñados para resultados naturales y sofisticados.",
+    "cta": "Ver todos los tratamientos",
     "items": [
       { "name": "Endolift", "tagline": "Redefinición sin cirugía", "description": "Lifting láser mínimamente invasivo para una regeneración profunda del tejido cutáneo con resultados naturales y duraderos." },
       { "name": "Toxina Botulínica", "tagline": "Expresión, refinada", "description": "Aplicación médica de precisión para suavizar líneas de expresión conservando la naturalidad y autenticidad del rostro." },
@@ -121,6 +125,345 @@
       "label": "Presencia Médica",
       "title": "Referente en Medicina Estética",
       "description": "La Dra. Lore López es reconocida en el ámbito de la medicina estética avanzada."
+    }
+  },
+  "consultaPage": {
+    "seo_title": "Consulta Premium | Dra. Lore López",
+    "seo_desc": "Agenda tu consulta de medicina estética con la Dra. Lore López. Una experiencia médica de alto nivel, personalizada y privada.",
+    "hero_label": "Consulta Médica Premium",
+    "hero_headline_1": "Tu primera consulta",
+    "hero_headline_2": "es un evento médico,",
+    "hero_headline_3": "no una cita ordinaria",
+    "hero_subtitle": "Reservada para pacientes que buscan resultados reales con criterio médico de excelencia.",
+    "what_label": "La Experiencia",
+    "what_title": "Lo que incluye tu consulta",
+    "what_subtitle": "Cada minuto de tu consulta tiene un propósito clínico. Esto es medicina estética de alto nivel.",
+    "steps": [
+      { "icon": "scan", "title": "Análisis Facial Avanzado", "description": "Evaluación tridimensional de tu estructura ósea, volúmenes faciales, calidad cutánea y asimetría. Una lectura médica completa de tu rostro." },
+      { "icon": "history", "title": "Historia Clínica Profunda", "description": "Revisión detallada de tu historial médico, tratamientos previos, hábitos de vida y factores sistémicos que influyen directamente en tu piel." },
+      { "icon": "protocol", "title": "Diseño del Protocolo", "description": "Creación de tu plan de tratamiento personalizado: qué hacer, en qué orden, con qué técnica, y cuándo esperar resultados visibles." },
+      { "icon": "care", "title": "Experiencia de Atención Total", "description": "Un entorno clínico diseñado para tu privacidad y comodidad, donde puedes hacer todas tus preguntas sin prisa y con toda la información." }
+    ],
+    "value_label": "Por qué es diferente",
+    "value_title": "No vendemos tratamientos. Diseñamos protocolos.",
+    "value_body": "La diferencia entre una consulta ordinaria y una consulta con la Dra. Lore López es el nivel de análisis, la profundidad del criterio clínico y el compromiso absoluto con tu resultado final. Aquí no hay paquetes predefinidos ni protocolos estándar. Cada plan es una obra médica personalizada.",
+    "form_label": "Solicitar Consulta",
+    "form_title": "Comienza aquí",
+    "form_subtitle": "Cuéntanos brevemente sobre ti y nos comunicaremos para coordinar tu cita.",
+    "form_name": "Nombre completo",
+    "form_email": "Correo electrónico",
+    "form_phone": "WhatsApp / Teléfono",
+    "form_interest": "¿Qué te interesa tratar?",
+    "form_message": "Mensaje (opcional)",
+    "form_submit": "Solicitar Mi Consulta",
+    "form_note": "Cupos limitados · Privacidad garantizada",
+    "form_location": "Ciudad / País de origen",
+    "form_success_title": "Tu solicitud fue recibida",
+    "form_success_body": "Nos comunicaremos contigo en las próximas 24 horas para coordinar tu consulta.",
+    "trust_1": "Análisis facial completo incluido",
+    "trust_2": "Sin compromiso de compra",
+    "trust_3": "Privacidad médica total"
+  },
+  "tratamientosPage": {
+    "seo_title": "Tratamientos Estéticos | Dra. Lore López",
+    "seo_desc": "Endolift, Toxina Botulínica, Primex, Ácido Hialurónico y Bioestimulación. Tratamientos de medicina estética avanzada con la Dra. Lore López.",
+    "hero_label": "Procedimientos Médicos",
+    "hero_headline_1": "Cada tratamiento,",
+    "hero_headline_2": "una obra de precisión",
+    "hero_subtitle": "Una selección curada de los procedimientos estéticos más avanzados del mundo, ejecutados con criterio médico y sensibilidad artística.",
+    "cta": "Ver Tratamiento",
+    "cta_consulta": "Agendar Consulta",
+    "treatments": [
+      {
+        "slug": "endolift",
+        "name": "Endolift",
+        "tagline": "Lifting sin bisturí",
+        "summary": "El estándar de oro en lifting facial mínimamente invasivo. Tecnología láser de fibra óptica que remodela el tejido desde adentro.",
+        "highlight": "Sin cirugía · Sin cicatrices · Sin tiempo de recuperación",
+        "position": "right"
+      },
+      {
+        "slug": "toxina-botulinica",
+        "name": "Toxina Botulínica",
+        "tagline": "Expresión natural, refinada",
+        "summary": "La diferencia entre un resultado natural y uno artificial está en la mano que lo aplica. Precisión médica para una expresión auténtica.",
+        "highlight": "Técnica de micro-dosis · Resultado natural · Recuperación inmediata",
+        "position": "left"
+      },
+      {
+        "slug": "primex",
+        "name": "Primex",
+        "tagline": "Bioestimulación de nueva generación",
+        "summary": "Protocolo de estimulación celular de última generación que activa la producción de colágeno desde las capas más profundas de la piel.",
+        "highlight": "Regeneración profunda · Colágeno natural · Sin toxinas",
+        "position": "right"
+      },
+      {
+        "slug": "acido-hialuronico",
+        "name": "Ácido Hialurónico Estructural",
+        "tagline": "Volumen con arquitectura",
+        "summary": "No es relleno, es escultura facial. Restauración de volumen y definición de contorno con técnicas de vectores de inyección de alta precisión.",
+        "highlight": "Resultados inmediatos · Reversible · Natural",
+        "position": "left"
+      },
+      {
+        "slug": "bioestimulacion",
+        "name": "Bioestimulación Facial y Corporal",
+        "tagline": "Rejuvenecimiento desde adentro",
+        "summary": "Activación de los mecanismos naturales de regeneración de la piel. Más luminosidad, firmeza y vitalidad sin intervención invasiva.",
+        "highlight": "100% biocompatible · Luminosidad · Firmeza",
+        "position": "right"
+      }
+    ]
+  },
+  "doctora": {
+    "seo_title": "La Doctora | Dra. Lore López",
+    "seo_desc": "Conoce a la Dra. Lore López, médico especialista en medicina estética avanzada. Formación internacional, filosofía de resultados naturales.",
+    "hero_label": "La Doctora",
+    "hero_statement": "No practico medicina estética para cambiar rostros. La practico para revelar lo que siempre estuvo ahí.",
+    "hero_name": "Dra. Lore López",
+    "opening_label": "El Inicio",
+    "opening_title": "Una médico que eligió el arte de preservar",
+    "opening_body_1": "Hay médicos que eligen la estética por vanidad y médicos que la eligen por convicción. La Dra. Lore López pertenece a la segunda categoría. Desde su formación en medicina hasta su especialización internacional, su motivación siempre fue la misma: ayudar a las personas a sentirse bien en su piel — no en la de alguien más.",
+    "opening_body_2": "Lo que comenzó como una fascinación por la anatomía facial se convirtió en una maestría en la lectura de rostros, en la comprensión de que cada curva, cada volumen, cada expresión tiene un lenguaje propio. Y su trabajo es escucharlo.",
+    "timeline_label": "Trayectoria",
+    "timeline_title": "Una formación sin atajos",
+    "timeline": [
+      { "year": "Medicina", "title": "Formación Médica Completa", "body": "Graduación con mención honorífica en medicina general. Base científica rigurosa que distingue su criterio clínico." },
+      { "year": "Especialización", "title": "Posgrado Internacional en Medicina Estética", "body": "Formación avanzada en centros de referencia mundial. Exposición a las técnicas más innovadoras de rejuvenecimiento facial." },
+      { "year": "Láser & Cirugía", "title": "Certificación en Tecnología Láser", "body": "Entrenamiento especializado en los sistemas láser de mayor precisión disponibles, incluyendo Endolift y tecnologías de bioestimulación." },
+      { "year": "Hoy", "title": "Práctica Privada de Excelencia", "body": "Atención exclusiva a pacientes que buscan resultados reales con criterio médico. Casos complejos, protocolos personalizados, resultados naturales." }
+    ],
+    "philosophy_label": "Filosofía",
+    "philosophy_title": "El principio de la mínima intervención",
+    "philosophy_quote": "La medicina estética más sofisticada es la que nadie nota. El objetivo no es que se vea que te hiciste algo — el objetivo es que te veas como siempre quisiste verte.",
+    "philosophy_body": "Esta filosofía guía cada diagnóstico, cada protocolo, cada mano que inyecta. La Dra. López trabaja con el principio de la mínima intervención efectiva: el menor estímulo necesario para lograr el mayor resultado natural posible.",
+    "human_label": "La Persona",
+    "human_title": "Más allá del consultorio",
+    "human_body": "Detrás del instrumental médico hay una persona que sabe lo que significa mirarse al espejo con dudas. Esta empatía no es un recurso de marketing — es la razón por la que sus pacientes regresan y la que explica por qué muchas de ellas se convierten en amigas de largo plazo.",
+    "cta_label": "Conoce tu protocolo",
+    "cta_title": "¿Lista para comenzar?",
+    "cta_body": "La primera consulta es el inicio de una conversación médica honesta sobre lo que quieres y lo que es posible lograr para ti.",
+    "cta_button": "Agendar Mi Consulta"
+  },
+  "galeriaPage": {
+    "seo_title": "Galería | Dra. Lore López",
+    "seo_desc": "Galería de resultados, ambiente clínico y momentos de la práctica de la Dra. Lore López. Medicina estética avanzada con resultados naturales.",
+    "hero_label": "La Galería",
+    "hero_headline_1": "Resultados que",
+    "hero_headline_2": "hablan por sí mismos",
+    "hero_subtitle": "Una curación editorial de resultados, ambiente clínico y la esencia de lo que hacemos.",
+    "filter_all": "Todo",
+    "filter_results": "Resultados",
+    "filter_clinic": "Clínica",
+    "filter_doctor": "Doctora",
+    "note": "Resultados individuales. Toda intervención se documenta con consentimiento informado.",
+    "categories": [
+      { "id": "results", "label": "Resultados" },
+      { "id": "clinic", "label": "Ambiente Clínico" },
+      { "id": "doctor", "label": "La Doctora" }
+    ],
+    "items": [
+      { "id": 1, "category": "results", "title": "Endolift · Resultado Natural", "subtitle": "Redefinición de óvalo facial", "treatment": "Endolift" },
+      { "id": 2, "category": "doctor", "title": "Dra. Lore López", "subtitle": "Consulta personalizada", "treatment": "" },
+      { "id": 3, "category": "clinic", "title": "Ambiente Clínico", "subtitle": "Privacidad y confort", "treatment": "" },
+      { "id": 4, "category": "results", "title": "Toxina Botulínica · Expresión Natural", "subtitle": "Suavizado de líneas de expresión", "treatment": "Toxina Botulínica" },
+      { "id": 5, "category": "results", "title": "Ácido Hialurónico · Volumen", "subtitle": "Definición de labios y pómulos", "treatment": "Ácido Hialurónico" },
+      { "id": 6, "category": "clinic", "title": "El Consultorio", "subtitle": "Diseñado para tu privacidad", "treatment": "" },
+      { "id": 7, "category": "results", "title": "Bioestimulación · Luminosidad", "subtitle": "Regeneración cutánea profunda", "treatment": "Bioestimulación" },
+      { "id": 8, "category": "doctor", "title": "En Proceso", "subtitle": "Precisión en cada procedimiento", "treatment": "" },
+      { "id": 9, "category": "results", "title": "Primex · Firmeza", "subtitle": "Bioestimulación de nueva generación", "treatment": "Primex" }
+    ]
+  },
+  "internacionales": {
+    "seo_title": "Pacientes Internacionales | Dra. Lore López",
+    "seo_desc": "Medicina estética de lujo para pacientes de USA, Miami, Panamá y Dubai. Consulta virtual, turismo médico y atención concierge.",
+    "hero_label": "Pacientes Internacionales",
+    "hero_headline_1": "La excelencia médica",
+    "hero_headline_2": "no tiene fronteras",
+    "hero_subtitle": "Atención de medicina estética de nivel internacional para pacientes de todo el mundo. Virtual o presencial — el protocolo llega donde estés.",
+    "virtual_label": "Consulta Virtual",
+    "virtual_title": "Tu protocolo, desde donde estés",
+    "virtual_subtitle": "El proceso comienza con una consulta virtual completa. Sin viajes previos, sin tiempo perdido.",
+    "virtual_steps": [
+      { "step": "01", "title": "Solicitud en línea", "body": "Completas un formulario de intake médico detallado con fotografías de frente, perfil y ¾. Toda la información es revisada antes de tu primera sesión." },
+      { "step": "02", "title": "Consulta por videollamada", "body": "Sesión de 45 minutos con la Dra. López. Análisis facial completo, diagnóstico médico, preguntas y diseño preliminar de tu protocolo." },
+      { "step": "03", "title": "Propuesta de protocolo", "body": "Recibes tu plan de tratamiento personalizado con procedimientos, tiempos, costos y recomendaciones de logística para tu visita." },
+      { "step": "04", "title": "Visita clínica concierge", "body": "Coordinamos todo para tu llegada: agenda, traslados, alojamiento recomendado y seguimiento post-procedimiento desde tu país." }
+    ],
+    "markets_label": "Mercados de origen",
+    "markets_title": "Conectando con el mundo",
+    "markets": [
+      { "city": "Miami · USA", "body": "Comunidad latina de alto perfil que busca resultados naturales con criterio médico europeo. Consulta virtual disponible en horario EST." },
+      { "city": "Panamá", "body": "Acceso directo con vuelos de conexión. Protocolo intensivo de 2-3 días disponible para pacientes panameñas con seguimiento virtual." },
+      { "city": "Dubai · EAU", "body": "Para la clientela de lujo del Medio Oriente, ofrecemos coordinación de agenda internacional y protocolo de alta fidelidad." },
+      { "city": "Latinoamérica", "body": "Argentina, Colombia, Venezuela, México. Comunidades que conocen el estándar de la Dra. López y viajan para experimentarlo." }
+    ],
+    "concierge_label": "Servicio Concierge",
+    "concierge_title": "Todo coordinado para ti",
+    "concierge_body": "Para pacientes internacionales, el viaje médico es una extensión de la experiencia clínica. Coordinamos recomendaciones de alojamiento, agendas densas para optimizar el viaje, seguimiento remoto y comunicación directa con la Dra. López antes, durante y después de tu visita.",
+    "cta_label": "Empezar el proceso",
+    "cta_title": "¿Desde dónde nos escribes?",
+    "cta_subtitle": "Cuéntanos tu situación y te respondemos con toda la información para comenzar tu proceso.",
+    "cta_button": "Solicitar Información",
+    "cta_note": "Respuesta en menos de 24 horas · Privacidad garantizada",
+    "form_success_title": "Solicitud recibida",
+    "form_success_body": "Te contactaremos en menos de 24 horas."
+  },
+  "treatmentDetail": {
+    "back": "Volver a Tratamientos",
+    "not_found": "Tratamiento no encontrado",
+    "view_all": "Ver todos los tratamientos",
+    "candidate_label": "Candidato Ideal",
+    "process_label": "El Proceso",
+    "benefits_label": "Beneficios Clave",
+    "cta_label": "¿Este tratamiento es para ti?",
+    "cta_button": "Agendar Consulta de Diagnóstico",
+    "cta_note": "En la consulta determinaremos si este tratamiento es el indicado para ti.",
+    "endolift": {
+      "hero_label": "Láser Mínimamente Invasivo",
+      "name": "Endolift",
+      "tagline": "El arte del lifting sin cirugía",
+      "positioning": "Endolift no es simplemente un tratamiento láser — es una redefinición del concepto de lifting. Mediante una fibra óptica del grosor de un cabello, se entrega energía láser directamente a las capas profundas del tejido, provocando una contracción y regeneración que ninguna crema, ni ningún aparato externo, puede lograr.",
+      "candidate_title": "¿Para quién está diseñado?",
+      "candidate_body": "El candidato ideal para Endolift es quien busca resultados visibles de redefinición facial sin los riesgos, el tiempo de recuperación o las cicatrices de una cirugía convencional. Es la solución para quien quiere verse natural, sin que sea obvio que se hizo algo.",
+      "candidate_points": [
+        "Flacidez moderada de la piel del rostro o cuello",
+        "Pérdida de definición del óvalo facial",
+        "Exceso de tejido bajo el mentón (papada incipiente)",
+        "Quien busca una alternativa real a la cirugía",
+        "Pacientes de 35 a 65 años con piel con buena elasticidad residual"
+      ],
+      "process_steps": [
+        { "num": "01", "title": "Preparación y marcación", "body": "Se marcan las zonas de tratamiento. Se aplica anestesia local tópica. Sin dolor, sin sedación." },
+        { "num": "02", "title": "Introducción de la fibra", "body": "Una microcánula del tamaño de una aguja guía la fibra óptica por debajo de la piel. El proceso es mínimamente invasivo." },
+        { "num": "03", "title": "Emisión de energía láser", "body": "La energía láser actúa en dos planos: contracción inmediata del tejido y estimulación de neocolagénesis a largo plazo." },
+        { "num": "04", "title": "Recuperación y resultado", "body": "Regreso a actividades en 24-48 horas. Resultado visible desde las primeras semanas, progresivo durante 3-6 meses." }
+      ],
+      "benefits": [
+        "Redefinición del óvalo facial visible",
+        "Estimulación de colágeno natural a largo plazo",
+        "Sin cicatrices, sin anestesia general",
+        "Recuperación ultrarrápida: 24-48 horas",
+        "Resultados naturales y duraderos",
+        "Procedimiento de menos de 90 minutos"
+      ]
+    },
+    "toxina-botulinica": {
+      "hero_label": "Neuromodulador Médico",
+      "name": "Toxina Botulínica",
+      "tagline": "La expresión correcta, en las manos correctas",
+      "positioning": "La toxina botulínica es el tratamiento médico estético más frecuente del mundo — y también el más malinterpretado. En manos incorrectas produce rostros congelados. En manos de la Dra. López, produce exactamente lo opuesto: expresividad refinada, naturalidad total y la sensación de haberse descansado muy bien.",
+      "candidate_title": "¿Para quién está indicado?",
+      "candidate_body": "Para cualquier persona que quiera suavizar líneas de expresión sin perder su naturalidad. El objetivo no es eliminar expresiones — es refinarlas.",
+      "candidate_points": [
+        "Líneas de expresión en frente, entrecejo y patas de gallo",
+        "Cejas que se ven pesadas o caídas",
+        "Quien quiere un efecto lifting suave del tercio superior",
+        "Pacientes que buscan prevenir el envejecimiento desde los 28-30 años",
+        "Como complemento de otros tratamientos en un protocolo integral"
+      ],
+      "process_steps": [
+        { "num": "01", "title": "Análisis de la dinámica facial", "body": "Se evalúa el movimiento natural de tu rostro en reposo y en expresión. Cada punto de aplicación se decide con criterio médico." },
+        { "num": "02", "title": "Aplicación de microdosis", "body": "Técnica de micro-punteo con agujas ultra-finas. Sin anestesia, con mínimas molestias. Duración: 15-20 minutos." },
+        { "num": "03", "title": "Evaluación a las 2 semanas", "body": "El resultado definitivo se evalúa a los 14 días. Se realizan ajustes precisos si es necesario." },
+        { "num": "04", "title": "Mantenimiento estratégico", "body": "Con tratamientos regulares, la dosis necesaria disminuye con el tiempo. Una estrategia inteligente a largo plazo." }
+      ],
+      "benefits": [
+        "Resultado natural que nadie nota",
+        "Sin tiempo de recuperación",
+        "Efecto progresivo en 3-7 días",
+        "Reversible con el tiempo",
+        "Prevención del envejecimiento prematuro",
+        "Complemento ideal para otros protocolos"
+      ]
+    },
+    "primex": {
+      "hero_label": "Bioestimulación Premium",
+      "name": "Primex",
+      "tagline": "Regeneración celular de nueva generación",
+      "positioning": "Primex es el protocolo de bioestimulación de última generación que activa la producción de colágeno y elastina desde las capas más profundas de la piel. No es un relleno, no es un neuromodulador — es el tratamiento que hace que tu piel se regenere a sí misma, con más calidad y vitalidad.",
+      "candidate_title": "¿Quién se beneficia de Primex?",
+      "candidate_body": "El candidato ideal es quien nota pérdida de luminosidad, textura desigual, piel opaca o pérdida de firmeza sin deformación de volúmenes.",
+      "candidate_points": [
+        "Piel sin luminosidad ni firmeza",
+        "Arrugas finas superficiales y pérdida de textura",
+        "Piel que se ve cansada sin causa aparente",
+        "Como preparación para otros procedimientos",
+        "Mantenimiento y optimización de tratamientos previos"
+      ],
+      "process_steps": [
+        { "num": "01", "title": "Preparación de la piel", "body": "Limpieza médica y aplicación de anestesia tópica para máxima comodidad durante el procedimiento." },
+        { "num": "02", "title": "Aplicación del protocolo Primex", "body": "Inyección intradérmica del complejo bioestimulante en múltiples planos según el mapa de tratamiento diseñado para ti." },
+        { "num": "03", "title": "Activación y recuperación", "body": "Recuperación prácticamente inmediata. Puede haber enrojecimiento mínimo las primeras horas." },
+        { "num": "04", "title": "Resultados progresivos", "body": "La regeneración ocurre gradualmente. Resultados óptimos a partir de las 4-6 semanas con mejoría continua." }
+      ],
+      "benefits": [
+        "Activación de colágeno y elastina propios",
+        "Mejora visible de la luminosidad",
+        "Sin sustancias extrañas al organismo",
+        "Recuperación inmediata",
+        "Complemento ideal de otros tratamientos",
+        "Efecto acumulativo con sesiones regulares"
+      ]
+    },
+    "acido-hialuronico": {
+      "hero_label": "Relleno Estructural",
+      "name": "Ácido Hialurónico Estructural",
+      "tagline": "Escultura facial con precisión médica",
+      "positioning": "El ácido hialurónico estructural no es un relleno cosmético — es arquitectura facial. En manos de la Dra. López, cada cc de producto se coloca con una intención anatómica precisa: restaurar el volumen que el tiempo restó, definir contornos que la gravedad desplazó, y crear una armonía que parece completamente natural.",
+      "candidate_title": "¿Para quién es este tratamiento?",
+      "candidate_body": "Para quien ha notado pérdida de volumen facial, aplanamiento de pómulos, surcos nasolabiales, pérdida de definición labial o un óvalo facial que ha perdido su arquitectura original.",
+      "candidate_points": [
+        "Pérdida de volumen en pómulos y sienes",
+        "Surcos nasolabiales o líneas de marioneta",
+        "Labios con pérdida de definición o volumen",
+        "Mentón o mandíbula sin definición",
+        "Quien busca un resultado inmediato y reversible"
+      ],
+      "process_steps": [
+        { "num": "01", "title": "Mapeo facial anatómico", "body": "Se evalúan los vectores de pérdida de volumen y los puntos de soporte estructural. Planificación precisa antes de cualquier inyección." },
+        { "num": "02", "title": "Selección de producto", "body": "No todos los ácidos hialurónicos son iguales. Se selecciona la densidad y reología ideal para cada zona a tratar." },
+        { "num": "03", "title": "Inyección con cánula o aguja", "body": "Técnica de inyección dependiendo de la zona: cánula roma para mayor seguridad vascular en zonas de riesgo, aguja fina para definición precisa." },
+        { "num": "04", "title": "Resultado inmediato y seguimiento", "body": "El resultado es visible de inmediato. Evaluación a las 2 semanas para ajustes. Duración: 12 a 18 meses según la zona." }
+      ],
+      "benefits": [
+        "Resultado visible desde el primer día",
+        "Completamente reversible con hialuronidasa",
+        "Sin tiempo de recuperación significativo",
+        "Hidratación profunda adicional",
+        "Personalizable en volumen y zona",
+        "Duración de 12 a 18 meses"
+      ]
+    },
+    "bioestimulacion": {
+      "hero_label": "Regeneración Natural",
+      "name": "Bioestimulación Facial y Corporal",
+      "tagline": "Tu piel, pero en su mejor versión",
+      "positioning": "La bioestimulación es el tratamiento de medicina estética que más se acerca a la filosofía de la Dra. López: activar lo que el cuerpo ya sabe hacer, para que lo haga mejor. Sin sustancias extrañas, sin volúmenes artificiales — solo regeneración real desde adentro.",
+      "candidate_title": "¿Para quién es este tratamiento?",
+      "candidate_body": "Para cualquier persona que quiera mejorar la calidad general de su piel: firmeza, luminosidad, textura, hidratación y elasticidad.",
+      "candidate_points": [
+        "Piel opaca, sin luminosidad ni vitalidad",
+        "Pérdida de firmeza y elasticidad difusa",
+        "Arrugas finas y textura irregular",
+        "Como tratamiento preventivo desde los 30 años",
+        "Para zonas corporales: cuello, escote, manos, abdomen"
+      ],
+      "process_steps": [
+        { "num": "01", "title": "Diagnóstico de piel", "body": "Evaluación del estado actual de la piel, diagnóstico de zonas prioritarias y selección del protocolo de bioestimulación más adecuado." },
+        { "num": "02", "title": "Preparación y aplicación", "body": "Piel limpia y preparada. Aplicación del bioestimulante mediante microinyecciones superficiales distribuidas en la zona de tratamiento." },
+        { "num": "03", "title": "Activación del proceso regenerativo", "body": "Las sustancias activas inician el proceso de síntesis de colágeno, elastina y ácido hialurónico endógeno de forma gradual." },
+        { "num": "04", "title": "Resultado progresivo y acumulativo", "body": "Mejoría visible a partir de las 4 semanas. El protocolo estándar es de 3 sesiones. El resultado mejora con el tiempo." }
+      ],
+      "benefits": [
+        "Activación del colágeno endógeno",
+        "Mejora de luminosidad y textura",
+        "Aplicable en rostro y cuerpo",
+        "Sin tiempo de recuperación",
+        "100% biocompatible",
+        "Efecto preventivo y regenerador a largo plazo"
+      ]
     }
   }
 }

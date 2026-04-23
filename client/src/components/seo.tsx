@@ -12,14 +12,14 @@ interface SEOProps {
   extraSchemas?: Array<Record<string, unknown>>;
 }
 
-const SITE_URL = "https://tosellmore.com";
+const SITE_URL = "https://lorelope.com";
+const BRAND_NAME = "Dra. Lore López";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/favicon.png`;
 
 function toAbsoluteUrl(path: string): string {
   if (path.startsWith("http://") || path.startsWith("https://")) {
     return path;
   }
-
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   return `${SITE_URL}${normalizedPath}`;
 }
@@ -35,8 +35,8 @@ export function SEO({
   extraSchemas = [],
 }: SEOProps) {
   const { language, t } = useLanguage();
-  const baseTitle = `Mariángel Hernández | ${t.metadata.base_title_suffix}`;
-  const finalTitle = title ? `${title} | ${baseTitle}` : baseTitle;
+  const baseTitle = `${BRAND_NAME} | ${t.metadata.base_title_suffix}`;
+  const finalTitle = title ? title : baseTitle;
   const finalDescription = description || t.metadata.default_description;
   const canonicalUrl = toAbsoluteUrl(canonicalPath || "/");
   const currentUrl = canonicalPath ? canonicalUrl : `${SITE_URL}${window.location.pathname}`;
@@ -46,36 +46,26 @@ export function SEO({
     ? [
         {
           "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Mariángel Hernández",
-          jobTitle: "Fundadora de startups tecnológicas",
+          "@type": "Physician",
+          name: BRAND_NAME,
+          medicalSpecialty: "Aesthetic Medicine",
           description:
-            "Fundadora de startups tecnológicas en Ecuador especializada en innovación empresarial, inteligencia artificial y desarrollo de negocios.",
+            "Especialista en medicina estética avanzada, rejuvenecimiento facial, cirugía y tratamientos láser con protocolos médicos personalizados.",
           url: SITE_URL,
-          worksFor: [
-            { "@type": "Organization", name: "ToSellMore", url: "https://tosellmore.com" },
-            { "@type": "Organization", name: "nexito.ai", url: "https://nexito.ai" },
-          ],
           sameAs: [],
         },
         {
           "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "ToSellMore",
-          url: "https://tosellmore.com",
-          founder: { "@type": "Person", name: "Mariángel Hernández" },
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "nexito.ai",
-          url: "https://nexito.ai",
-          founder: { "@type": "Person", name: "Mariángel Hernández" },
+          "@type": "MedicalBusiness",
+          name: `${BRAND_NAME} — Medicina Estética Avanzada`,
+          url: SITE_URL,
+          medicalSpecialty: "Aesthetic Medicine",
+          founder: { "@type": "Person", name: BRAND_NAME },
         },
         {
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "Mariángel Hernández",
+          name: BRAND_NAME,
           url: SITE_URL,
           inLanguage: language,
         },
@@ -98,7 +88,7 @@ export function SEO({
       <meta property="og:description" content={finalDescription} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:image" content={toAbsoluteUrl(ogImage)} />
-      <meta property="og:site_name" content="Mariángel Hernández" />
+      <meta property="og:site_name" content={BRAND_NAME} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={finalTitle} />

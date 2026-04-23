@@ -1,7 +1,7 @@
 import { SEO } from "@/components/seo";
 import { BaseLayout } from "@/layout/base-layout";
 import { useLanguage } from "@/i18n";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import {
   Award,
@@ -50,6 +50,14 @@ function RevealSection({ children, className = "" }: { children: React.ReactNode
   );
 }
 
+const TREATMENT_SLUGS = [
+  "endolift",
+  "toxina-botulinica",
+  "primex",
+  "acido-hialuronico",
+  "bioestimulacion",
+] as const;
+
 const iconMap: Record<string, React.ReactNode> = {
   award: <Award className="w-5 h-5" />,
   shield: <ShieldCheck className="w-5 h-5" />,
@@ -61,6 +69,11 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function Home() {
   const { t } = useLanguage();
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
+  const heroParallaxY = useTransform(scrollYProgress, [0, 1], ["0%", "28%"]);
+  const heroTextY = useTransform(scrollYProgress, [0, 1], ["0%", "14%"]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
   return (
     <BaseLayout>
@@ -80,18 +93,20 @@ export default function Home() {
       />
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,20%,12%)] via-[hsl(25,18%,16%)] to-[hsl(82,15%,18%)]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage: `radial-gradient(ellipse at 30% 50%, hsl(82,28%,52%) 0%, transparent 60%), radial-gradient(ellipse at 75% 30%, hsl(35,35%,70%) 0%, transparent 55%)`,
-          }}
-        />
-        <div className="absolute top-1/3 right-0 w-[45%] h-[70%] bg-gradient-to-l from-[hsl(82,15%,22%)]/30 to-transparent" />
+      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
+        <motion.div className="absolute inset-0" style={{ y: heroParallaxY }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,20%,12%)] via-[hsl(25,18%,16%)] to-[hsl(82,15%,18%)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+          <div
+            className="absolute inset-0 opacity-[0.04]"
+            style={{
+              backgroundImage: `radial-gradient(ellipse at 30% 50%, hsl(82,28%,52%) 0%, transparent 60%), radial-gradient(ellipse at 75% 30%, hsl(35,35%,70%) 0%, transparent 55%)`,
+            }}
+          />
+          <div className="absolute top-1/3 right-0 w-[45%] h-[70%] bg-gradient-to-l from-[hsl(82,15%,22%)]/30 to-transparent" />
+        </motion.div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-16 pt-28 pb-24 grid lg:grid-cols-2 gap-16 items-center">
+        <motion.div style={{ y: heroTextY, opacity: heroOpacity }} className="relative z-10 w-full max-w-[1400px] mx-auto px-8 lg:px-16 pt-28 pb-24 grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -188,7 +203,7 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
 
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(35,28%,97%)] to-transparent" />
       </section>
@@ -197,39 +212,41 @@ export default function Home() {
       <section id="nosotros" className="py-28 bg-[hsl(35,28%,97%)]">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
           <RevealSection>
-            <div className="text-center mb-16">
-              <motion.div variants={fadeUp}>
-                <SectionLabel>{t.trust.label}</SectionLabel>
-              </motion.div>
-              <motion.h2
-                variants={fadeUp}
-                className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight max-w-2xl mx-auto"
-              >
-                {t.trust.title}
-              </motion.h2>
+            <div className="grid lg:grid-cols-2 gap-16 items-end mb-20">
+              <div>
+                <motion.div variants={fadeUp}>
+                  <SectionLabel>{t.trust.label}</SectionLabel>
+                </motion.div>
+                <motion.h2
+                  variants={fadeUp}
+                  className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight"
+                >
+                  {t.trust.title}
+                </motion.h2>
+              </div>
               <motion.p
                 variants={fadeUp}
-                className="text-muted-foreground mt-5 max-w-xl mx-auto leading-relaxed text-lg font-light"
+                className="text-muted-foreground leading-relaxed text-lg font-light pb-1"
               >
                 {t.trust.subtitle}
               </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-              {t.trust.items.map((item: any, i: number) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
+              {t.trust.items.map((item, i) => (
                 <motion.div
                   key={i}
                   variants={fadeUp}
                   data-testid={`card-trust-${i}`}
-                  className="group bg-[hsl(35,28%,97%)] p-10 hover:bg-[hsl(35,22%,95%)] transition-colors duration-500"
+                  className="group py-10 px-0 md:px-12 first:pl-0 last:pr-0"
                 >
-                  <div className="w-10 h-10 flex items-center justify-center text-primary mb-6 border border-primary/20 bg-primary/5 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                  <div className="w-7 h-7 text-primary mb-8 group-hover:text-primary/70 transition-colors">
                     {iconMap[item.icon]}
                   </div>
-                  <h3 className="font-serif text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-3 leading-tight">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed font-light">
                     {item.description}
                   </p>
                 </motion.div>
@@ -240,64 +257,82 @@ export default function Home() {
       </section>
 
       {/* ─── TREATMENTS ─── */}
-      <section id="tratamientos" className="py-28 bg-[hsl(25,20%,10%)] relative overflow-hidden">
+      <section id="tratamientos" className="bg-[hsl(25,20%,10%)] relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <div className="absolute -top-40 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[100px]" />
 
         <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
           <RevealSection>
-            <div className="text-center mb-16">
-              <motion.div variants={fadeUp}>
-                <span className="inline-block text-[10px] uppercase tracking-[0.45em] font-semibold text-[hsl(82,28%,55%)] mb-4">
-                  — {t.treatments.label} —
-                </span>
-              </motion.div>
-              <motion.h2
-                variants={fadeUp}
-                className="font-serif text-4xl md:text-5xl font-bold text-white leading-tight"
-              >
-                {t.treatments.title}
-              </motion.h2>
+            <div className="pt-24 pb-16 grid lg:grid-cols-2 gap-12 items-end">
+              <div>
+                <motion.div variants={fadeUp}>
+                  <span className="inline-block text-[10px] uppercase tracking-[0.45em] font-semibold text-[hsl(82,28%,55%)] mb-4">
+                    — {t.treatments.label} —
+                  </span>
+                </motion.div>
+                <motion.h2
+                  variants={fadeUp}
+                  className="font-serif text-4xl md:text-5xl font-bold text-white leading-tight"
+                >
+                  {t.treatments.title}
+                </motion.h2>
+              </div>
               <motion.p
                 variants={fadeUp}
-                className="text-white/45 mt-5 max-w-lg mx-auto leading-relaxed text-lg font-light"
+                className="text-white/45 leading-relaxed text-lg font-light pb-1"
               >
                 {t.treatments.subtitle}
               </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {t.treatments.items.map((item: any, i: number) => (
-                <motion.div
+            <div className="border-t border-white/8">
+              {t.treatments.items.map((item, i) => (
+                <motion.a
                   key={i}
+                  href={`/tratamientos/${TREATMENT_SLUGS[i]}`}
                   variants={fadeUp}
                   data-testid={`card-treatment-${i}`}
-                  className={`group relative p-10 border border-white/8 bg-white/[0.03] hover:bg-white/[0.06] hover:border-primary/30 transition-all duration-500 ${i === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
+                  className="group flex items-start gap-8 lg:gap-16 py-10 border-b border-white/8 hover:bg-white/[0.025] transition-all duration-500 cursor-pointer px-2 -mx-2"
                 >
-                  <div className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center border border-white/8 bg-white/[0.04]">
-                    <span className="text-[10px] font-mono text-white/25">0{i + 1}</span>
-                  </div>
-                  <div className="mb-8">
-                    <div className="w-8 h-px bg-primary/40 mb-6" />
-                    <h3 className="font-serif text-2xl font-bold text-white mb-1 group-hover:text-[hsl(82,28%,65%)] transition-colors duration-400">
-                      {item.name}
-                    </h3>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-[hsl(82,28%,55%)] font-medium">
-                      {item.tagline}
+                  <span className="font-mono text-[10px] text-white/20 tracking-widest pt-2 flex-shrink-0 w-6">
+                    0{i + 1}
+                  </span>
+                  <div className="flex-1 grid lg:grid-cols-[2fr_1fr] gap-6 lg:gap-16 items-start">
+                    <div>
+                      <h3 className="font-serif text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-[hsl(82,28%,65%)] transition-colors duration-400 leading-tight">
+                        {item.name}
+                      </h3>
+                      <p className="text-[10px] uppercase tracking-[0.35em] text-[hsl(82,28%,45%)] font-medium">
+                        {item.tagline}
+                      </p>
+                    </div>
+                    <p className="text-white/38 text-sm leading-relaxed font-light hidden lg:block">
+                      {item.description}
                     </p>
                   </div>
-                  <p className="text-white/45 text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                  <div className="mt-8 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/25 group-hover:text-primary/60 transition-colors duration-400">
-                    <span>Conocer más</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </div>
-                </motion.div>
+                  <ArrowRight className="w-4 h-4 text-white/15 group-hover:text-primary transition-all duration-400 flex-shrink-0 mt-2 group-hover:translate-x-1" />
+                </motion.a>
               ))}
             </div>
           </RevealSection>
         </div>
+
+        <div className="max-w-[1400px] mx-auto px-8 lg:px-16 pb-16 pt-10">
+          <RevealSection>
+            <motion.div variants={fadeUp}>
+              <a href="/tratamientos">
+                <button
+                  data-testid="button-treatments-all"
+                  className="group inline-flex items-center gap-3 text-white/35 text-[10px] uppercase tracking-[0.45em] font-semibold hover:text-white/70 transition-colors duration-500"
+                >
+                  {t.treatments.cta}
+                  <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+                </button>
+              </a>
+            </motion.div>
+          </RevealSection>
+        </div>
+
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[hsl(35,28%,97%)] to-transparent" />
       </section>
 
@@ -406,7 +441,7 @@ export default function Home() {
               </div>
 
               <div className="space-y-0 border-l border-border">
-                {t.philosophy.steps.map((step: any, i: number) => (
+                {t.philosophy.steps.map((step, i) => (
                   <motion.div
                     key={i}
                     variants={fadeUp}
@@ -426,47 +461,74 @@ export default function Home() {
       </section>
 
       {/* ─── TESTIMONIALS ─── */}
-      <section className="py-28 bg-[hsl(35,28%,97%)]">
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
-          <RevealSection>
-            <div className="text-center mb-16">
-              <motion.div variants={fadeUp}>
-                <SectionLabel>{t.testimonials.label}</SectionLabel>
-              </motion.div>
-              <motion.h2
-                variants={fadeUp}
-                className="font-serif text-4xl md:text-5xl font-bold text-foreground"
-              >
-                {t.testimonials.title}
-              </motion.h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {t.testimonials.items.map((item: any, i: number) => (
-                <motion.div
-                  key={i}
-                  variants={fadeUp}
-                  data-testid={`card-testimonial-${i}`}
-                  className="group p-10 border border-border bg-white hover:border-primary/25 hover:shadow-[0_4px_40px_rgba(0,0,0,0.06)] transition-all duration-500"
-                >
+      <section className="bg-[hsl(35,28%,97%)]">
+        {/* Featured pull-quote */}
+        <RevealSection>
+          <motion.div
+            variants={fadeUp}
+            data-testid="card-testimonial-0"
+            className="bg-[hsl(25,20%,10%)] py-28 px-8 lg:px-16 relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+            <div className="max-w-[1400px] mx-auto">
+              <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.45em] font-semibold text-[hsl(82,28%,55%)] mb-8 block">
+                    — {t.testimonials.label} —
+                  </span>
+                  <blockquote className="font-serif text-3xl md:text-4xl text-white font-bold leading-tight italic">
+                    "{t.testimonials.items[0].text}"
+                  </blockquote>
+                </div>
+                <div className="lg:border-l lg:border-white/10 lg:pl-16">
                   <div className="flex gap-1 mb-6">
                     {Array.from({ length: 5 }).map((_, si) => (
                       <Star key={si} className="w-3 h-3 fill-primary text-primary" />
                     ))}
                   </div>
-                  <blockquote className="text-foreground/75 leading-relaxed mb-8 font-light italic text-[15px]">
-                    "{item.text}"
-                  </blockquote>
-                  <div className="pt-6 border-t border-border">
-                    <p className="font-semibold text-foreground text-sm">{item.name}</p>
-                    <p className="text-muted-foreground text-xs mt-0.5">{item.age}</p>
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-primary/60 mt-2 font-medium">{item.treatment}</p>
+                  <p className="font-serif text-xl font-bold text-white mb-1">{t.testimonials.items[0].name}</p>
+                  <p className="text-white/35 text-sm mb-3">{t.testimonials.items[0].age}</p>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[hsl(82,28%,55%)] font-medium">
+                    {t.testimonials.items[0].treatment}
+                  </p>
+                  <div className="mt-8">
+                    <motion.h2 className="font-serif text-4xl md:text-5xl font-bold text-white/10 leading-tight">
+                      {t.testimonials.title}
+                    </motion.h2>
                   </div>
-                </motion.div>
-              ))}
+                </div>
+              </div>
             </div>
-          </RevealSection>
-        </div>
+          </motion.div>
+        </RevealSection>
+
+        {/* Two smaller testimonials */}
+        <RevealSection>
+          <div className="max-w-[1400px] mx-auto px-8 lg:px-16 grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
+            {t.testimonials.items.slice(1).map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                data-testid={`card-testimonial-${i + 1}`}
+                className="py-14 px-0 md:px-12 first:pl-0 last:pr-0 group"
+              >
+                <div className="flex gap-1 mb-6">
+                  {Array.from({ length: 5 }).map((_, si) => (
+                    <Star key={si} className="w-2.5 h-2.5 fill-primary text-primary" />
+                  ))}
+                </div>
+                <blockquote className="text-foreground/65 leading-relaxed mb-8 font-light italic text-base">
+                  "{item.text}"
+                </blockquote>
+                <div>
+                  <p className="font-semibold text-foreground text-sm">{item.name}</p>
+                  <p className="text-muted-foreground text-xs mt-0.5">{item.age}</p>
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-primary/60 mt-2 font-medium">{item.treatment}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </RevealSection>
       </section>
 
       {/* ─── CONSULTATION EXPERIENCE ─── */}
@@ -491,25 +553,40 @@ export default function Home() {
                 </motion.h2>
                 <motion.p
                   variants={fadeUp}
-                  className="text-white/45 leading-relaxed text-lg font-light"
+                  className="text-white/45 leading-relaxed text-lg font-light mb-12"
                 >
                   {t.consultation.subtitle}
                 </motion.p>
+                <motion.div variants={fadeUp}>
+                  <a href="/consulta">
+                    <button
+                      data-testid="button-consultation-cta"
+                      className="group inline-flex items-center gap-3 px-10 py-4 bg-primary text-white text-[10px] uppercase tracking-[0.4em] font-semibold hover:bg-primary/80 transition-all duration-500"
+                    >
+                      {t.nav.agendar}
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    </button>
+                  </a>
+                </motion.div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/5">
-                {t.consultation.steps.map((step: any, i: number) => (
+              <div className="border-t border-white/8">
+                {t.consultation.steps.map((step, i) => (
                   <motion.div
                     key={i}
                     variants={fadeUp}
                     data-testid={`card-consultation-${i}`}
-                    className="group bg-[hsl(25,20%,10%)] p-8 hover:bg-white/[0.04] transition-all duration-400"
+                    className="group flex gap-8 py-8 border-b border-white/8 hover:bg-white/[0.02] transition-colors duration-400 -mx-4 px-4"
                   >
-                    <div className="text-[10px] font-mono text-[hsl(82,28%,45%)] tracking-widest mb-5">0{i + 1}</div>
-                    <h3 className="font-serif text-lg font-bold text-white mb-3 group-hover:text-[hsl(82,28%,65%)] transition-colors">
-                      {step.title}
-                    </h3>
-                    <p className="text-white/38 text-sm leading-relaxed">{step.description}</p>
+                    <span className="font-mono text-3xl font-bold text-white/8 flex-shrink-0 leading-none group-hover:text-primary/20 transition-colors duration-400">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <h3 className="font-serif text-lg font-bold text-white mb-2 group-hover:text-[hsl(82,28%,65%)] transition-colors duration-400">
+                        {step.title}
+                      </h3>
+                      <p className="text-white/40 text-sm leading-relaxed font-light">{step.description}</p>
+                    </div>
                   </motion.div>
                 ))}
               </div>

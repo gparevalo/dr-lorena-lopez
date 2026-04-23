@@ -17,7 +17,13 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [{ href: "/", label: t.nav.home }];
+  const navItems = [
+    { href: "/", label: t.nav.home },
+    { href: "/tratamientos", label: t.nav.tratamientos },
+    { href: "/doctora", label: t.nav.doctora },
+    { href: "/galeria", label: t.nav.galeria },
+    { href: "/pacientes-internacionales", label: t.nav.internacionales },
+  ];
 
   return (
     <nav
@@ -61,14 +67,14 @@ export function Navbar() {
           </motion.div>
         </Link>
 
-        <div className="hidden lg:flex items-center gap-12">
-          <div className="flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-10">
+          <div className="flex items-center gap-7">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative group py-2 text-[10px] uppercase tracking-[0.35em] font-semibold transition-all duration-500",
+                  "relative group py-2 text-[10px] uppercase tracking-[0.3em] font-semibold transition-all duration-500",
                   location === item.href
                     ? scrolled
                       ? "text-primary"
@@ -91,7 +97,7 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-5">
             <button
               data-testid="button-language-toggle"
               onClick={() => setLanguage(language === "en" ? "es" : "en")}
@@ -106,14 +112,14 @@ export function Navbar() {
               <span>{language.toUpperCase()}</span>
             </button>
 
-            <a href="#contacto">
+            <Link href="/consulta">
               <button
                 data-testid="button-nav-cta"
                 className="px-7 py-2.5 bg-primary text-white text-[10px] uppercase tracking-[0.3em] font-semibold hover:bg-primary/80 transition-all duration-500"
               >
                 {t.nav.agendar}
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -144,21 +150,21 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="absolute top-0 left-0 w-full h-screen bg-[hsl(35,28%,97%)] z-40 lg:hidden"
+            className="absolute top-0 left-0 w-full h-screen bg-[hsl(35,28%,97%)] z-40 lg:hidden overflow-y-auto"
           >
             <div className="flex flex-col h-full pt-28 px-10 pb-10 justify-between">
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-5">
                 {navItems.map((item, idx) => (
                   <motion.div
                     key={item.href}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.08 }}
+                    transition={{ delay: idx * 0.07 }}
                   >
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center gap-4 text-4xl font-serif font-bold text-foreground hover:text-primary transition-colors"
+                      className="flex items-center gap-4 text-3xl font-serif font-bold text-foreground hover:text-primary transition-colors"
                     >
                       <span className="text-xs font-mono text-muted-foreground">
                         0{idx + 1}
@@ -172,7 +178,7 @@ export function Navbar() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.35 }}
                 className="pt-8 border-t border-border flex flex-col gap-5"
               >
                 <button
@@ -183,11 +189,11 @@ export function Navbar() {
                   {t.nav.language_toggle}
                 </button>
 
-                <a href="#contacto" onClick={() => setIsOpen(false)}>
+                <Link href="/consulta" onClick={() => setIsOpen(false)}>
                   <button className="w-full py-4 bg-primary text-white text-[11px] uppercase tracking-[0.3em] font-semibold hover:bg-primary/80 transition-all">
                     {t.nav.agendar}
                   </button>
-                </a>
+                </Link>
               </motion.div>
             </div>
 

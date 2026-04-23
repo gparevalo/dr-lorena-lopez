@@ -80,6 +80,12 @@ export default {
           busy: "rgb(239 68 68)",
           offline: "rgb(156 163 175)",
         },
+        olive: "hsl(var(--olive) / <alpha-value>)",
+        sage: "hsl(var(--sage) / <alpha-value>)",
+        nude: "hsl(var(--nude) / <alpha-value>)",
+        ivory: "hsl(var(--ivory) / <alpha-value>)",
+        champagne: "hsl(var(--champagne) / <alpha-value>)",
+        "warm-stone": "hsl(var(--warm-stone) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],

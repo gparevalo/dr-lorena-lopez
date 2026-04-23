@@ -1,21 +1,114 @@
 {
   "metadata": {
-    "base_title_suffix": "base_title_suffix",
-    "default_description": "base_title_suffix"
+    "base_title_suffix": "Dra. Lore López | Medicina Estética Avanzada",
+    "default_description": "Especialista en medicina estética avanzada, rejuvenecimiento facial y tratamientos láser."
   },
   "nav": {
-    "home": "Inicio", 
-    "agendar": "Agendar", 
+    "home": "Inicio",
+    "tratamientos": "Tratamientos",
+    "nosotros": "Sobre Mí",
+    "contacto": "Contacto",
+    "agendar": "Agendar Consulta",
     "language_toggle": "Español / EN"
+  },
+  "hero": {
+    "label": "Medicina Estética Avanzada",
+    "headline_1": "La belleza natural",
+    "headline_2": "comienza con",
+    "headline_3": "precisión médica",
+    "subtitle": "Protocolos médicos personalizados diseñados para resultados elegantes y naturales que perduran en el tiempo.",
+    "cta_primary": "Agendar Consulta Médica",
+    "cta_secondary": "Descubrir Tratamientos",
+    "credential_1": "Especialización Internacional",
+    "credential_2": "Medicina Preventiva",
+    "credential_3": "Tecnología Avanzada"
+  },
+  "trust": {
+    "label": "Autoridad Médica",
+    "title": "Experiencia clínica al servicio de tu bienestar",
+    "subtitle": "Cada tratamiento es el resultado de años de formación especializada, investigación continua y un profundo compromiso con la excelencia médica.",
+    "items": [
+      { "icon": "award", "title": "Formación Internacional", "description": "Especialización y posgrados en centros de referencia mundial en medicina estética avanzada." },
+      { "icon": "shield", "title": "Certificaciones Médicas", "description": "Certificada por las principales instituciones internacionales en medicina estética y rejuvenecimiento facial." },
+      { "icon": "microscope", "title": "Diagnóstico Personalizado", "description": "Cada paciente recibe un análisis facial completo antes de cualquier protocolo de tratamiento." },
+      { "icon": "leaf", "title": "Medicina Preventiva", "description": "Enfoque preventivo que preserva y potencia tu belleza natural a largo plazo." },
+      { "icon": "zap", "title": "Tecnología de Vanguardia", "description": "Equipos médicos de última generación para resultados precisos y seguros." },
+      { "icon": "heart", "title": "Seguimiento Premium", "description": "Acompañamiento continuo durante y después de cada protocolo de tratamiento." }
+    ]
+  },
+  "treatments": {
+    "label": "Tratamientos Exclusivos",
+    "title": "Procedimientos de alta precisión",
+    "subtitle": "Una selección curada de tratamientos estéticos avanzados, diseñados para resultados naturales y sofisticados.",
+    "items": [
+      { "name": "Endolift", "tagline": "Redefinición sin cirugía", "description": "Lifting láser mínimamente invasivo para una regeneración profunda del tejido cutáneo con resultados naturales y duraderos." },
+      { "name": "Toxina Botulínica", "tagline": "Expresión, refinada", "description": "Aplicación médica de precisión para suavizar líneas de expresión conservando la naturalidad y autenticidad del rostro." },
+      { "name": "Primex", "tagline": "Bioestimulación premium", "description": "Protocolo avanzado de estimulación celular para la regeneración del colágeno y la restauración de la vitalidad cutánea." },
+      { "name": "Ácido Hialurónico", "tagline": "Volumen con elegancia", "description": "Restauración de volumen y contorno facial con técnicas de inyección de alta precisión para resultados armoniosos." },
+      { "name": "Bioestimulación", "tagline": "Rejuvenecimiento desde adentro", "description": "Activación de los mecanismos naturales de regeneración cutánea para una piel más luminosa, firme y saludable." }
+    ]
+  },
+  "about": {
+    "label": "Sobre la Doctora",
+    "title": "Dra. Lore López",
+    "specialty": "Médico · Cirugía · Láser",
+    "bio_1": "Con una formación médica rigurosa y una pasión genuina por la medicina estética de vanguardia, la Dra. Lore López ha construido una reputación basada en resultados naturales, criterio clínico y un enfoque profundamente humanizado.",
+    "bio_2": "Su filosofía integra la precisión científica con la sensibilidad artística, comprendiendo que cada rostro es único y merece un protocolo exclusivamente diseñado para sus características, historia y objetivos personales.",
+    "credentials": [
+      "Médico especialista en medicina estética avanzada",
+      "Posgrado internacional en rejuvenecimiento facial",
+      "Certificada en técnicas láser de vanguardia",
+      "Miembro de sociedades médicas internacionales"
+    ],
+    "philosophy_label": "Filosofía",
+    "philosophy": "\"La medicina estética no se trata de cambiar quién eres, sino de ayudarte a ser la mejor versión de ti mismo.\""
+  },
+  "philosophy": {
+    "label": "Proceso Médico",
+    "title": "Resultados que respetan tu naturaleza",
+    "subtitle": "Un proceso médico riguroso que garantiza resultados elegantes, naturales y duraderos.",
+    "steps": [
+      { "number": "01", "title": "Evaluación Médica", "description": "Consulta médica completa para comprender tu historia clínica, objetivos y estado actual de la piel." },
+      { "number": "02", "title": "Protocolo Personalizado", "description": "Diseño de un plan de tratamiento exclusivo, adaptado a tus características únicas y resultados deseados." },
+      { "number": "03", "title": "Resultados Naturales", "description": "Tratamientos ejecutados con la máxima precisión para resultados elegantes que preservan tu esencia natural." }
+    ]
+  },
+  "testimonials": {
+    "label": "Testimonios",
+    "title": "Lo que dicen nuestras pacientes",
+    "items": [
+      { "name": "Valentina R.", "age": "42 años", "text": "La Dra. López me devolvió la confianza en mi apariencia sin que nadie notara que me había hecho algo. Simplemente digo que me veo más descansada y radiante.", "treatment": "Toxina Botulínica + Ácido Hialurónico" },
+      { "name": "Marcela S.", "age": "38 años", "text": "Lo que más valoro es su enfoque médico. No busca venderme tratamientos, sino escuchar lo que realmente necesito. El resultado superó todas mis expectativas.", "treatment": "Endolift" },
+      { "name": "Carolina M.", "age": "51 años", "text": "Después de años buscando resultados naturales, finalmente encontré a una doctora que entiende que la belleza no se trata de cambiar sino de preservar lo mejor de una.", "treatment": "Bioestimulación + Primex" }
+    ]
+  },
+  "consultation": {
+    "label": "Tu Primera Consulta",
+    "title": "Una experiencia médica diferente",
+    "subtitle": "Desde el primer momento, tu consulta está diseñada para darte claridad, confianza y un plan de acción personalizado.",
+    "steps": [
+      { "title": "Análisis Facial Completo", "description": "Evaluación detallada de la estructura facial, calidad de piel y signos de envejecimiento." },
+      { "title": "Revisión de Estilo de Vida", "description": "Comprensión de tus hábitos, historial médico y factores que influyen en tu salud cutánea." },
+      { "title": "Protocolo Personalizado", "description": "Diseño de un plan de tratamiento exclusivo con objetivos claros y resultados esperados." },
+      { "title": "Experiencia Premium", "description": "Un entorno de atención diseñado para tu comodidad, privacidad y confianza total." }
+    ]
+  },
+  "cta": {
+    "label": "Reserva tu Lugar",
+    "title": "Comienza tu transformación",
+    "subtitle": "Agenda tu consulta médica privada y descubre un protocolo diseñado exclusivamente para ti.",
+    "button": "Agendar Mi Consulta",
+    "note": "Cupos limitados · Atención totalmente personalizada"
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "tagline": "Arquitectura Estratégica de Crecimiento. CEO de ToSellMore y cofundadora de nexito.ai, plataforma de incubación de emprendimientos basada en inteligencia artificial.",
-    "trusted_label": "Liderazgo en innovación en Ecuador y Latinoamérica",
-    "architect_label": "Arquitectura",
-    "ecosystem_label": "Ecosistema",
-    "privacy_protocol": "Privacy Protocol",
-    "designed_by": "Designed by PD Agencia"
+    "tagline": "Medicina Estética Avanzada · Resultados naturales con protocolos médicos de excelencia.",
+    "trusted_label": "Médico certificada en medicina estética avanzada",
+    "architect_label": "Navegación",
+    "ecosystem_label": "Redes Sociales",
+    "privacy_protocol": "Política de Privacidad",
+    "designed_by": "Diseñado por PD Agencia",
+    "specialty": "Médico · Cirugía · Láser"
   },
   "notFound": {
     "title": "Página no encontrada",
@@ -23,11 +116,11 @@
     "button": "Volver al Inicio"
   },
   "mediaPage": {
-    "title": "En Acción",
+    "title": "Presencia",
     "hero": {
-      "label": "Presencia en Medios & Liderazgo de Opinión",
-      "title": "Una voz que hoy ya está en los medios que importan.",
-      "description": "Mariángel Hernández participa activamente en conversaciones de alto nivel en medios de negocios, innovación y transformación digital en Latinoamérica. Su presencia no es teórica: es pública, constante y estratégica."
+      "label": "Presencia Médica",
+      "title": "Referente en Medicina Estética",
+      "description": "La Dra. Lore López es reconocida en el ámbito de la medicina estética avanzada."
     }
   }
 }

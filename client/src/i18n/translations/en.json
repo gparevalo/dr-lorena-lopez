@@ -1,33 +1,126 @@
 {
   "metadata": {
-    "base_title_suffix": "Speaker & Strategist",
-    "default_description": "TEDx Speaker, CEO of ToSellMore and Strategic Growth Architect."
+    "base_title_suffix": "Dr. Lore López | Advanced Aesthetic Medicine",
+    "default_description": "Specialist in advanced aesthetic medicine, facial rejuvenation, and laser treatments."
   },
   "nav": {
-    "home": "Home", 
-    "agendar": "agendar", 
+    "home": "Home",
+    "tratamientos": "Treatments",
+    "nosotros": "About",
+    "contacto": "Contact",
+    "agendar": "Book Consultation",
     "language_toggle": "English / ES"
-  }, 
+  },
+  "hero": {
+    "label": "Advanced Aesthetic Medicine",
+    "headline_1": "Natural beauty",
+    "headline_2": "begins with",
+    "headline_3": "medical precision",
+    "subtitle": "Personalized medical protocols designed for elegant, natural results that stand the test of time.",
+    "cta_primary": "Book Medical Consultation",
+    "cta_secondary": "Discover Treatments",
+    "credential_1": "International Specialization",
+    "credential_2": "Preventive Medicine",
+    "credential_3": "Advanced Technology"
+  },
+  "trust": {
+    "label": "Medical Authority",
+    "title": "Clinical expertise at the service of your wellbeing",
+    "subtitle": "Every treatment is the result of years of specialized training, continuous research, and a deep commitment to medical excellence.",
+    "items": [
+      { "icon": "award", "title": "International Training", "description": "Specialization and postgraduate studies at world-reference centers in advanced aesthetic medicine." },
+      { "icon": "shield", "title": "Medical Certifications", "description": "Certified by leading international institutions in aesthetic medicine and facial rejuvenation." },
+      { "icon": "microscope", "title": "Personalized Diagnosis", "description": "Each patient receives a complete facial analysis before any treatment protocol begins." },
+      { "icon": "leaf", "title": "Preventive Medicine", "description": "A preventive approach that preserves and enhances your natural beauty long-term." },
+      { "icon": "zap", "title": "Cutting-Edge Technology", "description": "State-of-the-art medical equipment for precise, safe results." },
+      { "icon": "heart", "title": "Premium Follow-Up", "description": "Continuous accompaniment during and after every treatment protocol." }
+    ]
+  },
+  "treatments": {
+    "label": "Exclusive Treatments",
+    "title": "High-precision procedures",
+    "subtitle": "A curated selection of advanced aesthetic treatments, designed for natural and sophisticated results.",
+    "items": [
+      { "name": "Endolift", "tagline": "Redefinition without surgery", "description": "Minimally invasive laser lifting for deep skin tissue regeneration with natural, lasting results." },
+      { "name": "Botulinum Toxin", "tagline": "Expression, refined", "description": "Precision medical application to soften expression lines while preserving the face's natural authenticity." },
+      { "name": "Primex", "tagline": "Premium biostimulation", "description": "Advanced cellular stimulation protocol for collagen regeneration and restoration of skin vitality." },
+      { "name": "Hyaluronic Acid", "tagline": "Volume with elegance", "description": "Facial volume and contour restoration with high-precision injection techniques for harmonious results." },
+      { "name": "Biostimulation", "tagline": "Rejuvenation from within", "description": "Activation of natural skin regeneration mechanisms for more luminous, firm, and healthy skin." }
+    ]
+  },
+  "about": {
+    "label": "About the Doctor",
+    "title": "Dr. Lore López",
+    "specialty": "Physician · Surgery · Laser",
+    "bio_1": "With rigorous medical training and a genuine passion for cutting-edge aesthetic medicine, Dr. Lore López has built a reputation based on natural results, clinical judgment, and a deeply humanized approach to aesthetic medicine.",
+    "bio_2": "Her philosophy integrates scientific precision with artistic sensibility, understanding that every face is unique and deserves a protocol exclusively designed for its characteristics, history, and personal goals.",
+    "credentials": [
+      "Specialist physician in advanced aesthetic medicine",
+      "International postgraduate in facial rejuvenation",
+      "Certified in cutting-edge laser techniques",
+      "Member of international medical societies"
+    ],
+    "philosophy_label": "Philosophy",
+    "philosophy": "\"Aesthetic medicine is not about changing who you are, but helping you become the best version of yourself.\""
+  },
+  "philosophy": {
+    "label": "Medical Process",
+    "title": "Results that respect your nature",
+    "subtitle": "A rigorous medical process that guarantees elegant, natural, and lasting results.",
+    "steps": [
+      { "number": "01", "title": "Medical Evaluation", "description": "Complete medical consultation to understand your clinical history, goals, and current skin condition." },
+      { "number": "02", "title": "Personalized Protocol", "description": "Design of an exclusive treatment plan, adapted to your unique characteristics and desired results." },
+      { "number": "03", "title": "Natural Results", "description": "Treatments executed with maximum precision for elegant results that preserve your natural essence." }
+    ]
+  },
+  "testimonials": {
+    "label": "Testimonials",
+    "title": "What our patients say",
+    "items": [
+      { "name": "Valentina R.", "age": "42 years", "text": "Dr. López restored my confidence in my appearance without anyone noticing I had anything done. I simply look more rested and radiant.", "treatment": "Botulinum Toxin + Hyaluronic Acid" },
+      { "name": "Marcela S.", "age": "38 years", "text": "What I value most is her medical approach. She doesn't try to sell me treatments — she listens to what I truly need. The result exceeded all my expectations.", "treatment": "Endolift" },
+      { "name": "Carolina M.", "age": "51 years", "text": "After years searching for natural results, I finally found a doctor who understands that beauty isn't about changing, but preserving the best of yourself.", "treatment": "Biostimulation + Primex" }
+    ]
+  },
+  "consultation": {
+    "label": "Your First Consultation",
+    "title": "A different medical experience",
+    "subtitle": "From the very first moment, your consultation is designed to give you clarity, confidence, and a personalized action plan.",
+    "steps": [
+      { "title": "Complete Facial Analysis", "description": "Detailed evaluation of facial structure, skin quality, and aging signs." },
+      { "title": "Lifestyle Review", "description": "Understanding your habits, medical history, and factors influencing your skin health." },
+      { "title": "Personalized Protocol", "description": "Design of an exclusive treatment plan with clear objectives and expected results." },
+      { "title": "Premium Experience", "description": "A care environment designed for your comfort, privacy, and total confidence." }
+    ]
+  },
+  "cta": {
+    "label": "Reserve Your Spot",
+    "title": "Begin your transformation",
+    "subtitle": "Schedule your private medical consultation and discover a protocol designed exclusively for you.",
+    "button": "Book My Consultation",
+    "note": "Limited spots · Fully personalized care"
+  },
   "footer": {
     "rights": "All rights reserved.",
-    "tagline": "Strategic Growth Architecture. CEO of ToSellMore and Co-founder of nexito.ai, an AI-powered startup incubation platform.",
-    "trusted_label": "Leadership in innovation in Ecuador and Latin America.",
-    "architect_label": "Architecture",
-    "ecosystem_label": "Ecosystem",
-    "privacy_protocol": "Privacy Protocol",
-    "designed_by": "Designed by PD Agencia"
-  }, 
+    "tagline": "Advanced Aesthetic Medicine · Natural results with excellence medical protocols.",
+    "trusted_label": "Certified physician in advanced aesthetic medicine",
+    "architect_label": "Navigation",
+    "ecosystem_label": "Social Media",
+    "privacy_protocol": "Privacy Policy",
+    "designed_by": "Designed by PD Agencia",
+    "specialty": "Physician · Surgery · Laser"
+  },
   "notFound": {
     "title": "Page Not Found",
     "description": "The page you're looking for doesn't exist or has been moved.",
     "button": "Back to Home"
   },
   "mediaPage": {
-    "title": "On Air",
+    "title": "Presence",
     "hero": {
-      "label": "Media Intelligence System",
-      "title": "The Authority of a Voice that Scales.",
-      "description": "Measurable results of Mariángel Hernández's media and strategic presence across leading business and innovation ecosystems."
+      "label": "Medical Presence",
+      "title": "Reference in Aesthetic Medicine",
+      "description": "Dr. Lore López is recognized in the field of advanced aesthetic medicine."
     }
   }
 }

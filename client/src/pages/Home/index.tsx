@@ -1,32 +1,579 @@
 import { SEO } from "@/components/seo";
 import { BaseLayout } from "@/layout/base-layout";
-import { Link } from "wouter";
+import { useLanguage } from "@/i18n";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import {
+  Award,
+  ShieldCheck,
+  Microscope,
+  Leaf,
+  Zap,
+  Heart,
+  Star,
+  ArrowRight,
+  Check,
+  Quote,
+} from "lucide-react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+};
+
+const stagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12 } },
+};
+
+function SectionLabel({ children }: { children: string }) {
+  return (
+    <span className="inline-block text-[10px] uppercase tracking-[0.45em] font-semibold text-primary mb-4">
+      — {children} —
+    </span>
+  );
+}
+
+function RevealSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "show" : "hidden"}
+      variants={stagger}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+const iconMap: Record<string, React.ReactNode> = {
+  award: <Award className="w-5 h-5" />,
+  shield: <ShieldCheck className="w-5 h-5" />,
+  microscope: <Microscope className="w-5 h-5" />,
+  leaf: <Leaf className="w-5 h-5" />,
+  zap: <Zap className="w-5 h-5" />,
+  heart: <Heart className="w-5 h-5" />,
+};
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <BaseLayout>
       <SEO
-        title="Mariángel Hernández | Fundadora de startups de innovación y tecnología en Ecuador"
-        description="CEO de ToSellMore y cofundadora de nexito.ai. Especialista en innovación, inteligencia artificial y crecimiento empresarial en Ecuador y Latinoamérica."
-        canonicalPath="/fundadora-startups-innovacion-ecuador"
+        title="Dra. Lore López | Medicina Estética Avanzada · Facial · Láser · Cirugía"
+        description="Especialista en medicina estética avanzada, rejuvenecimiento facial, cirugía y tratamientos láser. Resultados naturales con protocolos médicos personalizados."
+        canonicalPath="/"
         extraSchemas={[
           {
             "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "Landing principal de Mariángel Hernández",
-            url: "https://tosellmore.com/fundadora-startups-innovacion-ecuador",
-            about: [
-              "innovación empresarial",
-              "inteligencia artificial",
-              "crecimiento empresarial",
-            ],
+            "@type": "MedicalBusiness",
+            name: "Dra. Lore López - Medicina Estética Avanzada",
+            description: "Especialista en medicina estética avanzada, rejuvenecimiento facial y tratamientos láser.",
+            medicalSpecialty: "Aesthetic Medicine",
           },
         ]}
       />
-      <nav aria-label="SEO funnel home links" className="sr-only">
-        <Link href="/keynotes">Keynotes de Mariángel Hernández</Link>
-        <Link href="/media">Media y apariciones públicas</Link>
-      </nav>
+
+      {/* ─── HERO ─── */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,20%,12%)] via-[hsl(25,18%,16%)] to-[hsl(82,15%,18%)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: `radial-gradient(ellipse at 30% 50%, hsl(82,28%,52%) 0%, transparent 60%), radial-gradient(ellipse at 75% 30%, hsl(35,35%,70%) 0%, transparent 55%)`,
+          }}
+        />
+        <div className="absolute top-1/3 right-0 w-[45%] h-[70%] bg-gradient-to-l from-[hsl(82,15%,22%)]/30 to-transparent" />
+
+        <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-16 pt-28 pb-24 grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="mb-6"
+            >
+              <span className="text-[10px] uppercase tracking-[0.55em] font-semibold text-[hsl(82,28%,62%)]">
+                — {t.hero.label} —
+              </span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.35 }}
+              className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6"
+            >
+              {t.hero.headline_1}
+              <br />
+              <em className="not-italic text-[hsl(35,35%,75%)]">{t.hero.headline_2}</em>
+              <br />
+              <span className="text-[hsl(82,28%,62%)]">{t.hero.headline_3}</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="text-white/55 text-lg leading-relaxed max-w-md mb-10 font-light"
+            >
+              {t.hero.subtitle}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.65 }}
+              className="flex flex-col sm:flex-row gap-4 mb-16"
+            >
+              <a href="#contacto">
+                <button
+                  data-testid="button-hero-cta-primary"
+                  className="group px-8 py-4 bg-primary text-white text-[11px] uppercase tracking-[0.35em] font-semibold hover:bg-primary/80 transition-all duration-500 flex items-center gap-3"
+                >
+                  {t.hero.cta_primary}
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </button>
+              </a>
+              <a href="#tratamientos">
+                <button
+                  data-testid="button-hero-cta-secondary"
+                  className="px-8 py-4 border border-white/25 text-white text-[11px] uppercase tracking-[0.35em] font-semibold hover:border-white/60 hover:bg-white/5 transition-all duration-500"
+                >
+                  {t.hero.cta_secondary}
+                </button>
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.85 }}
+              className="flex items-center gap-8"
+            >
+              {[t.hero.credential_1, t.hero.credential_2, t.hero.credential_3].map((c, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <div className="w-1 h-1 rounded-full bg-primary/60" />
+                  <span className="text-[9px] uppercase tracking-[0.3em] text-white/35 font-medium">{c}</span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="hidden lg:flex justify-center items-center"
+          >
+            <div className="relative w-[420px] h-[520px]">
+              <div className="absolute inset-0 bg-gradient-to-br from-[hsl(82,18%,30%)]/20 to-[hsl(35,28%,70%)]/10 border border-white/8" />
+              <div className="absolute inset-6 border border-white/5" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 px-10 text-center">
+                <div className="w-16 h-px bg-primary/40" />
+                <p className="font-serif text-2xl text-white/80 font-bold leading-snug italic">
+                  "La belleza natural comienza con precisión médica"
+                </p>
+                <div className="w-16 h-px bg-primary/40" />
+                <div>
+                  <p className="font-serif text-white font-bold text-lg">Dra. Lore López</p>
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-white/40 mt-1">Medicina Estética Avanzada</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(35,28%,97%)] to-transparent" />
+      </section>
+
+      {/* ─── TRUST & AUTHORITY ─── */}
+      <section id="nosotros" className="py-28 bg-[hsl(35,28%,97%)]">
+        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+          <RevealSection>
+            <div className="text-center mb-16">
+              <motion.div variants={fadeUp}>
+                <SectionLabel>{t.trust.label}</SectionLabel>
+              </motion.div>
+              <motion.h2
+                variants={fadeUp}
+                className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight max-w-2xl mx-auto"
+              >
+                {t.trust.title}
+              </motion.h2>
+              <motion.p
+                variants={fadeUp}
+                className="text-muted-foreground mt-5 max-w-xl mx-auto leading-relaxed text-lg font-light"
+              >
+                {t.trust.subtitle}
+              </motion.p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+              {t.trust.items.map((item: any, i: number) => (
+                <motion.div
+                  key={i}
+                  variants={fadeUp}
+                  data-testid={`card-trust-${i}`}
+                  className="group bg-[hsl(35,28%,97%)] p-10 hover:bg-[hsl(35,22%,95%)] transition-colors duration-500"
+                >
+                  <div className="w-10 h-10 flex items-center justify-center text-primary mb-6 border border-primary/20 bg-primary/5 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    {iconMap[item.icon]}
+                  </div>
+                  <h3 className="font-serif text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* ─── TREATMENTS ─── */}
+      <section id="tratamientos" className="py-28 bg-[hsl(25,20%,10%)] relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+        <div className="absolute -top-40 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[100px]" />
+
+        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+          <RevealSection>
+            <div className="text-center mb-16">
+              <motion.div variants={fadeUp}>
+                <span className="inline-block text-[10px] uppercase tracking-[0.45em] font-semibold text-[hsl(82,28%,55%)] mb-4">
+                  — {t.treatments.label} —
+                </span>
+              </motion.div>
+              <motion.h2
+                variants={fadeUp}
+                className="font-serif text-4xl md:text-5xl font-bold text-white leading-tight"
+              >
+                {t.treatments.title}
+              </motion.h2>
+              <motion.p
+                variants={fadeUp}
+                className="text-white/45 mt-5 max-w-lg mx-auto leading-relaxed text-lg font-light"
+              >
+                {t.treatments.subtitle}
+              </motion.p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {t.treatments.items.map((item: any, i: number) => (
+                <motion.div
+                  key={i}
+                  variants={fadeUp}
+                  data-testid={`card-treatment-${i}`}
+                  className={`group relative p-10 border border-white/8 bg-white/[0.03] hover:bg-white/[0.06] hover:border-primary/30 transition-all duration-500 ${i === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
+                >
+                  <div className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center border border-white/8 bg-white/[0.04]">
+                    <span className="text-[10px] font-mono text-white/25">0{i + 1}</span>
+                  </div>
+                  <div className="mb-8">
+                    <div className="w-8 h-px bg-primary/40 mb-6" />
+                    <h3 className="font-serif text-2xl font-bold text-white mb-1 group-hover:text-[hsl(82,28%,65%)] transition-colors duration-400">
+                      {item.name}
+                    </h3>
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-[hsl(82,28%,55%)] font-medium">
+                      {item.tagline}
+                    </p>
+                  </div>
+                  <p className="text-white/45 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                  <div className="mt-8 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/25 group-hover:text-primary/60 transition-colors duration-400">
+                    <span>Conocer más</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </RevealSection>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[hsl(35,28%,97%)] to-transparent" />
+      </section>
+
+      {/* ─── ABOUT THE DOCTOR ─── */}
+      <section className="py-28 bg-[hsl(35,28%,97%)]">
+        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+          <RevealSection className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div variants={fadeUp}>
+              <div
+                className="relative h-[560px] overflow-hidden"
+                style={{ background: "linear-gradient(135deg, hsl(35,22%,90%) 0%, hsl(82,15%,85%) 60%, hsl(35,25%,88%) 100%)" }}
+              >
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
+                  <div className="w-20 h-20 rounded-full bg-[hsl(35,25%,80%)] border-2 border-[hsl(35,25%,70%)] mb-6 flex items-center justify-center">
+                    <span className="font-serif text-3xl font-bold text-[hsl(25,22%,25%)]">LL</span>
+                  </div>
+                  <p className="font-serif text-xl font-bold text-[hsl(25,22%,18%)]">{t.about.title}</p>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[hsl(25,22%,40%)] mt-1">{t.about.specialty}</p>
+                  <div className="mt-8 p-6 border border-[hsl(35,25%,75%)] bg-white/50 max-w-xs">
+                    <Quote className="w-5 h-5 text-primary/40 mb-3" />
+                    <p className="text-sm text-[hsl(25,22%,30%)] leading-relaxed italic font-light">
+                      {t.about.philosophy}
+                    </p>
+                  </div>
+                </div>
+                <div className="absolute top-6 left-6 w-16 h-16 border border-[hsl(35,25%,70%)]" />
+                <div className="absolute bottom-6 right-6 w-16 h-16 border border-[hsl(82,15%,70%)]" />
+              </div>
+            </motion.div>
+
+            <div>
+              <motion.div variants={fadeUp}>
+                <SectionLabel>{t.about.label}</SectionLabel>
+              </motion.div>
+              <motion.h2
+                variants={fadeUp}
+                className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight mb-2"
+              >
+                {t.about.title}
+              </motion.h2>
+              <motion.p
+                variants={fadeUp}
+                className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-8"
+              >
+                {t.about.specialty}
+              </motion.p>
+
+              <motion.p variants={fadeUp} className="text-foreground/75 leading-relaxed mb-5 text-lg font-light">
+                {t.about.bio_1}
+              </motion.p>
+              <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-10 font-light">
+                {t.about.bio_2}
+              </motion.p>
+
+              <motion.div variants={fadeUp} className="space-y-3 mb-10">
+                {t.about.credentials.map((c: string, i: number) => (
+                  <div key={i} data-testid={`text-credential-${i}`} className="flex items-start gap-3">
+                    <div className="w-5 h-5 flex-shrink-0 mt-0.5 flex items-center justify-center bg-primary/10">
+                      <Check className="w-3 h-3 text-primary" />
+                    </div>
+                    <span className="text-sm text-foreground/70 leading-relaxed">{c}</span>
+                  </div>
+                ))}
+              </motion.div>
+
+              <motion.div variants={fadeUp}>
+                <a href="#contacto">
+                  <button
+                    data-testid="button-about-cta"
+                    className="group px-8 py-4 bg-primary text-white text-[11px] uppercase tracking-[0.35em] font-semibold hover:bg-primary/80 transition-all duration-500 flex items-center gap-3"
+                  >
+                    {t.nav.agendar}
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </button>
+                </a>
+              </motion.div>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* ─── RESULTS PHILOSOPHY ─── */}
+      <section className="py-28 bg-[hsl(82,12%,94%)] relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-border" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-border" />
+
+        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+          <RevealSection>
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div>
+                <motion.div variants={fadeUp}>
+                  <SectionLabel>{t.philosophy.label}</SectionLabel>
+                </motion.div>
+                <motion.h2
+                  variants={fadeUp}
+                  className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight mb-5"
+                >
+                  {t.philosophy.title}
+                </motion.h2>
+                <motion.p
+                  variants={fadeUp}
+                  className="text-muted-foreground leading-relaxed text-lg font-light"
+                >
+                  {t.philosophy.subtitle}
+                </motion.p>
+              </div>
+
+              <div className="space-y-0 border-l border-border">
+                {t.philosophy.steps.map((step: any, i: number) => (
+                  <motion.div
+                    key={i}
+                    variants={fadeUp}
+                    data-testid={`card-step-${i}`}
+                    className="group relative pl-12 pb-10 last:pb-0 hover:pl-14 transition-all duration-500"
+                  >
+                    <div className="absolute left-0 top-1 -translate-x-1/2 w-3 h-3 bg-[hsl(82,12%,94%)] border-2 border-primary/30 group-hover:border-primary group-hover:bg-primary transition-all duration-500" />
+                    <span className="text-[10px] font-mono text-primary/50 tracking-widest mb-2 block">{step.number}</span>
+                    <h3 className="font-serif text-xl font-bold text-foreground mb-2">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* ─── TESTIMONIALS ─── */}
+      <section className="py-28 bg-[hsl(35,28%,97%)]">
+        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+          <RevealSection>
+            <div className="text-center mb-16">
+              <motion.div variants={fadeUp}>
+                <SectionLabel>{t.testimonials.label}</SectionLabel>
+              </motion.div>
+              <motion.h2
+                variants={fadeUp}
+                className="font-serif text-4xl md:text-5xl font-bold text-foreground"
+              >
+                {t.testimonials.title}
+              </motion.h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {t.testimonials.items.map((item: any, i: number) => (
+                <motion.div
+                  key={i}
+                  variants={fadeUp}
+                  data-testid={`card-testimonial-${i}`}
+                  className="group p-10 border border-border bg-white hover:border-primary/25 hover:shadow-[0_4px_40px_rgba(0,0,0,0.06)] transition-all duration-500"
+                >
+                  <div className="flex gap-1 mb-6">
+                    {Array.from({ length: 5 }).map((_, si) => (
+                      <Star key={si} className="w-3 h-3 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <blockquote className="text-foreground/75 leading-relaxed mb-8 font-light italic text-[15px]">
+                    "{item.text}"
+                  </blockquote>
+                  <div className="pt-6 border-t border-border">
+                    <p className="font-semibold text-foreground text-sm">{item.name}</p>
+                    <p className="text-muted-foreground text-xs mt-0.5">{item.age}</p>
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-primary/60 mt-2 font-medium">{item.treatment}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </RevealSection>
+        </div>
+      </section>
+
+      {/* ─── CONSULTATION EXPERIENCE ─── */}
+      <section className="py-28 bg-[hsl(25,20%,10%)] relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+        <div className="absolute -bottom-60 left-1/2 -translate-x-1/2 w-[60%] aspect-square bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+          <RevealSection>
+            <div className="grid lg:grid-cols-2 gap-20 items-start">
+              <div>
+                <motion.div variants={fadeUp}>
+                  <span className="inline-block text-[10px] uppercase tracking-[0.45em] font-semibold text-[hsl(82,28%,55%)] mb-4">
+                    — {t.consultation.label} —
+                  </span>
+                </motion.div>
+                <motion.h2
+                  variants={fadeUp}
+                  className="font-serif text-4xl md:text-5xl font-bold text-white leading-tight mb-5"
+                >
+                  {t.consultation.title}
+                </motion.h2>
+                <motion.p
+                  variants={fadeUp}
+                  className="text-white/45 leading-relaxed text-lg font-light"
+                >
+                  {t.consultation.subtitle}
+                </motion.p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/5">
+                {t.consultation.steps.map((step: any, i: number) => (
+                  <motion.div
+                    key={i}
+                    variants={fadeUp}
+                    data-testid={`card-consultation-${i}`}
+                    className="group bg-[hsl(25,20%,10%)] p-8 hover:bg-white/[0.04] transition-all duration-400"
+                  >
+                    <div className="text-[10px] font-mono text-[hsl(82,28%,45%)] tracking-widest mb-5">0{i + 1}</div>
+                    <h3 className="font-serif text-lg font-bold text-white mb-3 group-hover:text-[hsl(82,28%,65%)] transition-colors">
+                      {step.title}
+                    </h3>
+                    <p className="text-white/38 text-sm leading-relaxed">{step.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </RevealSection>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[hsl(35,28%,97%)] to-transparent" />
+      </section>
+
+      {/* ─── FINAL CTA ─── */}
+      <section id="contacto" className="py-36 bg-[hsl(35,28%,97%)] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(82,15%,92%)] via-[hsl(35,28%,97%)] to-[hsl(35,28%,97%)]" />
+
+        <div className="relative max-w-[1400px] mx-auto px-8 lg:px-16">
+          <RevealSection className="flex flex-col items-center text-center">
+            <motion.div variants={fadeUp}>
+              <SectionLabel>{t.cta.label}</SectionLabel>
+            </motion.div>
+
+            <motion.h2
+              variants={fadeUp}
+              className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight max-w-3xl mb-6"
+            >
+              {t.cta.title}
+            </motion.h2>
+
+            <motion.p
+              variants={fadeUp}
+              className="text-muted-foreground text-lg leading-relaxed max-w-md mb-12 font-light"
+            >
+              {t.cta.subtitle}
+            </motion.p>
+
+            <motion.div variants={fadeUp} className="flex flex-col items-center gap-5">
+              <a href="https://wa.me/" target="_blank" rel="noopener">
+                <button
+                  data-testid="button-cta-final"
+                  className="group px-12 py-5 bg-primary text-white text-[11px] uppercase tracking-[0.4em] font-semibold hover:bg-primary/80 transition-all duration-500 flex items-center gap-4"
+                >
+                  {t.cta.button}
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </button>
+              </a>
+              <p className="text-[10px] uppercase tracking-[0.35em] text-muted-foreground">{t.cta.note}</p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              className="mt-20 pt-16 border-t border-border w-full max-w-2xl flex flex-col md:flex-row justify-center items-center gap-12"
+            >
+              {[
+                { number: "10+", label: "Años de experiencia" },
+                { number: "2000+", label: "Pacientes atendidas" },
+                { number: "100%", label: "Protocolos personalizados" },
+              ].map((stat, i) => (
+                <div key={i} data-testid={`stat-${i}`} className="text-center">
+                  <p className="font-serif text-4xl font-bold text-primary">{stat.number}</p>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground mt-1">{stat.label}</p>
+                </div>
+              ))}
+            </motion.div>
+          </RevealSection>
+        </div>
+      </section>
     </BaseLayout>
   );
 }

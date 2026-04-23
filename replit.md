@@ -1,7 +1,7 @@
-# To Sell More (TSM) - Strategic Growth Consulting Website
+# Dra. Lore López - Luxury Medical Aesthetic Website
 
 ## Overview
-Premium, cinematic website for "To Sell More" - a strategic growth firm founded by Mariángel Hernández. Built with React, Framer Motion, and TailwindCSS with a dark-first premium aesthetic inspired by lusion.co and premium consultancies.
+Ultra-premium luxury medical brand website for "Dra. Lore López", a specialist in advanced aesthetic medicine, facial rejuvenation, surgery, and laser treatments. Built with React, Framer Motion, and TailwindCSS with a light-luxury editorial aesthetic.
 
 ## Architecture
 - **Frontend**: React + Vite + TailwindCSS + Framer Motion
@@ -10,49 +10,49 @@ Premium, cinematic website for "To Sell More" - a strategic growth firm founded 
 - **Bilingual**: Spanish (default) / English with custom i18n context
 
 ## Brand Identity
-- **Imperial Red**: #EF233C (HSL 350 87% 54%) - primary accent
-- **Vivid Burgundy**: #A4133C - secondary accent
-- **Space Cadet**: #2B2D42 - dark theme base
-- **Font heading**: Space Grotesk
-- **Font body**: Inter
-- Always dark mode (html class="dark")
-- Gradient text: red-to-burgundy gradient
+- **Brand**: Dra. Lore López · Médico · Cirugía · Láser
+- **Primary accent**: Muted Olive/Sage Green (HSL 82 28% 38%) - `hsl(82, 28%, 38%)`
+- **Background**: Warm Ivory (HSL 35 28% 97%)
+- **Foreground**: Deep Warm Brown (HSL 25 22% 13%)
+- **Dark sections**: Deep warm charcoal (HSL 25 20% 10%)
+- **Accent tones**: Champagne beige, nude, muted sage green
+- **Font heading**: Playfair Display (serif) — editorial luxury
+- **Font body**: Reddit Sans — clean premium sans-serif
+- Light mode (no dark class on html)
+- Gradient text: olive-to-dark-green gradient
 
-## Pages (5)
-- **Home** (`/`) - Cinematic 3D hero (HeroCanvas) + original hero + 9 content sections (incl. Authority metrics & Case Study)
-- **Modelo** (`/modelo`) - Methodology: 4 phases + founding principles
-- **Servicios** (`/servicios`) - 3 services: Diagnóstico, Sprint 90 Días, Implementación
-- **Mariángel** (`/mariangel`) - Leadership profile with bio, achievements, vision
-- **Agenda** (`/agenda`) - Contact form + schedule call CTA
+## Pages
+- **Home** (`/`) - Full luxury homepage with all 8 sections
+
+## Homepage Sections (in order)
+1. **Hero** - Cinematic full-screen dark hero with editorial serif typography and quote card
+2. **Trust & Authority** - 6-item credential grid (International Training, Certifications, Diagnosis, Preventive, Technology, Follow-up)
+3. **Signature Treatments** - 5 treatment cards (Endolift, Toxina Botulínica, Primex, Ácido Hialurónico, Bioestimulación)
+4. **About the Doctor** - Personal brand authority section with philosophy quote
+5. **Results Philosophy** - 3-step medical process timeline (Evaluation → Protocol → Results)
+6. **Testimonials** - 3 luxury social proof cards with star ratings
+7. **Consultation Experience** - 4-step first consultation grid
+8. **Final CTA** - Conversion section with stats (10+ years, 2000+ patients, 100% personalized)
 
 ## Key Features
 - Language toggle (ES/EN) persisted to localStorage, Spanish default
-- Canvas-based particle network animation (neural network style)
-- 3D depth-perspective hero canvas (HeroCanvas) with mouse interaction and glowing nodes
-- Scroll-triggered animations with Framer Motion
-- Full-screen storytelling sections with generous spacing
-- Glassmorphism navigation with scroll effect
-- Red glow effects and gradient text
+- Scroll-triggered reveal animations with Framer Motion useInView
+- Fixed navbar: transparent on scroll-top, ivory/light when scrolled
+- Premium hover states on all interactive elements
+- Staggered section animations with delay-based sequencing
 - Mobile-responsive with animated hamburger menu
 - Reduced motion support
 
 ## File Structure
-- `client/src/lib/i18n.tsx` - Language context with all EN/ES translations
-- `client/src/components/navigation.tsx` - Fixed nav with glass effect
-- `client/src/components/footer.tsx` - Premium footer with links
-- `client/src/components/particle-network.tsx` - Canvas-based particle animation
-- `client/src/components/hero-canvas.tsx` - 3D depth particle canvas for cinematic hero
-- `client/src/components/authority-section.tsx` - Credibility metrics (large editorial typography)
-- `client/src/components/case-study-section.tsx` - Editorial case study section
-- `client/src/components/scroll-reveal.tsx` - Scroll animation wrappers
-- `client/src/components/animated-counter.tsx` - Animated number counters
-- `client/src/pages/home.tsx` - Homepage with all sections
-- `client/src/pages/modelo.tsx` - Methodology page
-- `client/src/pages/services.tsx` - Services page
-- `client/src/pages/leadership.tsx` - Mariángel profile page
-- `client/src/pages/agenda.tsx` - Contact/schedule page
+- `client/src/i18n/translations/es.json` - Spanish translations (complete)
+- `client/src/i18n/translations/en.json` - English translations (complete)
+- `client/src/layout/navbar.tsx` - Fixed luxury navbar, adapts on scroll
+- `client/src/layout/footer.tsx` - Dark footer with brand identity
+- `client/src/layout/base-layout.tsx` - Base layout wrapper
+- `client/src/pages/Home/index.tsx` - Full luxury homepage with all 8 sections
+- `client/src/index.css` - Design system: luxury palette, typography, utilities
 
 ## Development
 - `npm run dev` starts both Express server and Vite dev server on port 5000
 - No external APIs or secrets required
-- Contact form is frontend-only (no backend submission)
+- Contact/booking links point to WhatsApp/social (configurable)

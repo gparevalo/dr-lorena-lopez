@@ -1,0 +1,276 @@
+Create an ultra-premium modern luxury medical aesthetic website homepage for "Dra. Lore López", a high-end specialist in advanced aesthetic medicine, facial rejuvenation, surgery and laser treatments.
+IMPORTANT:
+Before generating anything, first read and fully understand the file:
+docs/project-architecture.md
+This project is already built on an existing React base inside Replit, and all architectural decisions, component structure, design system rules, folder organization, implementation patterns, dependencies, coding standards, and project conventions are defined there.
+You must strictly follow that architecture.
+Do not create anything that conflicts with the existing project structure.
+Do not ignore the established design system.
+Do not generate isolated code outside the project conventions.
+The implementation must feel native to the existing codebase, not artificially added.
+CRITICAL TECHNICAL RESTRICTION:
+Do NOT upgrade, downgrade, replace, or modify any existing versions of dependencies, packages, libraries, frameworks, configs, build tools, or runtime environments.
+Do NOT change package.json versions.
+Do NOT modify Node version requirements.
+This project must run exactly on:
+Node.js 20
+You must preserve full compatibility with the current environment and existing architecture.
+Do not introduce new dependencies unless they are absolutely necessary and fully compatible with the current stack.
+Do not refactor the project structure.
+Do not alter the existing architecture.
+Do not migrate frameworks.
+Do not replace styling systems.
+Do not change routing structure.
+Do not change deployment behavior.
+Only build within the existing architecture exactly as it is.
+This is NOT a traditional clinic website.
+The design must feel like a luxury medical brand experience that combines:
+medical authority + premium aesthetics + sophisticated elegance + natural beauty + high trust + exclusivity
+The visual inspiration should be similar to Aura Urban Retreat, but adapted for a professional doctor specialized in aesthetic medicine.
+Avoid generic beauty clinic layouts.
+Avoid spa-like visuals.
+Avoid cheap medical website aesthetics.
+Avoid stock-looking sections.
+The site must feel editorial, premium, modern, exclusive and visually unforgettable.
+BRAND POSITIONING:
+Dra. Lore López
+Médico • Cirugía • Láser
+Medicina Estética Avanzada
+CORE DIFFERENTIATORS:
+
+
+Natural-looking results
+
+
+Personalized medical protocols
+
+
+Advanced facial specialization
+
+
+Preventive aesthetic medicine
+
+
+Strong medical authority
+
+
+International postgraduate training
+
+
+Advanced technology
+
+
+Continuous patient follow-up
+
+
+Premium patient experience
+
+
+TARGET AUDIENCE:
+Women and men, ages 30–55
+Professionals with purchasing power
+Patients seeking premium quality over low prices
+Clients who value trust, safety and natural results
+VISUAL STYLE:
+Luxury medical editorial design
+Color palette:
+
+
+soft nude
+
+
+ivory
+
+
+champagne beige
+
+
+olive green
+
+
+muted sage green
+
+
+warm neutral tones
+
+
+elegant shadows
+
+
+soft luxury gradients
+
+
+Typography:
+Elegant editorial serif + clean premium sans-serif
+Design direction:
+Minimalist but emotionally powerful
+Large sections
+Whitespace
+Soft parallax
+Smooth reveal animations
+High-end visual storytelling
+Premium layout composition
+HOMEPAGE SECTIONS:
+
+
+HERO SECTION
+
+
+Full-screen cinematic hero
+Use professional portrait of Dra. Lore López as the main visual focus
+Luxury editorial composition
+Powerful headline such as:
+"Natural beauty begins with medical precision"
+or
+"Advanced aesthetic medicine designed for timeless results"
+CTA buttons:
+
+
+Schedule your medical consultation
+
+
+Discover personalized treatments
+
+
+Must feel premium, powerful and memorable
+
+
+TRUST & AUTHORITY SECTION
+
+
+Medical credibility section
+Highlight:
+
+
+international specialization
+
+
+medical certifications
+
+
+personalized diagnosis
+
+
+preventive approach
+
+
+advanced technology
+
+
+premium patient protocols
+
+
+Make it elegant, not corporate
+
+
+SIGNATURE TREATMENTS SECTION
+
+
+Highlight premium treatments:
+
+
+Endolift
+
+
+Toxina Botulínica
+
+
+Primex
+
+
+Ácido Hialurónico
+
+
+Bioestimulación
+
+
+Cards must feel luxurious and premium
+Focus on transformation, not procedure descriptions
+
+
+ABOUT THE DOCTOR SECTION
+
+
+Personal brand authority section
+Elegant storytelling
+Focus on:
+experience + trust + natural results + patient care philosophy
+Use premium photography
+This section must create emotional trust
+
+
+RESULTS PHILOSOPHY SECTION
+
+
+Explain:
+medical evaluation first
+customized protocol second
+natural and elegant results always
+No aggressive before/after aesthetic
+More luxury medical positioning
+
+
+TESTIMONIAL SECTION
+
+
+Luxury social proof
+Clean premium cards
+Emotional credibility
+
+
+CONSULTATION EXPERIENCE SECTION
+
+
+Explain the first consultation experience:
+medical evaluation
+facial analysis
+lifestyle review
+personalized protocol
+This should justify premium positioning
+
+
+FINAL CTA SECTION
+
+
+Strong premium conversion section
+Schedule consultation
+Luxury emotional close
+TECHNICAL REQUIREMENTS:
+Built in React
+Production-ready UI
+Modern animations
+Responsive design
+Premium spacing
+Refined hover states
+Luxury transitions
+No template feeling
+No generic sections
+No standard clinic website appearance
+CRITICAL EXECUTION ORDER:
+Do not start coding immediately.
+First:
+
+
+Read docs/project-architecture.md
+
+
+Understand the existing architecture
+
+
+Respect the current component patterns
+
+
+Follow the existing design system
+
+
+Preserve Node.js 20 compatibility
+
+
+Do not change versions or architecture
+
+
+Then implement the premium homepage aligned with that structure
+
+
+This must feel like a world-class luxury medical personal brand website fully integrated into the current project architecture.
+The final result should create an immediate WOW effect.

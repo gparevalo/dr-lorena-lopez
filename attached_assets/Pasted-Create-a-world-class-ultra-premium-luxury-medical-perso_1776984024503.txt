@@ -1,0 +1,390 @@
+Create a world-class ultra-premium luxury medical personal brand website for:
+
+Dra. Lore López
+Médico • Cirugía • Láser
+Advanced Aesthetic Medicine Specialist
+
+IMPORTANT — FIRST STEP:
+
+Before generating anything, you MUST first read and fully understand:
+
+docs/project-architecture.md
+
+This project already exists inside Replit with an established React architecture.
+
+You must preserve:
+
+the same typography system
+the same footer
+the same technical architecture
+the same component philosophy
+the same design system
+the same routing structure
+the same production environment
+
+Do NOT modify:
+
+Node.js version (must remain Node 20)
+package versions
+package.json
+dependencies unless absolutely necessary
+build configuration
+framework versions
+deployment behavior
+architecture structure
+
+This must feel native to the existing codebase.
+
+Do not create isolated code.
+
+Do not refactor the architecture.
+
+Do not generate code that breaks compatibility.
+
+Only elevate the design inside the current system.
+
+THIS IS NOT A TRADITIONAL CLINIC WEBSITE
+
+Avoid:
+
+wordpress feeling
+generic clinic layouts
+square sections
+repetitive cards
+boring service grids
+template aesthetics
+spa website look
+feminine cliché beauty branding
+cold hospital design
+basic landing page structure
+
+This must feel like:
+
+Luxury Editorial Experience + Premium Medical Authority + Cinematic Scroll Storytelling
+
+Think:
+
+high-fashion editorial website
+luxury hospitality brand
+architectural storytelling
+premium medical authority
+exclusive international clinic
+
+Not a normal clinic website.
+
+CORE BRAND POSITIONING
+
+Natural beauty through medical precision.
+
+Luxury without excess.
+
+Clinical trust with editorial sophistication.
+
+Medical authority with emotional elegance.
+
+Silent luxury.
+
+High-ticket perception.
+
+International premium patients.
+
+TARGET PATIENT
+
+Women and men
+Age: 30–55
+Professionals with purchasing power
+Patients from Ecuador + USA + Miami + Panama + Dubai + international patients
+
+People who value:
+
+quality over price
+trust over promotions
+medical expertise over trends
+natural results over exaggerated aesthetics
+
+VISUAL DIRECTION
+
+Luxury Editorial Medical Design — 2026
+
+Color palette:
+
+olive green
+muted sage green
+nude sophisticated tones
+ivory
+champagne beige
+warm stone neutrals
+elegant shadows
+subtle gradients
+soft luxury contrast
+
+Typography:
+
+Preserve existing typography system from the project
+
+Do NOT change the current font system
+
+Enhance hierarchy through composition and layout only
+
+Design language:
+
+cinematic hero sections
+immersive scroll storytelling
+asymmetrical compositions
+layered photography
+floating text blocks
+editorial spacing
+visual rhythm
+soft motion
+premium parallax
+luxury hover interactions
+oversized whitespace
+refined visual drama
+world-class premium UX
+
+No boxy layouts.
+
+No repetitive cards.
+
+No old-school sections.
+
+REQUIRED PAGES
+
+HOME PAGE — Cinematic WOW Experience
+
+Hero must be unforgettable.
+
+Not a standard hero.
+
+Use video if available.
+
+Use professional doctor photography.
+
+Luxury emotional impact.
+
+Hero must feel 2026 premium.
+
+The first 5 seconds should create:
+
+“I trust her immediately.”
+
+Possible emotional positioning:
+
+“Natural beauty begins with medical precision”
+
+or stronger premium alternatives.
+
+Must feel cinematic.
+
+Not static.
+
+Not template.
+
+Include immersive storytelling while scrolling.
+
+PREMIUM CONSULTATION PAGE
+
+This is not a contact page.
+
+This is:
+
+Premium Personalized Medical Consultation
+
+Sell the experience of diagnosis.
+
+Position consultation as:
+
+high-value expert medical evaluation
+
+not a simple appointment.
+
+Include:
+
+facial analysis
+lifestyle evaluation
+medical history
+treatment suitability
+personalized protocol creation
+
+This page must justify premium pricing.
+
+PROCEDURES / HIGH-PRECISION TREATMENTS PAGE
+
+Luxury service architecture.
+
+Each treatment should feel exclusive.
+
+Featured treatments:
+
+ENDOLIFT
+PRIMEX
+Toxina Botulínica
+Ácido Hialurónico Estructural
+Bioestimulación Facial y Corporal
+
+Avoid cards.
+
+Use editorial layout.
+
+Use immersive detail sections.
+
+Use visual storytelling.
+
+Each procedure must feel like a premium transformation journey.
+
+Not like a menu of services.
+
+INDIVIDUAL SERVICE DETAIL PAGES
+
+Each treatment gets its own premium landing page.
+
+Each page must feel high-end and consultative.
+
+Not informational only.
+
+Each should include:
+
+emotional positioning
+medical authority
+ideal candidate
+benefits
+premium process
+consultation CTA
+luxury trust-building
+visual transformation storytelling
+
+Especially strong focus on:
+
+ENDOLIFT
+Toxina Botulínica
+
+These are strategic priorities.
+
+GALLERY SECTION + FULL GALLERY PAGE
+
+Gallery type:
+
+Mix of:
+
+luxury clinic experience
+professional doctor portraits
+elegant patient results
+premium atmosphere
+medical procedures
+brand storytelling
+
+Avoid aggressive before/after style.
+
+Must feel elegant and editorial.
+
+Gallery should feel like luxury magazine curation.
+
+Not image dump.
+
+ABOUT THE DOCTOR PAGE
+
+Personal authority page.
+
+Sell:
+
+trust
+expertise
+international education
+natural results philosophy
+medical credibility
+human connection
+
+No boring biography.
+
+Luxury storytelling only.
+
+INTERNATIONAL PATIENT PAGE
+
+High-ticket international positioning.
+
+For patients from:
+
+USA
+Miami
+Panama
+Dubai
+
+Virtual consultation process
+
+Medical tourism positioning
+
+Premium remote evaluation flow
+
+Luxury concierge perception
+
+TESTIMONIALS + TRUST SECTION
+
+Elegant social proof
+
+Premium clean storytelling
+
+High emotional credibility
+
+No cheap testimonial sliders
+
+SCROLL STORYTELLING REQUIREMENT
+
+Must include immersive editorial scrolling:
+
+as user scrolls:
+
+images shift
+text appears softly
+sections reveal like storytelling
+visual transitions feel cinematic
+motion feels premium and intentional
+
+Think luxury magazine experience.
+
+Not normal scrolling.
+
+TECHNICAL REQUIREMENTS
+
+Built in React
+
+Production-ready
+
+Fully compatible with:
+
+Node.js 20
+
+Preserve current architecture
+
+Preserve same footer
+
+Preserve same typography
+
+Modern responsive UI
+
+Luxury transitions
+
+Premium interactions
+
+High-end visual hierarchy
+
+No redesign of technical foundation
+
+Only elevate design quality
+
+FINAL OBJECTIVE
+
+This should not feel like a clinic website.
+
+It should feel like one of the best luxury medical personal brand websites in Latin America.
+
+It must create:
+
+immediate trust
+high-ticket perception
+premium authority
+international credibility
+luxury emotional impact
+
+The final result must generate:
+
+WOW effect within 5 seconds.

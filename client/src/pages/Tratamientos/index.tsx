@@ -1,186 +1,167 @@
 import { SEO } from "@/components/seo";
 import { BaseLayout } from "@/layout/base-layout";
 import { useLanguage } from "@/i18n";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight } from "lucide-react";
-import { Link } from "wouter";
+import { ArrowRight, Minus } from "lucide-react";
+import { UnifiedSection } from "@/components/layout/UnifiedSection";
+import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
+import { cn } from "@/lib/utils";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } },
 };
 
-const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
-
-function RevealSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+function LuxuryLabel({ children, dark = false }: { children: string; dark?: boolean }) {
   return (
-    <motion.div ref={ref} initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger} className={className}>
-      {children}
-    </motion.div>
+    <div className="flex items-center gap-4 mb-6">
+      <Minus className={cn("w-6 h-px", dark ? "text-primary/70" : "text-primary/50")} />
+      <span className={cn("text-[9px] uppercase tracking-[0.6em] font-semibold", dark ? "text-primary/90" : "text-primary")}>
+        {children}
+      </span>
+    </div>
   );
 }
-
-const gradients = [
-  "from-[hsl(82,18%,25%)] to-[hsl(82,12%,18%)]",
-  "from-[hsl(35,28%,22%)] to-[hsl(25,22%,14%)]",
-  "from-[hsl(60,12%,22%)] to-[hsl(82,15%,18%)]",
-  "from-[hsl(35,22%,20%)] to-[hsl(25,18%,13%)]",
-  "from-[hsl(82,22%,20%)] to-[hsl(35,18%,16%)]",
-];
 
 export default function Tratamientos() {
   const { t } = useLanguage();
   const tp = t.tratamientosPage;
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const heroBgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const heroTextY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
     <BaseLayout>
       <SEO title={tp.seo_title} description={tp.seo_desc} canonicalPath="/tratamientos" />
 
-      {/* ─── HERO ─── */}
-      <section ref={heroRef} className="relative min-h-[75vh] flex items-center overflow-hidden">
-        <motion.div className="absolute inset-0" style={{ y: heroBgY }}>
-          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25,22%,10%)] via-[hsl(35,18%,13%)] to-[hsl(82,12%,15%)]" />
-          <div
-            className="absolute inset-0 opacity-[0.06]"
-            style={{
-              backgroundImage: `radial-gradient(ellipse at 70% 50%, hsl(35,40%,65%) 0%, transparent 50%), radial-gradient(ellipse at 25% 70%, hsl(82,28%,55%) 0%, transparent 45%)`,
-            }}
-          />
-        </motion.div>
-
-        <motion.div
-          style={{ y: heroTextY, opacity: heroOpacity }}
-          className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-16 pt-36 pb-24"
+      {/* ─── HERO: MINIMALIST LUXURY ─── */}
+      <section ref={heroRef} className="relative min-h-[70vh] flex items-center overflow-hidden bg-black">
+        <motion.div 
+          className="absolute inset-0 z-0"
+          style={{ opacity: 0.4 }}
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="mb-8"
-          >
-            <span className="text-[10px] uppercase tracking-[0.55em] font-semibold text-[hsl(82,28%,62%)]">
-              — {tp.hero_label} —
-            </span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.35 }}
-            className="font-serif text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-[1.0] tracking-tight mb-8 max-w-3xl"
-          >
-            {tp.hero_headline_1}
-            <br />
-            <em className="not-italic text-[hsl(35,35%,72%)]">{tp.hero_headline_2}</em>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-white/50 text-lg leading-relaxed max-w-xl font-light"
-          >
-            {tp.hero_subtitle}
-          </motion.p>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
         </motion.div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(35,28%,97%)] to-transparent" />
+        <div className="relative z-10 max-w-[1500px] mx-auto px-8 lg:px-16 pt-32 w-full">
+          <motion.div 
+            style={{ opacity: heroOpacity, y: heroY }}
+            initial="hidden"
+            animate="show"
+            variants={{
+              hidden: {},
+              show: { transition: { staggerChildren: 0.15 } }
+            }}
+          >
+            <motion.div variants={fadeUp}>
+              <LuxuryLabel dark>{tp.hero_label}</LuxuryLabel>
+            </motion.div>
+            <motion.h1 
+              variants={fadeUp}
+              className="font-heading text-6xl md:text-8xl lg:text-[10rem] text-white leading-[0.8] tracking-tight mb-12"
+            >
+              {tp.hero_headline_1}
+              <br />
+              <span className="font-serif italic text-primary/80 lowercase">{tp.hero_headline_2}</span>
+            </motion.h1>
+            <motion.p 
+              variants={fadeUp}
+              className="font-serif text-white/40 text-xl md:text-2xl font-light max-w-xl leading-relaxed"
+            >
+              {tp.hero_subtitle}
+            </motion.p>
+          </motion.div>
+        </div>
       </section>
 
       {/* ─── TREATMENT ROWS ─── */}
-      <section className="bg-[hsl(35,28%,97%)]">
+      <section className="bg-background">
         {tp.treatments.map((treatment, i) => (
-          <RevealSection key={treatment.slug}>
-            <motion.div
-              variants={fadeUp}
-              className={`grid lg:grid-cols-2 min-h-[520px] ${i % 2 === 0 ? "" : "lg:grid-flow-dense"}`}
-            >
-              {/* Image / Visual panel */}
-              <div
-                className={`relative overflow-hidden min-h-[320px] lg:min-h-0 bg-gradient-to-br ${gradients[i]} ${i % 2 !== 0 ? "lg:col-start-2" : ""}`}
-              >
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
-                  <div className="w-20 h-px bg-white/15 mb-8" />
-                  <span className="font-serif text-6xl md:text-7xl font-bold text-white/10 leading-none select-none">
-                    0{i + 1}
-                  </span>
-                  <div className="mt-8 px-8 py-5 border border-white/10 bg-white/[0.04]">
-                    <p className="font-serif text-white/80 text-lg font-medium italic">{treatment.tagline}</p>
-                  </div>
-                  <div className="w-20 h-px bg-white/15 mt-8" />
-                </div>
-                <div className="absolute top-6 left-6 w-10 h-10 border border-white/10" />
-                <div className="absolute bottom-6 right-6 w-10 h-10 border border-white/10" />
+          <UnifiedSection 
+            key={treatment.slug} 
+            dark={i % 2 !== 0} 
+            withGrid={false}
+            className="py-12 lg:py-20"
+          >
+            <div className={cn(
+              "editorial-grid items-center gap-16 lg:gap-32",
+              i % 2 !== 0 ? "text-white" : "text-foreground"
+            )}>
+              {/* Index Column */}
+              <div className="col-span-12 lg:col-span-1 border-t border-primary/20 pt-8">
+                <span className="font-accent text-[10px] tracking-[0.5em] text-primary font-bold">
+                  0{i + 1}
+                </span>
               </div>
 
-              {/* Content panel */}
-              <div className={`flex flex-col justify-center p-12 lg:p-16 border-b border-border ${i % 2 !== 0 ? "lg:col-start-1 lg:row-start-1" : ""}`}>
-                <div className="w-8 h-px bg-primary/40 mb-6" />
-                <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4">
+              {/* Title & Tagline */}
+              <div className="col-span-12 lg:col-span-4">
+                <h2 className="font-heading text-4xl md:text-6xl tracking-tight leading-none mb-6">
                   {treatment.name}
                 </h2>
-                <p className="text-[10px] uppercase tracking-[0.35em] text-primary/70 font-semibold mb-6">
-                  {treatment.tagline}
-                </p>
-                <p className="text-foreground/65 leading-relaxed text-lg font-light mb-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-8 h-px bg-primary/40" />
+                  <span className="font-accent text-[9px] uppercase tracking-[0.4em] text-primary/70 font-semibold">
+                    {treatment.tagline}
+                  </span>
+                </div>
+              </div>
+
+              {/* Description & CTA */}
+              <div className="col-span-12 lg:col-span-6 lg:col-start-7 space-y-8">
+                <p className={cn(
+                  "text-lg md:text-xl font-light leading-relaxed font-serif italic",
+                  i % 2 !== 0 ? "text-white/70" : "text-foreground/70"
+                )}>
                   {treatment.summary}
                 </p>
-                <p className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground mb-8">
-                  {treatment.highlight}
-                </p>
-                <Link href={`/tratamientos/${treatment.slug}`}>
-                  <button
-                    data-testid={`button-treatment-${treatment.slug}`}
-                    className="group inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background text-[10px] uppercase tracking-[0.35em] font-semibold hover:bg-primary hover:text-white transition-all duration-500"
-                  >
-                    {tp.cta}
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </button>
-                </Link>
+                <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-16 pt-4">
+                  <div className="flex flex-col">
+                    <span className="font-accent text-[8px] uppercase tracking-[0.4em] text-primary/40 mb-2">Destacado</span>
+                    <span className="text-[11px] uppercase tracking-[0.25em] font-medium">{treatment.highlight}</span>
+                  </div>
+                  <a href={`/tratamientos/${treatment.slug}`}>
+                    <button className={cn(
+                      "group flex items-center gap-4 px-10 py-5 text-[10px] uppercase tracking-[0.4em] font-bold transition-all duration-700",
+                      i % 2 !== 0 
+                        ? "bg-white text-black hover:bg-primary hover:text-white" 
+                        : "bg-black text-white hover:bg-primary"
+                    )}>
+                      {tp.cta}
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-2" />
+                    </button>
+                  </a>
+                </div>
               </div>
-            </motion.div>
-          </RevealSection>
+            </div>
+          </UnifiedSection>
         ))}
       </section>
 
       {/* ─── FINAL CTA ─── */}
-      <section className="py-24 bg-[hsl(25,20%,10%)] relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16 text-center">
-          <RevealSection>
-            <motion.div variants={fadeUp}>
-              <span className="text-[10px] uppercase tracking-[0.45em] font-semibold text-[hsl(82,28%,55%)] mb-6 block">
-                — {tp.cta_consulta} —
-              </span>
-            </motion.div>
-            <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">
-              {t.cta.title}
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-white/45 text-lg font-light mb-10 max-w-lg mx-auto">
-              {t.cta.subtitle}
-            </motion.p>
-            <motion.div variants={fadeUp}>
-              <Link href="/consulta">
-                <button
-                  data-testid="button-tratamientos-cta"
-                  className="group inline-flex items-center gap-3 px-12 py-5 bg-primary text-white text-[11px] uppercase tracking-[0.4em] font-semibold hover:bg-primary/80 transition-all duration-500"
-                >
-                  {t.cta.button}
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </button>
-              </Link>
-            </motion.div>
-          </RevealSection>
-        </div>
-      </section>
+      <UnifiedSectionBlack className="py-48 text-center" withGlow>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+        >
+          <LuxuryLabel dark>{tp.cta_consulta}</LuxuryLabel>
+          <h2 className="font-heading text-6xl md:text-9xl text-white leading-none mb-12">
+            {t.cta.title}
+          </h2>
+          <p className="text-white/40 text-xl font-light tracking-wide max-w-lg mx-auto mb-16">
+            {t.cta.subtitle}
+          </p>
+          <a href="/consulta">
+            <button className="group relative px-20 py-8 bg-primary text-white text-[11px] uppercase tracking-[0.6em] font-bold shadow-2xl hover:scale-105 transition-all duration-700">
+              <span className="relative z-10">{t.cta.button}</span>
+            </button>
+          </a>
+        </motion.div>
+      </UnifiedSectionBlack>
     </BaseLayout>
   );
 }

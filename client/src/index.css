@@ -54,10 +54,11 @@
   --warm-stone: 25 16% 58%;
   --warm-stone-dark: 25 18% 40%;
 
-  --font-sans: 'Reddit Sans', sans-serif;
-  --font-heading: 'Playfair Display', serif;
-  --font-serif: 'Playfair Display', serif;
-  --font-quote: 'Shadows Into Light', cursive;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Tenor Sans', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-quote: 'Cormorant Garamond', serif;
+  --font-accent: 'Bodoni Moda', serif;
   --font-mono: 'JetBrains Mono', monospace;
   --radius: 0rem;
   /* Editorial style: sharp edges */
@@ -305,6 +306,34 @@
   }
   .bg-warm-stone {
     background-color: hsl(var(--warm-stone));
+  }
+
+  /* ── Editorial Layout Utilities ── */
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+  }
+
+  .luxury-text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--champagne-dark)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .asymmetric-reveal {
+    clip-path: inset(0 100% 0 0);
+    animation: reveal-right 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes reveal-right {
+    to { clip-path: inset(0 0 0 0); }
+  }
+
+  .mask-image-cinematic {
+    mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
   }
 }
 

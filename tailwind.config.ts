@@ -92,6 +92,7 @@ export default {
         heading: ["var(--font-heading)"],
         serif: ["var(--font-serif)"],
         quote: ["var(--font-quote)"],
+        accent: ["var(--font-accent)"],
         mono: ["var(--font-mono)"],
       },
       keyframes: {

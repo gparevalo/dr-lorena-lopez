@@ -1,44 +1,15 @@
 import { PageHero } from "@/components/layout/PageHero";
+
 import { SEO } from "@/components/seo";
+import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n";
 import { BaseLayout } from "@/layout/base-layout";
-import { motion, useInView } from "framer-motion";
-import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react";
-import { useRef } from "react";
-import { Link, useParams } from "wouter";
+import { fadeUp, staggerContainer } from "@/lib/animations";
 import headerImg from "@assets/images/fondo.png";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-  },
-};
-const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
-
-function RevealSection({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "show" : "hidden"}
-      variants={stagger}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
+import { motion } from "framer-motion";
+import { ArrowLeft, ArrowRight, CheckCircle, Sparkles } from "lucide-react";
+import { Link, useParams } from "wouter";
+import LuxuryLabel from "../Home/components/LuxuryLabel";
 
 const heroGradients: Record<string, string> = {
   endolift: "from-[hsl(82,18%,14%)] via-[hsl(82,14%,18%)] to-[hsl(35,18%,12%)]",
@@ -85,7 +56,6 @@ export default function TratamientoDetail() {
   const params = useParams<{ slug: string }>();
   const slug = params.slug as string;
   const { t } = useLanguage();
-
   const td = t.treatmentDetail;
 
   const treatmentDict: Record<TreatmentSlug, TreatmentInfo> = {
@@ -103,16 +73,14 @@ export default function TratamientoDetail() {
   if (!detail) {
     return (
       <BaseLayout>
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="min-h-screen flex items-center justify-center bg-ivory">
           <div className="text-center">
-            <p className="font-serif text-2xl text-foreground mb-6">
+            <p className="font-serif text-2xl text-foreground mb-8 italic">
               {td.not_found}
             </p>
-            <Link href="/tratamientos">
-              <button className="px-6 py-3 bg-primary text-white text-sm uppercase tracking-widest">
-                {td.view_all}
-              </button>
-            </Link>
+            <Button asChild variant="editorial">
+              <Link href="/tratamientos">{td.view_all}</Link>
+            </Button>
           </div>
         </div>
       </BaseLayout>
@@ -129,7 +97,7 @@ export default function TratamientoDetail() {
         canonicalPath={`/tratamientos/${slug}`}
       />
 
-      {/* ─── HERO ─── */}
+      {/* ─── HERO CINEMATIC ─── */}
       <PageHero
         title={detail.name}
         subtitle={detail.hero_label}
@@ -140,209 +108,263 @@ export default function TratamientoDetail() {
       >
         <Link
           href="/tratamientos"
-          className="inline-flex items-center gap-3 text-primary hover:text-white transition-all text-[10px] uppercase tracking-[0.45em] font-bold mt-4"
+          className="inline-flex items-center gap-3 text-primary hover:text-primary transition-all text-[10px] uppercase tracking-[0.45em] font-bold mt-8 group"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" />
           {td.back}
         </Link>
       </PageHero>
 
-      {/* ─── POSITIONING ─── */}
-      <section className="py-24 bg-[hsl(35,28%,97%)]">
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
-          <RevealSection>
+      {/* ─── POSITIONING MANIFESTO ─── */}
+      <section className="section-spacing bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-black/[0.03]" />
+        <div className="section-container">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <motion.div variants={fadeUp} className="flex justify-center mb-10">
+              <Sparkles className="w-6 h-6 text-primary/30" />
+            </motion.div>
+
+            <motion.p
+              variants={fadeUp}
+              className="font-serif text-foreground/80 leading-relaxed font-light italic"
+              style={{ fontSize: "var(--text-3xl)" }}
+            >
+              "{detail.positioning}"
+            </motion.p>
+
             <motion.div
               variants={fadeUp}
-              className="max-w-3xl mx-auto text-center"
+              className="mt-12 w-20 h-px bg-primary/20 mx-auto"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── IDEAL CANDIDATE GRID ─── */}
+      <section className="section-spacing bg-ivory/50">
+        <div className="section-container">
+          <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="lg:col-span-5"
             >
-              <div className="w-12 h-px bg-primary/40 mx-auto mb-8" />
-              <p className="font-serif text-2xl md:text-3xl text-foreground/80 leading-relaxed font-light">
-                {detail.positioning}
-              </p>
-              <div className="w-12 h-px bg-primary/40 mx-auto mt-8" />
-            </motion.div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* ─── IDEAL CANDIDATE ─── */}
-      <section className="py-24 bg-[hsl(82,12%,94%)] relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-border" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-border" />
-
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
-          <RevealSection>
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
-              <div>
-                <motion.div variants={fadeUp}>
-                  <span className="text-[10px] uppercase tracking-[0.45em] font-semibold text-primary mb-4 block">
-                    — {td.candidate_label} —
-                  </span>
-                </motion.div>
-                <motion.h2
-                  variants={fadeUp}
-                  className="font-serif text-4xl font-bold text-foreground leading-tight mb-5"
-                >
-                  {detail.candidate_title}
-                </motion.h2>
-                <motion.p
-                  variants={fadeUp}
-                  className="text-foreground/65 leading-relaxed text-lg font-light"
-                >
-                  {detail.candidate_body}
-                </motion.p>
-              </div>
-
-              <motion.div variants={fadeUp} className="space-y-4">
-                {detail.candidate_points.map((point: string, i: number) => (
-                  <div
-                    key={i}
-                    data-testid={`candidate-point-${i}`}
-                    className="flex items-start gap-4 p-5 bg-white border border-border group hover:border-primary/25 transition-colors duration-400"
-                  >
-                    <div className="w-5 h-5 flex-shrink-0 mt-0.5 flex items-center justify-center bg-primary/10">
-                      <CheckCircle className="w-3 h-3 text-primary" />
-                    </div>
-                    <span className="text-foreground/70 leading-relaxed text-sm">
-                      {point}
-                    </span>
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-          </RevealSection>
-        </div>
-      </section>
-
-      {/* ─── PROCESS ─── */}
-      <section className="py-24 bg-[hsl(25,20%,10%)] relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <div className="absolute -top-40 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[100px]" />
-
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
-          <RevealSection>
-            <div className="text-center mb-16">
               <motion.div variants={fadeUp}>
-                <span className="text-[10px] uppercase tracking-[0.45em] font-semibold text-[hsl(82,28%,55%)] mb-4 block">
-                  — {td.process_label} —
-                </span>
+                <LuxuryLabel>{td.candidate_label}</LuxuryLabel>
               </motion.div>
+
               <motion.h2
                 variants={fadeUp}
-                className="font-serif text-4xl md:text-5xl font-bold text-white"
+                className="font-heading text-black leading-tight mt-6 mb-8 tracking-tight"
+                style={{ fontSize: "var(--text-5xl)" }}
               >
-                {detail.name}
+                {detail.candidate_title}
               </motion.h2>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
-              {detail.process_steps.map((step, i) => (
+              <motion.p
+                variants={fadeUp}
+                className="text-foreground/60 text-lg font-light leading-relaxed font-serif italic"
+              >
+                {detail.candidate_body}
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-px bg-black/5 border border-black/5"
+            >
+              {detail.candidate_points.map((point: string, i: number) => (
                 <motion.div
                   key={i}
                   variants={fadeUp}
-                  data-testid={`process-step-${i}`}
-                  className="group bg-[hsl(25,20%,10%)] p-8 hover:bg-white/[0.04] transition-all duration-400"
+                  className="bg-white p-8 group hover:bg-ivory transition-colors duration-500 flex flex-col"
                 >
-                  <div className="text-[10px] font-mono text-[hsl(82,28%,45%)] tracking-widest mb-5">
-                    {step.num}
+                  <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/20 transition-all">
+                    <CheckCircle className="w-4 h-4 text-primary" />
                   </div>
-                  <div className="w-6 h-px bg-primary/30 mb-5" />
-                  <h3 className="font-serif text-lg font-bold text-white mb-3 group-hover:text-[hsl(82,28%,65%)] transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-white/40 text-sm leading-relaxed">
-                    {step.body}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </RevealSection>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[hsl(35,28%,97%)] to-transparent" />
-      </section>
-
-      {/* ─── BENEFITS ─── */}
-      <section className="py-24 bg-[hsl(35,28%,97%)]">
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
-          <RevealSection>
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <motion.div variants={fadeUp}>
-                  <span className="text-[10px] uppercase tracking-[0.45em] font-semibold text-primary mb-4 block">
-                    — {td.benefits_label} —
+                  <span className="text-foreground/70 leading-relaxed text-[15px] font-light italic font-serif">
+                    {point}
                   </span>
                 </motion.div>
-                <motion.h2
-                  variants={fadeUp}
-                  className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight"
-                >
-                  {detail.name}
-                </motion.h2>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {detail.benefits.map((benefit: string, i: number) => (
-                  <motion.div
-                    key={i}
-                    variants={fadeUp}
-                    data-testid={`benefit-${i}`}
-                    className="group flex items-start gap-4 p-5 border border-border hover:border-primary/30 hover:bg-primary/[0.02] transition-all duration-400"
-                  >
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 group-hover:scale-125 transition-transform" />
-                    <span className="text-foreground/70 text-sm leading-relaxed">
-                      {benefit}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </RevealSection>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* ─── CTA ─── */}
-      <section className="py-24 bg-[hsl(82,12%,94%)] relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-border" />
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16 text-center">
-          <RevealSection>
+      {/* ─── MEDICAL PROCESS ─── */}
+      <section className="section-spacing bg-black relative overflow-hidden">
+        {/* Glow decoration */}
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[140px]" />
+
+        <div className="section-container relative z-10">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="text-center mb-24"
+          >
             <motion.div variants={fadeUp}>
-              <span className="text-[10px] uppercase tracking-[0.45em] font-semibold text-primary mb-6 block">
-                — {td.cta_label} —
-              </span>
+              <LuxuryLabel dark>{td.process_label}</LuxuryLabel>
             </motion.div>
             <motion.h2
               variants={fadeUp}
-              className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-5"
+              className="font-heading text-white leading-none tracking-tighter mt-6"
+              style={{ fontSize: "var(--text-7xl)" }}
             >
               {detail.name}
             </motion.h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5">
+            {detail.process_steps.map((step, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="group p-10 bg-black/40 hover:bg-white/[0.02] transition-all duration-700 relative overflow-hidden"
+              >
+                <span className="absolute -right-4 -top-8 font-heading text-[120px] text-white/[0.02] group-hover:text-primary/[0.05] transition-colors duration-700 select-none">
+                  0{i + 1}
+                </span>
+
+                <span className="text-[10px] uppercase tracking-[0.4em] text-primary font-bold mb-8 block">
+                  Step {step.num}
+                </span>
+
+                <h3 className="font-heading text-2xl text-white mb-6 group-hover:text-primary/80 transition-colors">
+                  {step.title}
+                </h3>
+
+                <p className="text-white/40 text-sm leading-relaxed font-light">
+                  {step.body}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── BENEFITS ─── */}
+      <section className="section-spacing bg-white">
+        <div className="section-container">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="lg:col-span-5"
+            >
+              <motion.div variants={fadeUp}>
+                <LuxuryLabel>{td.benefits_label}</LuxuryLabel>
+              </motion.div>
+              <motion.h2
+                variants={fadeUp}
+                className="font-heading text-black leading-tight tracking-tight mt-6"
+                style={{ fontSize: "var(--text-6xl)" }}
+              >
+                {detail.name}
+              </motion.h2>
+            </motion.div>
+
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6"
+            >
+              {detail.benefits.map((benefit: string, i: number) => (
+                <motion.div
+                  key={i}
+                  variants={fadeUp}
+                  className="flex items-start gap-4 p-6 border border-black/5 bg-ivory/20 group hover:border-primary/20 transition-all duration-500"
+                >
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary/40 mt-2 flex-shrink-0 group-hover:scale-125 group-hover:bg-primary transition-all" />
+                  <span className="text-foreground/70 text-[15px] leading-relaxed font-light italic font-serif">
+                    {benefit}
+                  </span>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FINAL ACTION ─── */}
+      <section className="section-spacing bg-ivory relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-black/[0.05]" />
+
+        <div className="section-container relative z-10">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto flex flex-col items-center text-center"
+          >
+            {/* LABEL */}
+            <motion.div variants={fadeUp}>
+              <LuxuryLabel>{td.cta_label}</LuxuryLabel>
+            </motion.div>
+
+            {/* TITLE */}
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-black mb-6 tracking-tight mt-6 text-4xl md:text-6xl"
+            >
+              El siguiente paso es decisión tuya
+            </motion.h2>
+
+            {/* DESCRIPTION */}
             <motion.p
               variants={fadeUp}
-              className="text-muted-foreground text-lg font-light mb-10 max-w-lg mx-auto"
+              className="text-lg md:text-xl text-foreground/60 font-light max-w-2xl mx-auto italic font-serif mb-14"
             >
-              {td.cta_note}
+              Agenda tu valoración y descubre cómo este tratamiento puede
+              adaptarse a ti. Resultados naturales, planificación personalizada
+              y acompañamiento en cada paso.
             </motion.p>
+
+            {/* ACTIONS */}
             <motion.div
               variants={fadeUp}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <Link href="/consulta">
-                <button
-                  data-testid="button-detail-cta"
-                  className="group inline-flex items-center gap-3 px-12 py-5 bg-primary text-white text-[11px] uppercase tracking-[0.4em] font-semibold hover:bg-primary/80 transition-all duration-500"
-                >
+              <Button asChild variant="editorial" withShimmer>
+                <Link href="/contacto">
                   {td.cta_button}
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </button>
-              </Link>
-              <Link href="/tratamientos">
-                <button className="group inline-flex items-center gap-3 px-10 py-5 border border-border text-[11px] uppercase tracking-[0.35em] font-semibold hover:border-primary/40 transition-all duration-500 text-muted-foreground hover:text-foreground">
-                  <ArrowLeft className="w-4 h-4" />
+                  <ArrowRight className="ml-3 w-4 h-4" />
+                </Link>
+              </Button>
+
+              <Button
+                asChild
+                variant="ghost"
+                className="px-8 text-[11px] uppercase tracking-[0.4em] text-primary"
+              >
+                <Link href="/tratamientos">
+                  <ArrowLeft className="mr-3 w-4 h-4" />
                   {td.back}
-                </button>
-              </Link>
+                </Link>
+              </Button>
             </motion.div>
-          </RevealSection>
+          </motion.div>
         </div>
       </section>
     </BaseLayout>

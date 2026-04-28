@@ -15,11 +15,11 @@ export default function HeroHome() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="absolute top-[12%] md:top-[14%] lg:top-[14%] left-0 w-full flex justify-center z-20 px-6"
       >
-        <div className="text-center max-w-3xl ">
+        <div className="text-center max-w-2xl ">
           <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4 font-bold">
             {t.hero.label}
           </p>
-          <h1 className="font-heading text-6xl sm:text-7xl md:text-6xl lg:text-8xl text-black flex flex-col gap-0 leading-none tracking-[-0.03em]">
+          <h1 className="font-heading text-6xl sm:text-7xl md:text-6xl lg:text-8xl  text-black flex flex-col gap-0 leading-none tracking-[-0.03em]">
             <span>{t.hero.headline_1}</span>
 
             <span className="font-serif italic text-primary font-bold -mt-4">
@@ -80,7 +80,7 @@ export default function HeroHome() {
             sm:w-[620px] sm:h-[320px]
             md:w-[680px] md:h-[300px]
             lg:w-[650px] lg:h-[290px]
-            bg-primary/[0.8] rounded-t-full
+            bg-primary rounded-t-full
             shadow-[0_-20px_60px_rgba(0,0,0,0.08)]
           "
           />

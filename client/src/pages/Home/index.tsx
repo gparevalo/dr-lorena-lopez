@@ -53,11 +53,9 @@ export default function Home() {
       {/* ─── PHASE 3: HERO CINEMATIC ─── */}
       <HeroHome />
 
-      <FraseVideo />
+      <EstadisticaSection />
 
       <SobreDoctora />
-
-      <EstadisticaSection />
 
       <NuestroProceso />
 
@@ -65,6 +63,7 @@ export default function Home() {
 
       <ArmonizacionFacial />
 
+      <FraseVideo />
       {/* ─── TESTIMONIOS (MINIMALIST) ─── */}
       <UnifiedSection id="testimonios" dark={false} withGrid={false}>
         <div className="max-w-[1400px] mx-auto">

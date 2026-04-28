@@ -1,14 +1,18 @@
 import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
+import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n";
+import { fadeUp, staggerContainer } from "@/lib/animations";
 import { motion } from "framer-motion";
 import LuxuryLabel from "./LuxuryLabel";
-import { Button } from "@/components/ui/button";
-import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export default function TratamientosPrincipales() {
   const { t } = useLanguage();
   return (
-    <UnifiedSectionBlack id="tratamientos" className="bg-[#fdfdfd]">
+    <UnifiedSectionBlack
+      id="tratamientos"
+      className="bg-[#fdfdfd]"
+      withGrid={false}
+    >
       <div className="text-center max-w-4xl mx-auto mb-24">
         <motion.div
           variants={staggerContainer}
@@ -22,7 +26,7 @@ export default function TratamientosPrincipales() {
           <motion.h2
             variants={fadeUp}
             className="font-heading mb-10 text-black leading-none tracking-tighter"
-            style={{ fontSize: "var(--text-8xl)" }}
+            style={{ fontSize: "var(--text-7xl)" }}
           >
             {t.treatments.title}
           </motion.h2>
@@ -40,7 +44,11 @@ export default function TratamientosPrincipales() {
             <Button asChild variant="editorial" withShimmer>
               <a href="#contacto">{t.hero.cta_primary}</a>
             </Button>
-            <Button asChild variant="ghost" className="px-8 text-[11px] uppercase tracking-[0.4em] text-primary">
+            <Button
+              asChild
+              variant="ghost"
+              className="px-8 text-[11px] uppercase tracking-[0.4em] text-primary"
+            >
               <a href="/tratamientos">{t.hero.cta_secondary}</a>
             </Button>
           </motion.div>
@@ -65,18 +73,22 @@ export default function TratamientosPrincipales() {
             <span className="text-[10px] uppercase tracking-[0.4em] text-primary/60 font-bold mb-8 group-hover:translate-x-2 transition-transform duration-500">
               Protocol {String(i + 1).padStart(2, "0")}
             </span>
-            
+
             <h3 className="font-heading text-2xl text-black/90 mb-6 group-hover:text-primary transition-colors duration-500">
               {step.name}
             </h3>
-            
+
             <p className="text-black/50 text-sm leading-relaxed font-light mb-8 max-w-[240px]">
               {step.description}
             </p>
 
             <div className="mt-auto pt-6 border-t border-black/5 w-full">
-               <a href="/tratamientos" className="text-[9px] uppercase tracking-[0.3em] font-bold text-primary/40 group-hover:text-primary transition-colors flex items-center gap-2">
-                Explorar <span className="w-4 h-px bg-current group-hover:w-8 transition-all" />
+              <a
+                href="/tratamientos"
+                className="text-[9px] uppercase tracking-[0.3em] font-bold text-primary/40 group-hover:text-primary transition-colors flex items-center gap-2"
+              >
+                Explorar{" "}
+                <span className="w-4 h-px bg-current group-hover:w-8 transition-all" />
               </a>
             </div>
           </motion.div>

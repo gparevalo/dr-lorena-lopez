@@ -3,105 +3,97 @@ import { useLanguage } from "@/i18n";
 import foto from "@assets/images/3.jpg";
 import { motion } from "framer-motion";
 import LuxuryLabel from "./LuxuryLabel";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] },
-  },
-};
-
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-  },
-};
+import { fadeUp, staggerContainer, revealRight } from "@/lib/animations";
 
 export default function ProcesoClinicoPremium() {
   const { t } = useLanguage();
   return (
-    <UnifiedSection id="proceso" dark={false} withGlow={false}>
-      {/* HEADER */}
-      <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={container}
-        className="w-full flex justify-end"
-      >
-        <div className="max-w-3xl text-right">
-          <motion.div variants={fadeUp} className="flex justify-end">
-            <LuxuryLabel dark>{t.proceso.label}</LuxuryLabel>
+    <UnifiedSection id="proceso" dark={false} withGlow={true}>
+      <div className="editorial-grid items-center gap-12 lg:gap-24">
+        {/* LEFT: IMAGE REVEAL */}
+        <div className="col-span-12 lg:col-span-12 mb-12">
+           <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="w-full flex flex-col items-center text-center"
+          >
+            <motion.div variants={fadeUp}>
+              <LuxuryLabel>{t.proceso.label}</LuxuryLabel>
+            </motion.div>
+
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-black leading-none tracking-tighter mb-8"
+              style={{ fontSize: "var(--text-7xl)" }}
+            >
+              {t.proceso.title}{" "}
+              <span className="text-primary italic font-serif">
+                {t.proceso.title2}
+              </span>
+            </motion.h2>
+
+            <motion.p
+              variants={fadeUp}
+              className="mt-4 mb-0 text-xl md:text-2xl font-serif italic text-foreground/60 max-w-2xl"
+            >
+              {t.proceso.subtitle}
+            </motion.p>
           </motion.div>
+        </div>
 
-          <motion.h2
-            variants={item}
-            className="font-heading text-6xl sm:text-7xl md:text-6xl lg:text-8xl text-black leading-none tracking-[-0.03em]"
+        <div className="col-span-12 lg:col-span-5">
+          <motion.div
+            variants={revealRight}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="relative aspect-video lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
           >
-            {t.proceso.title}{" "}
-            <span className="text-primary inline-block">
-              {t.proceso.title2}
-            </span>
-          </motion.h2>
+            <img src={foto} className="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-1000 scale-105 hover:scale-100" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+          </motion.div>
         </div>
-      </motion.div>
-      <div className="grid grid-cols-12   items-center gap-20  ">
-        {/* IMAGEN 1/3 */}
 
-        <div className="col-span-12 lg:col-span-5  ">
-          <img src={foto} className="w-full h-full object-cover rounded-2xl" />
-        </div>
-        {/* CONTENIDO 2/3 */}
+        {/* RIGHT: STEPS GRID */}
         <div className="col-span-12 lg:col-span-7">
-          {" "}
-          <motion.p
-            variants={item}
-            className="mt-6 mb-10 text-lg text-foreground/70 max-w-2xl  "
-          >
-            {t.proceso.subtitle}
-          </motion.p>
           <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
-            variants={container}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            variants={staggerContainer}
+            className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16"
           >
             {t.proceso.items.map((step) => (
               <motion.div
                 key={step.number}
-                variants={item}
-                className="relative border-l border-border pl-8"
+                variants={fadeUp}
+                className="relative group lg:pl-0"
               >
-                {/* number */}
-                <div className="absolute -left-4 top-0 w-8 h-8 rounded-full border border-border bg-background flex items-center justify-center text-xs font-medium">
-                  {step.number}
+                {/* Visual Connector Line (Mobile) */}
+                <div className="absolute -left-6 top-0 bottom-0 w-px bg-primary/10 md:hidden" />
+                
+                {/* step indicator */}
+                <div className="flex items-center gap-4 mb-6">
+                   <div className="w-10 h-10 rounded-full border border-primary/20 bg-ivory flex items-center justify-center text-[10px] font-bold tracking-widest text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    {step.number}
+                  </div>
+                  <div className="h-px w-8 bg-primary/20 group-hover:w-12 transition-all duration-500" />
                 </div>
 
                 {/* content */}
-                <h3 className="text-xl md:text-2xl font-medium">
+                <h3 className="text-xl md:text-2xl font-serif font-medium mb-4 group-hover:text-primary transition-colors">
                   {step.title}
                 </h3>
 
-                <p className="mt-2 text-foreground/70 leading-relaxed">
+                <p className="text-foreground/60 leading-relaxed font-light mb-4">
                   {step.description}
                 </p>
 
-                <p className="mt-3 italic text-primary/70">“{step.insight}”</p>
+                <div className="pt-4 border-t border-black/5">
+                  <p className="italic text-primary/80 font-serif text-sm">“{step.insight}”</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>

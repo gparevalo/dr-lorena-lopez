@@ -2,123 +2,83 @@ import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
 import { useLanguage } from "@/i18n";
 import { motion } from "framer-motion";
 import LuxuryLabel from "./LuxuryLabel";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] },
-  },
-};
-
-const stagger = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.15 } },
-};
+import { Button } from "@/components/ui/button";
+import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export default function TratamientosPrincipales() {
   const { t } = useLanguage();
   return (
-    <UnifiedSectionBlack id="proceso" className=" bg-black/[0.05]">
-      <div className="text-center max-w-3xl mx-auto mb-24">
+    <UnifiedSectionBlack id="tratamientos" className="bg-[#fdfdfd]">
+      <div className="text-center max-w-4xl mx-auto mb-24">
         <motion.div
+          variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          variants={stagger}
         >
           <motion.div variants={fadeUp} className="flex justify-center">
             <LuxuryLabel dark>{t.treatments.label}</LuxuryLabel>
           </motion.div>
           <motion.h2
             variants={fadeUp}
-            className="font-heading mb-10 text-6xl sm:text-7xl md:text-6xl lg:text-8xl text-black leading-none tracking-[-0.03em]"
+            className="font-heading mb-10 text-black leading-none tracking-tighter"
+            style={{ fontSize: "var(--text-8xl)" }}
           >
             {t.treatments.title}
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-black/40 text-xl font-light tracking-wide"
+            className="text-black/40 text-xl font-serif italic max-w-2xl mx-auto mb-12"
           >
             {t.treatments.subtitle}
           </motion.p>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-10  w-full 
-    justify-center items-center
-    gap-4  "
-        ></motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="
-    left-0 w-full
-    flex flex-col sm:flex-row 
-    justify-center items-center
-    gap-4
-    z-30
-  "
-        >
-          <a href="#contacto">
-            <button
-              className="
-            px-6 py-3 
-            bg-primary text-white 
-            text-[11px] uppercase tracking-[0.3em] font-semibold
-            hover:bg-white hover:text-primary 
-            backdrop-blur-md
-            shadow-md hover:shadow-xl 
-            transition duration-300
-          "
-            >
-              {t.hero.cta_primary}
-            </button>
-          </a>
-
-          <a href="/tratamientos">
-            <button
-              className="
-            px-6 py-3 
-            border border-primary/60 
-            text-primary 
-            text-[11px] uppercase tracking-[0.3em] font-semibold
-            backdrop-blur-md
-            hover:bg-primary hover:text-white 
-            transition duration-300
-          "
-            >
-              {t.hero.cta_secondary}
-            </button>
-          </a>
+          <motion.div
+            variants={fadeUp}
+            className="flex flex-col sm:flex-row justify-center items-center gap-6"
+          >
+            <Button asChild variant="editorial" withShimmer>
+              <a href="#contacto">{t.hero.cta_primary}</a>
+            </Button>
+            <Button asChild variant="ghost" className="px-8 text-[11px] uppercase tracking-[0.4em] text-primary">
+              <a href="/tratamientos">{t.hero.cta_secondary}</a>
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-black/5 border border-black/5">
         {t.treatments.items.map((step, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
-            transition={{ delay: i * 0.2, duration: 0.8 }}
-            className="group relative flex flex-col items-center text-center p-8 border border-primary/5 hover:border-primary/80 transition-all duration-700 bg-black/[0.03]"
+            className="group relative flex flex-col items-start text-left p-10 bg-white hover:bg-ivory transition-all duration-700 overflow-hidden"
           >
-            <span className="font-accent text-5xl text-primary/70 group-hover:text-primary/90 transition-colors duration-700 mb-8 block">
-              {String(i + 1).padStart(2, "0")}
+            {/* Background Decoration */}
+            <span className="absolute -right-4 -top-8 font-heading text-[120px] text-black/[0.02] group-hover:text-primary/[0.05] transition-colors duration-700 select-none pointer-events-none">
+              0{i + 1}
             </span>
-            <h3 className="font-heading font-bold text-xl text-black/90 uppercase tracking-widest mb-4">
+
+            <span className="text-[10px] uppercase tracking-[0.4em] text-primary/60 font-bold mb-8 group-hover:translate-x-2 transition-transform duration-500">
+              Protocol {String(i + 1).padStart(2, "0")}
+            </span>
+            
+            <h3 className="font-heading text-2xl text-black/90 mb-6 group-hover:text-primary transition-colors duration-500">
               {step.name}
             </h3>
-            <p className="text-black/60 text-sm leading-relaxed font-light">
+            
+            <p className="text-black/50 text-sm leading-relaxed font-light mb-8 max-w-[240px]">
               {step.description}
             </p>
+
+            <div className="mt-auto pt-6 border-t border-black/5 w-full">
+               <a href="/tratamientos" className="text-[9px] uppercase tracking-[0.3em] font-bold text-primary/40 group-hover:text-primary transition-colors flex items-center gap-2">
+                Explorar <span className="w-4 h-px bg-current group-hover:w-8 transition-all" />
+              </a>
+            </div>
           </motion.div>
         ))}
       </div>

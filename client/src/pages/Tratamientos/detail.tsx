@@ -1,9 +1,10 @@
+import { PageHero } from "@/components/layout/PageHero";
 import { SEO } from "@/components/seo";
-import { BaseLayout } from "@/layout/base-layout";
 import { useLanguage } from "@/i18n";
+import { BaseLayout } from "@/layout/base-layout";
 import { motion, useInView } from "framer-motion";
+import { ArrowRight, ArrowLeft, CheckCircle, ArrowBigLeft } from "lucide-react";
 import { useRef } from "react";
-import { ArrowRight, ArrowLeft, CheckCircle } from "lucide-react";
 import { Link, useParams } from "wouter";
 
 const fadeUp = {
@@ -100,60 +101,21 @@ export default function TratamientoDetail() {
       />
 
       {/* ─── HERO ─── */}
-      <section className={`relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-to-br ${gradientClass}`}>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-        <div
-          className="absolute inset-0 opacity-[0.05]"
-          style={{
-            backgroundImage: `radial-gradient(ellipse at 30% 60%, hsl(35,40%,65%) 0%, transparent 55%), radial-gradient(ellipse at 75% 30%, hsl(82,28%,55%) 0%, transparent 50%)`,
-          }}
-        />
-
-        <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-16 pt-36 pb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="mb-6"
-          >
-            <Link href="/tratamientos" className="inline-flex items-center gap-2 text-white/40 hover:text-white/70 transition-colors text-[10px] uppercase tracking-[0.35em] font-semibold">
-              <ArrowLeft className="w-3 h-3" />
-              {td.back}
-            </Link>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className="mb-6"
-          >
-            <span className="text-[10px] uppercase tracking-[0.55em] font-semibold text-[hsl(82,28%,60%)]">
-              — {detail.hero_label} —
-            </span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.35 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.0] tracking-tight mb-6 max-w-3xl"
-          >
-            {detail.name}
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-serif text-2xl text-[hsl(35,35%,72%)] font-medium italic max-w-xl"
-          >
-            {detail.tagline}
-          </motion.p>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[hsl(35,28%,97%)] to-transparent" />
-      </section>
+      <PageHero
+        title={detail.name}
+        subtitle={detail.hero_label}
+        description={detail.tagline}
+        className={`bg-gradient-to-br ${gradientClass}`}
+        dark={true}
+      >
+        <Link 
+          href="/tratamientos" 
+          className="inline-flex items-center gap-3 text-white/50 hover:text-white transition-all text-[10px] uppercase tracking-[0.45em] font-bold mt-4"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          {td.back}
+        </Link>
+      </PageHero>
 
       {/* ─── POSITIONING ─── */}
       <section className="py-24 bg-[hsl(35,28%,97%)]">

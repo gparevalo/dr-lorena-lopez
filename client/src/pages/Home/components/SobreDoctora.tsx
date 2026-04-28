@@ -1,34 +1,21 @@
 import { UnifiedSection } from "@/components/layout/UnifiedSection";
 import { useLanguage } from "@/i18n";
+import { fadeUp, revealRight, staggerContainer } from "@/lib/animations";
 import imgDr from "@assets/images/hero-lore3-blanco.png";
 import { motion } from "framer-motion";
 import LuxuryLabel from "./LuxuryLabel";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] },
-  },
-};
-
-const stagger = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.15 } },
-};
-
 export default function SobreDoctora() {
   const { t } = useLanguage();
   return (
-    <UnifiedSection id="doctora" dark={false} withGlow={false}>
-      <div className="editorial-grid items-center gap-20">
-        <div className="col-span-12 lg:col-span-5 order-2 lg:order-1">
+    <UnifiedSection id="doctora" dark={false} withGlow={true}>
+      <div className="editorial-grid items-center gap-12 lg:gap-24">
+        <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
           <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
-            variants={stagger}
+            variants={staggerContainer}
           >
             <motion.div variants={fadeUp}>
               <LuxuryLabel>{t.about.label}</LuxuryLabel>
@@ -36,34 +23,35 @@ export default function SobreDoctora() {
 
             <motion.h2
               variants={fadeUp}
-              className="font-heading text-5xl md:text-7xl text-foreground leading-[0.9] tracking-tight mb-8"
+              className="font-heading text-foreground leading-[0.9] tracking-tight mb-8"
+              style={{ fontSize: "var(--text-6xl)" }}
             >
               {t.about.title}
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
-              className="font-serif italic font-bold text-2xl text-primary mb-10"
+              className="font-serif italic font-medium text-xl md:text-2xl text-primary mb-10"
             >
               {t.about.specialty}
             </motion.p>
 
             <motion.div
               variants={fadeUp}
-              className="space-y-6 text-muted-foreground text-lg leading-relaxed   mb-12"
+              className="space-y-6 text-foreground/70 text-lg leading-relaxed mb-12"
             >
               <p>{t.about.bio_1}</p>
-              <p className="opacity-70">{t.about.bio_2}</p>
+              <p className="opacity-70 font-light">{t.about.bio_2}</p>
             </motion.div>
 
             <motion.div
               variants={fadeUp}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 border-t border-border pt-10"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 border-t border-black/5 pt-10"
             >
               {t.about.credentials.map((c: string, i: number) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary/40 mt-2 flex-shrink-0" />
-                  <span className="text-xs uppercase tracking-[0.2em] font-medium opacity-80">
+                <div key={i} className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2 flex-shrink-0" />
+                  <span className="text-[10px] uppercase tracking-[0.25em] font-bold opacity-80">
                     {c}
                   </span>
                 </div>
@@ -74,20 +62,24 @@ export default function SobreDoctora() {
 
         <div className="col-span-12 lg:col-span-6 lg:col-start-7 order-1 lg:order-2">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, x: 50 }}
-            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            variants={revealRight}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
-            transition={{ duration: 1.5 }}
-            className="relative aspect-[4/5] overflow-hidden"
+            className="relative aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] bg-ivory overflow-hidden group"
           >
-            {/**"/doctor-portrait.png" [] */}
             <img
               src={imgDr}
               alt="Dra. Lore López"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
             />
-            <div className="absolute inset-0 border-[20px] border-background/20" />
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 border border-primary/20 hidden lg:block" />
+            {/* Cinematic overlays */}
+            <div className="absolute inset-0 border-[1px] border-black/5" />
+            <div className="absolute inset-8 border-[1px] border-white/20" />
+
+            {/* Floating decorative elements */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-primary/20 hidden lg:block" />
+            <div className="absolute top-1/2 -left-4 w-12 h-px bg-primary/40 hidden lg:block" />
           </motion.div>
         </div>
       </div>

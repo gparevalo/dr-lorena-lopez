@@ -7,8 +7,9 @@ import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Minus, Quote } from "lucide-react";
 import { useRef } from "react";
+import { PageHero } from "@/components/layout/PageHero";
+import headerImg from "@assets/images/12.png";
 import CtaSection from "../Home/components/CtaSection";
-import HeaderPageDoctora from "./componentes/HeaderPageDoctora";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -68,7 +69,13 @@ export default function Doctora() {
         canonicalPath="/doctora"
       />
 
-      <HeaderPageDoctora />
+      <PageHero
+        title={d.hero_name}
+        subtitle={d.opening_label}
+        description={t.about.specialty}
+        image={headerImg}
+        dark={true}
+      />
 
       {/* ─── STORY: EDITORIAL LAYOUT ─── */}
       <UnifiedSection dark={false} withGlow={false}>

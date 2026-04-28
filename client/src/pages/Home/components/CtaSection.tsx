@@ -39,14 +39,24 @@ export default function CtaSection() {
             <LuxuryLabel>{t.cta.label}</LuxuryLabel>
           </motion.div>
 
-          <h2 className="font-heading text-6xl md:text-8xl text-white leading-[0.8] mb-12">
+          <motion.h2
+            variants={fadeUp}
+            className="font-heading text-white leading-[0.8] mb-12 tracking-tight"
+            style={{ fontSize: "clamp(3.5rem, 10vw, 9rem)" }}
+          >
             {t.cta.title}
-            <span className="text-primary italic font-serif"> {t.cta.title2}</span>
-          </h2>
+            <span className="text-secondary italic font-serif block mt-4">
+              {" "}
+              {t.cta.title2}
+            </span>
+          </motion.h2>
 
-          <p className="text-white/50 text-xl font-light tracking-wide max-w-md mb-16">
+          <motion.p
+            variants={fadeUp}
+            className="text-white/60 text-xl md:text-2xl font-serif italic max-w-2xl mb-20 leading-relaxed font-light"
+          >
             {t.cta.subtitle}
-          </p>
+          </motion.p>
 
           {/* RIGHT - ACTION BLOCK */}
           <motion.div
@@ -74,9 +84,14 @@ export default function CtaSection() {
             </a>
           </motion.div>
         </motion.div>
-        <p className="mt-10 text-white/[0.3] text-lg font-bold tracking-wide max-w-md italic font-serif">
-          {t.cta.note}
-        </p>
+        <motion.div
+          variants={fadeUp}
+          className="mt-20 pt-10 border-t border-white/5 w-full flex flex-col md:flex-row items-center justify-center gap-6"
+        >
+          <p className="text-white/[0.2] text-[10px] uppercase tracking-[0.4em] font-bold">
+            {t.cta.note}
+          </p>
+        </motion.div>
       </div>
 
       {/* Background Glow */}

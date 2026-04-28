@@ -1,6 +1,7 @@
 import { useLanguage } from "@/i18n";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { fadeUp, staggerContainer } from "@/lib/animations";
 
 function CountUp({ value }: { value: string }) {
   const [display, setDisplay] = useState("0");
@@ -14,7 +15,7 @@ function CountUp({ value }: { value: string }) {
     const suffix = value.replace(/[0-9]/g, "");
 
     let start = 0;
-    const duration = 1200;
+    const duration = 1500;
     const stepTime = 16;
     const steps = duration / stepTime;
     const increment = numeric / steps;
@@ -36,25 +37,12 @@ function CountUp({ value }: { value: string }) {
   return (
     <span
       ref={ref}
-      className="font-heading font-bold text-5xl text-white mb-3 relative z-10"
+      className="font-heading font-bold text-5xl md:text-6xl text-white mb-4 relative z-10"
     >
       {display}
     </span>
   );
 }
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.15,
-      duration: 0.8,
-      ease: [0.16, 1, 0.3, 1],
-    },
-  }),
-};
 
 export default function EstadisticaSection() {
   const { t } = useLanguage();
@@ -78,32 +66,40 @@ export default function EstadisticaSection() {
   ];
 
   return (
-    <div className="bg-primary border-t border-white/10 py-24">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center max-w-6xl mx-auto px-6">
-        {stats.map((stat, i) => (
-          <motion.div
-            key={i}
-            custom={i}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="flex flex-col items-center relative"
-          >
-            {/* accent */}
-            <span className="absolute -top-6 text-white/5 text-5xl font-heading tracking-widest select-none">
-              {stat.accent}
-            </span>
+    <div className="bg-primary relative overflow-hidden">
+      {/* Cinematic subtle grid on background */}
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
+        style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "40px 40px" }} />
+      
+      <div className="section-container section-spacing relative z-10">
+        <motion.div 
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 lg:gap-16 text-center"
+        >
+          {stats.map((stat, i) => (
+            <motion.div
+              key={i}
+              variants={fadeUp}
+              className="flex flex-col items-center relative"
+            >
+              {/* accent background label */}
+              <span className="absolute top-0 text-white/5 text-2xl md:text-5xl font-heading tracking-widest select-none uppercase -translate-y-1/2">
+                {stat.accent}
+              </span>
 
-            {/* animated number */}
-            <CountUp value={stat.number} />
+              {/* animated number */}
+              <CountUp value={stat.number} />
 
-            {/* label */}
-            <span className="text-xs uppercase tracking-[0.35em] text-white/80 font-medium max-w-[180px]">
-              {stat.label}
-            </span>
-          </motion.div>
-        ))}
+              {/* label */}
+              <span className="text-[10px] uppercase tracking-[0.4em] text-white/70 font-semibold max-w-[200px] leading-relaxed">
+                {stat.label}
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ export function UnifiedSectionBlack({
     <section
       id={id}
       className={cn(
-        "relative py-32 md:py-40 overflow-hidden",
+        "relative overflow-hidden section-spacing",
         dark ? "bg-[#030303] text-white" : "bg-white text-black",
         className,
       )}
@@ -42,7 +42,7 @@ export function UnifiedSectionBlack({
       )}
 
       {/* Content Container */}
-      <div className="mx-auto max-w-[1440px] px-8 lg:px-16 relative z-20">
+      <div className="section-container relative z-20">
         {children}
       </div>
 

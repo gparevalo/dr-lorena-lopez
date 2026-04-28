@@ -6,8 +6,9 @@ import { cn } from "@/lib/utils";
 import { useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Minus } from "lucide-react";
 import { useRef } from "react";
+import { PageHero } from "@/components/layout/PageHero";
+import headerImg from "@assets/images/10-t.png";
 import CtaSection from "../Home/components/CtaSection";
-import HeaderPage from "./componentes/HeaderPage";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -62,7 +63,13 @@ export default function Tratamientos() {
       />
 
       {/* ─── HERO: MINIMALIST LUXURY ─── */}
-      <HeaderPage />
+      <PageHero
+        title={`${tp.hero_headline_1} ${tp.hero_headline_2}`}
+        subtitle={tp.hero_label}
+        description={tp.hero_subtitle}
+        image={headerImg}
+        dark={true}
+      />
 
       {/* ─── TREATMENT ROWS ─── */}
       <section className="bg-background">

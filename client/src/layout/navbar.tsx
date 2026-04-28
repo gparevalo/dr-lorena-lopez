@@ -1,7 +1,9 @@
 import { useLanguage } from "@/i18n";
 import { cn } from "@/lib/utils";
+import logo_header from "@assets/images/logo_header.png";
+import logo_header_white from "@assets/images/logo_header_white.png";
 import { AnimatePresence, motion } from "framer-motion";
-import { Globe, Menu, X, ArrowRight } from "lucide-react";
+import { ArrowRight, Globe, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 
@@ -21,59 +23,53 @@ export function Navbar() {
     { href: "/", label: t.nav.home },
     { href: "/tratamientos", label: t.nav.tratamientos },
     { href: "/doctora", label: t.nav.doctora },
-    { href: "/galeria", label: t.nav.galeria }, 
+    { href: "/galeria", label: t.nav.galeria },
   ];
 
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-1000 ease-[0.16, 1, 0.3, 1]",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-700",
         scrolled
-          ? "bg-background/85 backdrop-blur-2xl border-b border-border/30 py-4"
-          : "bg-transparent py-8",
+          ? "bg-background/90 backdrop-blur-xl border-b border-border/30 py-4"
+          : "bg-gradient-to-b from-black/70 via-black/30 to-transparent py-6",
       )}
     >
-      <div className="max-w-[1500px] mx-auto px-8 lg:px-16 flex items-center justify-between">
-        {/* LOGO: Cinematic Editorial Approach */}
+      <div className="max-w-[1500px] mx-auto px-6 lg:px-16 flex items-center justify-between">
+        {/* LOGO */}
         <Link href="/">
-          <a className="group flex flex-col leading-none">
-            <span
-              className={cn(
-                "font-heading text-2xl lg:text-3xl tracking-[-0.02em] transition-colors duration-700",
-                scrolled || location !== "/" ? "text-foreground" : "text-white",
-              )}
-            >
-              Dra. <span className="font-serif italic text-primary/80 lowercase">Lore</span> López
-            </span>
-            <span
-              className={cn(
-                "text-[7px] uppercase tracking-[0.6em] font-bold mt-1 transition-colors duration-700 opacity-60 font-accent",
-                scrolled || location !== "/" ? "text-muted-foreground" : "text-white/70",
-              )}
-            >
-              Medicina Estética avanzada
-            </span>
+          <a className="flex flex-col leading-none">
+            <img
+              src={scrolled ? logo_header : logo_header_white}
+              className="h-8 md:h-14 w-auto object-contain"
+            />
           </a>
         </Link>
 
-        {/* DESKTOP MENU: Wide & Breathable */}
-        <div className="hidden lg:flex items-center gap-12">
-          <div className="flex items-center gap-10">
+        {/* DESKTOP */}
+        <div className="hidden lg:flex items-center gap-10">
+          <div className="flex items-center gap-8">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
                 <a
                   className={cn(
-                    "relative py-2 font-accent text-[9px] uppercase tracking-[0.4em] font-medium transition-all duration-500",
+                    "relative py-2 font-bold text-[11px] uppercase tracking-[0.25em] transition-all duration-300",
                     location === item.href
-                      ? "text-primary px-2"
-                      : (scrolled || location !== "/" ? "text-foreground/70 hover:text-foreground" : "text-white/50 hover:text-white"),
+                      ? "text-primary"
+                      : scrolled
+                        ? "text-foreground/80 hover:text-foreground"
+                        : "text-white/80 hover:text-white",
                   )}
                 >
                   {item.label}
+
+                  {/* underline */}
                   <span
                     className={cn(
-                      "absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-px bg-primary transition-all duration-700",
-                      location === item.href ? "w-full" : "group-hover:w-full",
+                      "absolute left-0 -bottom-1 h-px bg-primary transition-all duration-500",
+                      location === item.href
+                        ? "w-full"
+                        : "w-0 group-hover:w-full",
                     )}
                   />
                 </a>
@@ -81,25 +77,30 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-8">
-            {/* Language Toggle: Discrete */}
+          {/* RIGHT */}
+          <div className="flex items-center gap-6">
+            {/* Language */}
             <button
               onClick={() => setLanguage(language === "en" ? "es" : "en")}
               className={cn(
-                "group flex items-center gap-3 font-accent text-[9px] uppercase tracking-[0.3em] font-semibold transition-all duration-500",
-                scrolled || location !== "/" ? "text-muted-foreground hover:text-foreground" : "text-white/30 hover:text-white",
+                "flex font-bold items-center gap-2 text-[11px] uppercase tracking-[0.25em]",
+                scrolled
+                  ? "text-muted-foreground hover:text-foreground"
+                  : "text-white/70 hover:text-white",
               )}
             >
-              <Globe className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" />
-              <span>{language === "en" ? "EN" : "ES"}</span>
+              <Globe className="w-3 h-3" />
+              {language === "en" ? "EN" : "ES"}
             </button>
 
-            {/* CTA: Concierge Style */}
+            {/* CTA */}
             <Link href="/#contacto">
               <button
                 className={cn(
-                  "relative px-10 py-4 bg-primary text-white font-bold text-[9px] uppercase tracking-[0.5em] transition-all duration-700 hover:scale-105 active:scale-95 shadow-2xl shadow-primary/10",
-                  !scrolled && location === "/" && "bg-white text-black hover:bg-primary hover:text-white"
+                  "px-8 py-3 bg-primary text-white text-[11px] uppercase tracking-[0.3em] font-semibold transition-all duration-300 hover:scale-[1.03]",
+                  !scrolled &&
+                    location === "/" &&
+                    "bg-white text-black hover:bg-primary hover:text-white",
                 )}
               >
                 {t.nav.agendar}
@@ -108,75 +109,74 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* MOBILE TRIGGER */}
+        {/* MOBILE BUTTON */}
         <button
           className={cn(
-            "lg:hidden p-4 transition-all",
+            "lg:hidden p-3",
             scrolled || location !== "/" ? "text-foreground" : "text-white",
           )}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* MOBILE MENU: Fullscreen Editorial Reveal */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.05 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 bg-background lg:hidden pt-32 px-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl lg:hidden pt-24 px-6"
           >
-            <div className="flex flex-col h-full gap-8">
-              {navItems.map((item, idx) => (
-                <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 + 0.3 }}
-                >
-                  <Link href={item.href}>
-                    <a
-                      onClick={() => setIsOpen(false)}
-                      className="group flex items-center justify-between py-4"
-                    >
-                      <div className="flex flex-col">
-                        <span className="font-accent text-[8px] text-primary/40 tracking-[0.4em] mb-2">0{idx + 1}</span>
-                        <span className="font-heading text-5xl uppercase tracking-tight text-foreground transition-all duration-500 group-hover:italic group-hover:text-primary">
+            <div className="flex flex-col h-full">
+              {/* LINKS */}
+              <div className="flex flex-col gap-6">
+                {navItems.map((item, idx) => (
+                  <motion.div
+                    key={item.href}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.08 }}
+                  >
+                    <Link href={item.href}>
+                      <a
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center justify-between py-3 border-b border-border/30"
+                      >
+                        <span className="font-heading text-xl uppercase tracking-[0.08em] text-foreground">
                           {item.label}
                         </span>
-                      </div>
-                      <ArrowRight className="w-8 h-8 opacity-0 -translate-x-10 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-primary" />
-                    </a>
-                  </Link>
-                </motion.div>
-              ))}
+                        <ArrowRight className="w-5 h-5 text-primary opacity-70" />
+                      </a>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.8 }}
-                className="mt-auto pb-16 flex flex-col gap-10"
-              >
+              {/* FOOTER */}
+              <div className="mt-auto pb-10 flex flex-col gap-6">
                 <button
                   onClick={() => {
                     setLanguage(language === "en" ? "es" : "en");
                     setIsOpen(false);
                   }}
-                  className="flex items-center gap-4 font-accent text-xs uppercase tracking-[0.4em] text-muted-foreground"
+                  className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground"
                 >
                   <Globe className="w-4 h-4 text-primary" />
-                  {language === "en" ? "Switch to Spanish" : "English Version"}
+                  {language === "en" ? "ES" : "EN"}
                 </button>
-                <Link href="/#contacto" onClick={() => setIsOpen(false)}>
-                  <button className="w-full py-8 bg-primary text-white text-[10px] uppercase tracking-[0.6em] font-bold shadow-2xl">
+
+                <Link href="/#contacto">
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="w-full py-4 bg-primary text-white text-[11px] uppercase tracking-[0.3em] font-semibold"
+                  >
                     {t.nav.agendar}
                   </button>
                 </Link>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         )}

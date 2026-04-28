@@ -17,26 +17,50 @@
   "hero": {
     "label": "Medicina Estética Avanzada",
     "headline_1": "La belleza natural",
-    "headline_2": "comienza con",
+    "headline_2": "se construye con",
     "headline_3": "precisión médica",
-    "subtitle": "Protocolos médicos personalizados diseñados para resultados elegantes y naturales que perduran en el tiempo.",
-    "cta_primary": "Agendar Consulta Médica",
-    "cta_secondary": "Descubrir Tratamientos",
+    "subtitle": "Diseñamos protocolos médicos personalizados que respetan tu estructura, optimizan tu piel y logran resultados sutiles, armónicos y duraderos.",
+    "cta_primary": "Agendar Valoración Médica",
+    "cta_secondary": "Explorar Tratamientos",
     "credential_1": "Especialización Internacional",
-    "credential_2": "Medicina Preventiva",
-    "credential_3": "Tecnología Avanzada"
+    "credential_2": "Enfoque Preventivo",
+    "credential_3": "Tecnología de Última Generación"
   },
   "trust": {
     "label": "Autoridad Médica",
     "title": "Experiencia clínica al servicio de tu bienestar",
     "subtitle": "Cada tratamiento es el resultado de años de formación especializada, investigación continua y un profundo compromiso con la excelencia médica.",
     "items": [
-      { "icon": "award", "title": "Formación Internacional", "description": "Especialización y posgrados en centros de referencia mundial en medicina estética avanzada." },
-      { "icon": "shield", "title": "Certificaciones Médicas", "description": "Certificada por las principales instituciones internacionales en medicina estética y rejuvenecimiento facial." },
-      { "icon": "microscope", "title": "Diagnóstico Personalizado", "description": "Cada paciente recibe un análisis facial completo antes de cualquier protocolo de tratamiento." },
-      { "icon": "leaf", "title": "Medicina Preventiva", "description": "Enfoque preventivo que preserva y potencia tu belleza natural a largo plazo." },
-      { "icon": "zap", "title": "Tecnología de Vanguardia", "description": "Equipos médicos de última generación para resultados precisos y seguros." },
-      { "icon": "heart", "title": "Seguimiento Premium", "description": "Acompañamiento continuo durante y después de cada protocolo de tratamiento." }
+      {
+        "icon": "award",
+        "title": "Formación Internacional",
+        "description": "Especialización y posgrados en centros de referencia mundial en medicina estética avanzada."
+      },
+      {
+        "icon": "shield",
+        "title": "Certificaciones Médicas",
+        "description": "Certificada por las principales instituciones internacionales en medicina estética y rejuvenecimiento facial."
+      },
+      {
+        "icon": "microscope",
+        "title": "Diagnóstico Personalizado",
+        "description": "Cada paciente recibe un análisis facial completo antes de cualquier protocolo de tratamiento."
+      },
+      {
+        "icon": "leaf",
+        "title": "Medicina Preventiva",
+        "description": "Enfoque preventivo que preserva y potencia tu belleza natural a largo plazo."
+      },
+      {
+        "icon": "zap",
+        "title": "Tecnología de Vanguardia",
+        "description": "Equipos médicos de última generación para resultados precisos y seguros."
+      },
+      {
+        "icon": "heart",
+        "title": "Seguimiento Premium",
+        "description": "Acompañamiento continuo durante y después de cada protocolo de tratamiento."
+      }
     ]
   },
   "treatments": {
@@ -45,11 +69,31 @@
     "subtitle": "Una selección curada de tratamientos estéticos avanzados, diseñados para resultados naturales y sofisticados.",
     "cta": "Ver todos los tratamientos",
     "items": [
-      { "name": "Endolift", "tagline": "Redefinición sin cirugía", "description": "Lifting láser mínimamente invasivo para una regeneración profunda del tejido cutáneo con resultados naturales y duraderos." },
-      { "name": "Toxina Botulínica", "tagline": "Expresión, refinada", "description": "Aplicación médica de precisión para suavizar líneas de expresión conservando la naturalidad y autenticidad del rostro." },
-      { "name": "Primex", "tagline": "Bioestimulación premium", "description": "Protocolo avanzado de estimulación celular para la regeneración del colágeno y la restauración de la vitalidad cutánea." },
-      { "name": "Ácido Hialurónico", "tagline": "Volumen con elegancia", "description": "Restauración de volumen y contorno facial con técnicas de inyección de alta precisión para resultados armoniosos." },
-      { "name": "Bioestimulación", "tagline": "Rejuvenecimiento desde adentro", "description": "Activación de los mecanismos naturales de regeneración cutánea para una piel más luminosa, firme y saludable." }
+      {
+        "name": "Endolift",
+        "tagline": "Redefinición sin cirugía",
+        "description": "Lifting láser mínimamente invasivo para una regeneración profunda del tejido cutáneo con resultados naturales y duraderos."
+      },
+      {
+        "name": "Toxina Botulínica",
+        "tagline": "Expresión, refinada",
+        "description": "Aplicación médica de precisión para suavizar líneas de expresión conservando la naturalidad y autenticidad del rostro."
+      },
+      {
+        "name": "Primex",
+        "tagline": "Bioestimulación premium",
+        "description": "Protocolo avanzado de estimulación celular para la regeneración del colágeno y la restauración de la vitalidad cutánea."
+      },
+      {
+        "name": "Ácido Hialurónico",
+        "tagline": "Volumen con elegancia",
+        "description": "Restauración de volumen y contorno facial con técnicas de inyección de alta precisión para resultados armoniosos."
+      },
+      {
+        "name": "Bioestimulación",
+        "tagline": "Rejuvenecimiento desde adentro",
+        "description": "Activación de los mecanismos naturales de regeneración cutánea para una piel más luminosa, firme y saludable."
+      }
     ]
   },
   "about": {
@@ -72,18 +116,45 @@
     "title": "Resultados que respetan tu naturaleza",
     "subtitle": "Un proceso médico riguroso que garantiza resultados elegantes, naturales y duraderos.",
     "steps": [
-      { "number": "01", "title": "Evaluación Médica", "description": "Consulta médica completa para comprender tu historia clínica, objetivos y estado actual de la piel." },
-      { "number": "02", "title": "Protocolo Personalizado", "description": "Diseño de un plan de tratamiento exclusivo, adaptado a tus características únicas y resultados deseados." },
-      { "number": "03", "title": "Resultados Naturales", "description": "Tratamientos ejecutados con la máxima precisión para resultados elegantes que preservan tu esencia natural." }
+      {
+        "number": "01",
+        "title": "Evaluación Médica",
+        "description": "Consulta médica completa para comprender tu historia clínica, objetivos y estado actual de la piel."
+      },
+      {
+        "number": "02",
+        "title": "Protocolo Personalizado",
+        "description": "Diseño de un plan de tratamiento exclusivo, adaptado a tus características únicas y resultados deseados."
+      },
+      {
+        "number": "03",
+        "title": "Resultados Naturales",
+        "description": "Tratamientos ejecutados con la máxima precisión para resultados elegantes que preservan tu esencia natural."
+      }
     ]
   },
   "testimonials": {
     "label": "Testimonios",
     "title": "Lo que dicen nuestras pacientes",
     "items": [
-      { "name": "Valentina R.", "age": "42 años", "text": "La Dra. López me devolvió la confianza en mi apariencia sin que nadie notara que me había hecho algo. Simplemente digo que me veo más descansada y radiante.", "treatment": "Toxina Botulínica + Ácido Hialurónico" },
-      { "name": "Marcela S.", "age": "38 años", "text": "Lo que más valoro es su enfoque médico. No busca venderme tratamientos, sino escuchar lo que realmente necesito. El resultado superó todas mis expectativas.", "treatment": "Endolift" },
-      { "name": "Carolina M.", "age": "51 años", "text": "Después de años buscando resultados naturales, finalmente encontré a una doctora que entiende que la belleza no se trata de cambiar sino de preservar lo mejor de una.", "treatment": "Bioestimulación + Primex" }
+      {
+        "name": "Valentina R.",
+        "age": "42 años",
+        "text": "La Dra. López me devolvió la confianza en mi apariencia sin que nadie notara que me había hecho algo. Simplemente digo que me veo más descansada y radiante.",
+        "treatment": "Toxina Botulínica + Ácido Hialurónico"
+      },
+      {
+        "name": "Marcela S.",
+        "age": "38 años",
+        "text": "Lo que más valoro es su enfoque médico. No busca venderme tratamientos, sino escuchar lo que realmente necesito. El resultado superó todas mis expectativas.",
+        "treatment": "Endolift"
+      },
+      {
+        "name": "Carolina M.",
+        "age": "51 años",
+        "text": "Después de años buscando resultados naturales, finalmente encontré a una doctora que entiende que la belleza no se trata de cambiar sino de preservar lo mejor de una.",
+        "treatment": "Bioestimulación + Primex"
+      }
     ]
   },
   "consultation": {
@@ -91,10 +162,22 @@
     "title": "Una experiencia médica diferente",
     "subtitle": "Desde el primer momento, tu consulta está diseñada para darte claridad, confianza y un plan de acción personalizado.",
     "steps": [
-      { "title": "Análisis Facial Completo", "description": "Evaluación detallada de la estructura facial, calidad de piel y signos de envejecimiento." },
-      { "title": "Revisión de Estilo de Vida", "description": "Comprensión de tus hábitos, historial médico y factores que influyen en tu salud cutánea." },
-      { "title": "Protocolo Personalizado", "description": "Diseño de un plan de tratamiento exclusivo con objetivos claros y resultados esperados." },
-      { "title": "Experiencia Premium", "description": "Un entorno de atención diseñado para tu comodidad, privacidad y confianza total." }
+      {
+        "title": "Análisis Facial Completo",
+        "description": "Evaluación detallada de la estructura facial, calidad de piel y signos de envejecimiento."
+      },
+      {
+        "title": "Revisión de Estilo de Vida",
+        "description": "Comprensión de tus hábitos, historial médico y factores que influyen en tu salud cutánea."
+      },
+      {
+        "title": "Protocolo Personalizado",
+        "description": "Diseño de un plan de tratamiento exclusivo con objetivos claros y resultados esperados."
+      },
+      {
+        "title": "Experiencia Premium",
+        "description": "Un entorno de atención diseñado para tu comodidad, privacidad y confianza total."
+      }
     ]
   },
   "cta": {
@@ -139,10 +222,26 @@
     "what_title": "Lo que incluye tu consulta",
     "what_subtitle": "Cada minuto de tu consulta tiene un propósito clínico. Esto es medicina estética de alto nivel.",
     "steps": [
-      { "icon": "scan", "title": "Análisis Facial Avanzado", "description": "Evaluación tridimensional de tu estructura ósea, volúmenes faciales, calidad cutánea y asimetría. Una lectura médica completa de tu rostro." },
-      { "icon": "history", "title": "Historia Clínica Profunda", "description": "Revisión detallada de tu historial médico, tratamientos previos, hábitos de vida y factores sistémicos que influyen directamente en tu piel." },
-      { "icon": "protocol", "title": "Diseño del Protocolo", "description": "Creación de tu plan de tratamiento personalizado: qué hacer, en qué orden, con qué técnica, y cuándo esperar resultados visibles." },
-      { "icon": "care", "title": "Experiencia de Atención Total", "description": "Un entorno clínico diseñado para tu privacidad y comodidad, donde puedes hacer todas tus preguntas sin prisa y con toda la información." }
+      {
+        "icon": "scan",
+        "title": "Análisis Facial Avanzado",
+        "description": "Evaluación tridimensional de tu estructura ósea, volúmenes faciales, calidad cutánea y asimetría. Una lectura médica completa de tu rostro."
+      },
+      {
+        "icon": "history",
+        "title": "Historia Clínica Profunda",
+        "description": "Revisión detallada de tu historial médico, tratamientos previos, hábitos de vida y factores sistémicos que influyen directamente en tu piel."
+      },
+      {
+        "icon": "protocol",
+        "title": "Diseño del Protocolo",
+        "description": "Creación de tu plan de tratamiento personalizado: qué hacer, en qué orden, con qué técnica, y cuándo esperar resultados visibles."
+      },
+      {
+        "icon": "care",
+        "title": "Experiencia de Atención Total",
+        "description": "Un entorno clínico diseñado para tu privacidad y comodidad, donde puedes hacer todas tus preguntas sin prisa y con toda la información."
+      }
     ],
     "value_label": "Por qué es diferente",
     "value_title": "No vendemos tratamientos. Diseñamos protocolos.",
@@ -229,10 +328,26 @@
     "timeline_label": "Trayectoria",
     "timeline_title": "Una formación sin atajos",
     "timeline": [
-      { "year": "Medicina", "title": "Formación Médica Completa", "body": "Graduación con mención honorífica en medicina general. Base científica rigurosa que distingue su criterio clínico." },
-      { "year": "Especialización", "title": "Posgrado Internacional en Medicina Estética", "body": "Formación avanzada en centros de referencia mundial. Exposición a las técnicas más innovadoras de rejuvenecimiento facial." },
-      { "year": "Láser & Cirugía", "title": "Certificación en Tecnología Láser", "body": "Entrenamiento especializado en los sistemas láser de mayor precisión disponibles, incluyendo Endolift y tecnologías de bioestimulación." },
-      { "year": "Hoy", "title": "Práctica Privada de Excelencia", "body": "Atención exclusiva a pacientes que buscan resultados reales con criterio médico. Casos complejos, protocolos personalizados, resultados naturales." }
+      {
+        "year": "Medicina",
+        "title": "Formación Médica Completa",
+        "body": "Graduación con mención honorífica en medicina general. Base científica rigurosa que distingue su criterio clínico."
+      },
+      {
+        "year": "Especialización",
+        "title": "Posgrado Internacional en Medicina Estética",
+        "body": "Formación avanzada en centros de referencia mundial. Exposición a las técnicas más innovadoras de rejuvenecimiento facial."
+      },
+      {
+        "year": "Láser & Cirugía",
+        "title": "Certificación en Tecnología Láser",
+        "body": "Entrenamiento especializado en los sistemas láser de mayor precisión disponibles, incluyendo Endolift y tecnologías de bioestimulación."
+      },
+      {
+        "year": "Hoy",
+        "title": "Práctica Privada de Excelencia",
+        "body": "Atención exclusiva a pacientes que buscan resultados reales con criterio médico. Casos complejos, protocolos personalizados, resultados naturales."
+      }
     ],
     "philosophy_label": "Filosofía",
     "philosophy_title": "El principio de la mínima intervención",
@@ -264,15 +379,69 @@
       { "id": "doctor", "label": "La Doctora" }
     ],
     "items": [
-      { "id": 1, "category": "results", "title": "Endolift · Resultado Natural", "subtitle": "Redefinición de óvalo facial", "treatment": "Endolift" },
-      { "id": 2, "category": "doctor", "title": "Dra. Lore López", "subtitle": "Consulta personalizada", "treatment": "" },
-      { "id": 3, "category": "clinic", "title": "Ambiente Clínico", "subtitle": "Privacidad y confort", "treatment": "" },
-      { "id": 4, "category": "results", "title": "Toxina Botulínica · Expresión Natural", "subtitle": "Suavizado de líneas de expresión", "treatment": "Toxina Botulínica" },
-      { "id": 5, "category": "results", "title": "Ácido Hialurónico · Volumen", "subtitle": "Definición de labios y pómulos", "treatment": "Ácido Hialurónico" },
-      { "id": 6, "category": "clinic", "title": "El Consultorio", "subtitle": "Diseñado para tu privacidad", "treatment": "" },
-      { "id": 7, "category": "results", "title": "Bioestimulación · Luminosidad", "subtitle": "Regeneración cutánea profunda", "treatment": "Bioestimulación" },
-      { "id": 8, "category": "doctor", "title": "En Proceso", "subtitle": "Precisión en cada procedimiento", "treatment": "" },
-      { "id": 9, "category": "results", "title": "Primex · Firmeza", "subtitle": "Bioestimulación de nueva generación", "treatment": "Primex" }
+      {
+        "id": 1,
+        "category": "results",
+        "title": "Endolift · Resultado Natural",
+        "subtitle": "Redefinición de óvalo facial",
+        "treatment": "Endolift"
+      },
+      {
+        "id": 2,
+        "category": "doctor",
+        "title": "Dra. Lore López",
+        "subtitle": "Consulta personalizada",
+        "treatment": ""
+      },
+      {
+        "id": 3,
+        "category": "clinic",
+        "title": "Ambiente Clínico",
+        "subtitle": "Privacidad y confort",
+        "treatment": ""
+      },
+      {
+        "id": 4,
+        "category": "results",
+        "title": "Toxina Botulínica · Expresión Natural",
+        "subtitle": "Suavizado de líneas de expresión",
+        "treatment": "Toxina Botulínica"
+      },
+      {
+        "id": 5,
+        "category": "results",
+        "title": "Ácido Hialurónico · Volumen",
+        "subtitle": "Definición de labios y pómulos",
+        "treatment": "Ácido Hialurónico"
+      },
+      {
+        "id": 6,
+        "category": "clinic",
+        "title": "El Consultorio",
+        "subtitle": "Diseñado para tu privacidad",
+        "treatment": ""
+      },
+      {
+        "id": 7,
+        "category": "results",
+        "title": "Bioestimulación · Luminosidad",
+        "subtitle": "Regeneración cutánea profunda",
+        "treatment": "Bioestimulación"
+      },
+      {
+        "id": 8,
+        "category": "doctor",
+        "title": "En Proceso",
+        "subtitle": "Precisión en cada procedimiento",
+        "treatment": ""
+      },
+      {
+        "id": 9,
+        "category": "results",
+        "title": "Primex · Firmeza",
+        "subtitle": "Bioestimulación de nueva generación",
+        "treatment": "Primex"
+      }
     ]
   },
   "internacionales": {
@@ -286,18 +455,46 @@
     "virtual_title": "Tu protocolo, desde donde estés",
     "virtual_subtitle": "El proceso comienza con una consulta virtual completa. Sin viajes previos, sin tiempo perdido.",
     "virtual_steps": [
-      { "step": "01", "title": "Solicitud en línea", "body": "Completas un formulario de intake médico detallado con fotografías de frente, perfil y ¾. Toda la información es revisada antes de tu primera sesión." },
-      { "step": "02", "title": "Consulta por videollamada", "body": "Sesión de 45 minutos con la Dra. López. Análisis facial completo, diagnóstico médico, preguntas y diseño preliminar de tu protocolo." },
-      { "step": "03", "title": "Propuesta de protocolo", "body": "Recibes tu plan de tratamiento personalizado con procedimientos, tiempos, costos y recomendaciones de logística para tu visita." },
-      { "step": "04", "title": "Visita clínica concierge", "body": "Coordinamos todo para tu llegada: agenda, traslados, alojamiento recomendado y seguimiento post-procedimiento desde tu país." }
+      {
+        "step": "01",
+        "title": "Solicitud en línea",
+        "body": "Completas un formulario de intake médico detallado con fotografías de frente, perfil y ¾. Toda la información es revisada antes de tu primera sesión."
+      },
+      {
+        "step": "02",
+        "title": "Consulta por videollamada",
+        "body": "Sesión de 45 minutos con la Dra. López. Análisis facial completo, diagnóstico médico, preguntas y diseño preliminar de tu protocolo."
+      },
+      {
+        "step": "03",
+        "title": "Propuesta de protocolo",
+        "body": "Recibes tu plan de tratamiento personalizado con procedimientos, tiempos, costos y recomendaciones de logística para tu visita."
+      },
+      {
+        "step": "04",
+        "title": "Visita clínica concierge",
+        "body": "Coordinamos todo para tu llegada: agenda, traslados, alojamiento recomendado y seguimiento post-procedimiento desde tu país."
+      }
     ],
     "markets_label": "Mercados de origen",
     "markets_title": "Conectando con el mundo",
     "markets": [
-      { "city": "Miami · USA", "body": "Comunidad latina de alto perfil que busca resultados naturales con criterio médico europeo. Consulta virtual disponible en horario EST." },
-      { "city": "Panamá", "body": "Acceso directo con vuelos de conexión. Protocolo intensivo de 2-3 días disponible para pacientes panameñas con seguimiento virtual." },
-      { "city": "Dubai · EAU", "body": "Para la clientela de lujo del Medio Oriente, ofrecemos coordinación de agenda internacional y protocolo de alta fidelidad." },
-      { "city": "Latinoamérica", "body": "Argentina, Colombia, Venezuela, México. Comunidades que conocen el estándar de la Dra. López y viajan para experimentarlo." }
+      {
+        "city": "Miami · USA",
+        "body": "Comunidad latina de alto perfil que busca resultados naturales con criterio médico europeo. Consulta virtual disponible en horario EST."
+      },
+      {
+        "city": "Panamá",
+        "body": "Acceso directo con vuelos de conexión. Protocolo intensivo de 2-3 días disponible para pacientes panameñas con seguimiento virtual."
+      },
+      {
+        "city": "Dubai · EAU",
+        "body": "Para la clientela de lujo del Medio Oriente, ofrecemos coordinación de agenda internacional y protocolo de alta fidelidad."
+      },
+      {
+        "city": "Latinoamérica",
+        "body": "Argentina, Colombia, Venezuela, México. Comunidades que conocen el estándar de la Dra. López y viajan para experimentarlo."
+      }
     ],
     "concierge_label": "Servicio Concierge",
     "concierge_title": "Todo coordinado para ti",
@@ -335,10 +532,26 @@
         "Pacientes de 35 a 65 años con piel con buena elasticidad residual"
       ],
       "process_steps": [
-        { "num": "01", "title": "Preparación y marcación", "body": "Se marcan las zonas de tratamiento. Se aplica anestesia local tópica. Sin dolor, sin sedación." },
-        { "num": "02", "title": "Introducción de la fibra", "body": "Una microcánula del tamaño de una aguja guía la fibra óptica por debajo de la piel. El proceso es mínimamente invasivo." },
-        { "num": "03", "title": "Emisión de energía láser", "body": "La energía láser actúa en dos planos: contracción inmediata del tejido y estimulación de neocolagénesis a largo plazo." },
-        { "num": "04", "title": "Recuperación y resultado", "body": "Regreso a actividades en 24-48 horas. Resultado visible desde las primeras semanas, progresivo durante 3-6 meses." }
+        {
+          "num": "01",
+          "title": "Preparación y marcación",
+          "body": "Se marcan las zonas de tratamiento. Se aplica anestesia local tópica. Sin dolor, sin sedación."
+        },
+        {
+          "num": "02",
+          "title": "Introducción de la fibra",
+          "body": "Una microcánula del tamaño de una aguja guía la fibra óptica por debajo de la piel. El proceso es mínimamente invasivo."
+        },
+        {
+          "num": "03",
+          "title": "Emisión de energía láser",
+          "body": "La energía láser actúa en dos planos: contracción inmediata del tejido y estimulación de neocolagénesis a largo plazo."
+        },
+        {
+          "num": "04",
+          "title": "Recuperación y resultado",
+          "body": "Regreso a actividades en 24-48 horas. Resultado visible desde las primeras semanas, progresivo durante 3-6 meses."
+        }
       ],
       "benefits": [
         "Redefinición del óvalo facial visible",
@@ -364,10 +577,26 @@
         "Como complemento de otros tratamientos en un protocolo integral"
       ],
       "process_steps": [
-        { "num": "01", "title": "Análisis de la dinámica facial", "body": "Se evalúa el movimiento natural de tu rostro en reposo y en expresión. Cada punto de aplicación se decide con criterio médico." },
-        { "num": "02", "title": "Aplicación de microdosis", "body": "Técnica de micro-punteo con agujas ultra-finas. Sin anestesia, con mínimas molestias. Duración: 15-20 minutos." },
-        { "num": "03", "title": "Evaluación a las 2 semanas", "body": "El resultado definitivo se evalúa a los 14 días. Se realizan ajustes precisos si es necesario." },
-        { "num": "04", "title": "Mantenimiento estratégico", "body": "Con tratamientos regulares, la dosis necesaria disminuye con el tiempo. Una estrategia inteligente a largo plazo." }
+        {
+          "num": "01",
+          "title": "Análisis de la dinámica facial",
+          "body": "Se evalúa el movimiento natural de tu rostro en reposo y en expresión. Cada punto de aplicación se decide con criterio médico."
+        },
+        {
+          "num": "02",
+          "title": "Aplicación de microdosis",
+          "body": "Técnica de micro-punteo con agujas ultra-finas. Sin anestesia, con mínimas molestias. Duración: 15-20 minutos."
+        },
+        {
+          "num": "03",
+          "title": "Evaluación a las 2 semanas",
+          "body": "El resultado definitivo se evalúa a los 14 días. Se realizan ajustes precisos si es necesario."
+        },
+        {
+          "num": "04",
+          "title": "Mantenimiento estratégico",
+          "body": "Con tratamientos regulares, la dosis necesaria disminuye con el tiempo. Una estrategia inteligente a largo plazo."
+        }
       ],
       "benefits": [
         "Resultado natural que nadie nota",
@@ -393,10 +622,26 @@
         "Mantenimiento y optimización de tratamientos previos"
       ],
       "process_steps": [
-        { "num": "01", "title": "Preparación de la piel", "body": "Limpieza médica y aplicación de anestesia tópica para máxima comodidad durante el procedimiento." },
-        { "num": "02", "title": "Aplicación del protocolo Primex", "body": "Inyección intradérmica del complejo bioestimulante en múltiples planos según el mapa de tratamiento diseñado para ti." },
-        { "num": "03", "title": "Activación y recuperación", "body": "Recuperación prácticamente inmediata. Puede haber enrojecimiento mínimo las primeras horas." },
-        { "num": "04", "title": "Resultados progresivos", "body": "La regeneración ocurre gradualmente. Resultados óptimos a partir de las 4-6 semanas con mejoría continua." }
+        {
+          "num": "01",
+          "title": "Preparación de la piel",
+          "body": "Limpieza médica y aplicación de anestesia tópica para máxima comodidad durante el procedimiento."
+        },
+        {
+          "num": "02",
+          "title": "Aplicación del protocolo Primex",
+          "body": "Inyección intradérmica del complejo bioestimulante en múltiples planos según el mapa de tratamiento diseñado para ti."
+        },
+        {
+          "num": "03",
+          "title": "Activación y recuperación",
+          "body": "Recuperación prácticamente inmediata. Puede haber enrojecimiento mínimo las primeras horas."
+        },
+        {
+          "num": "04",
+          "title": "Resultados progresivos",
+          "body": "La regeneración ocurre gradualmente. Resultados óptimos a partir de las 4-6 semanas con mejoría continua."
+        }
       ],
       "benefits": [
         "Activación de colágeno y elastina propios",
@@ -422,10 +667,26 @@
         "Quien busca un resultado inmediato y reversible"
       ],
       "process_steps": [
-        { "num": "01", "title": "Mapeo facial anatómico", "body": "Se evalúan los vectores de pérdida de volumen y los puntos de soporte estructural. Planificación precisa antes de cualquier inyección." },
-        { "num": "02", "title": "Selección de producto", "body": "No todos los ácidos hialurónicos son iguales. Se selecciona la densidad y reología ideal para cada zona a tratar." },
-        { "num": "03", "title": "Inyección con cánula o aguja", "body": "Técnica de inyección dependiendo de la zona: cánula roma para mayor seguridad vascular en zonas de riesgo, aguja fina para definición precisa." },
-        { "num": "04", "title": "Resultado inmediato y seguimiento", "body": "El resultado es visible de inmediato. Evaluación a las 2 semanas para ajustes. Duración: 12 a 18 meses según la zona." }
+        {
+          "num": "01",
+          "title": "Mapeo facial anatómico",
+          "body": "Se evalúan los vectores de pérdida de volumen y los puntos de soporte estructural. Planificación precisa antes de cualquier inyección."
+        },
+        {
+          "num": "02",
+          "title": "Selección de producto",
+          "body": "No todos los ácidos hialurónicos son iguales. Se selecciona la densidad y reología ideal para cada zona a tratar."
+        },
+        {
+          "num": "03",
+          "title": "Inyección con cánula o aguja",
+          "body": "Técnica de inyección dependiendo de la zona: cánula roma para mayor seguridad vascular en zonas de riesgo, aguja fina para definición precisa."
+        },
+        {
+          "num": "04",
+          "title": "Resultado inmediato y seguimiento",
+          "body": "El resultado es visible de inmediato. Evaluación a las 2 semanas para ajustes. Duración: 12 a 18 meses según la zona."
+        }
       ],
       "benefits": [
         "Resultado visible desde el primer día",
@@ -451,10 +712,26 @@
         "Para zonas corporales: cuello, escote, manos, abdomen"
       ],
       "process_steps": [
-        { "num": "01", "title": "Diagnóstico de piel", "body": "Evaluación del estado actual de la piel, diagnóstico de zonas prioritarias y selección del protocolo de bioestimulación más adecuado." },
-        { "num": "02", "title": "Preparación y aplicación", "body": "Piel limpia y preparada. Aplicación del bioestimulante mediante microinyecciones superficiales distribuidas en la zona de tratamiento." },
-        { "num": "03", "title": "Activación del proceso regenerativo", "body": "Las sustancias activas inician el proceso de síntesis de colágeno, elastina y ácido hialurónico endógeno de forma gradual." },
-        { "num": "04", "title": "Resultado progresivo y acumulativo", "body": "Mejoría visible a partir de las 4 semanas. El protocolo estándar es de 3 sesiones. El resultado mejora con el tiempo." }
+        {
+          "num": "01",
+          "title": "Diagnóstico de piel",
+          "body": "Evaluación del estado actual de la piel, diagnóstico de zonas prioritarias y selección del protocolo de bioestimulación más adecuado."
+        },
+        {
+          "num": "02",
+          "title": "Preparación y aplicación",
+          "body": "Piel limpia y preparada. Aplicación del bioestimulante mediante microinyecciones superficiales distribuidas en la zona de tratamiento."
+        },
+        {
+          "num": "03",
+          "title": "Activación del proceso regenerativo",
+          "body": "Las sustancias activas inician el proceso de síntesis de colágeno, elastina y ácido hialurónico endógeno de forma gradual."
+        },
+        {
+          "num": "04",
+          "title": "Resultado progresivo y acumulativo",
+          "body": "Mejoría visible a partir de las 4 semanas. El protocolo estándar es de 3 sesiones. El resultado mejora con el tiempo."
+        }
       ],
       "benefits": [
         "Activación del colágeno endógeno",

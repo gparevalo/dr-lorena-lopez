@@ -68,13 +68,13 @@ export default function Doctora() {
         description={d.seo_desc}
         canonicalPath="/doctora"
       />
-
+ 
       <PageHero
-        title={d.hero_name}
+        title={d.hero_name} 
         subtitle={d.opening_label}
         description={t.about.specialty}
         image={headerImg}
-        dark={true}
+        dark={false}
       />
 
       {/* ─── STORY: EDITORIAL LAYOUT ─── */}

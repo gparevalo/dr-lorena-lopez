@@ -330,45 +330,129 @@
     "hero_subtitle": "Una selección curada de los procedimientos estéticos más avanzados del mundo, ejecutados con criterio médico y sensibilidad artística.",
     "cta": "Ver Tratamiento",
     "cta_consulta": "Agendar Consulta",
+
     "treatments": [
       {
         "slug": "endolift",
         "name": "Endolift",
-        "tagline": "Lifting sin bisturí",
-        "summary": "El estándar de oro en lifting facial mínimamente invasivo. Tecnología láser de fibra óptica que remodela el tejido desde adentro.",
-        "highlight": "Sin cirugía · Sin cicatrices · Sin tiempo de recuperación",
+        "tagline": "Lifting sin cirugía",
+        "summary": "Rejuvenece, redefine y tensa tu rostro desde adentro, sin bisturí. Endolift es un tratamiento avanzado que mejora la firmeza de la piel y reduce grasa localizada, logrando un efecto lifting natural y progresivo.",
+        "description": "Es ideal si buscas un cambio visible sin pasar por cirugía. Actúa desde las capas internas de la piel para redefinir el contorno facial, mejorar la flacidez y estilizar zonas como la papada o el cuello. Los resultados se ven de forma progresiva, manteniendo una apariencia natural y elegante.",
+        "benefits": [
+          "Reafirma y tensa la piel",
+          "Reduce papada y grasa localizada",
+          "Define el contorno facial",
+          "Mejora la calidad de la piel con el tiempo",
+          "Resultados naturales sin cirugía"
+        ],
+        "zones": [
+          "Papada",
+          "Mandíbula",
+          "Mejillas",
+          "Cuello",
+          "Zona alrededor de los ojos"
+        ],
+        "duration": "Resultados progresivos que mejoran con el tiempo",
+        "downtime": "Mínimo, puedes retomar tu rutina rápidamente",
+        "highlight": "Sin cirugía · Sin cicatrices · Resultado progresivo",
+        "image": "/images/treatments/endolift.jpg",
+        "video": "/videos/treatments/endolift.mp4",
         "position": "right"
-      },
-      {
-        "slug": "toxina-botulinica",
-        "name": "Toxina Botulínica",
-        "tagline": "Expresión natural, refinada",
-        "summary": "La diferencia entre un resultado natural y uno artificial está en la mano que lo aplica. Precisión médica para una expresión auténtica.",
-        "highlight": "Técnica de micro-dosis · Resultado natural · Recuperación inmediata",
-        "position": "left"
       },
       {
         "slug": "primex",
         "name": "Primex",
-        "tagline": "Bioestimulación de nueva generación",
-        "summary": "Protocolo de estimulación celular de última generación que activa la producción de colágeno desde las capas más profundas de la piel.",
-        "highlight": "Regeneración profunda · Colágeno natural · Sin toxinas",
+        "tagline": "Moldea tu cuerpo y reafirma tu piel",
+        "summary": "Tecnología avanzada que ayuda a reducir grasa, mejorar la firmeza de la piel y redefinir tu figura sin procedimientos invasivos.",
+        "description": "Primex combina diferentes tecnologías para trabajar de forma profunda y segura en el cuerpo y rostro. Es ideal si buscas moldear zonas específicas, mejorar la textura de la piel y reducir la apariencia de celulitis, todo sin cirugía ni tiempos de recuperación.",
+        "benefits": [
+          "Reduce grasa localizada",
+          "Reafirma la piel",
+          "Mejora la celulitis",
+          "Define la silueta corporal",
+          "Resultados visibles desde las primeras sesiones"
+        ],
+        "zones": ["Abdomen", "Piernas", "Brazos", "Glúteos", "Rostro"],
+        "duration": "Sesiones cortas con resultados visibles desde el inicio",
+        "downtime": "No requiere tiempo de recuperación",
+        "highlight": "No invasivo · Remodelación corporal · Resultados visibles",
+        "image": "/images/treatments/primex.jpg",
+        "video": "/videos/treatments/primex.mp4",
+        "position": "left"
+      },
+      {
+        "slug": "toxina-botulinica",
+        "name": "Toxina Botulínica",
+        "tagline": "Expresión natural, sin excesos",
+        "summary": "Suaviza líneas de expresión y rejuvenece tu rostro manteniendo tu naturalidad. Menos líneas, más frescura.",
+        "description": "Este tratamiento relaja suavemente los músculos responsables de las arrugas, logrando una apariencia más descansada y armoniosa. El objetivo no es cambiar tu rostro, sino resaltar tu expresión natural con un resultado elegante y equilibrado.",
+        "benefits": [
+          "Reduce arrugas de expresión",
+          "Previene nuevas líneas",
+          "Resultado natural y fresco",
+          "Procedimiento rápido",
+          "Mejora estética y funcional"
+        ],
+        "zones": [
+          "Frente",
+          "Entrecejo",
+          "Patas de gallo",
+          "Cuello",
+          "Axilas (sudoración)"
+        ],
+        "duration": "Resultados visibles en pocos días",
+        "downtime": "Inmediato, puedes continuar tu día con normalidad",
+        "highlight": "Resultados naturales · Procedimiento rápido · Sin recuperación",
+        "image": "/images/treatments/toxina.jpg",
+        "video": "/videos/treatments/toxina.mp4",
         "position": "right"
       },
       {
         "slug": "acido-hialuronico",
-        "name": "Ácido Hialurónico Estructural",
-        "tagline": "Volumen con arquitectura",
-        "summary": "No es relleno, es escultura facial. Restauración de volumen y definición de contorno con técnicas de vectores de inyección de alta precisión.",
-        "highlight": "Resultados inmediatos · Reversible · Natural",
+        "name": "Ácido Hialurónico",
+        "tagline": "Armonía y equilibrio facial",
+        "summary": "Restaura volumen, define contornos y mejora la armonía de tu rostro de forma natural y sin cirugía.",
+        "description": "Más que un relleno, es una técnica de diseño facial. Permite mejorar proporciones, definir rasgos y recuperar volumen perdido, logrando un rostro más equilibrado, fresco y rejuvenecido sin perder naturalidad.",
+        "benefits": [
+          "Define mandíbula y mentón",
+          "Aumenta volumen en pómulos",
+          "Corrige asimetrías",
+          "Mejora surcos y líneas profundas",
+          "Resultados inmediatos"
+        ],
+        "zones": [
+          "Mandíbula",
+          "Mentón",
+          "Pómulos",
+          "Labios",
+          "Surcos nasogenianos"
+        ],
+        "duration": "Resultados inmediatos",
+        "downtime": "Mínimo, incorporación inmediata",
+        "highlight": "Resultados inmediatos · Natural · Reversible",
+        "image": "/images/treatments/acido-hialuronico.jpg",
+        "video": "/videos/treatments/acido-hialuronico.mp4",
         "position": "left"
       },
       {
         "slug": "bioestimulacion",
-        "name": "Bioestimulación Facial y Corporal",
+        "name": "Bioestimulación",
         "tagline": "Rejuvenecimiento desde adentro",
-        "summary": "Activación de los mecanismos naturales de regeneración de la piel. Más luminosidad, firmeza y vitalidad sin intervención invasiva.",
-        "highlight": "100% biocompatible · Luminosidad · Firmeza",
+        "summary": "Activa la producción natural de colágeno para mejorar la firmeza, textura y luminosidad de tu piel.",
+        "description": "Este tratamiento estimula los procesos naturales de regeneración de la piel, logrando resultados progresivos y duraderos. Ideal si buscas mejorar la calidad de tu piel de forma natural, sin cambios bruscos.",
+        "benefits": [
+          "Mejora firmeza y elasticidad",
+          "Aporta luminosidad",
+          "Reduce líneas finas",
+          "Regenera la piel desde adentro",
+          "Resultados progresivos y naturales"
+        ],
+        "zones": ["Rostro", "Cuello", "Escote", "Manos", "Cuerpo"],
+        "duration": "Resultados progresivos en semanas",
+        "downtime": "No invasivo, mínima recuperación",
+        "highlight": "Colágeno natural · Piel más firme · Resultado progresivo",
+        "image": "/images/treatments/bioestimulacion.jpg",
+        "video": "/videos/treatments/bioestimulacion.mp4",
         "position": "right"
       }
     ]

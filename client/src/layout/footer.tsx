@@ -1,5 +1,5 @@
 import { useLanguage } from "@/i18n";
-import logo_header_white from "@assets/images/logo_header_white.png";
+import logo_header_white from "@assets/images/logo_verde-removebg-preview.png";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ShieldCheck } from "lucide-react";
 import { Link } from "wouter";

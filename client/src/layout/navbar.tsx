@@ -1,7 +1,7 @@
 import { useLanguage } from "@/i18n";
 import { cn } from "@/lib/utils";
-import logo_header from "@assets/images/logo_header.png";
-import logo_header_white from "@assets/images/logo_header_white.png";
+import logo_header from "@assets/images/logo_verde-removebg-preview.png";
+import logo_header_white from "@assets/images/logo_verde-removebg-preview.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Globe, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";

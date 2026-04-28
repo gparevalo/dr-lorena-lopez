@@ -9,16 +9,17 @@ export default function LuxuryLabel({
   dark?: boolean;
 }) {
   return (
-    <div className="flex items-center gap-4 mb-6">
-      <Minus className={"text-primary"} />
+    <div className="flex items-center gap-4 mb-6 ">
+      <Minus className={"text-primary font-bold"} />
       <span
         className={cn(
-          "text-[10px] uppercase tracking-[0.6em] font-semibold",
+          "text-[11px] uppercase tracking-[0.6em] font-bold",
           dark ? "text-primary" : "text-primary",
         )}
       >
         {children}
       </span>
+      <Minus className={"text-primary font-bold"} />
     </div>
   );
 }

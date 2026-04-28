@@ -22,8 +22,7 @@ export function Navbar() {
   const navItems = [
     { href: "/", label: t.nav.home },
     { href: "/tratamientos", label: t.nav.tratamientos },
-    { href: "/doctora", label: t.nav.doctora },
-    { href: "/galeria", label: t.nav.galeria },
+    { href: "/doctora", label: t.nav.doctora }, 
   ];
 
   return (

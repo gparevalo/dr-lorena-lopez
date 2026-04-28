@@ -8,13 +8,12 @@ import { Route, Switch, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 
 // Pages
-import Home from "@/pages/Home";
 import Consulta from "@/pages/Consulta";
-import Tratamientos from "@/pages/Tratamientos";
-import TratamientoDetail from "@/pages/Tratamientos/detail";
 import Doctora from "@/pages/Doctora";
 import Galeria from "@/pages/Galeria";
-import PacientesInternacionales from "@/pages/PacientesInternacionales";
+import Home from "@/pages/Home";
+import Tratamientos from "@/pages/Tratamientos";
+import TratamientoDetail from "@/pages/Tratamientos/detail";
 import NotFound from "./pages/not-found";
 
 function ScrollToTop() {
@@ -34,7 +33,6 @@ function Router() {
       <Route path="/tratamientos/:slug" component={TratamientoDetail} />
       <Route path="/doctora" component={Doctora} />
       <Route path="/galeria" component={Galeria} />
-      <Route path="/pacientes-internacionales" component={PacientesInternacionales} />
       <Route component={NotFound} />
     </Switch>
   );

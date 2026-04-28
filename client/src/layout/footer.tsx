@@ -1,4 +1,5 @@
 import { useLanguage } from "@/i18n";
+import logo_header_white from "@assets/images/logo_header_white.png";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ShieldCheck } from "lucide-react";
 import { Link } from "wouter";
@@ -16,116 +17,98 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[hsl(25,20%,10%)] border-t border-white/5 py-16 px-6 lg:px-10 relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-      <div className="absolute -bottom-48 left-1/2 -translate-x-1/2 w-[80%] aspect-square bg-primary/[0.04] rounded-full blur-[140px] pointer-events-none" />
+    <footer className="relative bg-black/[0.9] text-white overflow-hidden py-6 px-6 lg:px-10">
+    
 
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 mb-12">
-          <motion.div
-            className="lg:col-span-5"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="mb-8">
-              <p className="font-serif text-2xl font-bold text-white tracking-tight">
-                Dra. Lore López
-              </p>
-              <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mt-1 font-medium">
-                {t.footer.specialty}
-              </p>
-            </div>
-
-            <p className="text-white/45 max-w-sm text-base leading-relaxed font-light italic border-l border-primary/20 pl-5 mb-8">
+      <div className="max-w-6xl mx-auto relative z-10 ">
+        {/* TOP GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 mb-10 mt-10">
+          {/* BRAND */}
+          <motion.div className="lg:col-span-4 text-start">
+            <Link href="/">
+              <a className="flex flex-col leading-none">
+                <img
+                  src={logo_header_white}
+                  className="h-8 md:h-20 w-full object-cover"
+                />
+              </a>
+            </Link>
+ 
+            <p className="mt-8 text-white/40 text-lg leading-relaxed font-light italic border-l border-primary/30 pl-6 max-w-md">
               {t.footer.tagline}
             </p>
 
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 border border-white/8 bg-white/[0.03]">
+            <div className="mt-10 inline-flex items-center gap-3 px-5 py-3 border border-white/10 bg-white/[0.03]">
               <ShieldCheck className="w-4 h-4 text-primary" />
-              <span className="text-[9px] uppercase tracking-[0.35em] font-semibold text-white/45">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-medium">
                 {t.footer.trusted_label}
               </span>
             </div>
           </motion.div>
 
-          <motion.div
-            className="lg:col-span-4"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.8 }}
-          >
-            <h4 className="text-primary text-[10px] uppercase tracking-[0.55em] font-semibold mb-7">
+          {/* NAV */}
+          <motion.div className="lg:col-span-5">
+            <h4 className="text-primary text-[11px] uppercase tracking-[0.3em] font-semibold mb-10">
               {t.footer.architect_label}
             </h4>
 
-            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+            <div className="grid grid-cols-2 gap-y-5 gap-x-8">
               {navLinks.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="group flex items-center gap-3 text-white/35 hover:text-white transition-all duration-400 text-[11px] uppercase tracking-[0.25em] font-semibold"
+                  className="group flex items-center gap-3 text-white/50 hover:text-white transition text-[13px] tracking-[0.15em]"
                 >
-                  <span className="w-1.5 h-1.5 bg-primary/25 group-hover:bg-primary transition-colors flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-primary/30 group-hover:bg-primary transition" />
                   {item.label}
                 </Link>
               ))}
             </div>
           </motion.div>
 
-          <motion.div
-            className="lg:col-span-3"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            <h4 className="text-primary text-[10px] uppercase tracking-[0.55em] font-semibold mb-7">
+          {/* SOCIAL */}
+          <motion.div className="lg:col-span-3">
+            <h4 className="text-primary text-[11px] uppercase tracking-[0.3em] font-semibold mb-10">
               {t.footer.ecosystem_label}
             </h4>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-5">
               {["Instagram", "Facebook"].map((platform) => (
                 <a
                   key={platform}
                   href="#"
-                  target="_blank"
-                  rel="noopener"
-                  className="group flex items-center justify-between text-white/35 hover:text-white transition-all duration-400 text-[11px] uppercase tracking-[0.3em] font-semibold"
+                  className="group flex items-center justify-between text-white/50 hover:text-white transition text-[13px] tracking-[0.15em]"
                 >
                   {platform}
-                  <ArrowUpRight className="w-3.5 h-3.5 text-primary opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0" />
+                  <ArrowUpRight className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition" />
                 </a>
               ))}
 
               <a
                 href="#"
-                className="group flex items-center justify-between text-white/35 hover:text-white transition-all duration-400 text-[11px] uppercase tracking-[0.3em] font-semibold"
+                className="group flex items-center justify-between text-white/50 hover:text-white transition text-[13px] tracking-[0.15em]"
               >
                 {t.footer.privacy_protocol}
-                <ShieldCheck className="w-3.5 h-3.5 text-white/15" />
+                <ShieldCheck className="w-4 h-4 text-white/20 group-hover:text-primary transition" />
               </a>
             </div>
           </motion.div>
         </div>
 
-        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-5">
-          <div className="flex flex-col gap-1 text-center md:text-left">
-            <p className="text-white/20 text-[10px] uppercase tracking-[0.4em] font-semibold">
-              © {new Date().getFullYear()} Dra. Lore López — {t.footer.rights}
-            </p>
-            <p className="text-[9px] uppercase tracking-[0.3em] font-medium text-white/10 italic">
-              Medicina Estética Avanzada
-            </p>
-          </div>
+        {/* DIVIDER */}
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mb-10" />
 
-          <div className="group flex items-center gap-4">
-            <span className="text-white/12 text-[10px] uppercase tracking-[0.35em] font-semibold group-hover:text-white/28 transition-colors">
+        {/* BOTTOM */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-white/40 text-[11px] tracking-[0.2em] uppercase">
+            © {new Date().getFullYear()} Dra. Lore López — {t.footer.rights}
+          </p>
+
+          <div className="flex items-center gap-4">
+            <span className="text-white/30 text-[10px] uppercase tracking-[0.25em]">
               {t.footer.designed_by}
             </span>
-            <div className="w-8 h-px bg-white/8 group-hover:w-16 group-hover:bg-primary transition-all duration-700" />
+            <div className="w-10 h-px bg-white/10 group-hover:w-20 transition-all duration-700" />
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@
     "headline_1": "La belleza natural",
     "headline_2": "se construye con",
     "headline_3": "precisión médica",
-    "subtitle": "Diseñamos protocolos médicos personalizados que respetan tu estructura, optimizan tu piel y logran resultados sutiles, armónicos y duraderos.",
+    "subtitle": "Tratamientos médicos que trabajan con tu estructura, no contra ella, para revelar una piel más equilibrada y natural.",
     "cta_primary": "Agendar Valoración Médica",
     "cta_secondary": "Explorar Tratamientos",
     "credential_1": "Especialización Internacional",
@@ -80,11 +80,6 @@
         "description": "Aplicación médica de precisión para suavizar líneas de expresión conservando la naturalidad y autenticidad del rostro."
       },
       {
-        "name": "Primex",
-        "tagline": "Bioestimulación premium",
-        "description": "Protocolo avanzado de estimulación celular para la regeneración del colágeno y la restauración de la vitalidad cutánea."
-      },
-      {
         "name": "Ácido Hialurónico",
         "tagline": "Volumen con elegancia",
         "description": "Restauración de volumen y contorno facial con técnicas de inyección de alta precisión para resultados armoniosos."
@@ -96,42 +91,104 @@
       }
     ]
   },
-  "about": {
-    "label": "Sobre la Doctora",
-    "title": "Dra. Lore López",
-    "specialty": "Médico · Cirugía · Láser",
-    "bio_1": "Con una formación médica rigurosa y una pasión genuina por la medicina estética de vanguardia, la Dra. Lore López ha construido una reputación basada en resultados naturales, criterio clínico y un enfoque profundamente humanizado.",
-    "bio_2": "Su filosofía integra la precisión científica con la sensibilidad artística, comprendiendo que cada rostro es único y merece un protocolo exclusivamente diseñado para sus características, historia y objetivos personales.",
-    "credentials": [
-      "Médico especialista en medicina estética avanzada",
-      "Posgrado internacional en rejuvenecimiento facial",
-      "Certificada en técnicas láser de vanguardia",
-      "Miembro de sociedades médicas internacionales"
-    ],
-    "philosophy_label": "Filosofía",
-    "philosophy": "\"La medicina estética no se trata de cambiar quién eres, sino de ayudarte a ser la mejor versión de ti mismo.\""
-  },
-  "philosophy": {
-    "label": "Proceso Médico",
-    "title": "Resultados que respetan tu naturaleza",
-    "subtitle": "Un proceso médico riguroso que garantiza resultados elegantes, naturales y duraderos.",
-    "steps": [
+  "proceso": {
+    "label": "Proceso médico",
+    "title": "Precisión clínica para resultados",
+    "title2": " naturales",
+    "subtitle": "Cada tratamiento sigue un protocolo médico personalizado que prioriza seguridad, armonía y evolución progresiva.",
+    "cta": "Ver tratamientos",
+    "items": [
       {
         "number": "01",
-        "title": "Evaluación Médica",
-        "description": "Consulta médica completa para comprender tu historia clínica, objetivos y estado actual de la piel."
+        "title": "Evaluación médica",
+        "description": "Historia clínica, hábitos y estado general de salud.",
+        "insight": "La estética comienza con medicina."
       },
       {
         "number": "02",
-        "title": "Protocolo Personalizado",
-        "description": "Diseño de un plan de tratamiento exclusivo, adaptado a tus características únicas y resultados deseados."
+        "title": "Análisis facial",
+        "description": "Estudio de simetría, volumen y calidad de piel.",
+        "insight": "Entendemos la causa, no solo el signo."
       },
       {
         "number": "03",
-        "title": "Resultados Naturales",
-        "description": "Tratamientos ejecutados con la máxima precisión para resultados elegantes que preservan tu esencia natural."
+        "title": "Protocolo personalizado",
+        "description": "Diseño de plan médico según cada rostro.",
+        "insight": "No hay tratamientos estándar."
+      },
+      {
+        "number": "04",
+        "title": "Aplicación precisa",
+        "description": "Técnica avanzada enfocada en naturalidad y seguridad.",
+        "insight": "Menos intervención, más precisión."
+      },
+      {
+        "number": "05",
+        "title": "Seguimiento médico",
+        "description": "Control y acompañamiento posterior al tratamiento.",
+        "insight": "El cuidado no termina en consulta."
+      },
+      {
+        "number": "06",
+        "title": "Evolución natural",
+        "description": "Resultados progresivos y armónicos en el tiempo.",
+        "insight": "La mejor estética no se nota."
       }
     ]
+  },
+  "starService": {
+    "label": "Armonización facial",
+    "title": "Diseño facial ",
+    "title2": " integral",
+    "subtitle": "Un enfoque médico global que combina diagnóstico, técnica y criterio estético para armonizar el rostro de forma natural, precisa y personalizada.",
+    "cta": "Ver evaluación médica",
+
+    "items": [
+      {
+        "name": "Ácido hialurónico",
+        "tagline": "Estructuración inteligente",
+        "description": "Reposicionamiento estratégico de volúmenes para restaurar proporción y equilibrio sin exceso ni artificialidad."
+      },
+      {
+        "name": "Bioestimulación",
+        "tagline": "Regeneración profunda",
+        "description": "Activación de colágeno propio para mejorar firmeza, textura y calidad de la piel desde el interior."
+      },
+      {
+        "name": "Protocolos personalizados",
+        "tagline": "Diseño a medida",
+        "description": "Combinación de técnicas médicas adaptadas a la anatomía, edad y objetivos estéticos de cada paciente."
+      },
+      {
+        "name": "Evaluación médica completa",
+        "tagline": "Diagnóstico facial integral",
+        "description": "Análisis estructural del rostro para definir un plan de tratamiento coherente, seguro y progresivo."
+      }
+    ],
+
+    "message": "No aplicamos productos, diseñamos rostros."
+  },
+  "about": {
+    "label": "Sobre la Doctora",
+    "title": "Dra. Lore López",
+    "specialty": "Medicina estética · Armonización facial · Láser avanzado",
+
+    "bio_1": "Médica especializada en estética avanzada con un enfoque centrado en resultados naturales y armónicos. Su práctica se distingue por el rigor clínico, la precisión técnica y una visión integral del rostro como un todo funcional y estético.",
+
+    "bio_2": "Su trabajo combina ciencia médica y sensibilidad estética para diseñar protocolos personalizados que respetan la anatomía, la historia y la expresión natural de cada paciente.",
+
+    "credentials": [
+      "Especialista en medicina estética avanzada",
+      "Posgrado internacional en rejuvenecimiento facial",
+      "Certificación en tecnología láser de última generación",
+      "Formación continua en armonización facial y bioestimulación"
+    ],
+
+    "philosophy_label": "Filosofía",
+
+    "philosophy": "\"La medicina estética no se trata de cambiar rostros, sino de entenderlos con precisión médica.\",",
+
+    "philosophy2": "Equilibrio, naturalidad y criterio clínico."
   },
   "testimonials": {
     "label": "Testimonios",
@@ -182,15 +239,16 @@
   },
   "cta": {
     "label": "Reserva tu Lugar",
-    "title": "Comienza tu transformación",
+    "title": "Comienza tu ",
+    "title2": "transformación",
     "subtitle": "Agenda tu consulta médica privada y descubre un protocolo diseñado exclusivamente para ti.",
     "button": "Agendar Mi Consulta",
     "note": "Cupos limitados · Atención totalmente personalizada"
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "tagline": "Medicina Estética Avanzada · Resultados naturales con protocolos médicos de excelencia.",
-    "trusted_label": "Médico certificada en medicina estética avanzada",
+    "tagline": " Resultados naturales con protocolos médicos de excelencia.",
+    "trusted_label": "Médico certificada",
     "architect_label": "Navegación",
     "ecosystem_label": "Redes Sociales",
     "privacy_protocol": "Política de Privacidad",

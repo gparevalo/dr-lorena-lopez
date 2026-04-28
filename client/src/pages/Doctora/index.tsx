@@ -1,16 +1,22 @@
-import { SEO } from "@/components/seo";
-import { BaseLayout } from "@/layout/base-layout";
-import { useLanguage } from "@/i18n";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import { ArrowRight, Quote, Minus } from "lucide-react";
 import { UnifiedSection } from "@/components/layout/UnifiedSection";
 import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
+import { SEO } from "@/components/seo";
+import { useLanguage } from "@/i18n";
+import { BaseLayout } from "@/layout/base-layout";
 import { cn } from "@/lib/utils";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Minus, Quote } from "lucide-react";
+import { useRef } from "react";
+import CtaSection from "../Home/components/CtaSection";
+import HeaderPageDoctora from "./componentes/HeaderPageDoctora";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] },
+  },
 };
 
 const stagger = {
@@ -18,11 +24,24 @@ const stagger = {
   show: { transition: { staggerChildren: 0.15 } },
 };
 
-function LuxuryLabel({ children, dark = false }: { children: string; dark?: boolean }) {
+function LuxuryLabel({
+  children,
+  dark = false,
+}: {
+  children: string;
+  dark?: boolean;
+}) {
   return (
     <div className="flex items-center gap-4 mb-6">
-      <Minus className={cn("w-6 h-px", dark ? "text-primary/70" : "text-primary/50")} />
-      <span className={cn("text-[9px] uppercase tracking-[0.6em] font-semibold", dark ? "text-primary/90" : "text-primary")}>
+      <Minus
+        className={cn("w-6 h-px", dark ? "text-primary/70" : "text-primary/50")}
+      />
+      <span
+        className={cn(
+          "text-[9px] uppercase tracking-[0.6em] font-semibold",
+          dark ? "text-primary/90" : "text-primary",
+        )}
+      >
         {children}
       </span>
     </div>
@@ -33,62 +52,29 @@ export default function Doctora() {
   const { t } = useLanguage();
   const d = t.doctora;
   const heroRef = useRef(null);
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
   const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
   return (
     <BaseLayout>
-      <SEO title={d.seo_title} description={d.seo_desc} canonicalPath="/doctora" />
+      <SEO
+        title={d.seo_title}
+        description={d.seo_desc}
+        canonicalPath="/doctora"
+      />
 
-      {/* ─── HERO: CINEMATIC PORTRAIT ─── */}
-      <section ref={heroRef} className="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
-        <motion.div 
-          className="absolute inset-0 z-0"
-          style={{ scale: heroScale }}
-        >
-          <img 
-            src="/doctor-portrait.png" 
-            alt="Dra. Lore López" 
-            className="w-full h-full object-cover opacity-70"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-        </motion.div>
-
-        <div className="relative z-10 max-w-[1500px] mx-auto px-8 lg:px-16 pt-32 w-full">
-          <motion.div 
-            style={{ y: textY }}
-            initial="hidden"
-            animate="show"
-            variants={stagger}
-            className="max-w-3xl"
-          >
-            <motion.div variants={fadeUp}>
-              <LuxuryLabel dark>{d.hero_label}</LuxuryLabel>
-            </motion.div>
-            <motion.h1 
-              variants={fadeUp}
-              className="font-heading text-6xl md:text-8xl lg:text-[10rem] text-white leading-none tracking-tight mb-8"
-            >
-              {d.hero_name}
-            </motion.h1>
-            <motion.p 
-              variants={fadeUp}
-              className="font-accent text-primary/80 text-xs md:text-sm uppercase tracking-[0.5em] font-bold"
-            >
-              {t.about.specialty}
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+      <HeaderPageDoctora />
 
       {/* ─── STORY: EDITORIAL LAYOUT ─── */}
       <UnifiedSection dark={false} withGlow={false}>
         <div className="editorial-grid items-start gap-20">
-          <div className="col-span-12 lg:col-span-4 sticky top-32">
-            <motion.div 
+          <div className="col-span-12 lg:col-span-4 sticky md:top-32">
+            <motion.div
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
@@ -104,7 +90,7 @@ export default function Doctora() {
           </div>
 
           <div className="col-span-12 lg:col-span-7 lg:col-start-6 space-y-12">
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
@@ -113,7 +99,7 @@ export default function Doctora() {
             >
               {d.opening_body_1}
             </motion.div>
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
@@ -131,7 +117,7 @@ export default function Doctora() {
       <UnifiedSectionBlack id="trayectoria">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-24 border-b border-white/10 pb-12">
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
@@ -142,7 +128,9 @@ export default function Doctora() {
                 {d.timeline_title}
               </h2>
             </motion.div>
-            <span className="font-accent text-primary/40 text-xs tracking-[0.4em] mb-4">Curriculum Vitae</span>
+            <span className="font-accent text-primary/40 text-xs tracking-[0.4em] mb-4">
+              Curriculum Vitae
+            </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5">
@@ -173,7 +161,7 @@ export default function Doctora() {
       {/* ─── PHILOSOPHY: LARGE QUOTE ─── */}
       <UnifiedSection dark={false} withGrid={false} className="py-48">
         <div className="max-w-5xl mx-auto text-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -184,38 +172,16 @@ export default function Doctora() {
               {d.philosophy_quote}
             </p>
             <div className="flex flex-col items-center gap-4">
-              <span className="font-heading text-xl uppercase tracking-[0.4em] font-bold">{d.hero_name}</span>
+              <span className="font-heading text-xl uppercase tracking-[0.4em] font-bold">
+                {d.hero_name}
+              </span>
               <div className="w-12 h-px bg-primary/40" />
             </div>
           </motion.div>
         </div>
       </UnifiedSection>
 
-      {/* ─── FOOTER CTA ─── */}
-      <UnifiedSectionBlack className="py-40">
-        <div className="text-center max-w-4xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.2 }}
-          >
-            <LuxuryLabel dark>{d.cta_label}</LuxuryLabel>
-            <h2 className="font-heading text-6xl md:text-[8rem] text-white leading-[0.8] mb-12">
-              {d.cta_title}
-            </h2>
-            <p className="text-white/40 text-xl font-light tracking-wide max-w-lg mx-auto mb-16">
-              {d.cta_body}
-            </p>
-
-            <a href="/consulta">
-              <button className="group relative px-16 py-6 bg-white text-black text-[11px] uppercase tracking-[0.6em] font-bold hover:bg-primary hover:text-white transition-all duration-700">
-                <span className="relative z-10">{d.cta_button}</span>
-              </button>
-            </a>
-          </motion.div>
-        </div>
-      </UnifiedSectionBlack>
+      <CtaSection />
     </BaseLayout>
   );
 }

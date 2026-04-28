@@ -1,13 +1,28 @@
 import { SEO } from "@/components/seo";
-import { BaseLayout } from "@/layout/base-layout";
 import { useLanguage } from "@/i18n";
+import { BaseLayout } from "@/layout/base-layout";
 import { motion, useInView } from "framer-motion";
+import {
+  ArrowRight,
+  CheckCircle,
+  ClipboardList,
+  FlaskConical,
+  Lock,
+  ScanFace,
+  ShieldCheck,
+  Sparkles,
+  Star,
+} from "lucide-react";
 import { useRef, useState } from "react";
-import { ArrowRight, CheckCircle, ScanFace, ClipboardList, FlaskConical, Sparkles, ShieldCheck, Lock, Star } from "lucide-react";
+import CtaSection from "../Home/components/CtaSection";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+  },
 };
 
 const stagger = {
@@ -15,11 +30,23 @@ const stagger = {
   show: { transition: { staggerChildren: 0.12 } },
 };
 
-function RevealSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function RevealSection({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   return (
-    <motion.div ref={ref} initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger} className={className}>
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "show" : "hidden"}
+      variants={stagger}
+      className={className}
+    >
       {children}
     </motion.div>
   );
@@ -32,13 +59,25 @@ const stepIcons: React.ReactNode[] = [
   <Sparkles className="w-6 h-6" />,
 ];
 
-type ConsultaFormData = { name: string; email: string; phone: string; interest: string; message: string };
+type ConsultaFormData = {
+  name: string;
+  email: string;
+  phone: string;
+  interest: string;
+  message: string;
+};
 type ConsultaField = keyof ConsultaFormData;
 
 export default function Consulta() {
   const { t } = useLanguage();
   const c = t.consultaPage;
-  const [formData, setFormData] = useState<ConsultaFormData>({ name: "", email: "", phone: "", interest: "", message: "" });
+  const [formData, setFormData] = useState<ConsultaFormData>({
+    name: "",
+    email: "",
+    phone: "",
+    interest: "",
+    message: "",
+  });
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: React.FormEvent) {
@@ -86,9 +125,13 @@ export default function Consulta() {
             >
               {c.hero_headline_1}
               <br />
-              <em className="not-italic text-[hsl(35,35%,75%)]">{c.hero_headline_2}</em>
+              <em className="not-italic text-[hsl(35,35%,75%)]">
+                {c.hero_headline_2}
+              </em>
               <br />
-              <span className="text-[hsl(82,28%,62%)]">{c.hero_headline_3}</span>
+              <span className="text-[hsl(82,28%,62%)]">
+                {c.hero_headline_3}
+              </span>
             </motion.h1>
 
             <motion.p
@@ -129,10 +172,16 @@ export default function Consulta() {
                   — {c.what_label} —
                 </span>
               </motion.div>
-              <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight max-w-2xl mx-auto">
+              <motion.h2
+                variants={fadeUp}
+                className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight max-w-2xl mx-auto"
+              >
                 {c.what_title}
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-muted-foreground mt-5 max-w-xl mx-auto text-lg font-light leading-relaxed">
+              <motion.p
+                variants={fadeUp}
+                className="text-muted-foreground mt-5 max-w-xl mx-auto text-lg font-light leading-relaxed"
+              >
                 {c.what_subtitle}
               </motion.p>
             </div>
@@ -148,7 +197,9 @@ export default function Consulta() {
                   <div className="w-12 h-12 flex items-center justify-center border border-primary/20 bg-primary/5 text-primary mb-8 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-500">
                     {stepIcons[i]}
                   </div>
-                  <div className="text-[10px] font-mono text-primary/40 tracking-widest mb-3">0{i + 1}</div>
+                  <div className="text-[10px] font-mono text-primary/40 tracking-widest mb-3">
+                    0{i + 1}
+                  </div>
                   <h3 className="font-serif text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                     {step.title}
                   </h3>
@@ -176,10 +227,16 @@ export default function Consulta() {
                     — {c.value_label} —
                   </span>
                 </motion.div>
-                <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+                <motion.h2
+                  variants={fadeUp}
+                  className="font-serif text-4xl md:text-5xl font-bold text-white leading-tight mb-6"
+                >
                   {c.value_title}
                 </motion.h2>
-                <motion.p variants={fadeUp} className="text-white/50 text-lg leading-relaxed font-light">
+                <motion.p
+                  variants={fadeUp}
+                  className="text-white/50 text-lg leading-relaxed font-light"
+                >
                   {c.value_body}
                 </motion.p>
               </div>
@@ -187,14 +244,22 @@ export default function Consulta() {
               <motion.div variants={fadeUp} className="space-y-0">
                 {[
                   { icon: <Star className="w-5 h-5" />, text: c.trust_1 },
-                  { icon: <ShieldCheck className="w-5 h-5" />, text: c.trust_2 },
+                  {
+                    icon: <ShieldCheck className="w-5 h-5" />,
+                    text: c.trust_2,
+                  },
                   { icon: <Lock className="w-5 h-5" />, text: c.trust_3 },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-6 p-8 border-b border-white/5 last:border-b-0 group hover:bg-white/[0.03] transition-colors duration-500">
+                  <div
+                    key={i}
+                    className="flex items-center gap-6 p-8 border-b border-white/5 last:border-b-0 group hover:bg-white/[0.03] transition-colors duration-500"
+                  >
                     <div className="w-10 h-10 flex items-center justify-center border border-primary/20 text-primary/70 flex-shrink-0">
                       {item.icon}
                     </div>
-                    <span className="text-white/60 text-base font-light group-hover:text-white/80 transition-colors">{item.text}</span>
+                    <span className="text-white/60 text-base font-light group-hover:text-white/80 transition-colors">
+                      {item.text}
+                    </span>
                   </div>
                 ))}
               </motion.div>
@@ -215,22 +280,39 @@ export default function Consulta() {
                     — {c.form_label} —
                   </span>
                 </motion.div>
-                <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4">
+                <motion.h2
+                  variants={fadeUp}
+                  className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4"
+                >
                   {c.form_title}
                 </motion.h2>
-                <motion.p variants={fadeUp} className="text-muted-foreground text-lg font-light leading-relaxed mb-12">
+                <motion.p
+                  variants={fadeUp}
+                  className="text-muted-foreground text-lg font-light leading-relaxed mb-12"
+                >
                   {c.form_subtitle}
                 </motion.p>
 
                 <motion.div variants={fadeUp} className="space-y-6">
                   {[
-                    { icon: <CheckCircle className="w-4 h-4 text-primary" />, text: c.trust_1 },
-                    { icon: <ShieldCheck className="w-4 h-4 text-primary" />, text: c.trust_2 },
-                    { icon: <Lock className="w-4 h-4 text-primary" />, text: c.trust_3 },
+                    {
+                      icon: <CheckCircle className="w-4 h-4 text-primary" />,
+                      text: c.trust_1,
+                    },
+                    {
+                      icon: <ShieldCheck className="w-4 h-4 text-primary" />,
+                      text: c.trust_2,
+                    },
+                    {
+                      icon: <Lock className="w-4 h-4 text-primary" />,
+                      text: c.trust_3,
+                    },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-4">
                       {item.icon}
-                      <span className="text-sm text-foreground/65">{item.text}</span>
+                      <span className="text-sm text-foreground/65">
+                        {item.text}
+                      </span>
                     </div>
                   ))}
                 </motion.div>
@@ -242,18 +324,49 @@ export default function Consulta() {
                     <div className="w-16 h-16 flex items-center justify-center bg-primary/10 mb-8">
                       <CheckCircle className="w-8 h-8 text-primary" />
                     </div>
-                    <h3 className="font-serif text-2xl font-bold text-foreground mb-3">{c.form_success_title}</h3>
-                    <p className="text-muted-foreground font-light">{c.form_success_body}</p>
+                    <h3 className="font-serif text-2xl font-bold text-foreground mb-3">
+                      {c.form_success_title}
+                    </h3>
+                    <p className="text-muted-foreground font-light">
+                      {c.form_success_body}
+                    </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-0 border border-border" data-testid="form-consulta">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="space-y-0 border border-border"
+                    data-testid="form-consulta"
+                  >
                     {[
-                      { key: "name", label: c.form_name, type: "text", testid: "input-name" },
-                      { key: "email", label: c.form_email, type: "email", testid: "input-email" },
-                      { key: "phone", label: c.form_phone, type: "tel", testid: "input-phone" },
-                      { key: "interest", label: c.form_interest, type: "text", testid: "input-interest" },
+                      {
+                        key: "name",
+                        label: c.form_name,
+                        type: "text",
+                        testid: "input-name",
+                      },
+                      {
+                        key: "email",
+                        label: c.form_email,
+                        type: "email",
+                        testid: "input-email",
+                      },
+                      {
+                        key: "phone",
+                        label: c.form_phone,
+                        type: "tel",
+                        testid: "input-phone",
+                      },
+                      {
+                        key: "interest",
+                        label: c.form_interest,
+                        type: "text",
+                        testid: "input-interest",
+                      },
                     ].map((field) => (
-                      <div key={field.key} className="border-b border-border last:border-b-0">
+                      <div
+                        key={field.key}
+                        className="border-b border-border last:border-b-0"
+                      >
                         <label className="block text-[9px] uppercase tracking-[0.4em] font-semibold text-muted-foreground px-6 pt-5 pb-1">
                           {field.label}
                         </label>
@@ -261,7 +374,12 @@ export default function Consulta() {
                           type={field.type}
                           data-testid={field.testid}
                           value={formData[field.key as ConsultaField]}
-                          onChange={(e) => setFormData((p) => ({ ...p, [field.key]: e.target.value }))}
+                          onChange={(e) =>
+                            setFormData((p) => ({
+                              ...p,
+                              [field.key]: e.target.value,
+                            }))
+                          }
                           className="w-full px-6 pb-5 pt-1 bg-transparent text-foreground placeholder-muted-foreground/40 focus:outline-none text-base"
                           required={field.key !== "message"}
                         />
@@ -274,13 +392,20 @@ export default function Consulta() {
                       <textarea
                         data-testid="input-message"
                         value={formData.message}
-                        onChange={(e) => setFormData((p) => ({ ...p, message: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((p) => ({
+                            ...p,
+                            message: e.target.value,
+                          }))
+                        }
                         rows={4}
                         className="w-full px-6 pb-5 pt-1 bg-transparent text-foreground placeholder-muted-foreground/40 focus:outline-none resize-none text-base"
                       />
                     </div>
                     <div className="p-6 bg-[hsl(35,22%,95%)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                      <p className="text-[9px] uppercase tracking-[0.3em] text-muted-foreground">{c.form_note}</p>
+                      <p className="text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
+                        {c.form_note}
+                      </p>
                       <button
                         type="submit"
                         data-testid="button-form-submit"
@@ -297,6 +422,8 @@ export default function Consulta() {
           </RevealSection>
         </div>
       </section>
+      {/* ─── FINAL CTA (CONCIERGE) ─── */}
+      <CtaSection />
     </BaseLayout>
   );
 }

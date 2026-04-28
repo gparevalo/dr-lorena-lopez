@@ -31,12 +31,36 @@
     "title": "Clinical expertise at the service of your wellbeing",
     "subtitle": "Every treatment is the result of years of specialized training, continuous research, and a deep commitment to medical excellence.",
     "items": [
-      { "icon": "award", "title": "International Training", "description": "Specialization and postgraduate studies at world-reference centers in advanced aesthetic medicine." },
-      { "icon": "shield", "title": "Medical Certifications", "description": "Certified by leading international institutions in aesthetic medicine and facial rejuvenation." },
-      { "icon": "microscope", "title": "Personalized Diagnosis", "description": "Each patient receives a complete facial analysis before any treatment protocol begins." },
-      { "icon": "leaf", "title": "Preventive Medicine", "description": "A preventive approach that preserves and enhances your natural beauty long-term." },
-      { "icon": "zap", "title": "Cutting-Edge Technology", "description": "State-of-the-art medical equipment for precise, safe results." },
-      { "icon": "heart", "title": "Premium Follow-Up", "description": "Continuous accompaniment during and after every treatment protocol." }
+      {
+        "icon": "award",
+        "title": "International Training",
+        "description": "Specialization and postgraduate studies at world-reference centers in advanced aesthetic medicine."
+      },
+      {
+        "icon": "shield",
+        "title": "Medical Certifications",
+        "description": "Certified by leading international institutions in aesthetic medicine and facial rejuvenation."
+      },
+      {
+        "icon": "microscope",
+        "title": "Personalized Diagnosis",
+        "description": "Each patient receives a complete facial analysis before any treatment protocol begins."
+      },
+      {
+        "icon": "leaf",
+        "title": "Preventive Medicine",
+        "description": "A preventive approach that preserves and enhances your natural beauty long-term."
+      },
+      {
+        "icon": "zap",
+        "title": "Cutting-Edge Technology",
+        "description": "State-of-the-art medical equipment for precise, safe results."
+      },
+      {
+        "icon": "heart",
+        "title": "Premium Follow-Up",
+        "description": "Continuous accompaniment during and after every treatment protocol."
+      }
     ]
   },
   "treatments": {
@@ -45,11 +69,87 @@
     "subtitle": "A curated selection of advanced aesthetic treatments, designed for natural and sophisticated results.",
     "cta": "View all treatments",
     "items": [
-      { "name": "Endolift", "tagline": "Redefinition without surgery", "description": "Minimally invasive laser lifting for deep skin tissue regeneration with natural, lasting results." },
-      { "name": "Botulinum Toxin", "tagline": "Expression, refined", "description": "Precision medical application to soften expression lines while preserving the face's natural authenticity." },
-      { "name": "Primex", "tagline": "Premium biostimulation", "description": "Advanced cellular stimulation protocol for collagen regeneration and restoration of skin vitality." },
-      { "name": "Hyaluronic Acid", "tagline": "Volume with elegance", "description": "Facial volume and contour restoration with high-precision injection techniques for harmonious results." },
-      { "name": "Biostimulation", "tagline": "Rejuvenation from within", "description": "Activation of natural skin regeneration mechanisms for more luminous, firm, and healthy skin." }
+      {
+        "name": "Endolift",
+        "tagline": "Redefinition without surgery",
+        "description": "Minimally invasive laser lifting for deep skin tissue regeneration with natural, lasting results."
+      },
+      {
+        "name": "Botulinum Toxin",
+        "tagline": "Expression, refined",
+        "description": "Precision medical application to soften expression lines while preserving the face's natural authenticity."
+      },
+      {
+        "name": "Primex",
+        "tagline": "Premium biostimulation",
+        "description": "Advanced cellular stimulation protocol for collagen regeneration and restoration of skin vitality."
+      },
+      {
+        "name": "Hyaluronic Acid",
+        "tagline": "Volume with elegance",
+        "description": "Facial volume and contour restoration with high-precision injection techniques for harmonious results."
+      },
+      {
+        "name": "Biostimulation",
+        "tagline": "Rejuvenation from within",
+        "description": "Activation of natural skin regeneration mechanisms for more luminous, firm, and healthy skin."
+      }
+    ]
+  },
+  "proceso": {
+    "label": "Tratamiento Estrella",
+    "title": "Endolift",
+    "subtitle": "Tecnología láser mínimamente invasiva que redefine el contorno facial y corporal desde las capas profundas de la piel, sin cirugía y con resultados progresivos y naturales.",
+    "cta": "Ver todos los tratamientos",
+    "items": [
+      {
+        "name": "Endolift",
+        "tagline": "Redefinición profunda sin cirugía",
+        "description": "Estimula la contracción del tejido y la producción de colágeno para mejorar firmeza, contorno y calidad de la piel desde el interior."
+      },
+      {
+        "name": "Efecto lifting progresivo",
+        "tagline": "Resultado natural en evolución",
+        "description": "Mejora visible y progresiva de la flacidez sin cambios bruscos, respetando la expresión natural del rostro."
+      },
+      {
+        "name": "Estimulación de colágeno",
+        "tagline": "Regeneración biológica real",
+        "description": "Activa procesos naturales de regeneración cutánea que fortalecen la estructura de la piel a largo plazo."
+      },
+      {
+        "name": "Definición de contorno",
+        "tagline": "Armonía facial precisa",
+        "description": "Reestructura zonas de flacidez en rostro y cuerpo para recuperar definición sin volumen artificial."
+      }
+    ]
+  },
+  "starService": {
+    "label": "Tratamientos Exclusivos",
+    "title": "Procedimientos de alta precisión",
+    "subtitle": "Una selección curada de tratamientos estéticos avanzados, diseñados para resultados naturales y sofisticados.",
+    "cta": "Ver todos los tratamientos",
+    "items": [
+      {
+        "name": "Endolift",
+        "tagline": "Redefinición sin cirugía",
+        "description": "Lifting láser mínimamente invasivo para una regeneración profunda del tejido cutáneo con resultados naturales y duraderos."
+      },
+      {
+        "name": "Toxina Botulínica",
+        "tagline": "Expresión, refinada",
+        "description": "Aplicación médica de precisión para suavizar líneas de expresión conservando la naturalidad y autenticidad del rostro."
+      },
+      {
+        "name": "Ácido Hialurónico",
+        "tagline": "Volumen con elegancia",
+        "description": "Restauración de volumen y contorno facial con técnicas de inyección de alta precisión para resultados armoniosos."
+      },
+      {
+        "name": "Bioestimulación",
+        "tagline": "Rejuvenecimiento desde adentro",
+        "description": "Activación de los mecanismos naturales de regeneración cutánea para una piel más luminosa, firme y saludable."
+      }
     ]
   },
   "about": {
@@ -65,25 +165,53 @@
       "Member of international medical societies"
     ],
     "philosophy_label": "Philosophy",
-    "philosophy": "\"Aesthetic medicine is not about changing who you are, but helping you become the best version of yourself.\""
+    "philosophy": "\"La medicina estética no cambia quién eres. Revela la armonía que ya existe en ti.\"",
+    "philosophy2": "\"Equilibra, no transforma.\""
   },
   "philosophy": {
     "label": "Medical Process",
     "title": "Results that respect your nature",
     "subtitle": "A rigorous medical process that guarantees elegant, natural, and lasting results.",
     "steps": [
-      { "number": "01", "title": "Medical Evaluation", "description": "Complete medical consultation to understand your clinical history, goals, and current skin condition." },
-      { "number": "02", "title": "Personalized Protocol", "description": "Design of an exclusive treatment plan, adapted to your unique characteristics and desired results." },
-      { "number": "03", "title": "Natural Results", "description": "Treatments executed with maximum precision for elegant results that preserve your natural essence." }
+      {
+        "number": "01",
+        "title": "Medical Evaluation",
+        "description": "Complete medical consultation to understand your clinical history, goals, and current skin condition."
+      },
+      {
+        "number": "02",
+        "title": "Personalized Protocol",
+        "description": "Design of an exclusive treatment plan, adapted to your unique characteristics and desired results."
+      },
+      {
+        "number": "03",
+        "title": "Natural Results",
+        "description": "Treatments executed with maximum precision for elegant results that preserve your natural essence."
+      }
     ]
   },
   "testimonials": {
     "label": "Testimonials",
     "title": "What our patients say",
     "items": [
-      { "name": "Valentina R.", "age": "42 years", "text": "Dr. López restored my confidence in my appearance without anyone noticing I had anything done. I simply look more rested and radiant.", "treatment": "Botulinum Toxin + Hyaluronic Acid" },
-      { "name": "Marcela S.", "age": "38 years", "text": "What I value most is her medical approach. She doesn't try to sell me treatments — she listens to what I truly need. The result exceeded all my expectations.", "treatment": "Endolift" },
-      { "name": "Carolina M.", "age": "51 years", "text": "After years searching for natural results, I finally found a doctor who understands that beauty isn't about changing, but preserving the best of yourself.", "treatment": "Biostimulation + Primex" }
+      {
+        "name": "Valentina R.",
+        "age": "42 years",
+        "text": "Dr. López restored my confidence in my appearance without anyone noticing I had anything done. I simply look more rested and radiant.",
+        "treatment": "Botulinum Toxin + Hyaluronic Acid"
+      },
+      {
+        "name": "Marcela S.",
+        "age": "38 years",
+        "text": "What I value most is her medical approach. She doesn't try to sell me treatments — she listens to what I truly need. The result exceeded all my expectations.",
+        "treatment": "Endolift"
+      },
+      {
+        "name": "Carolina M.",
+        "age": "51 years",
+        "text": "After years searching for natural results, I finally found a doctor who understands that beauty isn't about changing, but preserving the best of yourself.",
+        "treatment": "Biostimulation + Primex"
+      }
     ]
   },
   "consultation": {
@@ -91,10 +219,22 @@
     "title": "A different medical experience",
     "subtitle": "From the very first moment, your consultation is designed to give you clarity, confidence, and a personalized action plan.",
     "steps": [
-      { "title": "Complete Facial Analysis", "description": "Detailed evaluation of facial structure, skin quality, and aging signs." },
-      { "title": "Lifestyle Review", "description": "Understanding your habits, medical history, and factors influencing your skin health." },
-      { "title": "Personalized Protocol", "description": "Design of an exclusive treatment plan with clear objectives and expected results." },
-      { "title": "Premium Experience", "description": "A care environment designed for your comfort, privacy, and total confidence." }
+      {
+        "title": "Complete Facial Analysis",
+        "description": "Detailed evaluation of facial structure, skin quality, and aging signs."
+      },
+      {
+        "title": "Lifestyle Review",
+        "description": "Understanding your habits, medical history, and factors influencing your skin health."
+      },
+      {
+        "title": "Personalized Protocol",
+        "description": "Design of an exclusive treatment plan with clear objectives and expected results."
+      },
+      {
+        "title": "Premium Experience",
+        "description": "A care environment designed for your comfort, privacy, and total confidence."
+      }
     ]
   },
   "cta": {
@@ -139,10 +279,26 @@
     "what_title": "What your consultation includes",
     "what_subtitle": "Every minute of your consultation has a clinical purpose. This is high-level aesthetic medicine.",
     "steps": [
-      { "icon": "scan", "title": "Advanced Facial Analysis", "description": "Three-dimensional evaluation of your bone structure, facial volumes, skin quality, and asymmetry. A complete medical reading of your face." },
-      { "icon": "history", "title": "In-Depth Clinical History", "description": "Detailed review of your medical history, previous treatments, lifestyle habits, and systemic factors that directly influence your skin." },
-      { "icon": "protocol", "title": "Protocol Design", "description": "Creation of your personalized treatment plan: what to do, in what order, with which technique, and when to expect visible results." },
-      { "icon": "care", "title": "Total Care Experience", "description": "A clinical environment designed for your privacy and comfort, where you can ask all your questions without rush and with full information." }
+      {
+        "icon": "scan",
+        "title": "Advanced Facial Analysis",
+        "description": "Three-dimensional evaluation of your bone structure, facial volumes, skin quality, and asymmetry. A complete medical reading of your face."
+      },
+      {
+        "icon": "history",
+        "title": "In-Depth Clinical History",
+        "description": "Detailed review of your medical history, previous treatments, lifestyle habits, and systemic factors that directly influence your skin."
+      },
+      {
+        "icon": "protocol",
+        "title": "Protocol Design",
+        "description": "Creation of your personalized treatment plan: what to do, in what order, with which technique, and when to expect visible results."
+      },
+      {
+        "icon": "care",
+        "title": "Total Care Experience",
+        "description": "A clinical environment designed for your privacy and comfort, where you can ask all your questions without rush and with full information."
+      }
     ],
     "value_label": "Why it's different",
     "value_title": "We don't sell treatments. We design protocols.",
@@ -229,10 +385,26 @@
     "timeline_label": "Career",
     "timeline_title": "A training without shortcuts",
     "timeline": [
-      { "year": "Medicine", "title": "Complete Medical Education", "body": "Graduated with honors in general medicine. Rigorous scientific foundation that distinguishes her clinical judgment." },
-      { "year": "Specialization", "title": "International Postgraduate in Aesthetic Medicine", "body": "Advanced training at world-reference centers. Exposure to the most innovative facial rejuvenation techniques." },
-      { "year": "Laser & Surgery", "title": "Laser Technology Certification", "body": "Specialized training in the highest-precision laser systems available, including Endolift and biostimulation technologies." },
-      { "year": "Today", "title": "Private Practice of Excellence", "body": "Exclusive care for patients seeking real results with medical judgment. Complex cases, personalized protocols, natural results." }
+      {
+        "year": "Medicine",
+        "title": "Complete Medical Education",
+        "body": "Graduated with honors in general medicine. Rigorous scientific foundation that distinguishes her clinical judgment."
+      },
+      {
+        "year": "Specialization",
+        "title": "International Postgraduate in Aesthetic Medicine",
+        "body": "Advanced training at world-reference centers. Exposure to the most innovative facial rejuvenation techniques."
+      },
+      {
+        "year": "Laser & Surgery",
+        "title": "Laser Technology Certification",
+        "body": "Specialized training in the highest-precision laser systems available, including Endolift and biostimulation technologies."
+      },
+      {
+        "year": "Today",
+        "title": "Private Practice of Excellence",
+        "body": "Exclusive care for patients seeking real results with medical judgment. Complex cases, personalized protocols, natural results."
+      }
     ],
     "philosophy_label": "Philosophy",
     "philosophy_title": "The principle of minimal intervention",
@@ -264,15 +436,69 @@
       { "id": "doctor", "label": "The Doctor" }
     ],
     "items": [
-      { "id": 1, "category": "results", "title": "Endolift · Natural Result", "subtitle": "Facial oval redefinition", "treatment": "Endolift" },
-      { "id": 2, "category": "doctor", "title": "Dr. Lore López", "subtitle": "Personalized consultation", "treatment": "" },
-      { "id": 3, "category": "clinic", "title": "Clinical Environment", "subtitle": "Privacy and comfort", "treatment": "" },
-      { "id": 4, "category": "results", "title": "Botulinum Toxin · Natural Expression", "subtitle": "Expression line softening", "treatment": "Botulinum Toxin" },
-      { "id": 5, "category": "results", "title": "Hyaluronic Acid · Volume", "subtitle": "Lip and cheekbone definition", "treatment": "Hyaluronic Acid" },
-      { "id": 6, "category": "clinic", "title": "The Consultation Room", "subtitle": "Designed for your privacy", "treatment": "" },
-      { "id": 7, "category": "results", "title": "Biostimulation · Luminosity", "subtitle": "Deep skin regeneration", "treatment": "Biostimulation" },
-      { "id": 8, "category": "doctor", "title": "In Process", "subtitle": "Precision in every procedure", "treatment": "" },
-      { "id": 9, "category": "results", "title": "Primex · Firmness", "subtitle": "Next-gen biostimulation", "treatment": "Primex" }
+      {
+        "id": 1,
+        "category": "results",
+        "title": "Endolift · Natural Result",
+        "subtitle": "Facial oval redefinition",
+        "treatment": "Endolift"
+      },
+      {
+        "id": 2,
+        "category": "doctor",
+        "title": "Dr. Lore López",
+        "subtitle": "Personalized consultation",
+        "treatment": ""
+      },
+      {
+        "id": 3,
+        "category": "clinic",
+        "title": "Clinical Environment",
+        "subtitle": "Privacy and comfort",
+        "treatment": ""
+      },
+      {
+        "id": 4,
+        "category": "results",
+        "title": "Botulinum Toxin · Natural Expression",
+        "subtitle": "Expression line softening",
+        "treatment": "Botulinum Toxin"
+      },
+      {
+        "id": 5,
+        "category": "results",
+        "title": "Hyaluronic Acid · Volume",
+        "subtitle": "Lip and cheekbone definition",
+        "treatment": "Hyaluronic Acid"
+      },
+      {
+        "id": 6,
+        "category": "clinic",
+        "title": "The Consultation Room",
+        "subtitle": "Designed for your privacy",
+        "treatment": ""
+      },
+      {
+        "id": 7,
+        "category": "results",
+        "title": "Biostimulation · Luminosity",
+        "subtitle": "Deep skin regeneration",
+        "treatment": "Biostimulation"
+      },
+      {
+        "id": 8,
+        "category": "doctor",
+        "title": "In Process",
+        "subtitle": "Precision in every procedure",
+        "treatment": ""
+      },
+      {
+        "id": 9,
+        "category": "results",
+        "title": "Primex · Firmness",
+        "subtitle": "Next-gen biostimulation",
+        "treatment": "Primex"
+      }
     ]
   },
   "internacionales": {
@@ -286,18 +512,46 @@
     "virtual_title": "Your protocol, wherever you are",
     "virtual_subtitle": "The process begins with a complete virtual consultation. No prior travel, no wasted time.",
     "virtual_steps": [
-      { "step": "01", "title": "Online intake", "body": "You complete a detailed medical intake form with front, profile, and ¾ photographs. All information is reviewed before your first session." },
-      { "step": "02", "title": "Video consultation", "body": "A 45-minute session with Dr. López. Complete facial analysis, medical diagnosis, questions, and preliminary protocol design." },
-      { "step": "03", "title": "Protocol proposal", "body": "You receive your personalized treatment plan with procedures, timelines, costs, and logistics recommendations for your visit." },
-      { "step": "04", "title": "Concierge clinical visit", "body": "We coordinate everything for your arrival: schedule, transfers, recommended accommodation, and post-procedure follow-up from your home country." }
+      {
+        "step": "01",
+        "title": "Online intake",
+        "body": "You complete a detailed medical intake form with front, profile, and ¾ photographs. All information is reviewed before your first session."
+      },
+      {
+        "step": "02",
+        "title": "Video consultation",
+        "body": "A 45-minute session with Dr. López. Complete facial analysis, medical diagnosis, questions, and preliminary protocol design."
+      },
+      {
+        "step": "03",
+        "title": "Protocol proposal",
+        "body": "You receive your personalized treatment plan with procedures, timelines, costs, and logistics recommendations for your visit."
+      },
+      {
+        "step": "04",
+        "title": "Concierge clinical visit",
+        "body": "We coordinate everything for your arrival: schedule, transfers, recommended accommodation, and post-procedure follow-up from your home country."
+      }
     ],
     "markets_label": "Origin markets",
     "markets_title": "Connecting with the world",
     "markets": [
-      { "city": "Miami · USA", "body": "High-profile Latino community seeking natural results with European medical standards. Virtual consultation available in EST hours." },
-      { "city": "Panama", "body": "Direct access with connecting flights. Intensive 2-3 day protocol available for Panamanian patients with virtual follow-up." },
-      { "city": "Dubai · UAE", "body": "For the luxury clientele of the Middle East, we offer international schedule coordination and high-fidelity protocol management." },
-      { "city": "Latin America", "body": "Argentina, Colombia, Venezuela, Mexico. Communities that know Dr. López's standard and travel to experience it." }
+      {
+        "city": "Miami · USA",
+        "body": "High-profile Latino community seeking natural results with European medical standards. Virtual consultation available in EST hours."
+      },
+      {
+        "city": "Panama",
+        "body": "Direct access with connecting flights. Intensive 2-3 day protocol available for Panamanian patients with virtual follow-up."
+      },
+      {
+        "city": "Dubai · UAE",
+        "body": "For the luxury clientele of the Middle East, we offer international schedule coordination and high-fidelity protocol management."
+      },
+      {
+        "city": "Latin America",
+        "body": "Argentina, Colombia, Venezuela, Mexico. Communities that know Dr. López's standard and travel to experience it."
+      }
     ],
     "concierge_label": "Concierge Service",
     "concierge_title": "Everything coordinated for you",
@@ -335,10 +589,26 @@
         "Patients aged 35–65 with good residual skin elasticity"
       ],
       "process_steps": [
-        { "num": "01", "title": "Preparation and marking", "body": "Treatment areas are marked. Topical local anesthesia is applied. No pain, no sedation." },
-        { "num": "02", "title": "Fiber introduction", "body": "A needle-sized microcannula guides the fiber optic beneath the skin. The process is minimally invasive." },
-        { "num": "03", "title": "Laser energy emission", "body": "Laser energy acts on two planes: immediate tissue contraction and long-term neocollagenesis stimulation." },
-        { "num": "04", "title": "Recovery and result", "body": "Return to activities in 24–48 hours. Visible results from the first weeks, progressive over 3–6 months." }
+        {
+          "num": "01",
+          "title": "Preparation and marking",
+          "body": "Treatment areas are marked. Topical local anesthesia is applied. No pain, no sedation."
+        },
+        {
+          "num": "02",
+          "title": "Fiber introduction",
+          "body": "A needle-sized microcannula guides the fiber optic beneath the skin. The process is minimally invasive."
+        },
+        {
+          "num": "03",
+          "title": "Laser energy emission",
+          "body": "Laser energy acts on two planes: immediate tissue contraction and long-term neocollagenesis stimulation."
+        },
+        {
+          "num": "04",
+          "title": "Recovery and result",
+          "body": "Return to activities in 24–48 hours. Visible results from the first weeks, progressive over 3–6 months."
+        }
       ],
       "benefits": [
         "Visible facial oval redefinition",
@@ -364,10 +634,26 @@
         "As a complement to other treatments in an integral protocol"
       ],
       "process_steps": [
-        { "num": "01", "title": "Facial dynamics analysis", "body": "The natural movement of your face at rest and in expression is evaluated. Each application point is decided with medical judgment." },
-        { "num": "02", "title": "Microdose application", "body": "Ultra-fine needle micro-dotting technique. No anesthesia, minimal discomfort. Duration: 15–20 minutes." },
-        { "num": "03", "title": "Two-week evaluation", "body": "The final result is evaluated at 14 days. Precise adjustments are made if necessary." },
-        { "num": "04", "title": "Strategic maintenance", "body": "With regular treatments, the dose needed decreases over time. A smart long-term strategy." }
+        {
+          "num": "01",
+          "title": "Facial dynamics analysis",
+          "body": "The natural movement of your face at rest and in expression is evaluated. Each application point is decided with medical judgment."
+        },
+        {
+          "num": "02",
+          "title": "Microdose application",
+          "body": "Ultra-fine needle micro-dotting technique. No anesthesia, minimal discomfort. Duration: 15–20 minutes."
+        },
+        {
+          "num": "03",
+          "title": "Two-week evaluation",
+          "body": "The final result is evaluated at 14 days. Precise adjustments are made if necessary."
+        },
+        {
+          "num": "04",
+          "title": "Strategic maintenance",
+          "body": "With regular treatments, the dose needed decreases over time. A smart long-term strategy."
+        }
       ],
       "benefits": [
         "Natural result nobody notices",
@@ -393,10 +679,26 @@
         "Maintenance and optimization of previous treatments"
       ],
       "process_steps": [
-        { "num": "01", "title": "Skin preparation", "body": "Medical cleansing and application of topical anesthesia for maximum comfort during the procedure." },
-        { "num": "02", "title": "Primex protocol application", "body": "Intradermal injection of the biostimulating complex at multiple planes according to the treatment map designed for you." },
-        { "num": "03", "title": "Activation and recovery", "body": "Practically immediate recovery. There may be minimal redness in the first hours." },
-        { "num": "04", "title": "Progressive results", "body": "Regeneration occurs gradually. Optimal results from 4–6 weeks with continuous improvement." }
+        {
+          "num": "01",
+          "title": "Skin preparation",
+          "body": "Medical cleansing and application of topical anesthesia for maximum comfort during the procedure."
+        },
+        {
+          "num": "02",
+          "title": "Primex protocol application",
+          "body": "Intradermal injection of the biostimulating complex at multiple planes according to the treatment map designed for you."
+        },
+        {
+          "num": "03",
+          "title": "Activation and recovery",
+          "body": "Practically immediate recovery. There may be minimal redness in the first hours."
+        },
+        {
+          "num": "04",
+          "title": "Progressive results",
+          "body": "Regeneration occurs gradually. Optimal results from 4–6 weeks with continuous improvement."
+        }
       ],
       "benefits": [
         "Activation of own collagen and elastin",
@@ -422,10 +724,26 @@
         "Those seeking an immediate and reversible result"
       ],
       "process_steps": [
-        { "num": "01", "title": "Anatomical facial mapping", "body": "Volume loss vectors and structural support points are evaluated. Precise planning before any injection." },
-        { "num": "02", "title": "Product selection", "body": "Not all hyaluronic acids are equal. The ideal density and rheology is selected for each area to be treated." },
-        { "num": "03", "title": "Cannula or needle injection", "body": "Injection technique depends on the area: blunt cannula for greater vascular safety in risk zones, fine needle for precise definition." },
-        { "num": "04", "title": "Immediate result and follow-up", "body": "The result is visible immediately. Two-week evaluation for adjustments. Duration: 12 to 18 months depending on the area." }
+        {
+          "num": "01",
+          "title": "Anatomical facial mapping",
+          "body": "Volume loss vectors and structural support points are evaluated. Precise planning before any injection."
+        },
+        {
+          "num": "02",
+          "title": "Product selection",
+          "body": "Not all hyaluronic acids are equal. The ideal density and rheology is selected for each area to be treated."
+        },
+        {
+          "num": "03",
+          "title": "Cannula or needle injection",
+          "body": "Injection technique depends on the area: blunt cannula for greater vascular safety in risk zones, fine needle for precise definition."
+        },
+        {
+          "num": "04",
+          "title": "Immediate result and follow-up",
+          "body": "The result is visible immediately. Two-week evaluation for adjustments. Duration: 12 to 18 months depending on the area."
+        }
       ],
       "benefits": [
         "Result visible from day one",
@@ -451,10 +769,26 @@
         "For body areas: neck, décolleté, hands, abdomen"
       ],
       "process_steps": [
-        { "num": "01", "title": "Skin diagnosis", "body": "Evaluation of the current skin condition, diagnosis of priority areas, and selection of the most appropriate biostimulation protocol." },
-        { "num": "02", "title": "Preparation and application", "body": "Clean and prepared skin. Application of the biostimulant via superficial microinjections distributed across the treatment area." },
-        { "num": "03", "title": "Regenerative process activation", "body": "The active substances initiate the gradual synthesis of endogenous collagen, elastin, and hyaluronic acid." },
-        { "num": "04", "title": "Progressive and cumulative result", "body": "Visible improvement from 4 weeks. Standard protocol: 3 sessions. Results improve over time." }
+        {
+          "num": "01",
+          "title": "Skin diagnosis",
+          "body": "Evaluation of the current skin condition, diagnosis of priority areas, and selection of the most appropriate biostimulation protocol."
+        },
+        {
+          "num": "02",
+          "title": "Preparation and application",
+          "body": "Clean and prepared skin. Application of the biostimulant via superficial microinjections distributed across the treatment area."
+        },
+        {
+          "num": "03",
+          "title": "Regenerative process activation",
+          "body": "The active substances initiate the gradual synthesis of endogenous collagen, elastin, and hyaluronic acid."
+        },
+        {
+          "num": "04",
+          "title": "Progressive and cumulative result",
+          "body": "Visible improvement from 4 weeks. Standard protocol: 3 sessions. Results improve over time."
+        }
       ],
       "benefits": [
         "Activation of endogenous collagen",

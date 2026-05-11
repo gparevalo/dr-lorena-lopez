@@ -11,8 +11,7 @@ export function Footer() {
     { href: "/", label: t.nav.home },
     { href: "/tratamientos", label: t.nav.tratamientos },
     { href: "/doctora", label: t.nav.doctora },
-    { href: "/galeria", label: t.nav.galeria },
-    { href: "/pacientes-internacionales", label: t.nav.internacionales },
+    { href: "/galeria", label: t.nav.galeria }, 
     { href: "/consulta", label: t.nav.agendar },
   ];
 

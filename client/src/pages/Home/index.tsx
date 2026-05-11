@@ -15,6 +15,8 @@ import SobreDoctora from "./components/SobreDoctora";
 import TratamientosPrincipales from "./components/TratamientosPrincipales";
 import { fadeUp, staggerContainer, fadeIn } from "@/lib/animations";
 import { SEO } from "@/components/seo";
+import HeroHome2 from "./components/HeroHome2";
+import HeroHomeFinal from "./components/HeroHomeFinal";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -28,7 +30,7 @@ export default function Home() {
       />
 
       {/* ─── HERO CINEMATIC ─── */}
-      <HeroHome />
+      <HeroHomeFinal /> 
 
       <EstadisticaSection />
 

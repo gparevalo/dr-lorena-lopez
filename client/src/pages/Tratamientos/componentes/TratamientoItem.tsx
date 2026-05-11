@@ -87,7 +87,7 @@ export default function TratamientoItem() {
                 <motion.p
                   variants={fadeUp}
                   className={cn(
-                    "text-lg md:text-xl font-light leading-relaxed font-serif italic max-w-xl",
+                    "text-md  leading-relaxed     max-w-xl",
                     isDark ? "text-[#CBBBA0]" : "text-foreground/70",
                   )}
                 >
@@ -97,7 +97,7 @@ export default function TratamientoItem() {
                 {/* HIGHLIGHT */}
                 <motion.p
                   variants={fadeUp}
-                  className="text-xs uppercase tracking-[0.35em] text-primary font-medium"
+                  className="text-lg uppercase tracking-[0.35em] text-primary font-medium"
                 >
                   {treatment.highlight}
                 </motion.p>
@@ -107,7 +107,7 @@ export default function TratamientoItem() {
                   <motion.ul
                     variants={fadeUp}
                     className={cn(
-                      "space-y-2 text-sm",
+                      "space-y-2 text-sm leading-relaxed ",
                       isDark ? "text-[#A08D75]" : "text-foreground/70",
                     )}
                   >

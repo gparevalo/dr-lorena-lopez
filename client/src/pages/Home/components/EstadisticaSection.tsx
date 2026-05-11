@@ -1,7 +1,7 @@
 import { useLanguage } from "@/i18n";
+import { fadeUp, staggerContainer } from "@/lib/animations";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { fadeUp, staggerContainer } from "@/lib/animations";
 
 function CountUp({ value }: { value: string }) {
   const [display, setDisplay] = useState("0");
@@ -67,12 +67,8 @@ export default function EstadisticaSection() {
 
   return (
     <div className="bg-primary relative overflow-hidden">
-      {/* Cinematic subtle grid on background */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
-        style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "40px 40px" }} />
-      
       <div className="section-container section-spacing relative z-10">
-        <motion.div 
+        <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"

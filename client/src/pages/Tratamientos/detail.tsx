@@ -106,46 +106,97 @@ export default function TratamientoDetail() {
         className={`bg-gradient-to-br ${gradientClass}`}
         dark={false}
       >
-        <Link
-          href="/tratamientos"
-          className="inline-flex items-center gap-3 text-primary hover:text-primary transition-all text-[10px] uppercase tracking-[0.45em] font-bold mt-8 group"
-        >
-          <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" />
-          {td.back}
-        </Link>
+        <div className="text-end flex justify-end">
+          <Link
+            href="/tratamientos"
+            className="inline-flex items-center gap-3 text-primary hover:text-black transition-all text-sm uppercase tracking-[0.45em] font-bold mt-8 group"
+          >
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            {td.back}
+          </Link>
+        </div>
       </PageHero>
 
       {/* ─── POSITIONING MANIFESTO ─── */}
       <section className="section-spacing bg-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-px bg-black/[0.03]" />
-        <div className="section-container">
+        {/* subtle architectural lines */}
+        <div className="absolute top-0 left-0 w-full h-px bg-black/[0.04]" />
+
+        <div className="section-container relative">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-6xl mx-auto"
           >
-            <motion.div variants={fadeUp} className="flex justify-center mb-10">
-              <Sparkles className="w-6 h-6 text-primary/30" />
-            </motion.div>
-
-            <motion.p
-              variants={fadeUp}
-              className="font-serif text-foreground/80 leading-relaxed font-light italic"
-              style={{ fontSize: "var(--text-3xl)" }}
-            >
-              "{detail.positioning}"
-            </motion.p>
-
+            {/* LABEL */}
             <motion.div
               variants={fadeUp}
-              className="mt-12 w-20 h-px bg-primary/20 mx-auto"
-            />
+              className="flex items-center gap-4 mb-14"
+            >
+              <span className="w-12 h-px bg-primary/30" />
+
+              <span
+                className="
+            text-[10px]
+            tracking-[0.45em]
+            uppercase
+            text-primary
+            font-semibold
+          "
+              >
+                Más allá de la estética
+              </span>
+            </motion.div>
+
+            {/* MANIFESTO */}
+            <motion.div variants={fadeUp} className="relative">
+              <p
+                className="
+            font-serif
+            text-black
+            leading-[1.25]
+            tracking-[-0.03em]
+            max-w-5xl
+            text-4xl
+          "
+              >
+                {detail.positioning}
+              </p>
+
+              {/* decorative quote mark */}
+              <span
+                className="
+            absolute
+            -top-10
+            -left-6
+            text-[8rem]
+            font-serif
+            text-primary/10
+            leading-none
+            hidden lg:block
+          "
+              >
+                “
+              </span>
+            </motion.div>
           </motion.div>
         </div>
-      </section>
+        {/* ─── CINEMATIC OVERLAYS ─── */}
+        <div className="absolute bottom-0 left-0 w-full h-[150px] bg-gradient-to-t from-white to-transparent z-40" />
 
+        <div
+          className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]"
+          style={{
+            backgroundImage: `
+            linear-gradient(to right, #000 1px, transparent 1px),
+            linear-gradient(to bottom, #000 1px, transparent 1px)
+          `,
+            backgroundSize: "80px 80px",
+          }}
+        />
+      </section>
       {/* ─── IDEAL CANDIDATE GRID ─── */}
       <section className="section-spacing bg-ivory/50">
         <div className="section-container">
@@ -171,33 +222,72 @@ export default function TratamientoDetail() {
 
               <motion.p
                 variants={fadeUp}
-                className="text-foreground/60 text-lg font-light leading-relaxed font-serif italic"
+                className="text-foreground/60 text-lg font-light leading-relaxed  "
               >
                 {detail.candidate_body}
               </motion.p>
             </motion.div>
-
             <motion.div
               variants={staggerContainer}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-px bg-black/5 border border-black/5"
+              className="lg:col-span-7"
             >
-              {detail.candidate_points.map((point: string, i: number) => (
-                <motion.div
-                  key={i}
-                  variants={fadeUp}
-                  className="bg-white p-8 group hover:bg-ivory transition-colors duration-500 flex flex-col"
-                >
-                  <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/20 transition-all">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                  </div>
-                  <span className="text-foreground/70 leading-relaxed text-[15px] font-light italic font-serif">
-                    {point}
-                  </span>
-                </motion.div>
-              ))}
+              <div className="border-t border-black/10">
+                {detail.candidate_points.map((point: string, i: number) => (
+                  <motion.div
+                    key={i}
+                    variants={fadeUp}
+                    className="
+          group
+          grid
+          grid-cols-[80px_1fr]
+          gap-6
+          py-8
+          border-b
+          border-black/10
+          transition-all
+          duration-500
+        "
+                  >
+                    {/* NUMBER */}
+                    <div
+                      className="
+            text-primary/40
+            font-serif
+            italic
+            text-3xl
+            leading-none
+            transition-all
+            duration-500
+            group-hover:text-primary
+            group-hover:translate-x-1
+          "
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </div>
+
+                    {/* TEXT */}
+                    <div>
+                      <p
+                        className="
+              text-[1.05rem]
+              leading-[1.9]
+              text-foreground/75
+              font-light
+              tracking-[0.01em]
+              transition-all
+              duration-500
+              group-hover:text-foreground
+            "
+                      >
+                        {point}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>
@@ -216,7 +306,10 @@ export default function TratamientoDetail() {
             viewport={{ once: true }}
             className="text-center mb-24"
           >
-            <motion.div variants={fadeUp}>
+            <motion.div
+              variants={fadeUp}
+              className="text-center flex justify-center"
+            >
               <LuxuryLabel dark>{td.process_label}</LuxuryLabel>
             </motion.div>
             <motion.h2
@@ -296,7 +389,7 @@ export default function TratamientoDetail() {
                   className="flex items-start gap-4 p-6 border border-black/5 bg-ivory/20 group hover:border-primary/20 transition-all duration-500"
                 >
                   <div className="w-1.5 h-1.5 rounded-full bg-primary/40 mt-2 flex-shrink-0 group-hover:scale-125 group-hover:bg-primary transition-all" />
-                  <span className="text-foreground/70 text-[15px] leading-relaxed font-light italic font-serif">
+                  <span className="text-foreground/70 text-[15px] leading-relaxed ">
                     {benefit}
                   </span>
                 </motion.div>

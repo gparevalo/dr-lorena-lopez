@@ -71,7 +71,7 @@ export default function TratamientosPrincipales() {
             </span>
 
             <span className="text-[10px] uppercase tracking-[0.4em] text-primary/60 font-bold mb-8 group-hover:translate-x-2 transition-transform duration-500">
-              Protocol {String(i + 1).padStart(2, "0")}
+              Tratamiento {String(i + 1).padStart(2, "0")}
             </span>
 
             <h3 className="font-heading text-2xl text-black/90 mb-6 group-hover:text-primary transition-colors duration-500">

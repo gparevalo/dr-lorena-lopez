@@ -1,7 +1,7 @@
+import { fadeIn, fadeUp, staggerContainer } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
-import { fadeUp, staggerContainer, fadeIn } from "@/lib/animations";
 
 interface PageHeroProps {
   title: string;
@@ -104,14 +104,14 @@ export function PageHero({
           {description && (
             <motion.p
               variants={fadeUp}
-              className="font-serif italic text-xl md:text-2xl text-foreground/70 max-w-2xl leading-relaxed mb-12"
+              className="    text-lg md:text-lg text-foreground/90 max-w-2xl leading-relaxed mb-12"
             >
               {description}
             </motion.p>
           )}
-
-          {children && <motion.div variants={fadeUp}>{children}</motion.div>}
         </motion.div>
+
+        {children && <motion.div variants={fadeUp}>{children}</motion.div>}
       </div>
 
       {/* Grid Pattern */}

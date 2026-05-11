@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { fadeUp, staggerContainer, fadeIn } from "@/lib/animations";
 import { Star, ShieldCheck, HeartPulse } from "lucide-react";
 
-export default function HeroHome() {
+export default function HeroHome2() {
   const { t } = useLanguage();
 
   return (

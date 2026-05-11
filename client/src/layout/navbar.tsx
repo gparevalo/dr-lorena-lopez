@@ -22,7 +22,7 @@ export function Navbar() {
   const navItems = [
     { href: "/", label: t.nav.home },
     { href: "/tratamientos", label: t.nav.tratamientos },
-    { href: "/doctora", label: t.nav.doctora }, 
+    { href: "/doctora", label: t.nav.doctora },
   ];
 
   return (
@@ -93,7 +93,7 @@ export function Navbar() {
             </button>
 
             {/* CTA */}
-            <Link href="/#contacto">
+            <a href="/consulta">
               <button
                 className={cn(
                   "px-8 py-3 bg-primary text-white text-[11px] uppercase tracking-[0.3em] font-semibold transition-all duration-300 hover:scale-[1.03]",
@@ -104,7 +104,7 @@ export function Navbar() {
               >
                 {t.nav.agendar}
               </button>
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -167,14 +167,14 @@ export function Navbar() {
                   {language === "en" ? "ES" : "EN"}
                 </button>
 
-                <Link href="/#contacto">
+                <a href="/consulta">
                   <button
                     onClick={() => setIsOpen(false)}
                     className="w-full py-4 bg-primary text-white text-[11px] uppercase tracking-[0.3em] font-semibold"
                   >
                     {t.nav.agendar}
                   </button>
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

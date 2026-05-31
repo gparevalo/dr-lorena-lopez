@@ -34,7 +34,7 @@ export default function TratamientoItem() {
             withGrid={false}
             className={cn(
               "py-20 md:py-28 relative overflow-hidden",
-              isDark && "bg-[#0A0A0A]", // negro más premium
+              isDark && "bg-primary", // negro más premium
             )}
           >
             <div

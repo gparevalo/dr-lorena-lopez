@@ -89,7 +89,11 @@ export default function CtaSection() {
                 withShimmer
                 className="relative z-10 w-full justify-between mt-auto"
               >
-                <a href="https://wa.me/" target="_blank" rel="noopener">
+                <a
+                  href="https://wa.me/593980163009"
+                  target="_blank"
+                  rel="noopener"
+                >
                   {t.cta.button}
                   <ArrowRight className="ml-4 w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
                 </a>

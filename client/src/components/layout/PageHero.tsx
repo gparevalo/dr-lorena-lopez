@@ -1,4 +1,4 @@
-import { fadeIn, fadeUp, staggerContainer } from "@/lib/animations";
+import { fadeUp, staggerContainer } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
@@ -9,10 +9,9 @@ interface PageHeroProps {
   subtitle?: string;
   description?: string;
   image?: string;
-  imagePortada?: string;
   children?: ReactNode;
   className?: string;
-  dark?: boolean;
+  align?: "left" | "center";
 }
 
 export function PageHero({
@@ -21,114 +20,247 @@ export function PageHero({
   subtitle,
   description,
   image,
-  imagePortada,
   children,
   className,
-  dark = true,
+  align = "left",
 }: PageHeroProps) {
   return (
     <section
       className={cn(
-        "relative min-h-[70vh] flex items-center pt-32 pb-20 overflow-hidden",
-        dark ? "bg-black text-white" : "bg-transparent text-black",
-        className,
+        `
+      relative
+      overflow-hidden
+      min-h-[70vh] 
+      pt-36
+      pb-20
+      md:pt-44
+      md:pb-28
+      bg-[#1E140F]
+      text-white
+    `,
       )}
     >
-      {/* Background with Depth */}
-      <div className="absolute inset-0 z-0">
-        {image && (
-          <motion.div
-            initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.6 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${image})` }}
-          />
-        )}
-
-        {/* Gradients & Blur */}
+      {/* ───────────────── BACKGROUND IMAGE ───────────────── */}
+      {image && (
         <div
-          className={cn(
-            "absolute inset-0 z-1",
-            dark
-              ? "bg-gradient-to-b from-black/80 via-black/50 to-black"
-              : "bg-gradient-to-b from-black/80 via-white/20 to-white",
-          )}
+          className="
+            absolute
+            inset-0
+            bg-cover
+            bg-center
+            scale-[1.02]
+          "
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
+        />
+      )}
+
+      {/* ───────────────── CINEMATIC BROWN SHADOW ───────────────── */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background: `
+            linear-gradient(
+              90deg,
+              rgba(24, 15, 10, 0.94) 0%,
+              rgba(44, 29, 20, 0.90) 18%,
+              rgba(66, 45, 31, 0.78) 34%,
+              rgba(90, 64, 45, 0.46) 48%,
+              rgba(90, 64, 45, 0.14) 58%,
+              rgba(90, 64, 45, 0.00) 70%
+            )
+          `,
+        }}
+      />
+
+      {/* MOBILE EXTRA OVERLAY */}
+      <div className="absolute inset-0 bg-black/35 md:hidden z-0" />
+
+      {/* ───────────────── SOFT GLOWS ───────────────── */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* TOP LEFT GLOW */}
+        <div
+          className="
+            absolute
+            top-[-180px]
+            left-[-120px]
+            w-[420px]
+            h-[420px]
+            rounded-full
+            bg-primary/15
+            blur-[120px]
+          "
         />
 
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="show"
-          className="absolute inset-0 z-2 backdrop-blur-[1px]"
+        {/* BOTTOM RIGHT GLOW */}
+        <div
+          className="
+            absolute
+            bottom-[-220px]
+            right-[-100px]
+            w-[380px]
+            h-[380px]
+            rounded-full
+            bg-[#C6A27E]/10
+            blur-[120px]
+          "
         />
-
-        {/* Decorative elements */}
-        {dark && (
-          <>
-            <div className="absolute top-0 left-0 w-full h-[500px] bg-primary/10 blur-[120px] rounded-full translate-y-[-50%] pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[60%] h-[400px] bg-primary/5 blur-[100px] rounded-full translate-y-[50%] pointer-events-none" />
-          </>
-        )}
       </div>
 
-      {/* Content Container */}
-      <div className="section-container relative z-10 w-full">
+      {/* ───────────────── GRID TEXTURE ───────────────── */}
+      <div
+        className="absolute inset-0 opacity-[0.025]"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, #ffffff 1px, transparent 1px),
+            linear-gradient(to bottom, #ffffff 1px, transparent 1px)
+          `,
+          backgroundSize: "80px 80px",
+        }}
+      />
+
+      {/* ───────────────── CONTENT ───────────────── */}
+      <div
+        className="
+    relative
+    z-10
+    w-full
+    max-w-[50vw]
+    px-5
+    sm:px-6
+    lg:px-10
+  "
+      >
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="show"
-          className="max-w-4xl"
+          className={cn(
+            "max-w-4xl",
+            align === "center" &&
+              "mx-auto flex flex-col items-center text-center",
+          )}
         >
+          {/* ───────────────── LABEL ───────────────── */}
           {subtitle && (
-            <motion.span
+            <motion.div
               variants={fadeUp}
-              className="block font-bold text-[10px] uppercase tracking-[0.4em] text-white/[0.7] mb-6"
+              className="
+                inline-flex
+                items-center
+                gap-3
+                mb-7
+              "
             >
-              {subtitle}
-            </motion.span>
+              <span className="w-10 h-px bg-primary/50" />
+
+              <span
+                className="
+                  text-[10px]
+                  uppercase
+                  tracking-[0.35em]
+                  font-bold
+                  text-white/60
+                "
+              >
+                {subtitle}
+              </span>
+            </motion.div>
           )}
 
+          {/* ───────────────── TITLE ───────────────── */}
           <motion.h1
             variants={fadeUp}
-            className="font-heading text-6xl md:text-8xl lg:text-9xl mb-8 leading-[0.9] tracking-tight"
+            className={cn(
+              `
+                leading-[0.92]
+                tracking-[-0.05em]
+              `,
+              align === "center" ? "text-center" : "text-left",
+            )}
           >
-            {title}
+            <span
+              className="
+                block
+                text-5xl
+                sm:text-6xl
+                lg:text-7xl
+                font-black
+              "
+            >
+              {title}
+            </span>
+
             {title2 && (
-              <span className="font-serif italic text-primary font-bold -mt-4">
+              <span
+                className="
+                  block
+                  mt-1
+                  font-serif
+                  italic
+                  text-primary
+                  text-5xl
+                  sm:text-6xl
+                  lg:text-7xl
+                "
+              >
                 {title2}
               </span>
             )}
           </motion.h1>
 
+          {/* ───────────────── DESCRIPTION ───────────────── */}
           {description && (
             <motion.p
               variants={fadeUp}
-              className="    text-lg md:text-lg text-foreground/90 max-w-2xl leading-relaxed mb-12"
+              className={cn(
+                `
+                  mt-8
+                  max-w-2xl
+                  text-base
+                  md:text-lg
+                  leading-relaxed
+                  text-white/70
+                `,
+                align === "center" && "text-center",
+              )}
             >
               {description}
             </motion.p>
           )}
-        </motion.div>
 
-        {children && <motion.div variants={fadeUp}>{children}</motion.div>}
+          {/* ───────────────── DECORATIVE LINE ───────────────── */}
+          <motion.div
+            variants={fadeUp}
+            className="
+              mt-10
+              flex
+              items-center
+              gap-4
+            "
+          >
+            <div className="w-16 h-px bg-primary/40" />
+
+            <div className="w-2 h-2 rounded-full bg-primary/60" />
+
+            <div className="w-24 h-px bg-primary/15" />
+          </motion.div>
+
+          {/* ───────────────── EXTRA CONTENT ───────────────── */}
+          {children && (
+            <motion.div variants={fadeUp} className="mt-12">
+              {children}
+            </motion.div>
+          )}
+        </motion.div>
       </div>
 
-      {/* Grid Pattern */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, ${dark ? "#fff" : "#000"} 1px, transparent 1px),
-            linear-gradient(to bottom, ${dark ? "#fff" : "#000"} 1px, transparent 1px)
-          `,
-          backgroundSize: "80px 80px",
-          maskImage:
-            "radial-gradient(ellipse 50% 50% at 50% 50%, #000 0%, transparent 100%)",
-          WebkitMaskImage:
-            "radial-gradient(ellipse 50% 50% at 50% 50%, #000 0%, transparent 100%)",
-        }}
-      />
+      {/* ───────────────── TOP FADE ───────────────── */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#664c39]/40 to-transparent z-10" />
+
+      {/* ───────────────── BOTTOM FADE ───────────────── */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary/30 to-transparent z-10" />
     </section>
   );
 }

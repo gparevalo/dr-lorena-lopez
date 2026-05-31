@@ -2,7 +2,6 @@ import { PageHero } from "@/components/layout/PageHero";
 import { SEO } from "@/components/seo";
 import { useLanguage } from "@/i18n";
 import { BaseLayout } from "@/layout/base-layout";
-import headerImg from "@assets/images/18.jpg";
 import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import CtaSection from "../Home/components/CtaSection";
@@ -33,12 +32,11 @@ export default function Tratamientos() {
         title2={`${tp.hero_headline_2}`}
         subtitle={tp.hero_label}
         description={tp.hero_subtitle}
-        image={headerImg}
-        dark={false}
+        image={"/images/tratamientos.png"}
       />
 
       {/* ─── TREATMENT ROWS ─── */}
-      <TratamientoItem/>
+      <TratamientoItem />
 
       {/* ─── FINAL CTA (CONCIERGE) ─── */}
       <CtaSection />

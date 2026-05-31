@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import logo_header from "@assets/images/logo_verde-removebg-preview.png";
 import logo_header_white from "@assets/images/logo_verde-removebg-preview.png";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Globe, Menu, X } from "lucide-react";
+import { ArrowRight, CalendarDays, Globe, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 
@@ -21,8 +21,7 @@ export function Navbar() {
 
   const navItems = [
     { href: "/", label: t.nav.home },
-    { href: "/tratamientos", label: t.nav.tratamientos },
-    { href: "/doctora", label: t.nav.doctora },
+    { href: "/tratamientos", label: t.nav.tratamientos }, 
   ];
 
   return (
@@ -31,7 +30,7 @@ export function Navbar() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-700",
         scrolled
           ? "bg-background/90 backdrop-blur-xl border-b border-border/30 py-4"
-          : "bg-gradient-to-b from-black/70 via-black/30 to-transparent py-6",
+          : "bg-gradient-to-b from-black/60 via-black/40 to-transparent py-6",
       )}
     >
       <div className="max-w-[1500px] mx-auto px-6 lg:px-16 flex items-center justify-between">
@@ -78,6 +77,35 @@ export function Navbar() {
 
           {/* RIGHT */}
           <div className="flex items-center gap-6">
+            {/* CTA */}
+            <a href="/consulta">
+              <button
+                className="
+    px-8
+    h-14
+    bg-primary
+    text-white
+    uppercase
+    tracking-[0.25em]
+    text-xs
+    font-bold
+    rounded-full
+    shadow-xl
+    hover:scale-[1.02]
+    transition-all
+    w-full
+    sm:w-auto
+    flex
+    items-center
+    justify-center
+    gap-3
+  "
+              >
+                <CalendarDays className="w-4 h-4" />
+                {t.nav.agendar}
+              </button>
+            </a>
+
             {/* Language */}
             <button
               onClick={() => setLanguage(language === "en" ? "es" : "en")}
@@ -91,20 +119,6 @@ export function Navbar() {
               <Globe className="w-3 h-3" />
               {language === "en" ? "EN" : "ES"}
             </button>
-
-            {/* CTA */}
-            <a href="/consulta">
-              <button
-                className={cn(
-                  "px-8 py-3 bg-primary text-white text-[11px] uppercase tracking-[0.3em] font-semibold transition-all duration-300 hover:scale-[1.03]",
-                  !scrolled &&
-                    location === "/" &&
-                    "bg-white text-black hover:bg-primary hover:text-white",
-                )}
-              >
-                {t.nav.agendar}
-              </button>
-            </a>
           </div>
         </div>
 

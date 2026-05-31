@@ -1,261 +1,433 @@
-import { useLanguage } from "@/i18n";
-import heroImg from "@assets/images/61.png";
-import { motion } from "framer-motion";
-import { fadeUp, staggerContainer, fadeIn } from "@/lib/animations";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/i18n";
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  CalendarDays,
+  Crown,
+  Flower
+} from "lucide-react";
 
 export default function HeroHomeFinal() {
   const { t } = useLanguage();
-  const c = t.consultaPage;
 
   return (
-    <>
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="
+        relative
+        h-[110vh]
+        flex
+        items-center
+        overflow-hidden
+        bg-black
+      "
+    >
+      {/* ───────────────── BACKGROUND IMAGE ───────────────── */}
+      <div
         className="
-    relative
-    min-h-screen
-    bg-white
-    overflow-hidden
-    flex items-center pt-24
-  "
-      >
-        {/* ─── BACKGROUND CINEMATIC ELEMENTS ─── */}
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-0 right-0 w-[60%] h-[100%] bg-white/40 skew-x-[-12deg] translate-x-[20%] z-0" />
-          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[140px]" />
-          <div className="absolute bottom-[10%] right-[-5%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />
+          absolute
+          inset-0
+          bg-cover
+          bg-no-repeat
+          bg-[72%_center]
+          md:bg-center
+          scale-[1.02]
+        "
+        style={{
+          backgroundImage: "url('/images/hero-doctora.png')",
+        }}
+      />
 
-          {/* Sculptural geometric accent */}
-          <div className="absolute bottom-0 right-[5%] w-[35%] aspect-square border-l border-t border-black/[0.03] rounded-tl-[10rem] z-0 hidden lg:block" />
-        </div>
+      {/* ───────────────── CINEMATIC DARK OVERLAY ───────────────── */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background: `
+      linear-gradient(
+        90deg,
+        rgba(32, 18, 12, 0.92) 0%,
+        rgba(52, 32, 22, 0.82) 18%,
+        rgba(76, 52, 36, 0.58) 40%,
+        rgba(92, 66, 48, 0.24) 72%,
+        rgba(92, 66, 48, 0.04) 100%
+      )
+    `,
+        }}
+      />
 
-        <div
+      {/* MOBILE EXTRA OVERLAY */}
+      <div className="absolute inset-0 bg-black/45 md:bg-black/10 z-0" />
+
+      {/* ───────────────── AMBIENT GLOWS ───────────────── */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        {/* TOP GLOW */}
+        <motion.div
+          animate={{
+            opacity: [0.5, 0.8, 0.5],
+            scale: [1, 1.05, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
           className="
-      section-container
-      relative
-      z-20
-      w-full
-      grid
-      lg:grid-cols-12
-      items-center
-      gap-10
-    "
-        >
-          {/* LEFT CONTENT */}
-          <div className="lg:col-span-6 relative z-30">
-            <motion.div
-              variants={fadeUp}
-              className="flex items-center gap-4 mb-8"
-            >
-              <span className="w-12 h-px bg-primary/30" />
-              <p className="text-[10px] tracking-[0.5em] uppercase text-primary font-bold">
-                {t.hero.label}
-              </p>
-            </motion.div>
+            absolute
+            -top-40
+            -left-40
+            w-[420px]
+            h-[420px]
+            md:w-[650px]
+            md:h-[650px]
+            rounded-full
+            bg-primary/20
+            blur-[120px]
+          "
+        />
 
-            <motion.h1
-              variants={fadeUp}
-              className="font-heading text-black leading-[0.85] tracking-tight mb-10"
-            >
-              <span className="block">{t.hero.headline_1}</span>
-              <span className="font-serif italic text-primary font-bold block">
-                {t.hero.headline_2}
-              </span>
-              <span className="font-serif block mb-4">{t.hero.headline_3}</span>
-            </motion.h1>
-            <p
-              className=" 
-    text-xl   
-    max-w-[520px] 
-    font-serif
-    italic 
-  "
-            >
-              {t.hero.subtitle}
-            </p>
+        {/* SOFT LIGHT */}
+        <motion.div
+          animate={{
+            opacity: [0.25, 0.4, 0.25],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+          }}
+          className="
+            absolute
+            bottom-[-180px]
+            right-[-100px]
+            w-[340px]
+            h-[340px]
+            rounded-full
+            bg-white/10
+            blur-[120px]
+          "
+        />
 
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              transition={{ delay: 0.3 }}
-              className="mt-10 flex items-center gap-5"
-            >
-              <a href="/consulta">
-                <button
-                  className="
-              px-8 py-4
-              bg-primary
-              text-white
-              uppercase
-              tracking-[0.25em]
-              text-xs
-              hover:scale-[1.02]
-              transition
-            "
-                >
-                  {t.hero.cta_primary}
-                </button>
-              </a>
-              <Button
-                asChild
-                variant="ghost"
-                className="px-8 text-[11px] uppercase tracking-[0.4em] font-bold group w-full sm:w-auto"
-              >
-                <a href="#proceso" className="flex items-center gap-3">
-                  {t.hero.cta_secondary}
-                  <span className="w-8 h-px bg-primary/30 group-hover:w-12 transition-all duration-500" />
-                </a>
-              </Button>
-            </motion.div>
-          </div>
-
-          {/* RIGHT VISUAL */}
-          <div
-            className="
-    lg:col-span-6
-    relative
-    h-[90vh]
-    flex
-    items-center
-    justify-center
-  "
-          >
-            {/* ambient blur */}
-            <div
-              className="
-      absolute
-      w-[520px]
-      h-[520px]
-      rounded-full
-      bg-primary/10
-      blur-[120px]
-    "
-            />
-
-            {/* MAIN EDITORIAL FRAME */}
-            <motion.div
-              initial={{ opacity: 0, y: 80 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 1.2,
-                ease: "easeOut",
-              }}
-              className="
-      relative
-      z-20
-      w-[85%]
-      h-[78vh]
-      rounded-[3rem]
-      overflow-hidden
-      bg-white/40
-      backdrop-blur-2xl
-      border border-white/50
-      shadow-[0_20px_80px_rgba(0,0,0,0.08)]
-    "
-            >
-              {/* IMAGE */}
-              <motion.img
-                src={heroImg}
-                alt="Doctora"
-                className="
-        absolute
-        inset-0
-        w-full
-        h-full
-        object-cover
-        object-center
-        scale-[1.02]
-      "
-              />
-
-              {/* cinematic fade */}
-              <div
-                className="
-        absolute
-        inset-0
-        bg-gradient-to-t
-        from-black/10
-        via-transparent
-        to-white/10
-      "
-              />
-
-              {/* soft bottom fade */}
-              <div
-                className="
-        absolute
-        bottom-0
-        left-0
-        right-0
-        h-[25%]
-        bg-gradient-to-t
-        from-white/40
-        to-transparent
-      "
-              />
-            </motion.div>
-
-            {/* decorative border */}
-            <div
-              className="
-      absolute
-      w-[88%]
-      h-[81vh]
-      rounded-[3.5rem]
-      border
-      border-black/[0.04]
-    "
-            />
-
-            {/* FLOATING CARD */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.7 }}
-              className="
-      absolute
-      top-[10%]
-      right-[-2%]
-      z-40
-      max-w-[240px]
-      rounded-[2rem]
-      bg-primary
-      backdrop-blur-xl
-      border border-white/50
-      px-6
-      py-5
-      shadow-[0_20px_50px_rgba(0,0,0,0.08)]
-    "
-            >
-              <p className="text-[10px] tracking-[0.35em] uppercase text-white mb-2 font-bold">
-                Especialista
-              </p>
-
-              <p className="text-sm leading-relaxed text-white/90 ">
-                Resultados armónicos y sofisticados con enfoque médico-estético
-                avanzado.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-        {/* ─── CINEMATIC OVERLAYS ─── */}
-
+        {/* GRID TEXTURE */}
         <div
-          className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `
-            linear-gradient(to right, #000 1px, transparent 1px),
-            linear-gradient(to bottom, #000 1px, transparent 1px)
-          `,
+              linear-gradient(to right, #fff 1px, transparent 1px),
+              linear-gradient(to bottom, #fff 1px, transparent 1px)
+            `,
             backgroundSize: "80px 80px",
           }}
         />
-        {/* bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#f8f5f1] to-transparent" />
-      </motion.section>
-    </>
+      </div>
+
+      {/* ───────────────── CONTENT ───────────────── */}
+      <div
+        className="
+          relative
+          z-20
+          w-full
+          max-w-7xl
+          mx-auto
+          px-5
+          sm:px-6
+          lg:px-10
+          py-28
+        "
+      >
+        <div className="max-w-[760px]">
+          {/* LABEL */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="
+              inline-flex
+              items-center
+              gap-3
+              mb-8
+              rounded-full
+              border
+              border-[#8B5E3C]/10
+              bg-[#8B5E3C]/25
+              backdrop-blur-xl
+              px-5
+              py-2.5
+            "
+          >
+            <Crown className="w-4 h-4 text-primary" />
+
+            <p className="text-[10px] sm:text-xs tracking-[0.28em] uppercase text-white/80 font-bold">
+              {t.hero.label}
+            </p>
+          </motion.div>
+
+          {/* TITLE */}
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="
+              text-center
+              md:text-left
+              leading-[0.92]
+              tracking-[-0.06em]
+              text-white
+              max-w-[900px]
+            "
+          >
+            <span
+              className="
+                block
+                text-7xl
+                sm:text-[62px]
+                md:text-[82px]
+                lg:text-[104px]
+                font-black
+              "
+            >
+              {t.hero.headline_1}
+            </span>
+
+            <span
+              className="
+                block
+                italic
+                font-serif
+                text-primary
+                text-7xl
+                sm:text-[62px]
+                md:text-[82px]
+                lg:text-[104px]
+              "
+            >
+              {t.hero.headline_2}
+            </span>
+
+            <span
+              className="
+                block
+                font-serif
+                text-7xl
+                sm:text-[62px]
+                md:text-[82px]
+                lg:text-[104px]
+              "
+            >
+              {t.hero.headline_3}
+            </span>
+          </motion.h1>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="
+              mt-14              flex
+              flex-col
+              sm:flex-row
+              items-center
+              md:items-start
+              gap-4
+            "
+          >
+            {/* PRIMARY CTA */}{" "}
+            <a
+              href="https://wa.me/593980163009"
+              target="_blank"
+              rel="noopener"
+              className="w-full sm:w-auto"
+            >
+              <button
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  w-full
+                  sm:w-auto
+                  h-14
+                  px-8
+                  rounded-full
+                  bg-primary
+                  text-white
+                  uppercase
+                  text-xs
+                  font-black
+                  tracking-[0.22em]
+                  shadow-[0_10px_40px_rgba(0,0,0,0.25)]
+                  transition-all
+                  hover:scale-[1.02]
+                  flex
+                  items-center
+                  justify-center
+                  gap-3
+                "
+              >
+                {/* SHINE EFFECT */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    opacity-0
+                    group-hover:opacity-100
+                    transition-opacity
+                    bg-gradient-to-r
+                    from-white/0
+                    via-white/20
+                    to-white/0
+                    translate-x-[-100%]
+                    group-hover:translate-x-[100%]
+                    duration-1000
+                  "
+                />
+
+                <CalendarDays className="w-4 h-4 relative z-10" />
+
+                <span className="relative z-10">{t.hero.cta_primary}</span>
+              </button>
+            </a>
+            {/* SECONDARY CTA */}
+            <Button
+              asChild
+              variant="ghost"
+              className="
+                group
+                w-full
+                sm:w-auto
+                justify-center
+                md:justify-start
+                text-white
+                hover:bg-transparent
+                px-2
+                h-14
+              "
+            >
+              <a
+                href="#proceso"
+                className="
+                  flex
+                  items-center
+                  gap-3
+                  uppercase
+                  text-[11px]
+                  font-bold
+                  tracking-[0.24em]
+                "
+              >
+                {t.hero.cta_secondary}
+
+                <ArrowRight
+                  className="
+                    w-4
+                    h-4
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                  "
+                />
+              </a>
+            </Button>
+          </motion.div>
+
+          {/* PREMIUM INFO STRIP */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.35 }}
+            className="
+              mt-14
+              flex
+              flex-col
+              sm:flex-row
+              items-center
+              sm:items-start
+              gap-6
+            "
+          >
+            <div
+              className="
+                flex
+                items-center
+                gap-4
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/5
+                backdrop-blur-xl
+                px-6
+                py-4
+              "
+            >
+              <div
+                className="
+                  w-12
+                  h-12
+                  rounded-2xl
+                  bg-[#8B5E3C]/25
+                  flex
+                  items-center
+                  justify-center
+                "
+              >
+                <Flower className="w-5 h-5 text-primary" />
+              </div>
+
+              <div className="text-center sm:text-left">
+                <p className="text-white font-semibold text-sm">
+                  Medicina estética avanzada
+                </p>
+
+                <p className="text-white/50 text-xs mt-1 uppercase tracking-[0.18em]">
+                  Protocolos personalizados
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="
+                flex
+                items-center
+                gap-4
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/5
+                backdrop-blur-xl
+                px-6
+                py-4
+              "
+            >
+              <div
+                className="
+                  w-12
+                  h-12
+                  rounded-2xl
+                  bg-white/10
+                  flex
+                  items-center
+                  justify-center
+                "
+              >
+                <CalendarDays className="w-5 h-5 text-white" />
+              </div>
+
+              <div className="text-center sm:text-left">
+                <p className="text-white font-semibold text-sm">
+                  Valoración especializada
+                </p>
+
+                <p className="text-white/50 text-xs mt-1 uppercase tracking-[0.18em]">
+                  Agenda disponible online
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* BOTTOM FADE */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-primary to-transparent z-10" />
+    </motion.section>
   );
 }

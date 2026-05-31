@@ -49,12 +49,12 @@ export default function EstadisticaSection() {
 
   const stats = [
     {
-      number: "15+",
+      number: "11+",
       label: "Años de excelencia médica",
       accent: "experiencia",
     },
     {
-      number: "5000+",
+      number: "4000+",
       label: "Transformaciones realizadas",
       accent: "pacientes",
     },
@@ -82,7 +82,7 @@ export default function EstadisticaSection() {
               className="flex flex-col items-center relative"
             >
               {/* accent background label */}
-              <span className="absolute top-0 text-white/5 text-2xl md:text-5xl font-heading tracking-widest select-none uppercase -translate-y-1/2">
+              <span className="absolute top-0 text-white/30 text-2xl md:text-5xl font-heading tracking-widest select-none uppercase -translate-y-1/2">
                 {stat.accent}
               </span>
 

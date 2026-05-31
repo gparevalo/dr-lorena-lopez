@@ -4,6 +4,7 @@ import { useLanguage } from "@/i18n";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import { motion } from "framer-motion";
 import LuxuryLabel from "./LuxuryLabel";
+import { CalendarDays } from "lucide-react";
 
 export default function TratamientosPrincipales() {
   const { t } = useLanguage();
@@ -41,9 +42,32 @@ export default function TratamientosPrincipales() {
             variants={fadeUp}
             className="flex flex-col sm:flex-row justify-center items-center gap-6"
           >
-            <Button asChild variant="editorial" withShimmer>
-              <a href="#contacto">{t.hero.cta_primary}</a>
-            </Button>
+            <button
+              className="
+    px-8
+    h-14
+    bg-primary
+    text-white
+    uppercase
+    tracking-[0.25em]
+    text-xs
+    font-bold
+    rounded-full
+    shadow-xl
+    hover:scale-[1.02]
+    transition-all
+    w-full
+    sm:w-auto
+    flex
+    items-center
+    justify-center
+    gap-3
+  "
+            >
+              <CalendarDays className="w-4 h-4" />
+
+              <a href="/consulta">{t.hero.cta_primary} consulta</a>
+            </button>
             <Button
               asChild
               variant="ghost"

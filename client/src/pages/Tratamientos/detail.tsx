@@ -7,7 +7,7 @@ import { BaseLayout } from "@/layout/base-layout";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import headerImg from "@assets/images/fondo.png";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, CheckCircle, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link, useParams } from "wouter";
 import LuxuryLabel from "../Home/components/LuxuryLabel";
 

@@ -1,22 +1,19 @@
 import { UnifiedSection } from "@/components/layout/UnifiedSection";
- import { useLanguage } from "@/i18n";
+import { SEO } from "@/components/seo";
+import { useLanguage } from "@/i18n";
 import { BaseLayout } from "@/layout/base-layout";
+import { fadeIn, fadeUp, staggerContainer } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
-import ArmonizacionFacial from "./components/ArmonizacionFacial";
 import CtaSection from "./components/CtaSection";
 import EstadisticaSection from "./components/EstadisticaSection";
 import FraseVideo from "./components/FraseVideo";
-import HeroHome from "./components/HeroHome";
+import HeroHomeFinal from "./components/HeroHomeFinal";
 import LuxuryLabel from "./components/LuxuryLabel";
 import NuestroProceso from "./components/NuestroProceso";
 import SobreDoctora from "./components/SobreDoctora";
 import TratamientosPrincipales from "./components/TratamientosPrincipales";
-import { fadeUp, staggerContainer, fadeIn } from "@/lib/animations";
-import { SEO } from "@/components/seo";
-import HeroHome2 from "./components/HeroHome2";
-import HeroHomeFinal from "./components/HeroHomeFinal";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -30,22 +27,27 @@ export default function Home() {
       />
 
       {/* ─── HERO CINEMATIC ─── */}
-      <HeroHomeFinal /> 
+      <HeroHomeFinal />
 
       <EstadisticaSection />
 
-      <SobreDoctora />
+      <TratamientosPrincipales />
 
       <NuestroProceso />
 
-      <TratamientosPrincipales />
+      <SobreDoctora />
 
-      <ArmonizacionFacial />
+      {/*<ArmonizacionFacial />*/}
 
       <FraseVideo />
 
       {/* ─── TESTIMONIOS (MINIMALIST) ─── */}
-      <UnifiedSection id="testimonios" dark={false} withGrid={false} withGlow={true}>
+      <UnifiedSection
+        id="testimonios"
+        dark={false}
+        withGrid={false}
+        withGlow={true}
+      >
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-24 border-b border-black/5 pb-12">
             <motion.div
@@ -73,11 +75,7 @@ export default function Home() {
               className="flex gap-1.5 p-3 rounded-full border border-black/5 bg-white/50 backdrop-blur-sm"
             >
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star
-                  key={i}
-                  size={12}
-                  className="fill-primary text-primary"
-                />
+                <Star key={i} size={12} className="fill-primary text-primary" />
               ))}
             </motion.div>
           </div>
@@ -92,12 +90,12 @@ export default function Home() {
                 viewport={{ once: true }}
                 className={cn(
                   "col-span-12 md:col-span-6 lg:col-span-4 p-12 bg-white hover:bg-ivory transition-all duration-700 flex flex-col group",
-                  i === 0 && "md:col-span-12 lg:col-span-4 bg-ivory/50"
+                  i === 0 && "md:col-span-12 lg:col-span-4 bg-ivory/50",
                 )}
               >
                 <div className="relative mb-10">
-                   <Quote className="w-8 h-8 text-primary/10 group-hover:text-primary/30 transition-colors duration-500" />
-                   <div className="absolute -top-4 -left-4 w-12 h-12 border border-primary/5 rounded-full -z-10 group-hover:scale-150 transition-transform duration-1000" />
+                  <Quote className="w-8 h-8 text-primary/10 group-hover:text-primary/30 transition-colors duration-500" />
+                  <div className="absolute -top-4 -left-4 w-12 h-12 border border-primary/5 rounded-full -z-10 group-hover:scale-150 transition-transform duration-1000" />
                 </div>
 
                 <p className="font-serif italic text-2xl text-foreground/80 leading-relaxed mb-12 flex-grow">
@@ -109,7 +107,8 @@ export default function Home() {
                     {item.name}
                   </span>
                   <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground font-medium">
-                    {item.treatment} <span className="mx-2 opacity-30">|</span> {item.age}
+                    {item.treatment} <span className="mx-2 opacity-30">|</span>{" "}
+                    {item.age}
                   </span>
                 </div>
               </motion.div>
@@ -119,9 +118,12 @@ export default function Home() {
 
         {/* Decorative Background Element */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] pointer-events-none opacity-[0.03] z-0">
-           <svg viewBox="0 0 100 100" className="w-full h-full fill-current text-primary">
-              <circle cx="50" cy="50" r="40" />
-           </svg>
+          <svg
+            viewBox="0 0 100 100"
+            className="w-full h-full fill-current text-primary"
+          >
+            <circle cx="50" cy="50" r="40" />
+          </svg>
         </div>
       </UnifiedSection>
 
@@ -130,4 +132,3 @@ export default function Home() {
     </BaseLayout>
   );
 }
-

@@ -24,7 +24,7 @@ export function UnifiedSectionBlack({
       id={id}
       className={cn(
         "relative overflow-hidden section-spacing",
-        dark ? "bg-[#030303] text-white" : "bg-white text-black",
+        dark ? "bg-primary/20 text-black" : "bg-white text-black",
         className,
       )}
     >

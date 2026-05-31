@@ -66,7 +66,7 @@ export default function CtaSection() {
             className="flex justify-center lg:center"
           >
             <a
-              href="https://wa.me/"
+              href="https://wa.me/593980163009"
               target="_blank"
               rel="noopener"
               className="group relative inline-flex items-center justify-center"

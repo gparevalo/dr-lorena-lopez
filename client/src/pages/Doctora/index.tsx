@@ -34,13 +34,11 @@ function LuxuryLabel({
 }) {
   return (
     <div className="flex items-center gap-4 mb-6">
-      <Minus
-        className={cn("w-6 h-px", dark ? "text-primary/70" : "text-primary/50")}
-      />
+      <Minus className={"w-6 h-px text-primary "} />
       <span
         className={cn(
           "text-[9px] uppercase tracking-[0.6em] font-semibold",
-          dark ? "text-primary/90" : "text-primary",
+          "text-primary",
         )}
       >
         {children}
@@ -68,13 +66,13 @@ export default function Doctora() {
         description={d.seo_desc}
         canonicalPath="/doctora"
       />
- 
+
       <PageHero
-        title={d.hero_name} 
+        title={d.hero_name}
+        title2={`${t.about.specialty}`}
         subtitle={d.opening_label}
-        description={t.about.specialty}
-        image={headerImg}
-        dark={false}
+        description={t.about.bio_2}
+        image={"/images/hero-doctora.png"}
       />
 
       {/* ─── STORY: EDITORIAL LAYOUT ─── */}
@@ -123,7 +121,7 @@ export default function Doctora() {
       {/* ─── TIMELINE: MINIMALIST DARK ─── */}
       <UnifiedSectionBlack id="trayectoria">
         <div className="max-w-[1400px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-24 border-b border-white/10 pb-12">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-10  mb-10 border-b border-white/10 pb-12">
             <motion.div
               initial="hidden"
               whileInView="show"
@@ -131,13 +129,10 @@ export default function Doctora() {
               variants={stagger}
             >
               <LuxuryLabel dark>{d.timeline_label}</LuxuryLabel>
-              <h2 className="font-heading text-5xl md:text-7xl text-white">
+              <h2 className="font-heading text-5xl md:text-7xl  ">
                 {d.timeline_title}
               </h2>
             </motion.div>
-            <span className="font-accent text-primary/40 text-xs tracking-[0.4em] mb-4">
-              Curriculum Vitae
-            </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5">
@@ -148,15 +143,15 @@ export default function Doctora() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
-                className="group bg-black p-12 hover:bg-primary/[0.02] transition-all duration-700 h-full"
+                className="group bg-primary p-12 hover:bg-black/[0.5] transition-all duration-700 h-full"
               >
-                <span className="font-accent text-primary/60 text-[10px] tracking-[0.5em] uppercase mb-8 block">
+                <span className=" text-white/50 text-[10px] tracking-[0.5em] uppercase mb-8 block">
                   {item.year}
                 </span>
                 <h3 className="font-heading text-xl text-white/90 uppercase tracking-widest mb-6 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-white/30 text-sm leading-relaxed font-light">
+                <p className="text-white/50 text-md leading-relaxed font-light">
                   {item.body}
                 </p>
               </motion.div>

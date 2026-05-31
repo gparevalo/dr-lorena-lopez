@@ -11,7 +11,7 @@
     "internacionales": "Pacientes Internacionales",
     "nosotros": "Sobre Mí",
     "contacto": "Contacto",
-    "agendar": "Agendar Consulta",
+    "agendar": "Agendar",
     "language_toggle": "Español / EN"
   },
   "hero": {
@@ -20,7 +20,7 @@
     "headline_2": "se construye con",
     "headline_3": "precisión médica",
     "subtitle": "Tratamientos médicos que trabajan con tu estructura, no contra ella, para revelar una piel más equilibrada y natural.",
-    "cta_primary": "Agendar Valoración Médica",
+    "cta_primary": "Agendar",
     "cta_secondary": "Explorar Tratamientos",
     "credential_1": "Especialización Internacional",
     "credential_2": "Enfoque Preventivo",
@@ -324,7 +324,7 @@
   "tratamientosPage": {
     "seo_title": "Tratamientos Estéticos | Dra. Lore López",
     "seo_desc": "Endolift, Toxina Botulínica, Primex, Ácido Hialurónico y Bioestimulación. Tratamientos de medicina estética avanzada con la Dra. Lore López.",
-    "hero_label": "Procedimientos Médicos",
+    "hero_label": "Tratamientos Médicos",
     "hero_headline_1": "Cada tratamiento,",
     "hero_headline_2": "una obra de precisión",
     "hero_subtitle": "Una selección curada de los procedimientos estéticos más avanzados del mundo, ejecutados con criterio médico y sensibilidad artística.",

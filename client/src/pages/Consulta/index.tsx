@@ -5,7 +5,7 @@ import heroImg from "@assets/images/61.png";
 import { motion, useInView } from "framer-motion";
 import { ClipboardList, FlaskConical, ScanFace, Sparkles } from "lucide-react";
 import { useRef, useState } from "react";
-import CtaSection from "../Home/components/CtaSection";
+import CtaSection from "../Home/sections/cta/CtaSection";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },

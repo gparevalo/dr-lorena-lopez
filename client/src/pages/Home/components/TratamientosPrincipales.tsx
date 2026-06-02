@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import { motion } from "framer-motion";
-import LuxuryLabel from "./LuxuryLabel";
 import { CalendarDays } from "lucide-react";
+import LuxuryLabel from "./LuxuryLabel";
 
 export default function TratamientosPrincipales() {
   const { t } = useLanguage();
@@ -14,7 +14,7 @@ export default function TratamientosPrincipales() {
       className="bg-[#fdfdfd]"
       withGrid={false}
     >
-      <div className="text-center max-w-4xl mx-auto mb-24">
+      <div className="text-center max-w-4xl mx-auto mb-24"> 
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -27,7 +27,6 @@ export default function TratamientosPrincipales() {
           <motion.h2
             variants={fadeUp}
             className="font-heading mb-10 text-black leading-none tracking-tighter"
-            style={{ fontSize: "var(--text-7xl)" }}
           >
             {t.treatments.title}
           </motion.h2>

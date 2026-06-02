@@ -9,7 +9,7 @@ import { Minus, Quote } from "lucide-react";
 import { useRef } from "react";
 import { PageHero } from "@/components/layout/PageHero";
 import headerImg from "@assets/images/12.png";
-import CtaSection from "../Home/components/CtaSection";
+import CtaSection from "../Home/sections/cta/CtaSection";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

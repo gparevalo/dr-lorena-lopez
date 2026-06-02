@@ -4,7 +4,7 @@ import { useLanguage } from "@/i18n";
 import { BaseLayout } from "@/layout/base-layout";
 import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import CtaSection from "../Home/components/CtaSection";
+import CtaSection from "../Home/sections/cta/CtaSection";
 import TratamientoItem from "./componentes/TratamientoItem";
 
 export default function Tratamientos() {

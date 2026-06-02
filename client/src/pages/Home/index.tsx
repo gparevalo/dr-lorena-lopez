@@ -6,14 +6,18 @@ import { fadeIn, fadeUp, staggerContainer } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
-import CtaSection from "./components/CtaSection";
-import EstadisticaSection from "./components/EstadisticaSection";
 import FraseVideo from "./components/FraseVideo";
-import HeroHomeFinal from "./components/HeroHomeFinal";
 import LuxuryLabel from "./components/LuxuryLabel";
 import NuestroProceso from "./components/NuestroProceso";
-import SobreDoctora from "./components/SobreDoctora";
 import TratamientosPrincipales from "./components/TratamientosPrincipales";
+import PostTreatmentProtocolsSection from "./PostTreatmentProtocolsSection";
+import SobreDoctora from "./sections/abaut/SobreDoctora";
+import CtaSection from "./sections/cta/CtaSection";
+import EstadisticaSection from "./sections/estadisticas/EstadisticaSection";
+import PremiumHero from "./sections/hero/PremiumHero";
+import PatientJourneySection from "./sections/journey/PatientJourneySection";
+import TestimonialSliderDemo from "./sections/resultados/TestimonialHome";
+import { TestimonialsSection } from "./sections/testimonials/TestimonialsSection";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -25,13 +29,23 @@ export default function Home() {
         description="Experiencia médica premium en medicina estética avanzada, rejuvenecimiento facial y láser. La autoridad en belleza natural y confianza médica."
         canonicalPath="/"
       />
-
-      {/* ─── HERO CINEMATIC ─── */}
-      <HeroHomeFinal />
+      <PremiumHero />
 
       <EstadisticaSection />
 
+      {/* ─── HERO CINEMATIC 
+      <HeroHomeFinal />
+─── */}
+
+      <PatientJourneySection />
+
+      <TestimonialSliderDemo />
+
+      <TestimonialsSection />
+
       <TratamientosPrincipales />
+
+      <PostTreatmentProtocolsSection />
 
       <NuestroProceso />
 

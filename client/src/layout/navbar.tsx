@@ -22,6 +22,7 @@ export function Navbar() {
   const navItems = [
     { href: "/", label: t.nav.home },
     { href: "/tratamientos", label: t.nav.tratamientos }, 
+    { href: "/tratamientos", label: t.nav.packs }, 
   ];
 
   return (

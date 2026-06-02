@@ -7,31 +7,25 @@ import { ArrowRight, CalendarDays, Crown } from "lucide-react";
 
 const quickLinks = [
   {
-    title: "Antes",
-    subtitle: "Prepara tu piel",
-    href: "#antes",
+    title: "Antes y despues",
+    subtitle: "Pre / Post tratamiento",
+    href: "#tu-experiencia-completa",
   },
   {
-    title: "Tratamientos",
+    title: "Packs y promociones",
     subtitle: "Descubre opciones",
-    href: "#tratamientos",
-  },
-  {
-    title: "Después",
-    subtitle: "Recuperación guiada",
-    href: "#despues",
-  },
-  {
-    title: "Resultados",
-    subtitle: "Mantén tus beneficios",
-    href: "#resultados",
+    href: "/tratamientos",
   },
 ];
 
 export default function PremiumHero() {
   const { t } = useLanguage();
   return (
-    <UnifiedSectionBlack id="hero" className="bg-[#fdfdfd] pt-32" withGrid={false}>
+    <UnifiedSectionBlack
+      id="hero"
+      className="bg-[#fdfdfd] pt-20"
+      withGrid={false}
+    >
       {" "}
       <div
         className=" 
@@ -234,48 +228,14 @@ export default function PremiumHero() {
                 </a>
               </Button>
             </motion.div>
-          </motion.div>
 
-          {/* RIGHT MOSAIC */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="relative"
-          >
-            <div className="grid grid-cols-4 gap-4">
-              <div className="h-[520px] rounded-[28px] overflow-hidden">
-                <img
-                  src="/images/doctora/3.jpg"
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="col-span-2 row-span-2 h-[520px] rounded-[32px] overflow-hidden">
-                <img
-                  src="/images/doctora/hero.png"
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="h-[520px] rounded-[28px] overflow-hidden">
-                <img
-                  src="/images/doctora/tratamientos.png"
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* PREMIUM INFO STRIP */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.35 }}
-          className="
-              mt-14
+            {/* PREMIUM INFO STRIP */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.35 }}
+              className="
+              mt-12
               flex
               flex-col
               sm:flex-row
@@ -283,18 +243,18 @@ export default function PremiumHero() {
               sm:items-start
               gap-6
             "
-        >
-          {/* JOURNEY */}
+            >
+              {/* JOURNEY */}
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {quickLinks.map((item, index) => (
-              <a
-                key={item.title}
-                href={item.href}
-                className=" group  transition-all duration-500  "
-              >
-                <div
-                  className="
+              <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4">
+                {quickLinks.map((item, index) => (
+                  <a
+                    key={item.title}
+                    href={item.href}
+                    className=" group  transition-all duration-500  "
+                  >
+                    <div
+                      className="
                 flex
                 items-center
                 gap-4
@@ -306,9 +266,9 @@ export default function PremiumHero() {
                 px-6
                 py-4
               "
-                >
-                  <div
-                    className="
+                    >
+                      <div
+                        className="
                   w-12
                   h-12
                   rounded-2xl
@@ -317,19 +277,21 @@ export default function PremiumHero() {
                   items-center
                   justify-center
                 "
-                  >
-                    0{index + 1}
-                  </div>
+                      >
+                        0{index + 1}
+                      </div>
 
-                  <div className="text-center sm:text-left ">
-                    <p className=" font-semibold text-sm ">{item.subtitle}</p>
+                      <div className="text-center sm:text-left ">
+                        <p className=" font-semibold text-sm ">
+                          {item.subtitle}
+                        </p>
 
-                    <p className="text-primary/50 text-xs mt-1 pb-1 uppercase tracking-[0.18em]">
-                      {item.title}
-                    </p>
+                        <p className="text-primary/50 text-xs mt-1 pb-2 uppercase tracking-[0.18em]">
+                          {item.title}
+                        </p>
 
-                    <div
-                      className="
+                        <div
+                          className="
                 flex
                 items-center
                 gap-2
@@ -339,23 +301,65 @@ export default function PremiumHero() {
                 tracking-[0.25em]
                 font-bold
               "
-                    >
-                      Explorar
-                      <ArrowRight
-                        className="
+                        >
+                          Explorar
+                          <ArrowRight
+                            className="
                   w-4
                   h-4
                   group-hover:translate-x-1
                   transition-transform
                 "
-                      />
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </motion.div>
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* RIGHT MOSAIC */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="relative"
+          >
+            <div className="grid grid-cols-3 gap-4">
+              <div className="h-[320px] rounded-[28px] overflow-hidden mt-[80px]">
+                <img
+                  src="/images/doctora/3.jpg"
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="col-span-2 row-span-2 h-[400px] rounded-[32px] overflow-hidden">
+                <img
+                  src="/images/doctora/hero.png"
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="col-span-2 row-span-2 h-[400px] rounded-[32px] overflow-hidden">
+                <img
+                  src="/images/doctora/evaluacion.png"
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="h-[320px] rounded-[28px] overflow-hidden mb-[80px]">
+                <img
+                  src="/images/doctora/tratamiento2.jpg"
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
         {/* Decorative Background Element */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] pointer-events-none opacity-[0.03] z-0">
           <svg

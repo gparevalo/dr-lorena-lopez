@@ -10,10 +10,7 @@ export default function ImgStickySection({
   activeStep: number;
 }) {
   const journeyActual =
-    journey.find((item) => item.id === activeStep) ?? journey[0];
-  console.log("activeStep:", activeStep);
-  console.log("current  :", journeyActual);
-  console.log("current image:", journeyActual.image);
+    journey.find((item) => item.id === activeStep) ?? journey[0]; 
   return (
     <div className="hidden lg:block">
       <div className="sticky top-28">
@@ -35,7 +32,7 @@ export default function ImgStickySection({
             transition={{
               duration: 0.6,
             }}
-            className="relative"
+            className="relative "
           >
             <div
               className="
@@ -47,7 +44,8 @@ export default function ImgStickySection({
               <img
                 src={journeyActual.image}
                 alt="Dra María de los Ángeles Arias"
-                className="bg-cover"
+                className="bg-contain 
+                  h-[550px] w-full"
               />
               <div className="mt-10">
                 <span

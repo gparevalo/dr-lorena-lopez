@@ -8,9 +8,7 @@ import { Route, Switch, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 
 // Pages
-import Consulta from "@/pages/Consulta";
-import Doctora from "@/pages/Doctora";
-import Galeria from "@/pages/Galeria";
+import Consulta from "@/pages/Consulta"; 
 import Home from "@/pages/Home";
 import TratamientoDetail from "./pages/DetalleProducto/detail";
 import NotFound from "./pages/not-found";
@@ -30,9 +28,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/consulta" component={Consulta} />
       <Route path="/tratamientos" component={Promociones} />
-      <Route path="/tratamientos/:slug" component={TratamientoDetail} />
-      <Route path="/doctora" component={Doctora} />
-      <Route path="/galeria" component={Galeria} />
+      <Route path="/tratamientos/:slug" component={TratamientoDetail} /> 
       <Route component={NotFound} />
     </Switch>
   );

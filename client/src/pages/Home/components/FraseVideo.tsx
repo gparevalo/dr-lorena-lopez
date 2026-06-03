@@ -10,12 +10,18 @@ export default function FraseVideo() {
   return (
     <UnifiedSectionBlack
       id="philosophy"
-      className="bg-primary relative flex items-center justify-center overflow-hidden h-[70vh]"
+      className="bg-primary relative flex items-center justify-center overflow-hidden h-[60vh]"
     >
       {/* Cinematic subtle grid on background */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
-        style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "60px 60px" }} />
-      
+      <div
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+
       {/* Floating decorative elements */}
       <div className="absolute top-1/4 -left-12 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-12 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
@@ -34,24 +40,22 @@ export default function FraseVideo() {
             </div>
           </motion.div>
 
-          <motion.p 
+          <motion.h2
             variants={fadeUp}
-            className="font-serif italic font-medium text-white/90 leading-[1.3] mb-8"
-            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+            className="mt-6 mb-6 font-heading  text-4xl text-white/[0.9] leading-[0.95] tracking-[-0.03em] max-w-3xl"
           >
             {t.about.philosophy}
-          </motion.p>
-          
+          </motion.h2>
+
           <motion.p
             variants={fadeUp}
-            className="font-heading text-secondary font-bold tracking-tighter"
-            style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}
+            className="font-heading text-secondary font-bold tracking-tighter font-heading  text-4xl"
           >
             {t.about.philosophy2}
           </motion.p>
-          
-          <motion.div 
-            variants={fadeUp} 
+
+          <motion.div
+            variants={fadeUp}
             className="mt-12 w-12 h-px bg-white/30 mx-auto"
           />
         </motion.div>

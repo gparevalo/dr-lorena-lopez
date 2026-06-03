@@ -32,7 +32,7 @@ export default function Tratamientos() {
         title2={`${tp.hero_headline_2}`}
         subtitle={tp.hero_label}
         description={tp.hero_subtitle}
-        image={"/images/tratamientos.png"}
+        image={"/images/hero5.png"}
       />
 
       {/* ─── TREATMENT ROWS ─── */}

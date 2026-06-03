@@ -15,6 +15,7 @@ import Home from "@/pages/Home";
 import Tratamientos from "@/pages/Tratamientos";
 import TratamientoDetail from "@/pages/Tratamientos/detail";
 import NotFound from "./pages/not-found";
+import Promociones from "./pages/Promociones";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -29,7 +30,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/consulta" component={Consulta} />
-      <Route path="/tratamientos" component={Tratamientos} />
+      <Route path="/tratamientos" component={Promociones} />
       <Route path="/tratamientos/:slug" component={TratamientoDetail} />
       <Route path="/doctora" component={Doctora} />
       <Route path="/galeria" component={Galeria} />

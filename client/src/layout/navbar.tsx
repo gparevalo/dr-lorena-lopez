@@ -1,7 +1,9 @@
 import { useLanguage } from "@/i18n";
 import { cn } from "@/lib/utils";
-import logo_header from "@assets/images/logo_verde-removebg-preview.png";
-import logo_header_white from "@assets/images/logo_verde-removebg-preview.png";
+import {
+  default as logo_header,
+  default as logo_header_white,
+} from "@assets/images/logo_verde-removebg-preview.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, CalendarDays, Globe, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -10,19 +12,19 @@ import { Link, useLocation } from "wouter";
 export function Navbar() {
   const { t, language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(true);
   const [location] = useLocation();
 
+  /*
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 30);
+    const handleScroll = () => setScrolled(window.scrollY > 0);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+*/
   const navItems = [
-    { href: "/", label: t.nav.home },
-    { href: "/tratamientos", label: t.nav.tratamientos }, 
-    { href: "/tratamientos", label: t.nav.packs }, 
+    { href: "/", label: t.nav.home }, 
+    { href: "/tratamientos", label: t.nav.tratamientos },
   ];
 
   return (

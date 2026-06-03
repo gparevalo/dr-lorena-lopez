@@ -6,7 +6,7 @@
   "nav": {
     "home": "Inicio",
     "tratamientos": "Tratamientos",
-    "packs":"Packs y Promociones",
+    "packs": "Cuidado integral",
     "doctora": "La Doctora",
     "galeria": "Galería",
     "internacionales": "Pacientes Internacionales",
@@ -67,28 +67,40 @@
   "treatments": {
     "label": "Tratamientos Exclusivos",
     "title": "Procedimientos de alta precisión",
-    "subtitle": "Una selección curada de tratamientos estéticos avanzados, diseñados para resultados naturales y sofisticados.",
+    "subtitle": "Cada procedimiento es una oportunidad para resaltar lo mejor de ti, mediante técnicas avanzadas y una visión médica centrada en la armonía facial y corporal.",
     "cta": "Ver todos los tratamientos",
     "items": [
       {
+        "id": 1,
         "name": "Endolift",
+        "affiliation": "Endolift",
+        "imageSrc": "/images/treatments/botox.jpg",
         "tagline": "Redefinición sin cirugía",
-        "description": "Lifting láser mínimamente invasivo para una regeneración profunda del tejido cutáneo con resultados naturales y duraderos."
+        "quote": "Lifting láser mínimamente invasivo para una regeneración profunda del tejido cutáneo con resultados naturales y duraderos."
       },
       {
+        "id": 2,
         "name": "Toxina Botulínica",
+        "affiliation": "Toxina Botulínica",
+        "imageSrc": "/images/treatments/botox.jpg",
         "tagline": "Expresión, refinada",
-        "description": "Aplicación médica de precisión para suavizar líneas de expresión conservando la naturalidad y autenticidad del rostro."
+        "quote": "Aplicación médica de precisión para suavizar líneas de expresión conservando la naturalidad y autenticidad del rostro."
       },
       {
+        "id": 3,
         "name": "Ácido Hialurónico",
+        "affiliation": "Ácido Hialurónico",
+        "imageSrc": "/images/treatments/hyaluronic-acid.jpg",
         "tagline": "Volumen con elegancia",
-        "description": "Restauración de volumen y contorno facial con técnicas de inyección de alta precisión para resultados armoniosos."
+        "quote": "Restauración de volumen y contorno facial con técnicas de inyección de alta precisión para resultados armoniosos."
       },
       {
+        "id": 4,
         "name": "Bioestimulación",
+        "affiliation": "Bioestimulación",
+        "imageSrc": "/images/treatments/biostimulation.jpg",
         "tagline": "Rejuvenecimiento desde adentro",
-        "description": "Activación de los mecanismos naturales de regeneración cutánea para una piel más luminosa, firme y saludable."
+        "quote": "Activación de los mecanismos naturales de regeneración cutánea para una piel más luminosa, firme y saludable."
       }
     ]
   },
@@ -328,12 +340,14 @@
     "hero_label": "Tratamientos Médicos",
     "hero_headline_1": "Cada tratamiento,",
     "hero_headline_2": "una obra de precisión",
-    "hero_subtitle": "Una selección curada de los procedimientos estéticos más avanzados del mundo, ejecutados con criterio médico y sensibilidad artística.",
-    "cta": "Ver Tratamiento",
+    "hero_subtitle": "Cada procedimiento es una oportunidad para resaltar lo mejor de ti, mediante técnicas avanzadas y una visión médica centrada en la armonía facial y corporal.",
+    "cta": "Ver detalle de tratamiento",
     "cta_consulta": "Agendar Consulta",
 
     "treatments": [
       {
+        "id": 1,
+        "imageSrc": "/images/treatments/luego.jpg",
         "slug": "endolift",
         "name": "Endolift",
         "tagline": "Lifting sin cirugía",
@@ -356,11 +370,13 @@
         "duration": "Resultados progresivos que mejoran con el tiempo",
         "downtime": "Mínimo, puedes retomar tu rutina rápidamente",
         "highlight": "Sin cirugía · Sin cicatrices · Resultado progresivo",
-        "image": "/images/treatments/endolift.jpg",
+        "image": "/images/treatments/endolift.png",
         "video": "/videos/treatments/endolift.mp4",
         "position": "right"
       },
       {
+        "id": 2,
+        "imageSrc": "/images/treatments/luego.jpg",
         "slug": "primex",
         "name": "Primex",
         "tagline": "Moldea tu cuerpo y reafirma tu piel",
@@ -382,6 +398,8 @@
         "position": "left"
       },
       {
+        "id": 3,
+        "imageSrc": "/images/treatments/luego.jpg",
         "slug": "toxina-botulinica",
         "name": "Toxina Botulínica",
         "tagline": "Expresión natural, sin excesos",
@@ -404,11 +422,13 @@
         "duration": "Resultados visibles en pocos días",
         "downtime": "Inmediato, puedes continuar tu día con normalidad",
         "highlight": "Resultados naturales · Procedimiento rápido · Sin recuperación",
-        "image": "/images/treatments/toxina.jpg",
+        "image": "/images/treatments/botox.png",
         "video": "/videos/treatments/toxina.mp4",
         "position": "right"
       },
       {
+        "id": 4,
+        "imageSrc": "/images/treatments/luego.jpg",
         "slug": "acido-hialuronico",
         "name": "Ácido Hialurónico",
         "tagline": "Armonía y equilibrio facial",
@@ -431,11 +451,13 @@
         "duration": "Resultados inmediatos",
         "downtime": "Mínimo, incorporación inmediata",
         "highlight": "Resultados inmediatos · Natural · Reversible",
-        "image": "/images/treatments/acido-hialuronico.jpg",
+        "image": "/images/treatments/tratamiento10.jpg",
         "video": "/videos/treatments/acido-hialuronico.mp4",
         "position": "left"
       },
       {
+        "id": 5,
+        "imageSrc": "/images/treatments/luego.jpg",
         "slug": "bioestimulacion",
         "name": "Bioestimulación",
         "tagline": "Rejuvenecimiento desde adentro",
@@ -452,7 +474,7 @@
         "duration": "Resultados progresivos en semanas",
         "downtime": "No invasivo, mínima recuperación",
         "highlight": "Colágeno natural · Piel más firme · Resultado progresivo",
-        "image": "/images/treatments/bioestimulacion.jpg",
+        "image": "/images/treatments/tratamiento2.jpg",
         "video": "/videos/treatments/bioestimulacion.mp4",
         "position": "right"
       }

@@ -1,7 +1,9 @@
+import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
 import { useLanguage } from "@/i18n";
-import { motion } from "framer-motion"; 
-import { TestimonialsColumn } from "./TestimonialsColumn";
+import { fadeUp } from "@/lib/animations";
+import { motion } from "framer-motion";
 import LuxuryLabel from "../../components/LuxuryLabel";
+import { TestimonialsColumn } from "../abaut/TestimonialsColumn";
 
 const testimonials = [
   {
@@ -9,7 +11,7 @@ const testimonials = [
     large: true,
   },
   {
-    image: "/images/doctora/tratamientos.png",
+    image: "/images/treatments/tratamiento3.jpg",
     small: true,
   },
   {
@@ -37,7 +39,7 @@ const testimonials = [
     large: true,
   },
   {
-    image: "/images/doctora/hero.png",
+    image: "/images/treatments/tratamiento.jpg",
     small: true,
   },
 ];
@@ -83,21 +85,75 @@ const TESTIMONIALS = [
 ];
 
 export function TestimonialsSection() {
-  const { language } = useLanguage();
+  const { t } = useLanguage();
 
   return (
-    <section
-      className="relative overflow-hidden"
-      style={{ background: "var(--op-canvas)" }}
+    <UnifiedSectionBlack
+      id="sobre-doctora"
+      className="bg-[#fdfdfd] mb-0 pb-0 pt-0"
+      withGrid={false}
     >
       <div className="scene-glow-dark" />
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 md:px-8 xl:px-12 py-32 md:py-2">
         <div className="grid lg:grid-cols-2 gap-20 items-center min-h-[85vh] py-20">
           {/* LEFT */}
-          <motion.div initial="hidden" animate="show">
+          <motion.div initial="hidden" animate="show" className="max-w-lg ">
             <motion.div>
-              <LuxuryLabel dark>Medicina Estética Avanzada</LuxuryLabel>
+              <LuxuryLabel>{t.about.label}</LuxuryLabel>
+            </motion.div>
+
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading mb-10 text-black leading-none tracking-tighter "
+            >
+              {t.about.title}
+            </motion.h2>
+            <motion.p
+              variants={fadeUp}
+              className="text-primary leading-relaxed mx-auto mb-6"
+            >
+              {t.about.specialty}
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              className="
+                space-y-6
+                text-foreground/70
+                text-lg 
+                mb-6  
+              "
+            >
+              <p> {t.about.bio_2}</p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              className="
+                grid
+                grid-cols-1
+                sm:grid-cols-2
+                gap-6
+                border-t
+                border-black/5
+                pt-10
+              "
+            >
+              {t.about.credentials.map((c: string, i: number) => (
+                <div key={i} className="flex items-start gap-4">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary/30 mt-2 flex-shrink-0" />
+
+                  <span
+                    className="
+                      text-md 
+                      opacity-80
+                    "
+                  >
+                    {c}
+                  </span>
+                </div>
+              ))}
             </motion.div>
           </motion.div>
           <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
@@ -115,6 +171,6 @@ export function TestimonialsSection() {
           </div>
         </div>
       </div>
-    </section>
+    </UnifiedSectionBlack>
   );
 }

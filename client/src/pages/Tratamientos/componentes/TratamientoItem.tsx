@@ -25,7 +25,7 @@ export default function TratamientoItem() {
   return (
     <section className="bg-background">
       {tp.treatments.map((treatment: any, i: number) => {
-        const isDark = i % 2 !== 0;
+        const isDark = i % 2 == 0;
 
         return (
           <UnifiedSection
@@ -33,7 +33,7 @@ export default function TratamientoItem() {
             dark={isDark}
             withGrid={false}
             className={cn(
-              "py-20 md:py-28 relative overflow-hidden",
+              "py-20 md:py-32 relative overflow-hidden",
               isDark && "bg-primary", // negro más premium
             )}
           >

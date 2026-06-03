@@ -27,41 +27,21 @@ export default function PremiumHero() {
       withGrid={false}
     >
       {" "}
-      <div
-        className=" 
-          relative
-          z-20
-          w-full   
-        "
-      >
-        <div className="grid lg:grid-cols-2 gap-20 items-center pt-10  py-0">
+      <div className="relative z-20 w-full">
+        <div className="grid lg:grid-cols-2 gap-20 items-center pt-10 py-0">
           {/* LEFT */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="show"
-            className="
-              text-center
-              md:text-left"
+            className="text-center md:text-left"
           >
             {/* LABEL */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="
-              inline-flex
-              items-center
-              gap-3
-              mb-8
-              rounded-full
-              border
-              border-primary/10
-              bg-primary/25
-              backdrop-blur-xl
-              px-5
-              py-2.5
-            "
+              className="inline-flex items-center gap-3 mb-8 rounded-full border border-primary/10 bg-primary/25 backdrop-blur-xl px-5 py-2.5"
             >
               <Crown className="w-4 h-4 text-primary" />
 
@@ -75,44 +55,17 @@ export default function PremiumHero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="
-              text-center
-              md:text-left
-              leading-[0.92]
-              tracking-[-0.06em]
-              
-              max-w-[550px]
-            "
+              className="text-center md:text-left leading-[0.92] tracking-[-0.06em] w-[550px]"
             >
-              <span
-                className="
-                block
-                text-8xl 
-                font-primary
-              "
-              >
+              <span className="block text-8xl font-primary">
                 {t.hero.headline_1}
               </span>
 
-              <span
-                className="
-                block
-                italic
-                font-serif
-                text-primary
-                text-8xl
-              "
-              >
+              <span className="block italic font-serif text-primary text-8xl">
                 {t.hero.headline_2}
               </span>
 
-              <span
-                className="
-                block
-                font-serif
-                text-8xl 
-              "
-              >
+              <span className="block font-serif text-8xl">
                 {t.hero.headline_3}
               </span>
             </motion.h1>
@@ -122,14 +75,7 @@ export default function PremiumHero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="
-              mt-14              flex
-              flex-col
-              sm:flex-row
-              items-center
-              md:items-start
-              gap-4
-            "
+              className="mt-14 flex flex-col sm:flex-row items-center md:items-start gap-4"
             >
               {/* PRIMARY CTA */}{" "}
               <a
@@ -138,48 +84,9 @@ export default function PremiumHero() {
                 rel="noopener"
                 className="w-full sm:w-auto"
               >
-                <button
-                  className="
-                  group
-                  relative
-                  overflow-hidden
-                  w-full
-                  sm:w-auto
-                  h-14
-                  px-8
-                  rounded-full
-                  bg-primary
-                  text-white
-                  uppercase
-                  text-xs
-                  font-black
-                  tracking-[0.22em]
-                  shadow-[0_10px_40px_rgba(0,0,0,0.25)]
-                  transition-all
-                  hover:scale-[1.02]
-                  flex
-                  items-center
-                  justify-center
-                  gap-3
-                "
-                >
+                <button className="group relative overflow-hidden w-full sm:w-auto h-14 px-8 rounded-full bg-primary text-white uppercase text-xs font-black tracking-[0.22em] shadow-[0_10px_40px_rgba(0,0,0,0.25)] transition-all hover:scale-[1.02] flex items-center justify-center gap-3">
                   {/* SHINE EFFECT */}
-                  <div
-                    className="
-                    absolute
-                    inset-0
-                    opacity-0
-                    group-hover:opacity-100
-                    transition-opacity
-                    bg-gradient-to-r
-                    from-white/0
-                    via-white/20
-                    to-white/0
-                    translate-x-[-100%]
-                    group-hover:translate-x-[100%]
-                    duration-1000
-                  "
-                  />
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] duration-1000" />
 
                   <CalendarDays className="w-4 h-4 relative z-10" />
 
@@ -190,41 +97,15 @@ export default function PremiumHero() {
               <Button
                 asChild
                 variant="ghost"
-                className="
-                group
-                w-full
-                sm:w-auto
-                justify-center
-                md:justify-start
-                text-primary
-                hover:bg-transparent
-                px-2
-                h-14
-              "
+                className="group w-full sm:w-auto justify-center md:justify-start text-primary hover:bg-transparent px-2 h-14"
               >
                 <a
-                  href="#proceso"
-                  className="
-                  flex
-                  items-center
-                  gap-3
-                  uppercase
-                  text-[11px]
-                  font-bold
-                  tracking-[0.24em]
-                "
+                  href="/tratamientos"
+                  className="flex items-center gap-3 uppercase text-[11px] font-bold tracking-[0.24em]"
                 >
                   {t.hero.cta_secondary}
 
-                  <ArrowRight
-                    className="
-                    w-4
-                    h-4
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                  "
-                  />
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </Button>
             </motion.div>
@@ -234,15 +115,7 @@ export default function PremiumHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.35 }}
-              className="
-              mt-12
-              flex
-              flex-col
-              sm:flex-row
-              items-center
-              sm:items-start
-              gap-6
-            "
+              className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-4"
             >
               {/* JOURNEY */}
 
@@ -251,66 +124,23 @@ export default function PremiumHero() {
                   <a
                     key={item.title}
                     href={item.href}
-                    className=" group  transition-all duration-500  "
+                    className="group transition-all duration-500"
                   >
-                    <div
-                      className="
-                flex
-                items-center
-                gap-4
-                rounded-3xl
-                border
-                border-white/10
-                bg-primary/5
-                backdrop-blur-xl
-                px-6
-                py-4
-              "
-                    >
-                      <div
-                        className="
-                  w-12
-                  h-12
-                  rounded-2xl
-                  bg-[#8B5E3C]/25
-                  flex
-                  items-center
-                  justify-center
-                "
-                      >
+                    <div className="flex items-center gap-4 rounded-3xl border border-white/10 bg-primary/5 backdrop-blur-xl px-6 py-4">
+                      <div className="w-12 h-12 rounded-2xl bg-primary/25 flex items-center justify-center">
                         0{index + 1}
                       </div>
 
-                      <div className="text-center sm:text-left ">
-                        <p className=" font-semibold text-sm ">
-                          {item.subtitle}
-                        </p>
+                      <div className="text-center sm:text-left">
+                        <p className="font-semibold text-sm">{item.subtitle}</p>
 
                         <p className="text-primary/50 text-xs mt-1 pb-2 uppercase tracking-[0.18em]">
                           {item.title}
                         </p>
 
-                        <div
-                          className="
-                flex
-                items-center
-                gap-2
-                text-primary
-                text-xs
-                uppercase
-                tracking-[0.25em]
-                font-bold
-              "
-                        >
+                        <div className="flex items-center gap-2 text-primary text-xs uppercase tracking-[0.25em] font-bold">
                           Explorar
-                          <ArrowRight
-                            className="
-                  w-4
-                  h-4
-                  group-hover:translate-x-1
-                  transition-transform
-                "
-                          />
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </div>
                       </div>
                     </div>
@@ -327,10 +157,10 @@ export default function PremiumHero() {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="grid grid-cols-3 gap-4">
-              <div className="h-[320px] rounded-[28px] overflow-hidden mt-[80px]">
+            <div className="grid grid-cols-3 gap-2 pl-20">
+              <div className="h-[340px] rounded-[28px] mr-2 overflow-hidden mt-[60px]">
                 <img
-                  src="/images/doctora/3.jpg"
+                  src="/images/treatments/tratamiento10.jpg"
                   alt=""
                   className="w-full h-full object-cover"
                 />
@@ -342,16 +172,16 @@ export default function PremiumHero() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="col-span-2 row-span-2 h-[400px] rounded-[32px] overflow-hidden">
+              <div className="col-span-2 row-span-2 mr-2 h-[400px] rounded-[32px] overflow-hidden">
                 <img
-                  src="/images/doctora/evaluacion.png"
+                  src="/images/doctora/3.jpg"
                   alt=""
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="h-[320px] rounded-[28px] overflow-hidden mb-[80px]">
                 <img
-                  src="/images/doctora/tratamiento2.jpg"
+                  src="/images/treatments/tratamiento6.jpg"
                   alt=""
                   className="w-full h-full object-cover"
                 />

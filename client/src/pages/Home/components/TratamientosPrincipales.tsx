@@ -8,13 +8,14 @@ import LuxuryLabel from "./LuxuryLabel";
 
 export default function TratamientosPrincipales() {
   const { t } = useLanguage();
+  const items = t.tratamientosPage.treatments.slice(0, 4); // Get only the first 4 treatments for the homepage section
   return (
     <UnifiedSectionBlack
       id="tratamientos"
-      className="bg-[#fdfdfd]"
+      className="bg-[#fdfdfd] pt-20"
       withGrid={false}
     >
-      <div className="text-center max-w-4xl mx-auto mb-24"> 
+      <div className="text-center max-w-4xl mx-auto mb-24">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -32,7 +33,7 @@ export default function TratamientosPrincipales() {
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="text-black/40 text-xl font-serif italic max-w-2xl mx-auto mb-12"
+            className="text-black/40 leading-relaxed max-w-2xl mx-auto mb-10"
           >
             {t.treatments.subtitle}
           </motion.p>
@@ -79,7 +80,7 @@ export default function TratamientosPrincipales() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-black/5 border border-black/5">
-        {t.treatments.items.map((step, i) => (
+        {items.map((step, i) => (
           <motion.div
             key={i}
             variants={fadeUp}

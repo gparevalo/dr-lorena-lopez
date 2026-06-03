@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { ClipboardList, FlaskConical, ScanFace, Sparkles } from "lucide-react";
 import { useRef, useState } from "react";
 import CtaSection from "../Home/sections/cta/CtaSection";
+import LuxuryLabel from "../Home/components/LuxuryLabel";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -261,7 +262,6 @@ export default function Consulta() {
               >
                 {c.hero_subtitle}
               </motion.p>
- 
             </div>
           </div>
         </div>
@@ -271,21 +271,19 @@ export default function Consulta() {
       <section className="py-28 bg-[hsl(35,28%,97%)]">
         <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
           <RevealSection>
-            <div className="text-center mb-16">
-              <motion.div variants={fadeUp}>
-                <span className="inline-block text-[10px] uppercase tracking-[0.45em] font-semibold text-primary mb-4">
-                  — {c.what_label} —
-                </span>
+            <div className="text-center max-w-4xl mx-auto mb-4">
+              <motion.div variants={fadeUp} className="flex justify-center">
+                <LuxuryLabel> {c.what_label} </LuxuryLabel>
               </motion.div>
               <motion.h2
                 variants={fadeUp}
-                className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight max-w-2xl mx-auto"
+                className="font-heading mb-10 text-black leading-none tracking-tighter"
               >
                 {c.what_title}
               </motion.h2>
               <motion.p
                 variants={fadeUp}
-                className="text-muted-foreground mt-5 max-w-xl mx-auto text-lg font-light leading-relaxed"
+                className="text-black/40 leading-relaxed max-w-2xl mx-auto mb-12"
               >
                 {c.value_body}
               </motion.p>

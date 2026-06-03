@@ -71,29 +71,36 @@
     "cta": "View all treatments",
     "items": [
       {
+        "id": 1,
         "name": "Endolift",
-        "tagline": "Redefinition without surgery",
-        "description": "Minimally invasive laser lifting for deep skin tissue regeneration with natural, lasting results."
+        "affiliation": "Endolift",
+        "imageSrc": "/images/treatments/botox.jpg",
+        "tagline": "Redefinición sin cirugía",
+        "quote": "Lifting láser mínimamente invasivo para una regeneración profunda del tejido cutáneo con resultados naturales y duraderos."
       },
       {
-        "name": "Botulinum Toxin",
-        "tagline": "Expression, refined",
-        "description": "Precision medical application to soften expression lines while preserving the face's natural authenticity."
+        "id": 2,
+        "name": "Toxina Botulínica",
+        "affiliation": "Toxina Botulínica",
+        "imageSrc": "/images/treatments/botox.jpg",
+        "tagline": "Expresión, refinada",
+        "quote": "Aplicación médica de precisión para suavizar líneas de expresión conservando la naturalidad y autenticidad del rostro."
       },
       {
-        "name": "Primex",
-        "tagline": "Premium biostimulation",
-        "description": "Advanced cellular stimulation protocol for collagen regeneration and restoration of skin vitality."
+        "id": 3,
+        "name": "Ácido Hialurónico",
+        "affiliation": "Ácido Hialurónico",
+        "imageSrc": "/images/treatments/hyaluronic-acid.jpg",
+        "tagline": "Volumen con elegancia",
+        "quote": "Restauración de volumen y contorno facial con técnicas de inyección de alta precisión para resultados armoniosos."
       },
       {
-        "name": "Hyaluronic Acid",
-        "tagline": "Volume with elegance",
-        "description": "Facial volume and contour restoration with high-precision injection techniques for harmonious results."
-      },
-      {
-        "name": "Biostimulation",
-        "tagline": "Rejuvenation from within",
-        "description": "Activation of natural skin regeneration mechanisms for more luminous, firm, and healthy skin."
+        "id": 4,
+        "name": "Bioestimulación",
+        "affiliation": "Bioestimulación",
+        "imageSrc": "/images/treatments/biostimulation.jpg",
+        "tagline": "Rejuvenecimiento desde adentro",
+        "quote": "Activación de los mecanismos naturales de regeneración cutánea para una piel más luminosa, firme y saludable."
       }
     ]
   },

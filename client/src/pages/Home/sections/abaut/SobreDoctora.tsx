@@ -1,53 +1,117 @@
-import { UnifiedSection } from "@/components/layout/UnifiedSection";
+import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
 import { useLanguage } from "@/i18n";
-import { fadeUp, revealRight, staggerContainer } from "@/lib/animations";
-import imgDr from "@assets/images/hero.png";
+import { fadeUp } from "@/lib/animations";
 import { motion } from "framer-motion";
 import LuxuryLabel from "../../components/LuxuryLabel";
+import { TestimonialsColumn } from "./TestimonialsColumn";
 
-export default function SobreDoctora() {
+const testimonials = [
+  {
+    image: "/images/doctora/1.jpg",
+    large: true,
+  },
+  {
+    image: "/images/treatments/tratamiento3.jpg",
+    small: true,
+  },
+  {
+    image: "/images/doctora/2.jpg",
+    small: true,
+  },
+  {
+    image: "/images/doctora/4.png",
+    small: true,
+  },
+  {
+    image: "/images/doctora/hero.png",
+    large: true,
+  },
+  {
+    image: "/images/doctora/3.jpg",
+    large: true,
+  },
+  {
+    image: "/images/doctora/tratamientos.png",
+    large: true,
+  },
+  {
+    image: "/images/doctora/8.jpg",
+    large: true,
+  },
+  {
+    image: "/images/treatments/tratamiento.jpg",
+    small: true,
+  },
+];
+
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
+
+const TESTIMONIALS = [
+  {
+    quoteEs:
+      "Operar en Ópera cambió la percepción que mis pacientes tienen de mi práctica. La infraestructura comunica un nivel que pocos centros en Ecuador tienen.",
+    quoteEn:
+      "Operating at Ópera changed how my patients perceive my practice. The infrastructure communicates a level that few centers in Ecuador have.",
+    nameEs: "Dr. Andrés M.",
+    nameEn: "Dr. Andrés M.",
+    roleEs: "Cirugía plástica",
+    roleEn: "Plastic surgery",
+    initials: "AM",
+  },
+  {
+    quoteEs:
+      "La coordinación es impecable. Llego y todo está listo. Menos fricción, más foco clínico. Así debe sentirse operar.",
+    quoteEn:
+      "The coordination is flawless. I arrive and everything is ready. Less friction, more clinical focus. That's what operating should feel like.",
+    nameEs: "Dr. Carlos V.",
+    nameEn: "Dr. Carlos V.",
+    roleEs: "Traumatología",
+    roleEn: "Orthopedic & trauma",
+    initials: "CV",
+  },
+  {
+    quoteEs:
+      "Mis pacientes preguntan siempre dónde es la clínica. Ese reconocimiento vale más que cualquier campaña de marketing.",
+    quoteEn:
+      "My patients always ask where the facility is. That recognition is worth more than any marketing campaign.",
+    nameEs: "Dra. Sofía L.",
+    nameEn: "Dr. Sofía L.",
+    roleEs: "Ginecología",
+    roleEn: "Gynecology",
+    initials: "SL",
+  },
+];
+
+export function SobreDoctora() {
   const { t } = useLanguage();
 
   return (
-    <UnifiedSection id="doctora" dark={false} withGlow={true}>
-      <div className="editorial-grid items-center gap-12 lg:gap-24">
-        {/* ───────────────── LEFT CONTENT ───────────────── */}
-        <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
-            <motion.div variants={fadeUp}>
+    <UnifiedSectionBlack
+      id="sobre-doctora"
+      className="bg-[#fdfdfd] mb-0 pb-0 pt-0"
+      withGrid={false}
+    >
+      <div className="scene-glow-dark" />
+
+      <div className="relative z-10 mx-auto max-w-[1440px] px-5 md:px-8 xl:px-12 py-32 md:py-2">
+        <div className="grid lg:grid-cols-2 gap-20 items-center min-h-[85vh] py-20">
+          {/* LEFT */}
+          <motion.div initial="hidden" animate="show" className="max-w-lg ">
+            <motion.div>
               <LuxuryLabel>{t.about.label}</LuxuryLabel>
             </motion.div>
 
             <motion.h2
               variants={fadeUp}
-              className="
-                font-heading
-                text-foreground
-                leading-[0.9]
-                tracking-tight
-                mb-8
-              "
-              style={{ fontSize: "var(--text-6xl)" }}
+              className="font-heading mb-10 text-black leading-none tracking-tighter "
             >
               {t.about.title}
             </motion.h2>
-
             <motion.p
               variants={fadeUp}
-              className="
-                font-serif
-                italic
-                font-medium
-                text-xl
-                md:text-2xl
-                text-primary
-                mb-10
-              "
+              className="text-primary leading-relaxed mx-auto mb-6"
             >
               {t.about.specialty}
             </motion.p>
@@ -57,16 +121,11 @@ export default function SobreDoctora() {
               className="
                 space-y-6
                 text-foreground/70
-                text-lg
-                leading-relaxed
-                mb-12
+                text-lg 
+                mb-6  
               "
             >
-              <p>{t.about.bio_1}</p>
-
-              <p className="opacity-70 font-light">
-                {t.about.bio_2}
-              </p>
+              <p> {t.about.bio_2}</p>
             </motion.div>
 
             <motion.div
@@ -87,10 +146,7 @@ export default function SobreDoctora() {
 
                   <span
                     className="
-                      text-[10px]
-                      uppercase
-                      tracking-[0.25em]
-                      font-bold
+                      text-md 
                       opacity-80
                     "
                   >
@@ -100,52 +156,21 @@ export default function SobreDoctora() {
               ))}
             </motion.div>
           </motion.div>
-        </div>
-
-        {/* ───────────────── RIGHT IMAGE ───────────────── */}
-        <div className="col-span-12 lg:col-span-6 order-1 lg:order-2 flex justify-center lg:justify-end">
-          <motion.div
-            variants={revealRight}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="
-              relative
-              aspect-[4/5]
-              w-full
-              max-w-[520px]
-              overflow-hidden
-              bg-ivory
-              group
-            "
-          >
-            <img
-              src={imgDr}
-              alt="Dra. Lore López"
-              className="
-                w-full
-                h-full
-                object-cover
-                grayscale-[0.15]
-                group-hover:grayscale-0
-                transition-all
-                duration-1000
-                scale-105
-                group-hover:scale-100
-              "
+          <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+            <TestimonialsColumn testimonials={firstColumn} duration={40} />
+            <TestimonialsColumn
+              testimonials={secondColumn}
+              className="hidden md:block"
+              duration={30}
             />
-
-            {/* Cinematic overlays */}
-            <div className="absolute inset-0 border border-black/5" />
-            <div className="absolute inset-8 border border-white/20" />
-
-            {/* Decorative elements */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-primary/20 hidden lg:block" />
-
-            <div className="absolute top-1/2 -left-4 w-12 h-px bg-primary/40 hidden lg:block" />
-          </motion.div>
+            <TestimonialsColumn
+              testimonials={thirdColumn}
+              className="hidden lg:block"
+              duration={50}
+            />
+          </div>
         </div>
       </div>
-    </UnifiedSection>
+    </UnifiedSectionBlack>
   );
 }

@@ -148,10 +148,14 @@ export default function TimeLineSection({
                   withShimmer
                   className="w-full md:w-auto"
                 >
-                  <Link href="/contacto">
+                  <a
+                    href="https://wa.me/593980163009"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Calendar className="ml-3 w-4 h-4" />
                     Agendar
-                  </Link>
+                  </a>
                 </Button>
                 <Button
                   asChild

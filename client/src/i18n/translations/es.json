@@ -676,18 +676,46 @@
     "back": "Volver a Tratamientos",
     "not_found": "Tratamiento no encontrado",
     "view_all": "Ver todos los tratamientos",
+
     "candidate_label": "Candidato Ideal",
-    "process_label": "El Proceso",
-    "benefits_label": "Beneficios Clave",
+    "candidate_title": "¿Para quién está diseñado?",
+
+    "process_label": "Tu experiencia",
+    "process_title": "¿Cómo es el proceso?",
+
+    "benefits_label": "Resultados esperados",
+    "benefits_title": "Los cambios que nuestras pacientes suelen valorar más",
+
     "cta_label": "¿Este tratamiento es para ti?",
     "cta_button": "Agendar Consulta de Diagnóstico",
     "cta_note": "En la consulta determinaremos si este tratamiento es el indicado para ti.",
+
     "endolift": {
       "hero_label": "Láser Mínimamente Invasivo",
       "name": "Endolift",
       "tagline": "El arte del lifting sin cirugía",
       "positioning": "Endolift no es simplemente un tratamiento láser — es una redefinición del concepto de lifting. Mediante una fibra óptica del grosor de un cabello, se entrega energía láser directamente a las capas profundas del tejido, provocando una contracción y regeneración que ninguna crema, ni ningún aparato externo, puede lograr.",
-      "candidate_title": "¿Para quién está diseñado?",
+
+      "philosophy": {
+        "label": "Filosofía del tratamiento",
+        "title": "La firmeza no siempre requiere cirugía.",
+        "description": "Endolift busca estimular procesos naturales de contracción y regeneración para mejorar la definición facial de forma progresiva y mínimamente invasiva.",
+        "principles": [
+          {
+            "title": "Estimulación profunda",
+            "description": "Actuamos directamente sobre las capas donde se genera la flacidez."
+          },
+          {
+            "title": "Resultados progresivos",
+            "description": "La mejoría continúa evolucionando durante los meses posteriores."
+          },
+          {
+            "title": "Menor invasión",
+            "description": "Una alternativa para quienes buscan resultados sin cirugía tradicional."
+          }
+        ]
+      },
+
       "candidate_body": "El candidato ideal para Endolift es quien busca resultados visibles de redefinición facial sin los riesgos, el tiempo de recuperación o las cicatrices de una cirugía convencional. Es la solución para quien quiere verse natural, sin que sea obvio que se hizo algo.",
       "candidate_points": [
         "Flacidez moderada de la piel del rostro o cuello",
@@ -732,6 +760,27 @@
       "name": "Toxina Botulínica",
       "tagline": "La expresión correcta, en las manos correctas",
       "positioning": "La toxina botulínica es el tratamiento médico estético más frecuente del mundo — y también el más malinterpretado. En manos incorrectas produce rostros congelados. En manos de la Dra. López, produce exactamente lo opuesto: expresividad refinada, naturalidad total y la sensación de haberse descansado muy bien.",
+
+      "philosophy": {
+        "label": "Filosofía del tratamiento",
+        "title": "Verse descansada sin perder expresión.",
+        "description": "El objetivo no es inmovilizar el rostro, sino suavizar líneas de expresión manteniendo naturalidad y armonía.",
+        "principles": [
+          {
+            "title": "Naturalidad",
+            "description": "Respetamos la personalidad y expresividad de cada paciente."
+          },
+          {
+            "title": "Precisión",
+            "description": "Cada aplicación se adapta a la anatomía individual."
+          },
+          {
+            "title": "Prevención",
+            "description": "Ayuda a retrasar la profundización de ciertas líneas de expresión."
+          }
+        ]
+      },
+
       "candidate_title": "¿Para quién está indicado?",
       "candidate_body": "Para cualquier persona que quiera suavizar líneas de expresión sin perder su naturalidad. El objetivo no es eliminar expresiones — es refinarlas.",
       "candidate_points": [
@@ -777,6 +826,26 @@
       "name": "Primex",
       "tagline": "Regeneración celular de nueva generación",
       "positioning": "Primex es el protocolo de bioestimulación de última generación que activa la producción de colágeno y elastina desde las capas más profundas de la piel. No es un relleno, no es un neuromodulador — es el tratamiento que hace que tu piel se regenere a sí misma, con más calidad y vitalidad.",
+      "philosophy": {
+        "label": "Filosofía del tratamiento",
+        "title": "La tecnología potencia lo que tus hábitos construyen.",
+        "description": "Primex complementa un estilo de vida saludable ayudando a trabajar zonas específicas y potenciar resultados de forma no invasiva.",
+        "principles": [
+          {
+            "title": "Complemento estratégico",
+            "description": "No sustituye hábitos saludables, los potencia."
+          },
+          {
+            "title": "Tecnología avanzada",
+            "description": "Protocolos adaptados a cada objetivo corporal."
+          },
+          {
+            "title": "Bienestar integral",
+            "description": "Buscamos resultados visibles que acompañen tu estilo de vida."
+          }
+        ]
+      },
+
       "candidate_title": "¿Quién se beneficia de Primex?",
       "candidate_body": "El candidato ideal es quien nota pérdida de luminosidad, textura desigual, piel opaca o pérdida de firmeza sin deformación de volúmenes.",
       "candidate_points": [
@@ -822,6 +891,26 @@
       "name": "Ácido Hialurónico Estructural",
       "tagline": "Escultura facial con precisión médica",
       "positioning": "El ácido hialurónico estructural no es un relleno cosmético — es arquitectura facial. En manos de la Dra. López, cada cc de producto se coloca con una intención anatómica precisa: restaurar el volumen que el tiempo restó, definir contornos que la gravedad desplazó, y crear una armonía que parece completamente natural.",
+
+      "philosophy": {
+        "label": "Filosofía del tratamiento",
+        "title": "La armonización comienza con el equilibrio.",
+        "description": "No buscamos transformar rostros, sino restaurar proporciones y resaltar características que ya forman parte de tu identidad.",
+        "principles": [
+          {
+            "title": "Equilibrio facial",
+            "description": "Analizamos el rostro como una unidad completa."
+          },
+          {
+            "title": "Personalización",
+            "description": "Cada diseño facial responde a objetivos únicos."
+          },
+          {
+            "title": "Resultados sutiles",
+            "description": "La mejor armonización es la que se percibe natural."
+          }
+        ]
+      },
       "candidate_title": "¿Para quién es este tratamiento?",
       "candidate_body": "Para quien ha notado pérdida de volumen facial, aplanamiento de pómulos, surcos nasolabiales, pérdida de definición labial o un óvalo facial que ha perdido su arquitectura original.",
       "candidate_points": [
@@ -867,6 +956,27 @@
       "name": "Bioestimulación Facial y Corporal",
       "tagline": "Tu piel, pero en su mejor versión",
       "positioning": "La bioestimulación es el tratamiento de medicina estética que más se acerca a la filosofía de la Dra. López: activar lo que el cuerpo ya sabe hacer, para que lo haga mejor. Sin sustancias extrañas, sin volúmenes artificiales — solo regeneración real desde adentro.",
+
+      "philosophy": {
+        "label": "Filosofía del tratamiento",
+        "title": "La mejor versión de tu piel ya existe.",
+        "description": "La bioestimulación aprovecha la capacidad natural del organismo para producir colágeno y mejorar la calidad de la piel desde el interior.",
+        "principles": [
+          {
+            "title": "Regeneración natural",
+            "description": "Trabajamos con los procesos biológicos propios del cuerpo."
+          },
+          {
+            "title": "Resultados progresivos",
+            "description": "Los cambios aparecen de forma gradual y elegante."
+          },
+          {
+            "title": "Calidad de piel",
+            "description": "Buscamos mejorar textura, firmeza y luminosidad."
+          }
+        ]
+      },
+
       "candidate_title": "¿Para quién es este tratamiento?",
       "candidate_body": "Para cualquier persona que quiera mejorar la calidad general de su piel: firmeza, luminosidad, textura, hidratación y elasticidad.",
       "candidate_points": [

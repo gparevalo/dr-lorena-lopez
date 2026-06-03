@@ -576,235 +576,345 @@
     "back": "Back to Treatments",
     "not_found": "Treatment not found",
     "view_all": "View all treatments",
+
     "candidate_label": "Ideal Candidate",
-    "process_label": "The Process",
+    "candidate_title": "¿Para quién está diseñado?",
+
+    "process_label": "Tu experiencia",
+    "process_title": "Cómo es el proceso?",
+
     "benefits_label": "Key Benefits",
+    "benefits_title": "Lo que podrás percibir",
+
     "cta_label": "Is this treatment for you?",
     "cta_button": "Book a Diagnostic Consultation",
     "cta_note": "In the consultation we will determine whether this treatment is right for you.",
+
     "endolift": {
-      "hero_label": "Minimally Invasive Laser",
+      "hero_label": "Láser Mínimamente Invasivo",
       "name": "Endolift",
-      "tagline": "The art of lifting without surgery",
-      "positioning": "Endolift is not simply a laser treatment — it is a redefinition of the lifting concept. Through a fiber optic the thickness of a hair, laser energy is delivered directly to the deep layers of tissue, causing a contraction and regeneration that no cream or external device can achieve.",
-      "candidate_title": "Who is it designed for?",
-      "candidate_body": "The ideal candidate for Endolift is someone seeking visible facial redefinition results without the risks, recovery time, or scars of conventional surgery. It is the solution for those who want to look natural, without it being obvious that anything was done.",
+      "tagline": "El arte del lifting sin cirugía",
+      "positioning": "Endolift no es simplemente un tratamiento láser — es una redefinición del concepto de lifting. Mediante una fibra óptica del grosor de un cabello, se entrega energía láser directamente a las capas profundas del tejido, provocando una contracción y regeneración que ninguna crema, ni ningún aparato externo, puede lograr.",
+
+      "philosophy": {
+        "label": "Filosofía del tratamiento",
+        "title": "La firmeza no siempre requiere cirugía.",
+        "description": "Endolift busca estimular procesos naturales de contracción y regeneración para mejorar la definición facial de forma progresiva y mínimamente invasiva.",
+        "principles": [
+          {
+            "title": "Estimulación profunda",
+            "description": "Actuamos directamente sobre las capas donde se genera la flacidez."
+          },
+          {
+            "title": "Resultados progresivos",
+            "description": "La mejoría continúa evolucionando durante los meses posteriores."
+          },
+          {
+            "title": "Menor invasión",
+            "description": "Una alternativa para quienes buscan resultados sin cirugía tradicional."
+          }
+        ]
+      },
+
+      "candidate_body": "El candidato ideal para Endolift es quien busca resultados visibles de redefinición facial sin los riesgos, el tiempo de recuperación o las cicatrices de una cirugía convencional. Es la solución para quien quiere verse natural, sin que sea obvio que se hizo algo.",
       "candidate_points": [
-        "Moderate skin laxity on the face or neck",
-        "Loss of facial oval definition",
-        "Excess tissue under the chin (early double chin)",
-        "Those seeking a real alternative to surgery",
-        "Patients aged 35–65 with good residual skin elasticity"
+        "Flacidez moderada de la piel del rostro o cuello",
+        "Pérdida de definición del óvalo facial",
+        "Exceso de tejido bajo el mentón (papada incipiente)",
+        "Quien busca una alternativa real a la cirugía",
+        "Pacientes de 35 a 65 años con piel con buena elasticidad residual"
       ],
       "process_steps": [
         {
           "num": "01",
-          "title": "Preparation and marking",
-          "body": "Treatment areas are marked. Topical local anesthesia is applied. No pain, no sedation."
+          "title": "Preparación y marcación",
+          "body": "Se marcan las zonas de tratamiento. Se aplica anestesia local tópica. Sin dolor, sin sedación."
         },
         {
           "num": "02",
-          "title": "Fiber introduction",
-          "body": "A needle-sized microcannula guides the fiber optic beneath the skin. The process is minimally invasive."
+          "title": "Introducción de la fibra",
+          "body": "Una microcánula del tamaño de una aguja guía la fibra óptica por debajo de la piel. El proceso es mínimamente invasivo."
         },
         {
           "num": "03",
-          "title": "Laser energy emission",
-          "body": "Laser energy acts on two planes: immediate tissue contraction and long-term neocollagenesis stimulation."
+          "title": "Emisión de energía láser",
+          "body": "La energía láser actúa en dos planos: contracción inmediata del tejido y estimulación de neocolagénesis a largo plazo."
         },
         {
           "num": "04",
-          "title": "Recovery and result",
-          "body": "Return to activities in 24–48 hours. Visible results from the first weeks, progressive over 3–6 months."
+          "title": "Recuperación y resultado",
+          "body": "Regreso a actividades en 24-48 horas. Resultado visible desde las primeras semanas, progresivo durante 3-6 meses."
         }
       ],
       "benefits": [
-        "Visible facial oval redefinition",
-        "Long-term natural collagen stimulation",
-        "No scars, no general anesthesia",
-        "Ultra-fast recovery: 24–48 hours",
-        "Natural and lasting results",
-        "Procedure under 90 minutes"
+        "Redefinición del óvalo facial visible",
+        "Estimulación de colágeno natural a largo plazo",
+        "Sin cicatrices, sin anestesia general",
+        "Recuperación ultrarrápida: 24-48 horas",
+        "Resultados naturales y duraderos",
+        "Procedimiento de menos de 90 minutos"
       ]
     },
     "toxina-botulinica": {
-      "hero_label": "Medical Neuromodulator",
-      "name": "Botulinum Toxin",
-      "tagline": "The right expression, in the right hands",
-      "positioning": "Botulinum toxin is the most frequent aesthetic medical treatment in the world — and also the most misunderstood. In incorrect hands it produces frozen faces. In Dr. López's hands, it produces exactly the opposite: refined expressiveness, total naturalness, and the feeling of being very well rested.",
-      "candidate_title": "Who is it indicated for?",
-      "candidate_body": "For anyone who wants to soften expression lines without losing their naturalness. The goal is not to eliminate expressions — it is to refine them.",
+      "hero_label": "Neuromodulador Médico",
+      "name": "Toxina Botulínica",
+      "tagline": "La expresión correcta, en las manos correctas",
+      "positioning": "La toxina botulínica es el tratamiento médico estético más frecuente del mundo — y también el más malinterpretado. En manos incorrectas produce rostros congelados. En manos de la Dra. López, produce exactamente lo opuesto: expresividad refinada, naturalidad total y la sensación de haberse descansado muy bien.",
+
+      "philosophy": {
+        "label": "Filosofía del tratamiento",
+        "title": "La firmeza no siempre requiere cirugía.",
+        "description": "Endolift busca estimular procesos naturales de contracción y regeneración para mejorar la definición facial de forma progresiva y mínimamente invasiva.",
+        "principles": [
+          {
+            "title": "Estimulación profunda",
+            "description": "Actuamos directamente sobre las capas donde se genera la flacidez."
+          },
+          {
+            "title": "Resultados progresivos",
+            "description": "La mejoría continúa evolucionando durante los meses posteriores."
+          },
+          {
+            "title": "Menor invasión",
+            "description": "Una alternativa para quienes buscan resultados sin cirugía tradicional."
+          }
+        ]
+      },
+
+      "candidate_title": "¿Para quién está indicado?",
+      "candidate_body": "Para cualquier persona que quiera suavizar líneas de expresión sin perder su naturalidad. El objetivo no es eliminar expresiones — es refinarlas.",
       "candidate_points": [
-        "Expression lines on forehead, glabella, and crow's feet",
-        "Eyebrows that look heavy or drooping",
-        "Those seeking a subtle lifting effect of the upper third",
-        "Patients seeking to prevent aging from ages 28–30",
-        "As a complement to other treatments in an integral protocol"
+        "Líneas de expresión en frente, entrecejo y patas de gallo",
+        "Cejas que se ven pesadas o caídas",
+        "Quien quiere un efecto lifting suave del tercio superior",
+        "Pacientes que buscan prevenir el envejecimiento desde los 28-30 años",
+        "Como complemento de otros tratamientos en un protocolo integral"
       ],
       "process_steps": [
         {
           "num": "01",
-          "title": "Facial dynamics analysis",
-          "body": "The natural movement of your face at rest and in expression is evaluated. Each application point is decided with medical judgment."
+          "title": "Análisis de la dinámica facial",
+          "body": "Se evalúa el movimiento natural de tu rostro en reposo y en expresión. Cada punto de aplicación se decide con criterio médico."
         },
         {
           "num": "02",
-          "title": "Microdose application",
-          "body": "Ultra-fine needle micro-dotting technique. No anesthesia, minimal discomfort. Duration: 15–20 minutes."
+          "title": "Aplicación de microdosis",
+          "body": "Técnica de micro-punteo con agujas ultra-finas. Sin anestesia, con mínimas molestias. Duración: 15-20 minutos."
         },
         {
           "num": "03",
-          "title": "Two-week evaluation",
-          "body": "The final result is evaluated at 14 days. Precise adjustments are made if necessary."
+          "title": "Evaluación a las 2 semanas",
+          "body": "El resultado definitivo se evalúa a los 14 días. Se realizan ajustes precisos si es necesario."
         },
         {
           "num": "04",
-          "title": "Strategic maintenance",
-          "body": "With regular treatments, the dose needed decreases over time. A smart long-term strategy."
+          "title": "Mantenimiento estratégico",
+          "body": "Con tratamientos regulares, la dosis necesaria disminuye con el tiempo. Una estrategia inteligente a largo plazo."
         }
       ],
       "benefits": [
-        "Natural result nobody notices",
-        "No recovery time",
-        "Progressive effect in 3–7 days",
-        "Reversible over time",
-        "Prevention of premature aging",
-        "Ideal complement to other protocols"
+        "Resultado natural que nadie nota",
+        "Sin tiempo de recuperación",
+        "Efecto progresivo en 3-7 días",
+        "Reversible con el tiempo",
+        "Prevención del envejecimiento prematuro",
+        "Complemento ideal para otros protocolos"
       ]
     },
     "primex": {
-      "hero_label": "Premium Biostimulation",
+      "hero_label": "Bioestimulación Premium",
       "name": "Primex",
-      "tagline": "Next-generation cellular regeneration",
-      "positioning": "Primex is the next-generation biostimulation protocol that activates collagen and elastin production from the deepest layers of the skin. It is not a filler, it is not a neuromodulator — it is the treatment that makes your skin regenerate itself, with more quality and vitality.",
-      "candidate_title": "Who benefits from Primex?",
-      "candidate_body": "The ideal candidate is someone who notices loss of luminosity, uneven texture, dull skin, or loss of firmness without volumetric deformity.",
+      "tagline": "Regeneración celular de nueva generación",
+      "positioning": "Primex es el protocolo de bioestimulación de última generación que activa la producción de colágeno y elastina desde las capas más profundas de la piel. No es un relleno, no es un neuromodulador — es el tratamiento que hace que tu piel se regenere a sí misma, con más calidad y vitalidad.",
+      "philosophy": {
+        "label": "Filosofía del tratamiento",
+        "title": "La tecnología potencia lo que tus hábitos construyen.",
+        "description": "Primex complementa un estilo de vida saludable ayudando a trabajar zonas específicas y potenciar resultados de forma no invasiva.",
+        "principles": [
+          {
+            "title": "Complemento estratégico",
+            "description": "No sustituye hábitos saludables, los potencia."
+          },
+          {
+            "title": "Tecnología avanzada",
+            "description": "Protocolos adaptados a cada objetivo corporal."
+          },
+          {
+            "title": "Bienestar integral",
+            "description": "Buscamos resultados visibles que acompañen tu estilo de vida."
+          }
+        ]
+      },
+
+      "candidate_title": "¿Quién se beneficia de Primex?",
+      "candidate_body": "El candidato ideal es quien nota pérdida de luminosidad, textura desigual, piel opaca o pérdida de firmeza sin deformación de volúmenes.",
       "candidate_points": [
-        "Skin without luminosity or firmness",
-        "Fine superficial wrinkles and loss of texture",
-        "Skin that looks tired for no apparent reason",
-        "As preparation for other procedures",
-        "Maintenance and optimization of previous treatments"
+        "Piel sin luminosidad ni firmeza",
+        "Arrugas finas superficiales y pérdida de textura",
+        "Piel que se ve cansada sin causa aparente",
+        "Como preparación para otros procedimientos",
+        "Mantenimiento y optimización de tratamientos previos"
       ],
       "process_steps": [
         {
           "num": "01",
-          "title": "Skin preparation",
-          "body": "Medical cleansing and application of topical anesthesia for maximum comfort during the procedure."
+          "title": "Preparación de la piel",
+          "body": "Limpieza médica y aplicación de anestesia tópica para máxima comodidad durante el procedimiento."
         },
         {
           "num": "02",
-          "title": "Primex protocol application",
-          "body": "Intradermal injection of the biostimulating complex at multiple planes according to the treatment map designed for you."
+          "title": "Aplicación del protocolo Primex",
+          "body": "Inyección intradérmica del complejo bioestimulante en múltiples planos según el mapa de tratamiento diseñado para ti."
         },
         {
           "num": "03",
-          "title": "Activation and recovery",
-          "body": "Practically immediate recovery. There may be minimal redness in the first hours."
+          "title": "Activación y recuperación",
+          "body": "Recuperación prácticamente inmediata. Puede haber enrojecimiento mínimo las primeras horas."
         },
         {
           "num": "04",
-          "title": "Progressive results",
-          "body": "Regeneration occurs gradually. Optimal results from 4–6 weeks with continuous improvement."
+          "title": "Resultados progresivos",
+          "body": "La regeneración ocurre gradualmente. Resultados óptimos a partir de las 4-6 semanas con mejoría continua."
         }
       ],
       "benefits": [
-        "Activation of own collagen and elastin",
-        "Visible improvement in luminosity",
-        "No foreign substances",
-        "Immediate recovery",
-        "Ideal complement to other treatments",
-        "Cumulative effect with regular sessions"
+        "Activación de colágeno y elastina propios",
+        "Mejora visible de la luminosidad",
+        "Sin sustancias extrañas al organismo",
+        "Recuperación inmediata",
+        "Complemento ideal de otros tratamientos",
+        "Efecto acumulativo con sesiones regulares"
       ]
     },
     "acido-hialuronico": {
-      "hero_label": "Structural Filler",
-      "name": "Structural Hyaluronic Acid",
-      "tagline": "Facial sculpture with medical precision",
-      "positioning": "Structural hyaluronic acid is not a cosmetic filler — it is facial architecture. In Dr. López's hands, each cc of product is placed with precise anatomical intent: restoring the volume that time diminished, defining contours that gravity displaced, and creating harmony that looks completely natural.",
-      "candidate_title": "Who is this treatment for?",
-      "candidate_body": "For those who have noticed facial volume loss, flattening of cheekbones, nasolabial folds, loss of lip definition, or a facial oval that has lost its original architecture.",
+      "hero_label": "Relleno Estructural",
+      "name": "Ácido Hialurónico Estructural",
+      "tagline": "Escultura facial con precisión médica",
+      "positioning": "El ácido hialurónico estructural no es un relleno cosmético — es arquitectura facial. En manos de la Dra. López, cada cc de producto se coloca con una intención anatómica precisa: restaurar el volumen que el tiempo restó, definir contornos que la gravedad desplazó, y crear una armonía que parece completamente natural.",
+
+      "philosophy": {
+        "label": "Filosofía del tratamiento",
+        "title": "La armonización comienza con el equilibrio.",
+        "description": "No buscamos transformar rostros, sino restaurar proporciones y resaltar características que ya forman parte de tu identidad.",
+        "principles": [
+          {
+            "title": "Equilibrio facial",
+            "description": "Analizamos el rostro como una unidad completa."
+          },
+          {
+            "title": "Personalización",
+            "description": "Cada diseño facial responde a objetivos únicos."
+          },
+          {
+            "title": "Resultados sutiles",
+            "description": "La mejor armonización es la que se percibe natural."
+          }
+        ]
+      },
+      "candidate_title": "¿Para quién es este tratamiento?",
+      "candidate_body": "Para quien ha notado pérdida de volumen facial, aplanamiento de pómulos, surcos nasolabiales, pérdida de definición labial o un óvalo facial que ha perdido su arquitectura original.",
       "candidate_points": [
-        "Volume loss in cheekbones and temples",
-        "Nasolabial folds or marionette lines",
-        "Lips with loss of definition or volume",
-        "Chin or jaw without definition",
-        "Those seeking an immediate and reversible result"
+        "Pérdida de volumen en pómulos y sienes",
+        "Surcos nasolabiales o líneas de marioneta",
+        "Labios con pérdida de definición o volumen",
+        "Mentón o mandíbula sin definición",
+        "Quien busca un resultado inmediato y reversible"
       ],
       "process_steps": [
         {
           "num": "01",
-          "title": "Anatomical facial mapping",
-          "body": "Volume loss vectors and structural support points are evaluated. Precise planning before any injection."
+          "title": "Mapeo facial anatómico",
+          "body": "Se evalúan los vectores de pérdida de volumen y los puntos de soporte estructural. Planificación precisa antes de cualquier inyección."
         },
         {
           "num": "02",
-          "title": "Product selection",
-          "body": "Not all hyaluronic acids are equal. The ideal density and rheology is selected for each area to be treated."
+          "title": "Selección de producto",
+          "body": "No todos los ácidos hialurónicos son iguales. Se selecciona la densidad y reología ideal para cada zona a tratar."
         },
         {
           "num": "03",
-          "title": "Cannula or needle injection",
-          "body": "Injection technique depends on the area: blunt cannula for greater vascular safety in risk zones, fine needle for precise definition."
+          "title": "Inyección con cánula o aguja",
+          "body": "Técnica de inyección dependiendo de la zona: cánula roma para mayor seguridad vascular en zonas de riesgo, aguja fina para definición precisa."
         },
         {
           "num": "04",
-          "title": "Immediate result and follow-up",
-          "body": "The result is visible immediately. Two-week evaluation for adjustments. Duration: 12 to 18 months depending on the area."
+          "title": "Resultado inmediato y seguimiento",
+          "body": "El resultado es visible de inmediato. Evaluación a las 2 semanas para ajustes. Duración: 12 a 18 meses según la zona."
         }
       ],
       "benefits": [
-        "Result visible from day one",
-        "Completely reversible with hyaluronidase",
-        "No significant recovery time",
-        "Additional deep hydration",
-        "Customizable in volume and area",
-        "Duration of 12 to 18 months"
+        "Resultado visible desde el primer día",
+        "Completamente reversible con hialuronidasa",
+        "Sin tiempo de recuperación significativo",
+        "Hidratación profunda adicional",
+        "Personalizable en volumen y zona",
+        "Duración de 12 a 18 meses"
       ]
     },
     "bioestimulacion": {
-      "hero_label": "Natural Regeneration",
-      "name": "Facial & Body Biostimulation",
-      "tagline": "Your skin, in its best version",
-      "positioning": "Biostimulation is the aesthetic medicine treatment closest to Dr. López's philosophy: activating what the body already knows how to do, so it does it better. No foreign substances, no artificial volumes — just real regeneration from within.",
-      "candidate_title": "Who is this treatment for?",
-      "candidate_body": "For anyone who wants to improve the overall quality of their skin: firmness, luminosity, texture, hydration, and elasticity.",
+      "hero_label": "Regeneración Natural",
+      "name": "Bioestimulación Facial y Corporal",
+      "tagline": "Tu piel, pero en su mejor versión",
+      "positioning": "La bioestimulación es el tratamiento de medicina estética que más se acerca a la filosofía de la Dra. López: activar lo que el cuerpo ya sabe hacer, para que lo haga mejor. Sin sustancias extrañas, sin volúmenes artificiales — solo regeneración real desde adentro.",
+
+      "philosophy": {
+        "label": "Filosofía del tratamiento",
+        "title": "La mejor versión de tu piel ya existe.",
+        "description": "La bioestimulación aprovecha la capacidad natural del organismo para producir colágeno y mejorar la calidad de la piel desde el interior.",
+        "principles": [
+          {
+            "title": "Regeneración natural",
+            "description": "Trabajamos con los procesos biológicos propios del cuerpo."
+          },
+          {
+            "title": "Resultados progresivos",
+            "description": "Los cambios aparecen de forma gradual y elegante."
+          },
+          {
+            "title": "Calidad de piel",
+            "description": "Buscamos mejorar textura, firmeza y luminosidad."
+          }
+        ]
+      },
+
+      "candidate_title": "¿Para quién es este tratamiento?",
+      "candidate_body": "Para cualquier persona que quiera mejorar la calidad general de su piel: firmeza, luminosidad, textura, hidratación y elasticidad.",
       "candidate_points": [
-        "Dull skin without luminosity or vitality",
-        "Diffuse loss of firmness and elasticity",
-        "Fine wrinkles and irregular texture",
-        "As a preventive treatment from age 30",
-        "For body areas: neck, décolleté, hands, abdomen"
+        "Piel opaca, sin luminosidad ni vitalidad",
+        "Pérdida de firmeza y elasticidad difusa",
+        "Arrugas finas y textura irregular",
+        "Como tratamiento preventivo desde los 30 años",
+        "Para zonas corporales: cuello, escote, manos, abdomen"
       ],
       "process_steps": [
         {
           "num": "01",
-          "title": "Skin diagnosis",
-          "body": "Evaluation of the current skin condition, diagnosis of priority areas, and selection of the most appropriate biostimulation protocol."
+          "title": "Diagnóstico de piel",
+          "body": "Evaluación del estado actual de la piel, diagnóstico de zonas prioritarias y selección del protocolo de bioestimulación más adecuado."
         },
         {
           "num": "02",
-          "title": "Preparation and application",
-          "body": "Clean and prepared skin. Application of the biostimulant via superficial microinjections distributed across the treatment area."
+          "title": "Preparación y aplicación",
+          "body": "Piel limpia y preparada. Aplicación del bioestimulante mediante microinyecciones superficiales distribuidas en la zona de tratamiento."
         },
         {
           "num": "03",
-          "title": "Regenerative process activation",
-          "body": "The active substances initiate the gradual synthesis of endogenous collagen, elastin, and hyaluronic acid."
+          "title": "Activación del proceso regenerativo",
+          "body": "Las sustancias activas inician el proceso de síntesis de colágeno, elastina y ácido hialurónico endógeno de forma gradual."
         },
         {
           "num": "04",
-          "title": "Progressive and cumulative result",
-          "body": "Visible improvement from 4 weeks. Standard protocol: 3 sessions. Results improve over time."
+          "title": "Resultado progresivo y acumulativo",
+          "body": "Mejoría visible a partir de las 4 semanas. El protocolo estándar es de 3 sesiones. El resultado mejora con el tiempo."
         }
       ],
       "benefits": [
-        "Activation of endogenous collagen",
-        "Improved luminosity and texture",
-        "Applicable to face and body",
-        "No recovery time",
+        "Activación del colágeno endógeno",
+        "Mejora de luminosidad y textura",
+        "Aplicable en rostro y cuerpo",
+        "Sin tiempo de recuperación",
         "100% biocompatible",
-        "Long-term preventive and regenerative effect"
+        "Efecto preventivo y regenerador a largo plazo"
       ]
     }
   }

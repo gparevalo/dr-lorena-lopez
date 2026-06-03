@@ -93,68 +93,22 @@ export default function Consulta() {
             <img
               src={heroImg}
               alt=""
-              className="
-          absolute
-          inset-0
-          w-full
-          h-full
-          object-cover
-        "
+              className="absolute inset-0 w-full h-full object-cover"
             />
 
             {/* cinematic overlay */}
-            <div
-              className="
-          absolute
-          inset-0
-          bg-gradient-to-t
-          from-black/50
-          via-black/10
-          to-transparent
-        "
-            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
 
             {/* editorial line */}
-            <div
-              className="
-          absolute
-          top-0
-          right-0
-          w-px
-          h-full
-          bg-white/10
-        "
-            />
+            <div className="absolute top-0 right-0 w-px h-full bg-white/10" />
 
             {/* floating statement */}
-            <div
-              className="
-          absolute
-          bottom-16
-          left-12
-          right-12
-        "
-            >
-              <p
-                className="
-            text-white/40
-            uppercase
-            tracking-[0.35em]
-            text-[10px]
-            mb-5
-          "
-              >
+            <div className="absolute bottom-16 left-12 right-12">
+              <p className="text-white/40 uppercase tracking-[0.35em] text-[10px] mb-5">
                 Private Consultation
               </p>
 
-              <p
-                className="
-            text-white
-            text-2xl
-            leading-relaxed
-            font-serif
-          "
-              >
+              <p className="text-white text-2xl leading-relaxed font-serif">
                 Un espacio diseñado para entender tu armonía facial desde una
                 visión médica y estética.
               </p>
@@ -162,60 +116,20 @@ export default function Consulta() {
           </div>
 
           {/* RIGHT CONTENT */}
-          <div
-            className="
-        lg:col-span-7
-        relative
-        flex
-        items-center
-      "
-          >
+          <div className="lg:col-span-7 relative flex items-center">
             {/* soft gradients */}
-            <div
-              className="
-          absolute
-          top-[10%]
-          right-[-10%]
-          w-[600px]
-          h-[600px]
-          rounded-full
-          bg-primary/10
-          blur-[120px]
-        "
-            />
+            <div className="absolute top-[10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]" />
 
-            <div
-              className="
-              pt-48
-          relative
-          z-20
-          w-full
-          px-8
-          lg:px-24 
-        "
-            >
+            <div className="pt-40 relative z-20 w-full px-8 lg:px-24">
               {/* label */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="
-            flex
-            items-center
-            gap-4
-            mb-10
-          "
+                className="flex items-center gap-4 mb-10"
               >
                 <div className="w-12 h-px bg-primary/30" />
 
-                <span
-                  className="
-              text-[10px]
-              uppercase
-              tracking-[0.45em]
-              text-primary
-              font-semibold
-            "
-                >
+                <span className="text-[10px] uppercase tracking-[0.45em] text-primary font-semibold">
                   {c.hero_label}
                 </span>
               </motion.div>
@@ -225,17 +139,7 @@ export default function Consulta() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className="
-            font-serif
-            text-[#1a1816]
-            leading-[0.9]
-            tracking-[-0.05em]
-            mb-10
-            text-[4rem]
-            sm:text-[5rem]
-            lg:text-[7rem]
-            max-w-[900px]
-          "
+                className="font-serif text-[#1a1816] leading-[0.9] tracking-[-0.05em] mb-10 text-[4rem] sm:text-[5rem] lg:text-[6rem] max-w-[900px]"
               >
                 <span className="block">{c.hero_headline_1}</span>
 
@@ -251,17 +155,22 @@ export default function Consulta() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="
-            text-[#5e5852]
-            text-xl
-            leading-[1.9]
-            font-light
-            max-w-[650px]
-            mb-14
-          "
+                className="text-[#5e5852] text-lg leading-[1.9] font-light max-w-[650px] mb-14"
               >
                 {c.hero_subtitle}
               </motion.p>
+
+              {/* CTA */}
+              <div className="flex flex-col md:flex-row items-start justify-start gap-4 mb-4">
+                <a
+                  href="https://wa.me/593980163009"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-14 px-10 rounded-full bg-primary text-white flex items-center justify-center uppercase tracking-[0.25em] text-xs font-semibold"
+                >
+                  Solicitar valoración
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -299,30 +208,12 @@ export default function Consulta() {
                 >
                   <div className="flex items-center gap-5 mb-6">
                     {/* number */}
-                    <div
-                      className="
-      text-xl
-      font-mono
-      tracking-[0.35em]
-      text-primary/35
-      pt-[2px]
-    "
-                    >
+                    <div className="text-xl font-mono tracking-[0.35em] text-primary/35 pt-[2px]">
                       0{i + 1}
                     </div>
 
                     {/* title */}
-                    <h3
-                      className="
-      font-serif
-      text-xl
-      font-bold
-      text-foreground
-      leading-none
-      group-hover:text-primary
-      transition-colors duration-300
-    "
-                    >
+                    <h3 className="font-serif text-xl font-bold text-foreground leading-none group-hover:text-primary transition-colors duration-300">
                       {step.title}
                     </h3>
                   </div>

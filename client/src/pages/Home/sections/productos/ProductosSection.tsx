@@ -11,7 +11,6 @@ import {
 import { useLanguage } from "@/i18n";
 import { fadeUp } from "@/lib/animations";
 import PacksSection from "@/pages/Promociones/sections/PacksSection";
-import PatientStoriesSection from "@/pages/Home/sections/productos/PatientStoriesSection";
 import TimelineTreatment from "@/pages/Promociones/sections/TimelineTreatment";
 import { useMemo } from "react";
 import LuxuryLabel from "../../components/LuxuryLabel";
@@ -123,7 +122,7 @@ ${form.observaciones}
     <>
       <UnifiedSectionBlack
         id="productos-tratamiento"
-        className="bg-[#fdfdfd] mb-0 pb-0"
+        className="bg-[#fdfdfd] mb-0 pb-0 "
         withGrid={false}
       >
         <div className="max-w-full mx-auto">
@@ -162,7 +161,7 @@ ${form.observaciones}
           </motion.div>
 
           {/* SELECTOR */}
-          <div className="sticky z-40 bg-[#fdfdfd] py-6 flex flex-wrap  justify-center  gap-4  mb-14">
+          <div className="sticky z-40 bg-[#fdfdfd] py-6 flex flex-wrap  justify-center  gap-4 md:mb-14">
             {" "}
             {treatmentSelector.map((treatment) => (
               <button
@@ -187,10 +186,7 @@ ${form.observaciones}
             ))}
           </div>
 
-          <div
-            className="min-h-[425px] space-y-6  relative bg-white rounded-[40px] p-4 md:p-10 mb-20
-                   border border-[#ECE8E2] pl-4 md:pl-10 shadow-[0_20px_60px_rgba(0,0,0,.04)] overflow-hidden "
-          >
+          <div className="min-h-[425px] relative mb-20 overflow-hidden p-0 md:space-y-6 md:bg-white md:rounded-[40px] md:border md:border-[#ECE8E2] md:p-10 md:shadow-[0_20px_60px_rgba(0,0,0,.04)]">
             {/* etapas */}
             <TimelineTreatment
               treatmentPlan={treatmentPlan}
@@ -203,7 +199,6 @@ ${form.observaciones}
               packs={packs}
               setSelectedProgram={setSelectedProgram}
             />
-
           </div>
         </div>
       </UnifiedSectionBlack>

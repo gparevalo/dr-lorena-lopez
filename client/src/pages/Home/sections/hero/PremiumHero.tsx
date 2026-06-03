@@ -55,17 +55,17 @@ export default function PremiumHero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center md:text-left leading-[0.92] tracking-[-0.06em] w-[550px]"
+              className="w-full text-center md:text-left leading-[0.92] tracking-[-0.06em] md:max-w-[550px]"
             >
-              <span className="block text-8xl font-primary">
+              <span className="block text-6xl md:text-8xl font-primary">
                 {t.hero.headline_1}
               </span>
 
-              <span className="block italic font-serif text-primary text-8xl">
+              <span className="block italic font-serif text-primary  text-7xl md:text-8xl">
                 {t.hero.headline_2}
               </span>
 
-              <span className="block font-serif text-8xl">
+              <span className="block font-serif  text-6xl md:text-7xl">
                 {t.hero.headline_3}
               </span>
             </motion.h1>
@@ -157,7 +157,7 @@ export default function PremiumHero() {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="grid grid-cols-3 gap-2 pl-20">
+            <div className="grid grid-cols-3 gap-2 pl-0 md:pl-20">
               <div className="h-[340px] rounded-[28px] mr-2 overflow-hidden mt-[60px]">
                 <img
                   src="/images/treatments/tratamiento10.jpg"

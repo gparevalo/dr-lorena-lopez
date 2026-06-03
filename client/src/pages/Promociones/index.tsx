@@ -5,9 +5,7 @@ import { BaseLayout } from "@/layout/base-layout";
 import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import CtaSection from "../Home/sections/cta/CtaSection";
-import TratamientoItem from "./componentes/TratamientoItem";
 import PostTreatmentProtocolsSection from "./PostTreatmentProtocolsSection";
-import NuestroProceso from "../Home/components/NuestroProceso";
 
 export default function Promociones() {
   const { t } = useLanguage();

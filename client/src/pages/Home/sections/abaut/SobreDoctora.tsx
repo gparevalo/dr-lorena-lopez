@@ -4,6 +4,7 @@ import { fadeUp } from "@/lib/animations";
 import { motion } from "framer-motion";
 import LuxuryLabel from "../../components/LuxuryLabel";
 import { TestimonialsColumn } from "./TestimonialsColumn";
+import { headerData } from "@/data/realTestimonials";
 
 const testimonials = [
   {
@@ -93,22 +94,30 @@ export function SobreDoctora() {
       className="bg-[#fdfdfd] mb-0 pb-0 pt-0"
       withGrid={false}
     >
-      <div className="scene-glow-dark" />
-
-      <div className="relative z-10 mx-auto max-w-[1440px] px-5 md:px-8 xl:px-12 py-32 md:py-2">
-        <div className="grid lg:grid-cols-2 gap-20 items-center min-h-[85vh] py-20">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-5 md:px-8 xl:px-12  ">
+        <div className="grid lg:grid-cols-2 gap-20 items-center min-h-[85vh]  ">
           {/* LEFT */}
           <motion.div initial="hidden" animate="show" className="max-w-lg ">
-            <motion.div>
-              <LuxuryLabel>{t.about.label}</LuxuryLabel>
-            </motion.div>
+            {/* HEADER */}
 
-            <motion.h2
-              variants={fadeUp}
-              className="font-heading mb-10 text-black leading-none tracking-tighter "
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-start max-w-4xl mx-auto mb-10"
             >
-              {t.about.title}
-            </motion.h2>
+              <motion.div variants={fadeUp} className="flex justify-start">
+                <LuxuryLabel>{t.about.label}</LuxuryLabel>
+              </motion.div>
+
+              <motion.h2
+                variants={fadeUp}
+                className="font-heading  text-black leading-none tracking-tighter"
+              >
+                {t.about.title}
+              </motion.h2>
+            </motion.div>
             <motion.p
               variants={fadeUp}
               className="text-primary leading-relaxed mx-auto mb-6"

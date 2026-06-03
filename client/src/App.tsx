@@ -12,8 +12,7 @@ import Consulta from "@/pages/Consulta";
 import Doctora from "@/pages/Doctora";
 import Galeria from "@/pages/Galeria";
 import Home from "@/pages/Home";
-import Tratamientos from "@/pages/Tratamientos";
-import TratamientoDetail from "@/pages/Tratamientos/detail";
+import TratamientoDetail from "./pages/DetalleProducto/detail";
 import NotFound from "./pages/not-found";
 import Promociones from "./pages/Promociones";
 

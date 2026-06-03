@@ -19,9 +19,7 @@ export function Footer() {
 
   const navLinks = [
     { href: "/", label: t.nav.home },
-    { href: "/tratamientos", label: t.nav.tratamientos },
-    { href: "/doctora", label: t.nav.doctora },
-    { href: "/galeria", label: t.nav.galeria },
+    { href: "/tratamientos", label: t.nav.tratamientos }, 
     { href: "/consulta", label: t.nav.agendar },
   ];
 

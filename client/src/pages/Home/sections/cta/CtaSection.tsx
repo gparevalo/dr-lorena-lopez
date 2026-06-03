@@ -1,8 +1,8 @@
 import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
 import { useLanguage } from "@/i18n";
+import fondo from "@assets/images/fondo.png";
 import { motion } from "framer-motion";
 import LuxuryLabel from "../../components/LuxuryLabel";
-import fondo from "@assets/images/fondo.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -19,79 +19,70 @@ export default function CtaSection() {
   return (
     <UnifiedSectionBlack
       id="contacto"
-      className="bg-black/[0.9] bg-cover bg-center relative py-0   md:py-0 "
+      className="bg-black/[0.7] bg-cover bg-center relative py-0   md:py-0 "
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${fondo})` }}
       />
-      <div className="absolute inset-0 bg-black/70" />
-
-      <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.2 }}
-          className="flex flex-col items-center"
-        >
-          <motion.div variants={fadeUp}>
-            <LuxuryLabel>{t.cta.label}</LuxuryLabel>
-          </motion.div>
-
-          <motion.h2
-            variants={fadeUp}
-            className="font-heading text-white leading-[0.8] mb-12 tracking-tight"
-            style={{ fontSize: "clamp(3.5rem, 10vw, 9rem)" }}
-          >
-            {t.cta.title}
-            <span className="text-secondary italic font-serif block mt-4">
-              {" "}
-              {t.cta.title2}
-            </span>
-          </motion.h2>
-
-          <motion.p
-            variants={fadeUp}
-            className="text-white/60 text-xl md:text-2xl font-serif italic max-w-2xl mb-20 leading-relaxed font-light"
-          >
-            {t.cta.subtitle}
-          </motion.p>
-
-          {/* RIGHT - ACTION BLOCK */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="flex justify-center lg:center"
-          >
-            <a
-              href="https://wa.me/593980163009"
-              target="_blank"
-              rel="noopener"
-              className="group relative inline-flex items-center justify-center"
-            >
-              {/* outer ring */}
-              <span className="absolute inset-0 rounded-full border border-white/15 group-hover:border-primary/60 transition" />
-
-              {/* glow */}
-              <span className="absolute inset-0 rounded-full bg-white/10 group-hover:bg-white/20 blur-md transition" />
-
-              {/* button */}
-              <span className="relative px-16 py-6 text-[11px] uppercase tracking-[0.6em] text-white font-medium">
-                {t.cta.button}
-              </span>
-            </a>
-          </motion.div>
+      <div className="absolute inset-0 bg-black/80" />
+      <div className="relative z-10 max-w-6xl mx-auto text-center py-32">
+        <motion.div variants={fadeUp} className="flex justify-center">
+          <LuxuryLabel>{t.cta.label}</LuxuryLabel>
         </motion.div>
-        <motion.div
+
+        <motion.h2
           variants={fadeUp}
-          className="mt-20 pt-10 border-t border-white/5 w-full flex flex-col md:flex-row items-center justify-center gap-6"
+          className="font-heading text-white  mb-10 mt-8 text-black leading-[0.9]  tracking-tighter max-w-5xl mx-auto"
+          style={{
+            fontSize: "clamp(3rem,8vw,7rem)",
+          }}
         >
-          <p className="text-white/[0.2] text-[10px] uppercase tracking-[0.4em] font-bold">
-            {t.cta.note}
+          {t.cta.title}
+
+          <span className="block text-primary italic font-serif mt-4">
+            {t.cta.title2}
+          </span>
+        </motion.h2>
+
+        <p className="text-white/70 text-lg md:text-xl max-w-3xl mx-auto mt-10 leading-relaxed">
+          {t.cta.subtitle}
+        </p>
+
+        {/* BENEFICIOS */}
+        <div className="mt-16 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {[
+            "Diagnóstico personalizado",
+            "Tratamiento adaptado a ti",
+            "Seguimiento profesional",
+          ].map((item) => (
+            <div
+              key={item}
+              className="bg-white/[0.03] border border-white/10 rounded-3xl px-6 py-5"
+            >
+              <p className="text-white/90 text-sm">{item}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-4">
+          <a
+            href="https://wa.me/593980163009"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-14 px-10 rounded-full bg-primary text-white flex items-center justify-center uppercase tracking-[0.25em] text-xs font-semibold"
+          >
+            Solicitar valoración
+          </a>
+        </div>
+
+        {/* FOOTER */}
+        <div className="mt-20 pt-10 border-t border-white/10 max-w-2xl mx-auto">
+          <p className="text-white/80 uppercase tracking-[0.35em] text-[11px]">
+            Quito · Atención previa cita
           </p>
-        </motion.div>
+        </div>
       </div>
 
       {/* Background Glow */}

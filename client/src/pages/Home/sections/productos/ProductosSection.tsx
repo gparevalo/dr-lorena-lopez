@@ -11,6 +11,7 @@ import {
 import { useLanguage } from "@/i18n";
 import { fadeUp } from "@/lib/animations";
 import PacksSection from "@/pages/Promociones/sections/PacksSection";
+import PatientStoriesSection from "@/pages/Home/sections/productos/PatientStoriesSection";
 import TimelineTreatment from "@/pages/Promociones/sections/TimelineTreatment";
 import { useMemo } from "react";
 import LuxuryLabel from "../../components/LuxuryLabel";
@@ -202,6 +203,7 @@ ${form.observaciones}
               packs={packs}
               setSelectedProgram={setSelectedProgram}
             />
+
           </div>
         </div>
       </UnifiedSectionBlack>

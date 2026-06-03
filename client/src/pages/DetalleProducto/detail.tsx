@@ -1,11 +1,9 @@
-import { PageHero } from "@/components/layout/PageHero";
-
+import { PageHeroTreatment } from "@/components/layout/PageHeroTreatment";
 import { SEO } from "@/components/seo";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n";
 import { BaseLayout } from "@/layout/base-layout";
 import { fadeUp, staggerContainer } from "@/lib/animations";
-import headerImg from "@assets/images/fondo.png";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link, useParams } from "wouter";
@@ -87,8 +85,6 @@ export default function TratamientoDetail() {
     );
   }
 
-  const gradientClass = heroGradients[slug] || heroGradients.endolift;
-
   return (
     <BaseLayout>
       <SEO
@@ -98,26 +94,101 @@ export default function TratamientoDetail() {
       />
 
       {/* ─── HERO CINEMATIC ─── */}
-      <PageHero
+      <PageHeroTreatment
         title={detail.name}
         subtitle={detail.hero_label}
         description={detail.tagline}
-        image={headerImg}
-        className={`bg-gradient-to-br ${gradientClass}`}
-        dark={false}
-      >
-        <div className="text-end flex justify-end">
-          <Link
-            href="/tratamientos"
-            className="inline-flex items-center gap-3 text-primary hover:text-black transition-all text-sm uppercase tracking-[0.45em] font-bold mt-8 group"
-          >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            {td.back}
-          </Link>
-        </div>
-      </PageHero>
+        image={"/images/hero5.png"}
+      />
 
       {/* ─── POSITIONING MANIFESTO ─── */}
+
+      <section className="relative py-32 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-6">
+    
+    <div className="grid lg:grid-cols-12 gap-16 items-start">
+
+      {/* LEFT */}
+
+      <div className="lg:col-span-7">
+
+        <span className="uppercase tracking-[0.35em] text-primary text-[11px] font-semibold">
+          Filosofía del tratamiento
+        </span>
+
+        <h2 className="font-heading text-5xl lg:text-7xl leading-[0.9] mt-6 mb-10">
+          No buscamos cambiar tu rostro.
+          <br />
+          Buscamos revelar su mejor versión.
+        </h2>
+
+        <p className="text-lg text-black/60 leading-relaxed max-w-2xl">
+          Cada procedimiento es diseñado para respetar la armonía facial,
+          potenciar la belleza natural y generar resultados progresivos que
+          evolucionan contigo.
+        </p>
+
+      </div>
+
+      {/* RIGHT */}
+
+      <div className="lg:col-span-5">
+
+        <div className="space-y-10">
+
+          {[
+            {
+              number: "01",
+              title: "Naturalidad",
+              description:
+                "Resultados elegantes que respetan tus rasgos."
+            },
+            {
+              number: "02",
+              title: "Precisión médica",
+              description:
+                "Cada decisión se basa en análisis facial y criterio clínico."
+            },
+            {
+              number: "03",
+              title: "Armonía integral",
+              description:
+                "Tratamos el rostro como un conjunto y no zonas aisladas."
+            }
+          ].map((item) => (
+            <div key={item.number} className="flex gap-6">
+
+              <span className="font-heading text-5xl text-primary/20 leading-none">
+                {item.number}
+              </span>
+
+              <div>
+                <h3 className="font-heading text-2xl mb-2">
+                  {item.title}
+                </h3>
+
+                <p className="text-black/60 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  {/* Background Number */}
+
+  <span className="absolute right-0 top-1/2 -translate-y-1/2 font-heading text-[400px] text-primary/[0.03] leading-none pointer-events-none">
+    01
+  </span>
+</section>
+
       <section className="section-spacing bg-white relative overflow-hidden">
         {/* subtle architectural lines */}
         <div className="absolute top-0 left-0 w-full h-px bg-black/[0.04]" />
@@ -197,6 +268,7 @@ export default function TratamientoDetail() {
           }}
         />
       </section>
+
       {/* ─── IDEAL CANDIDATE GRID ─── */}
       <section className="section-spacing bg-ivory/50">
         <div className="section-container">
@@ -460,6 +532,7 @@ export default function TratamientoDetail() {
           </motion.div>
         </div>
       </section>
+
     </BaseLayout>
   );
 }

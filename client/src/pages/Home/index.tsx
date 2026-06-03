@@ -1,6 +1,7 @@
 import { SEO } from "@/components/seo";
 import { useLanguage } from "@/i18n";
 import { BaseLayout } from "@/layout/base-layout";
+import PatientStoriesSection from "./sections/productos/PatientStoriesSection";
 import FraseVideo from "./components/FraseVideo";
 import { SobreDoctora } from "./sections/abaut/SobreDoctora";
 import CtaSection from "./sections/cta/CtaSection";
@@ -25,7 +26,8 @@ export default function Home() {
       <TreatmentsHome />
       <PatientJourneySection />
       <FraseVideo />
-      <ProductosSection />
+      <ProductosSection /> 
+      <PatientStoriesSection />
       <SobreDoctora />
       <CtaSection />
     </BaseLayout>

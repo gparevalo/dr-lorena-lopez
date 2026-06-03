@@ -8,7 +8,6 @@ import {
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import { Button } from "@/components/ui/button";
 import {
   carePrograms,
   treatmentCarePlans,
@@ -17,15 +16,12 @@ import {
 } from "@/data/treatmentCarePlans";
 import { useLanguage } from "@/i18n";
 import { fadeUp } from "@/lib/animations";
-import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
 import { useMemo } from "react";
-import { Link } from "wouter";
 import LuxuryLabel from "../Home/components/LuxuryLabel";
+import DetalleTratamientoSection from "./sections/DetalleTratamientoSection";
 import PacksSection from "./sections/PacksSection";
 import ProgramsSection from "./sections/ProgramsSection";
 import TimelineTreatment from "./sections/TimelineTreatment";
-import DetalleTratamientoSection from "./sections/DetalleTratamientoSection";
 
 export default function SignatureCarePrograms() {
   const { t } = useLanguage();

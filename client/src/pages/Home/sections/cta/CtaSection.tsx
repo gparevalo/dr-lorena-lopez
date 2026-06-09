@@ -34,9 +34,6 @@ export default function CtaSection() {
         <motion.h2
           variants={fadeUp}
           className="font-heading text-white  mb-10 mt-8 text-black leading-[0.9]  tracking-tighter max-w-5xl mx-auto"
-          style={{
-            fontSize: "clamp(3rem,8vw,7rem)",
-          }}
         >
           {t.cta.title}
 
@@ -58,9 +55,9 @@ export default function CtaSection() {
           ].map((item) => (
             <div
               key={item}
-              className="bg-white/[0.03] border border-white/10 rounded-3xl px-6 py-5"
+              className="bg-white/[0.03] border border-white/10 rounded-3xl px-6 py-6 backdrop-blur-md"
             >
-              <p className="text-white/90 text-sm">{item}</p>
+              <p className="text-white/80 text-sm tracking-wide">{item}</p>
             </div>
           ))}
         </div>

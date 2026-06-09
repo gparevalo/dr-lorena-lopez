@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
-interface PageHeroProps {
+interface HighTicketHeroProps {
   title: string;
   title2?: string;
   subtitle?: string;
@@ -14,7 +14,7 @@ interface PageHeroProps {
   align?: "left" | "center";
 }
 
-export function PageHero({
+export function HighTicketHero({
   title,
   title2,
   subtitle,
@@ -23,11 +23,11 @@ export function PageHero({
   children,
   className,
   align = "left",
-}: PageHeroProps) {
+}: HighTicketHeroProps) {
   return (
     <section
       className={cn(
-        "relative overflow-hidden h-[60vh] md:h-[80vh] pt-24 pb-20 mt-2 md:pt-[16vh] md:pb-28 md:mt-20 bg-white text-black pl-10 md:pl-20",
+        "relative overflow-hidden h-[80vh] md:h-[100vh] pt-24 pb-20 mt-2 md:pt-[15vh] md:pb-28 md:mt-10 bg-white text-black pl-10 md:pl-20",
       )}
     >
       {/* ───────────────── BACKGROUND IMAGE ───────────────── */}
@@ -58,7 +58,7 @@ export function PageHero({
               className="inline-flex items-center gap-3 mb-7"
             >
               <span className="w-10 h-px bg-primary/50" />
-              <span className="text-sm uppercase tracking-[0.35em] font-bold text-primary/60">
+              <span className="text-sm  uppercase tracking-[0.20em] font-bold text-primary/60">
                 {subtitle}
               </span>
             </motion.div>
@@ -67,7 +67,7 @@ export function PageHero({
           {/* ───────────────── TITLE ───────────────── */}
           <motion.h2
             variants={fadeUp}
-            className="font-heading mb-10 text-black leading-none tracking-tighter"
+            className="font-heading mb-10 text-black leading-none tracking-tighter text-7xl "
           >
             {title}
             {title2 && (

@@ -1,10 +1,16 @@
-import { PageHero } from "@/components/layout/PageHero";
 import { SEO } from "@/components/seo";
 import { useLanguage } from "@/i18n";
 import { BaseLayout } from "@/layout/base-layout";
 import { useScroll } from "framer-motion";
 import { useRef } from "react";
 import CtaSection from "../Home/sections/cta/CtaSection";
+import CtaLongevilift from "./components/CtaLongevilift";
+import DifferentiatorsSection from "./components/DifferentiatorsSection";
+import { HighTicketHero } from "./components/HighTicketHero";
+import MetodoSection from "./components/MetodoSection";
+import RecognitionSection from "./components/RecognitionSection";
+import SolutionSection from "./components/SolutionSection";
+import TransformationSection from "./components/TransformationSection";
 
 export default function HighTicket() {
   const { t } = useLanguage();
@@ -23,20 +29,21 @@ export default function HighTicket() {
         canonicalPath="/tratamientos"
       />
 
-      {/* ─── HERO: MINIMALIST LUXURY ─── */}
-      <PageHero
-        title={` Los mejores resultados no dependen`}
-        title2={`únicamente del
-              tratamiento.`}
-        subtitle={"Más allá del procedimiento"}
+      <HighTicketHero
+        title={`Los signos de envejecimiento no aparecen todos al mismo tiempo.`}
+        title2={`Por eso rara vez se resuelven con un solo tratamiento.`}
+        subtitle={"Tu plan personal de rejuvenecimiento"}
         description={
-          "    Cada procedimiento merece una estrategia de continuidad diseñada para proteger, potenciar y prolongar sus beneficios a largo plazo."
+          ""
+          //  "LongeviLift 360 comienza entendiendo cómo está envejeciendo tu rostro para diseñar un plan médico personalizado."
         }
-        image={"/images/hero6.png"}
+        image={"/images/hero-ticket.png"}
       />
 
-      {/* ─── FINAL CTA (CONCIERGE) ─── */}
-      <CtaSection />
+      <RecognitionSection />
+      <SolutionSection />
+      <MetodoSection />
+      <DifferentiatorsSection />  
     </BaseLayout>
   );
 }

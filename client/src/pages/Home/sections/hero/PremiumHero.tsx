@@ -8,13 +8,13 @@ import { ArrowRight, CalendarDays, Crown } from "lucide-react";
 const quickLinks = [
   {
     title: "Antes y despues",
-    subtitle: "Pre / Post tratamiento",
+    subtitle: "Protocolo de atención",
     href: "#tu-experiencia-completa",
   },
   {
-    title: "Packs y promociones",
-    subtitle: "Descubre opciones",
-    href: "/tratamientos",
+    title: "Plan completo",
+    subtitle: "Plan de rejuvenecimiento",
+    href: "/longevilift",
   },
 ];
 

@@ -109,7 +109,7 @@ export default function PatientJourneySection() {
   return (
     <section
       id="tu-experiencia-completa"
-      className={cn("relative  section-spacing", "bg-white text-black")}
+      className={cn("relative  section-spacing", "bg-[#FAF9F7] text-black")}
     >
       {/* Content Container */}
       <div className="section-container relative z-20">

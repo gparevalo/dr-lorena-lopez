@@ -44,7 +44,7 @@ export default function TimeLineSection({
             }}
             className=" relative pl-0  md:pl-2 "
           >
-            <div className=" relative  bg-white ounded-[40px] border border-[#ECE8E2] p-8 md:p-12 hadow-[0_20px_60px_rgba(0,0,0,.04)] overflow-hidden ">
+            <div className=" relative  bg-white ounded-[40px] border border-[#ECE8E2] rounded-3xl p-8 md:p-12 hadow-[0_20px_60px_rgba(0,0,0,.04)] overflow-hidden ">
               <span className="absolute -top-4 right-2 md:right-6 font-heading text-[90px] md:text-[170px] leading-none text-primary/[0.04] pointer-events-none select-none">
                 {step.number}
               </span>

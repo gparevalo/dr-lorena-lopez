@@ -23,7 +23,7 @@ export default function TratamientosPrincipales() {
           viewport={{ once: true }}
         >
           <motion.div variants={fadeUp} className="flex justify-center">
-            <LuxuryLabel dark>{t.treatments.label}</LuxuryLabel>
+            <LuxuryLabel >{t.treatments.label}</LuxuryLabel>
           </motion.div>
           <motion.h2
             variants={fadeUp}

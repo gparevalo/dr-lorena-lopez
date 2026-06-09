@@ -13,6 +13,7 @@ import Home from "@/pages/Home";
 import TratamientoDetail from "./pages/DetalleProducto/detail";
 import NotFound from "./pages/not-found";
 import Promociones from "./pages/Promociones";
+import HighTicket from "./pages/HighTicket";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -29,6 +30,8 @@ function Router() {
       <Route path="/consulta" component={Consulta} />
       <Route path="/tratamientos" component={Promociones} />
       <Route path="/tratamientos/:slug" component={TratamientoDetail} /> 
+      <Route path="/longevilift" component={HighTicket} />
+      
       <Route component={NotFound} />
     </Switch>
   );

@@ -128,7 +128,7 @@ export default function PatientJourneySection() {
             className="text-center max-w-4xl mx-auto mb-2 md:mb-24"
           >
             <motion.div variants={fadeUp} className="flex justify-center">
-              <LuxuryLabel dark>Tu experiencia completa</LuxuryLabel>
+              <LuxuryLabel >Tu experiencia completa</LuxuryLabel>
             </motion.div>
             <motion.h2
               variants={fadeUp}

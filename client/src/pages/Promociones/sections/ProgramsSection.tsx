@@ -34,7 +34,7 @@ export default function ProgramsSection({
           className="text-center max-w-4xl mx-auto mb-4"
         >
           <motion.div variants={fadeUp} className="flex justify-center">
-            <LuxuryLabel dark> Complementos opcionales</LuxuryLabel>
+            <LuxuryLabel> Complementos opcionales</LuxuryLabel>
           </motion.div>
           <motion.h2
             variants={fadeUp}

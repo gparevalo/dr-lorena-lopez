@@ -146,7 +146,7 @@ ${form.observaciones}
             className="text-center max-w-4xl mx-auto mb-4"
           >
             <motion.div variants={fadeUp} className="flex justify-center">
-              <LuxuryLabel dark>Cuidado integral</LuxuryLabel>
+              <LuxuryLabel >Cuidado integral</LuxuryLabel>
             </motion.div>
             <motion.h2
               variants={fadeUp}

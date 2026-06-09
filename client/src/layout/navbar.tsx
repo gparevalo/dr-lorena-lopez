@@ -6,7 +6,7 @@ import {
 } from "@assets/images/logo_verde-removebg-preview.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, CalendarDays, Globe, Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "wouter";
 
 export function Navbar() {
@@ -23,8 +23,9 @@ export function Navbar() {
   }, []);
 */
   const navItems = [
-    { href: "/", label: t.nav.home }, 
+    { href: "/", label: t.nav.home },
     { href: "/tratamientos", label: t.nav.tratamientos },
+    { href: "/longevilift", label: t.nav.longevilift },
   ];
 
   return (

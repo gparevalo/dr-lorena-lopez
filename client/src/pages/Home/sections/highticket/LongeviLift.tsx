@@ -26,7 +26,7 @@ export default function LongeviLift() {
               />
 
               {/* Contenido */}
-              <div className="relative z-10 max-w-3xl ml-auto text-right">
+              <div className="relative z-10 max-w-3xl ml-auto text-center md:text-right">
                 <div className="max-w-4xl ml-auto">
                   {" "}
                   <motion.div variants={fadeUp} className="flex justify-end">
@@ -58,7 +58,7 @@ export default function LongeviLift() {
                     ))}
                   </div>
                   {/* FOOTER INSIGHT */}
-                  <div className="mt-14 border-t border-[#ECE8E2] pt-10 text-right mb-8">
+                  <div className="mt-14 border-t border-[#ECE8E2] pt-10  text-center md:text-right mb-8">
                     <p className="text-2xl md:text-3xl text-black leading-relaxed">
                       Porque el rostro no envejece por separado.
                     </p>

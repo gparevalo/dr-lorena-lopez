@@ -146,7 +146,7 @@ export default function TimeLineSection({
                   asChild
                   variant="editorial"
                   withShimmer
-                  className="w-full md:w-auto"
+                  className="w-full md:w-auto rounded-full "
                 >
                   <a
                     href="https://wa.me/593980163009"

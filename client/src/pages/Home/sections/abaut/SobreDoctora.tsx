@@ -91,7 +91,7 @@ export function SobreDoctora() {
   return (
     <UnifiedSectionBlack
       id="sobre-doctora"
-      className="bg-[#fdfdfd] mb-0 pb-0 pt-0"
+      className="bg-[#fdfdfd] mb-0 pb-20 pt-0"
       withGrid={false}
     >
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 md:px-8 xl:px-12  ">

@@ -31,8 +31,8 @@ export default function Home() {
       <FraseVideo />
       <ProductosSection />
       <PatientStoriesSection />
-      <SobreDoctora />
-      <CtaSection />
+      <SobreDoctora /> 
+      <CtaSection /> 
     </BaseLayout>
   );
 }

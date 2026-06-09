@@ -86,6 +86,7 @@ export default function CtaSection() {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[120%] h-[120%] bg-[radial-gradient(circle_at_50%_50%,_rgba(107,140,78,0.1),_transparent_60%)]" />
       </div>
+      <br />
     </UnifiedSectionBlack>
   );
 }

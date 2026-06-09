@@ -68,7 +68,7 @@ export default function LongeviLift() {
                     </p>
                   </div>
                   <a
-                    href="/longevilift-360"
+                    href="/longevilift"
                     className="inline-block mt-0 px-10 py-4 bg-primary text-white rounded-full uppercase tracking-[0.2em] text-xs font-semibold"
                   >
                     Ver protocolo completo

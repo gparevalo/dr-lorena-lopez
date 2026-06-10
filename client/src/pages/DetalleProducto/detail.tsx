@@ -100,7 +100,7 @@ export default function TratamientoDetail() {
       <ProcesoSection detail={detail} />
       <BeneficiosSection detail={detail} />
 
-      <div className="max-w-6xl items-center ">
+      <div className="max-w-8xl items-center ">
         {detail.treatments && (
           <>
             <motion.div
@@ -108,7 +108,7 @@ export default function TratamientoDetail() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-center max-w-5xl mx-auto mb-16"
+              className="text-center max-w-7xl mx-auto mb-16"
             >
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -128,7 +128,7 @@ export default function TratamientoDetail() {
                   Tipo de tratamientos con laser
                 </motion.h2>
               </motion.div>{" "}
-              <div className="lg:col-span-7 grid grid-cols-2 gap-6 ">
+              <div className="lg:col-span-7 grid grid-cols-1¸ md:grid-cols-2   gap-6 ">
                 {detail.treatments.map((item, index) => (
                   <div
                     key={item.id}
@@ -136,7 +136,7 @@ export default function TratamientoDetail() {
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 ">
                       {/* LEFT - IMAGE */}
-                      <div className="relative bg-[#FAF9F7] min-h-[406px]">
+                      <div className="hidden md:block relative bg-[#FAF9F7] min-h-[406px]">
                         <img
                           src={item.imageSrc}
                           alt={item.name}

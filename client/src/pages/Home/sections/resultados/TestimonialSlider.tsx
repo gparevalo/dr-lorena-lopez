@@ -152,7 +152,7 @@ export const TestimonialSlider = ({
                   {activeReview.summary}{" "}
                 </p>
                 {/* BENEFITS */}
-                {activeReview.benefits && (
+                {!activeReview.treatments && activeReview.benefits && (
                   <motion.ul
                     variants={fadeUp}
                     className={cn(
@@ -170,22 +170,18 @@ export const TestimonialSlider = ({
                 {activeReview.treatments && (
                   <>
                     {" "}
-                    <div className="lg:col-span-7 grid grid-cols-2 gap-6 ">
+                    <div className="lg:col-span-7 grid grid-cols-3 gap-2 ">
                       {activeReview.treatments.map((item, index) => (
                         <div
                           key={item.id}
-                          className="group relative rounded-3xl border border-[#ECE8E2] bg-white p-6 hover:shadow-sm 
+                          className="group relative rounded-3xl border border-[#ECE8E2] bg-white p-4 hover:shadow-sm 
                   hover:scale-[1.03] transition"
                         >
-                          <div className="flex items-start justify-between mb-4">
+                          <div className="flex items-start justify-between mb-2">
                             <div className="flex items-center gap-3">
-                              <div className="w-10 h-10 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center font-heading text-sm">
-                                0{index + 1}
-                              </div>
-
                               <div>
                                 <p className="text-black/30 text-[11px] uppercase tracking-widest mt-1">
-                                  {item.name}
+                                  Tratamiento 0{item.id}
                                 </p>
                                 <p className="font-heading text-lg leading-snug">
                                   {item.name}
@@ -193,10 +189,6 @@ export const TestimonialSlider = ({
                               </div>
                             </div>
                           </div>
-
-                          <p className="text-black/50 text-sm leading-relaxed pl-[52px]">
-                            {item.description}
-                          </p>
                         </div>
                       ))}
                     </div>

@@ -338,45 +338,205 @@
     "hero_subtitle": "A curated selection of the world's most advanced aesthetic procedures, executed with medical judgment and artistic sensibility.",
     "cta": "View Treatment",
     "cta_consulta": "Book Consultation",
+
     "treatments": [
       {
+        "id": 1,
+        "imageSrc": "/images/treatments/luego.jpg",
         "slug": "endolift",
         "name": "Endolift",
-        "tagline": "Lifting without a scalpel",
-        "summary": "The gold standard in minimally invasive facial lifting. Fiber-optic laser technology that remodels tissue from within.",
-        "highlight": "No surgery · No scars · No recovery time",
-        "position": "right"
+        "tagline": "Lifting sin cirugía",
+        "summary": "Rejuvenece, redefine y tensa tu rostro desde adentro, sin bisturí. Endolift es un tratamiento avanzado que mejora la firmeza de la piel y reduce grasa localizada, logrando un efecto lifting natural y progresivo.",
+        "description": "Es ideal si buscas un cambio visible sin pasar por cirugía. Actúa desde las capas internas de la piel para redefinir el contorno facial, mejorar la flacidez y estilizar zonas como la papada o el cuello. Los resultados se ven de forma progresiva, manteniendo una apariencia natural y elegante.",
+        "benefits": [
+          "Reafirma y tensa la piel",
+          "Reduce papada y grasa localizada",
+          "Define el contorno facial",
+          "Mejora la calidad de la piel con el tiempo",
+          "Resultados naturales sin cirugía"
+        ],
+        "zones": [
+          "Papada",
+          "Mandíbula",
+          "Mejillas",
+          "Cuello",
+          "Zona alrededor de los ojos"
+        ],
+        "duration": "Resultados progresivos que mejoran con el tiempo",
+        "downtime": "Mínimo, puedes retomar tu rutina rápidamente",
+        "highlight": "Sin cirugía · Sin cicatrices · Resultado progresivo",
+        "image": "/images/treatments/endolift.png",
+        "video": "/videos/treatments/endolift.mp4",
+        "position": "right",
+        "treatments": [
+          {
+            "id": 1,
+            "imageSrc": "/images/treatments/laser/endoliftX.png",
+            "slug": "endoliftX",
+            "name": "EndoliftX",
+            "tagline": "Lifting sin cirugía",
+            "description": "EndoliftX es un tratamiento láser mínimamente invasivo que tensa la piel, redefine el rostro y estimula el colágeno sin cirugía."
+          },
+          {
+            "id": 2,
+            "imageSrc": "/images/treatments/laser/endoliftX.jpg",
+            "slug": "gluteolift",
+            "name": "Gluteolift",
+            "tagline": "Lifting sin cirugía",
+            "description": "Redefine, eleva y reafirma los glúteos con láser LASEmaR 1500®. Sin cirugía, resultados visibles desde la primera sesión y rápida recuperación."
+          },
+          {
+            "id": 3,
+            "imageSrc": "/images/treatments/laser/endoliftX.jpg",
+            "slug": "tensado-piel",
+            "name": "Tensado de la piel",
+            "tagline": "Lifting sin cirugía",
+            "description": "Tratamientos avanzados que estimulan el colágeno y tensan la piel, mejorando su firmeza, textura y elasticidad sin cirugía ni tiempo de recuperación."
+          },
+          {
+            "id": 4,
+            "imageSrc": "/images/treatments/laser/endoliftX.jpg",
+            "slug": "grasa-localizada",
+            "name": "Eliminación de grasa localizada",
+            "tagline": "Lifting sin cirugía",
+            "description": "Elimina grasa localizada sin cirugía con tecnología láser avanzada. Resultados visibles, contorno definido y piel más firme desde la primera sesión."
+          },
+          {
+            "id": 5,
+            "imageSrc": "/images/treatments/laser/endoliftX.jpg",
+            "slug": "rejuvenecimiento",
+            "name": "Rejuvenecimiento facial",
+            "tagline": "Lifting sin cirugía",
+            "description": "Tratamiento médico no invasivo que mejora arrugas, manchas, firmeza y luminosidad mediante tecnologías avanzadas que estimulan la regeneración natural de la piel."
+          },
+          {
+            "id": 6,
+            "imageSrc": "/images/treatments/laser/endoliftX.jpg",
+            "slug": "Granulomas",
+            "name": "Granulomas",
+            "tagline": "Lifting sin cirugía",
+            "description": "Reduce y elimina granulomas de forma segura con tecnología láser. Tratamiento preciso, mínimamente invasivo y con mejora visible desde las primeras sesiones."
+          },
+          {
+            "id": 7,
+            "imageSrc": "/images/treatments/laser/endoliftX.jpg",
+            "slug": "acne",
+            "name": "Acné y cicatrices",
+            "tagline": "Lifting sin cirugía",
+            "description": "Aborda el acné activo y sus secuelas con tecnología láser médica. Tratamiento preciso para reducir lesiones, mejorar la textura cutánea y minimizar cicatrices desde las primeras sesiones."
+          },
+          {
+            "id": 8,
+            "imageSrc": "/images/treatments/laser/endoliftX.jpg",
+            "slug": "Estrías",
+            "name": "Estrías",
+            "tagline": "Lifting sin cirugía",
+            "description": "Reduce y mejora el aspecto de las estrías con tecnología láser avanzada. Tratamiento médico eficaz tanto para estrías rojas como blancas, con regeneración real del tejido cutáneo."
+          }
+        ]
       },
       {
-        "slug": "toxina-botulinica",
-        "name": "Botulinum Toxin",
-        "tagline": "Natural expression, refined",
-        "summary": "The difference between a natural and artificial result lies in the hands that apply it. Medical precision for authentic expression.",
-        "highlight": "Micro-dose technique · Natural result · Immediate recovery",
-        "position": "left"
-      },
-      {
+        "id": 2,
+        "imageSrc": "/images/treatments/luego.jpg",
         "slug": "primex",
         "name": "Primex",
-        "tagline": "Next-generation biostimulation",
-        "summary": "State-of-the-art cellular stimulation protocol that activates collagen production from the deepest layers of the skin.",
-        "highlight": "Deep regeneration · Natural collagen · No toxins",
-        "position": "right"
-      },
-      {
-        "slug": "acido-hialuronico",
-        "name": "Structural Hyaluronic Acid",
-        "tagline": "Volume with architecture",
-        "summary": "Not filler — facial sculpture. Volume restoration and contour definition with high-precision injection vector techniques.",
-        "highlight": "Immediate results · Reversible · Natural",
+        "tagline": "Moldea tu cuerpo y reafirma tu piel",
+        "summary": "Tecnología avanzada que ayuda a reducir grasa, mejorar la firmeza de la piel y redefinir tu figura sin procedimientos invasivos.",
+        "description": "Primex combina diferentes tecnologías para trabajar de forma profunda y segura en el cuerpo y rostro. Es ideal si buscas moldear zonas específicas, mejorar la textura de la piel y reducir la apariencia de celulitis, todo sin cirugía ni tiempos de recuperación.",
+        "benefits": [
+          "Reduce grasa localizada",
+          "Reafirma la piel",
+          "Mejora la celulitis",
+          "Define la silueta corporal",
+          "Resultados visibles desde las primeras sesiones"
+        ],
+        "zones": ["Abdomen", "Piernas", "Brazos", "Glúteos", "Rostro"],
+        "duration": "Sesiones cortas con resultados visibles desde el inicio",
+        "downtime": "No requiere tiempo de recuperación",
+        "highlight": "No invasivo · Remodelación corporal · Resultados visibles",
+        "image": "/images/treatments/primex.jpg",
+        "video": "/videos/treatments/primex.mp4",
         "position": "left"
       },
       {
+        "id": 3,
+        "imageSrc": "/images/treatments/luego.jpg",
+        "slug": "toxina-botulinica",
+        "name": "Toxina Botulínica",
+        "tagline": "Expresión natural, sin excesos",
+        "summary": "Suaviza líneas de expresión y rejuvenece tu rostro manteniendo tu naturalidad. Menos líneas, más frescura.",
+        "description": "Este tratamiento relaja suavemente los músculos responsables de las arrugas, logrando una apariencia más descansada y armoniosa. El objetivo no es cambiar tu rostro, sino resaltar tu expresión natural con un resultado elegante y equilibrado.",
+        "benefits": [
+          "Reduce arrugas de expresión",
+          "Previene nuevas líneas",
+          "Resultado natural y fresco",
+          "Procedimiento rápido",
+          "Mejora estética y funcional"
+        ],
+        "zones": [
+          "Frente",
+          "Entrecejo",
+          "Patas de gallo",
+          "Cuello",
+          "Axilas (sudoración)"
+        ],
+        "duration": "Resultados visibles en pocos días",
+        "downtime": "Inmediato, puedes continuar tu día con normalidad",
+        "highlight": "Resultados naturales · Procedimiento rápido · Sin recuperación",
+        "image": "/images/treatments/botox.png",
+        "video": "/videos/treatments/toxina.mp4",
+        "position": "right"
+      },
+      {
+        "id": 4,
+        "imageSrc": "/images/treatments/luego.jpg",
+        "slug": "acido-hialuronico",
+        "name": "Ácido Hialurónico",
+        "tagline": "Armonía y equilibrio facial",
+        "summary": "Restaura volumen, define contornos y mejora la armonía de tu rostro de forma natural y sin cirugía.",
+        "description": "Más que un relleno, es una técnica de diseño facial. Permite mejorar proporciones, definir rasgos y recuperar volumen perdido, logrando un rostro más equilibrado, fresco y rejuvenecido sin perder naturalidad.",
+        "benefits": [
+          "Define mandíbula y mentón",
+          "Aumenta volumen en pómulos",
+          "Corrige asimetrías",
+          "Mejora surcos y líneas profundas",
+          "Resultados inmediatos"
+        ],
+        "zones": [
+          "Mandíbula",
+          "Mentón",
+          "Pómulos",
+          "Labios",
+          "Surcos nasogenianos"
+        ],
+        "duration": "Resultados inmediatos",
+        "downtime": "Mínimo, incorporación inmediata",
+        "highlight": "Resultados inmediatos · Natural · Reversible",
+        "image": "/images/treatments/tratamiento10.jpg",
+        "video": "/videos/treatments/acido-hialuronico.mp4",
+        "position": "left"
+      },
+      {
+        "id": 5,
+        "imageSrc": "/images/treatments/luego.jpg",
         "slug": "bioestimulacion",
-        "name": "Facial & Body Biostimulation",
-        "tagline": "Rejuvenation from within",
-        "summary": "Activation of the skin's natural regeneration mechanisms. More luminosity, firmness, and vitality without invasive intervention.",
-        "highlight": "100% biocompatible · Luminosity · Firmness",
+        "name": "Bioestimulación",
+        "tagline": "Rejuvenecimiento desde adentro",
+        "summary": "Activa la producción natural de colágeno para mejorar la firmeza, textura y luminosidad de tu piel.",
+        "description": "Este tratamiento estimula los procesos naturales de regeneración de la piel, logrando resultados progresivos y duraderos. Ideal si buscas mejorar la calidad de tu piel de forma natural, sin cambios bruscos.",
+        "benefits": [
+          "Mejora firmeza y elasticidad",
+          "Aporta luminosidad",
+          "Reduce líneas finas",
+          "Regenera la piel desde adentro",
+          "Resultados progresivos y naturales"
+        ],
+        "zones": ["Rostro", "Cuello", "Escote", "Manos", "Cuerpo"],
+        "duration": "Resultados progresivos en semanas",
+        "downtime": "No invasivo, mínima recuperación",
+        "highlight": "Colágeno natural · Piel más firme · Resultado progresivo",
+        "image": "/images/treatments/tratamiento2.jpg",
+        "video": "/videos/treatments/bioestimulacion.mp4",
         "position": "right"
       }
     ]

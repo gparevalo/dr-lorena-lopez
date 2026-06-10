@@ -8,4 +8,5 @@ export interface TreatmentInfo {
   candidate_points: string[];
   process_steps: Array<{ num: string; title: string; body: string }>;
   benefits: string[];
+  treatments: [];
 }

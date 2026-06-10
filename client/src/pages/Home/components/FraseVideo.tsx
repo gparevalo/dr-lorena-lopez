@@ -10,7 +10,7 @@ export default function FraseVideo() {
   return (
     <UnifiedSectionBlack
       id="philosophy"
-      className="bg-primary relative flex items-center justify-center overflow-hidden h-[60vh]"
+      className="bg-primary relative flex items-center justify-center overflow-hidden h-[70vh]"
     >
       {/* Cinematic subtle grid on background */}
       <div
@@ -40,19 +40,12 @@ export default function FraseVideo() {
             </div>
           </motion.div>
 
-          <motion.h2
-            variants={fadeUp}
-            className="mt-6 mb-6 font-heading  text-4xl text-white/[0.9] leading-[0.95] tracking-[-0.03em] max-w-3xl"
-          >
+          <h3 className="font-heading text-white leading-none tracking-tighter">
             {t.about.philosophy}
-          </motion.h2>
-
-          <motion.p
-            variants={fadeUp}
-            className="font-heading text-secondary font-bold tracking-tighter font-heading  text-4xl"
-          >
-            {t.about.philosophy2}
-          </motion.p>
+            <span className="block mt-2 font-serif italic text-white/70 text-7xl">
+              {t.about.philosophy2}
+            </span>
+          </h3>
 
           <motion.div
             variants={fadeUp}

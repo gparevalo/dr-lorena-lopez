@@ -13,10 +13,10 @@ export default function TreatmentsHome() {
   return (
     <UnifiedSectionBlack
       id="tratamientos"
-      className="bg-background  pt-32"
+      className="bg-background  pt-32 pb-20"
       withGrid={false}
     >
-      <div className="text-center max-w-4xl mx-auto mb-10">
+      <div className="text-center max-w-4xl mx-auto mb-20">
         <motion.div
           variants={staggerContainer}
           initial="hidden"

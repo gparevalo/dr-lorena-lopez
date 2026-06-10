@@ -64,7 +64,7 @@ export default function LongeviLift() {
                     </p>
 
                     <p className="mt-4 font-serif italic text-primary text-3xl md:text-5xl leading-none">
-                      Envejece de manera integral.
+                      Envejece como un todo.
                     </p>
                   </div>
                   <a

@@ -27,8 +27,7 @@ export default function SignatureCarePrograms() {
   const { t } = useLanguage();
   const tp = t.tratamientosPage;
 
-  const [selectedTreatment, setSelectedTreatment] =
-    useState("toxina-botulinica");
+  const [selectedTreatment, setSelectedTreatment] = useState("endolift");
 
   const [selectedProgram, setSelectedProgram] = useState<any>(null);
 
@@ -146,7 +145,7 @@ ${form.observaciones}
             className="text-center max-w-4xl mx-auto mb-4"
           >
             <motion.div variants={fadeUp} className="flex justify-center">
-              <LuxuryLabel >Cuidado integral</LuxuryLabel>
+              <LuxuryLabel>Cuidado integral</LuxuryLabel>
             </motion.div>
             <motion.h2
               variants={fadeUp}

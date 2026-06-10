@@ -17,6 +17,7 @@ export default function DetalleTratamientoSection({
     summary: string;
     highlight: string;
     position: string;
+    treatments: [];
   } | null;
 }) {
   const { t } = useLanguage();
@@ -165,6 +166,56 @@ export default function DetalleTratamientoSection({
                 </p>
               </div>
             </motion.div>
+          </div>
+          <div className="max-w-6xl items-center ">
+            <div className="flex items-center justify-start mb-6  ">
+              <h3 className=" pl-12 font-heading text-4xl mt-3 py-4">
+                Tipo de tratamientos con laser
+              </h3>
+            </div>
+            {detalleTratamiento.treatments && (
+              <>
+                {" "}
+                <div className="lg:col-span-7 grid grid-cols-2 gap-6 ">
+                  {detalleTratamiento.treatments.map((item, index) => (
+                    <div
+                      key={item.id}
+                      className="group relative rounded-3xl border border-[#ECE8E2] bg-white overflow-hidden hover:shadow-sm hover:scale-[1.02] transition"
+                    >
+                      <div className="grid grid-cols-1 md:grid-cols-2 ">
+                        {/* LEFT - IMAGE */}
+                        <div className="relative bg-[#FAF9F7] min-h-[406px]">
+                          <img
+                            src={item.imageSrc}
+                            alt={item.name}
+                            className="absolute inset-0 w-full min-h-[480px] object-cover"
+                          />
+                        </div>
+
+                        {/* RIGHT - CONTENT */}
+                        <div className="p-6 md:p-10 flex flex-col justify-center">
+                          <div>
+                            <p className="text-black/30 text-[11px] uppercase tracking-widest">
+                              {item.tagline}
+                            </p>
+
+                            <p className="font-heading text-xl leading-snug mt-1">
+                              {item.name}
+                            </p>
+                          </div>
+
+                          <div className="border-t border-black/5 mt-4 mb-4"></div>
+
+                          <p className="text-black/60 text-sm md:text-base leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </>
       )}

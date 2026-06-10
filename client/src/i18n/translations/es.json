@@ -373,7 +373,74 @@
         "highlight": "Sin cirugía · Sin cicatrices · Resultado progresivo",
         "image": "/images/treatments/endolift.png",
         "video": "/videos/treatments/endolift.mp4",
-        "position": "right"
+        "position": "right",
+        "treatments": [
+          {
+            "id": 1,
+            "imageSrc": "/images/treatments/laser/rejuvenecimiento.webp",
+
+            "slug": "endoliftX",
+            "name": "EndoliftX",
+            "tagline": "Lifting sin cirugía",
+            "description": "EndoliftX es un tratamiento láser mínimamente invasivo que tensa la piel, redefine el rostro y estimula el colágeno sin cirugía."
+          },
+          {
+            "id": 2,
+            "imageSrc": "/images/treatments/laser/gluteolift.png",
+            "slug": "gluteolift",
+            "name": "Gluteolift",
+            "tagline": "Lifting sin cirugía",
+            "description": "Redefine, eleva y reafirma los glúteos con láser LASEmaR 1500®. Sin cirugía, resultados visibles desde la primera sesión y rápida recuperación."
+          },
+          {
+            "id": 3,
+            "imageSrc": "/images/treatments/laser/tensado-piel.jpg",
+            "slug": "tensado-piel",
+            "name": "Tensado de la piel",
+            "tagline": "Lifting sin cirugía",
+            "description": "Tratamientos avanzados que estimulan el colágeno y tensan la piel, mejorando su firmeza, textura y elasticidad sin cirugía ni tiempo de recuperación."
+          },
+          {
+            "id": 4,
+            "imageSrc": "/images/treatments/laser/grasa-localizada.png",
+            "slug": "grasa-localizada",
+            "name": "Eliminación de grasa localizada",
+            "tagline": "Lifting sin cirugía",
+            "description": "Elimina grasa localizada sin cirugía con tecnología láser avanzada. Resultados visibles, contorno definido y piel más firme desde la primera sesión."
+          },
+          {
+            "id": 5,
+            "imageSrc": "/images/treatments/laser/endoliftX.png",
+            "slug": "rejuvenecimiento",
+            "name": "Rejuvenecimiento facial",
+            "tagline": "Lifting sin cirugía",
+            "description": "Tratamiento médico no invasivo que mejora arrugas, manchas, firmeza y luminosidad mediante tecnologías avanzadas que estimulan la regeneración natural de la piel."
+          },
+          {
+            "id": 6,
+            "imageSrc": "/images/treatments/laser/granulomas.jpg",
+            "slug": "Granulomas",
+            "name": "Granulomas",
+            "tagline": "Lifting sin cirugía",
+            "description": "Reduce y elimina granulomas de forma segura con tecnología láser. Tratamiento preciso, mínimamente invasivo y con mejora visible desde las primeras sesiones."
+          },
+          {
+            "id": 7,
+            "imageSrc": "/images/treatments/laser/acne.jpg",
+            "slug": "acne",
+            "name": "Acné y cicatrices",
+            "tagline": "Lifting sin cirugía",
+            "description": "Aborda el acné activo y sus secuelas con tecnología láser médica. Tratamiento preciso para reducir lesiones, mejorar la textura cutánea y minimizar cicatrices desde las primeras sesiones."
+          },
+          {
+            "id": 8,
+            "imageSrc": "/images/treatments/laser/estrias.webp",
+            "slug": "estrias",
+            "name": "Estrías",
+            "tagline": "Lifting sin cirugía",
+            "description": "Reduce y mejora el aspecto de las estrías con tecnología láser avanzada. Tratamiento médico eficaz tanto para estrías rojas como blancas, con regeneración real del tejido cutáneo."
+          }
+        ]
       },
       {
         "id": 2,
@@ -754,6 +821,73 @@
         "Recuperación ultrarrápida: 24-48 horas",
         "Resultados naturales y duraderos",
         "Procedimiento de menos de 90 minutos"
+      ],
+      "treatments": [
+        {
+          "id": 1,
+          "imageSrc": "/images/treatments/laser/rejuvenecimiento.webp",
+
+          "slug": "endoliftX",
+          "name": "EndoliftX",
+          "tagline": "Lifting sin cirugía",
+          "description": "EndoliftX es un tratamiento láser mínimamente invasivo que tensa la piel, redefine el rostro y estimula el colágeno sin cirugía."
+        },
+        {
+          "id": 2,
+          "imageSrc": "/images/treatments/laser/gluteolift.png",
+          "slug": "gluteolift",
+          "name": "Gluteolift",
+          "tagline": "Lifting sin cirugía",
+          "description": "Redefine, eleva y reafirma los glúteos con láser LASEmaR 1500®. Sin cirugía, resultados visibles desde la primera sesión y rápida recuperación."
+        },
+        {
+          "id": 3,
+          "imageSrc": "/images/treatments/laser/tensado-piel.jpg",
+          "slug": "tensado-piel",
+          "name": "Tensado de la piel",
+          "tagline": "Lifting sin cirugía",
+          "description": "Tratamientos avanzados que estimulan el colágeno y tensan la piel, mejorando su firmeza, textura y elasticidad sin cirugía ni tiempo de recuperación."
+        },
+        {
+          "id": 4,
+          "imageSrc": "/images/treatments/laser/grasa-localizada.png",
+          "slug": "grasa-localizada",
+          "name": "Eliminación de grasa localizada",
+          "tagline": "Lifting sin cirugía",
+          "description": "Elimina grasa localizada sin cirugía con tecnología láser avanzada. Resultados visibles, contorno definido y piel más firme desde la primera sesión."
+        },
+        {
+          "id": 5,
+          "imageSrc": "/images/treatments/laser/endoliftX.png",
+          "slug": "rejuvenecimiento",
+          "name": "Rejuvenecimiento facial",
+          "tagline": "Lifting sin cirugía",
+          "description": "Tratamiento médico no invasivo que mejora arrugas, manchas, firmeza y luminosidad mediante tecnologías avanzadas que estimulan la regeneración natural de la piel."
+        },
+        {
+          "id": 6,
+          "imageSrc": "/images/treatments/laser/granulomas.jpg",
+          "slug": "Granulomas",
+          "name": "Granulomas",
+          "tagline": "Lifting sin cirugía",
+          "description": "Reduce y elimina granulomas de forma segura con tecnología láser. Tratamiento preciso, mínimamente invasivo y con mejora visible desde las primeras sesiones."
+        },
+        {
+          "id": 7,
+          "imageSrc": "/images/treatments/laser/acne.jpg",
+          "slug": "acne",
+          "name": "Acné y cicatrices",
+          "tagline": "Lifting sin cirugía",
+          "description": "Aborda el acné activo y sus secuelas con tecnología láser médica. Tratamiento preciso para reducir lesiones, mejorar la textura cutánea y minimizar cicatrices desde las primeras sesiones."
+        },
+        {
+          "id": 8,
+          "imageSrc": "/images/treatments/laser/estrias.webp",
+          "slug": "estrias",
+          "name": "Estrías",
+          "tagline": "Lifting sin cirugía",
+          "description": "Reduce y mejora el aspecto de las estrías con tecnología láser avanzada. Tratamiento médico eficaz tanto para estrías rojas como blancas, con regeneración real del tejido cutáneo."
+        }
       ]
     },
     "toxina-botulinica": {

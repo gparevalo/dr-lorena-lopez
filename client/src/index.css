@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
   --button-outline: rgba(0, 0, 0, .08);
   --badge-outline: rgba(0, 0, 0, .04);
   --opaque-button-border-intensity: -8;
@@ -183,12 +184,29 @@
     font-size: var(--text-base);
   }
 
-  h1 { font-size: var(--text-6xl); }
-  h2 { font-size: var(--text-5xl); }
-  h3 { font-size: var(--text-4xl); }
-  h4 { font-size: var(--text-3xl); }
-  h5 { font-size: var(--text-2xl); }
-  h6 { font-size: var(--text-xl); }
+  h1 {
+    font-size: var(--text-6xl);
+  }
+
+  h2 {
+    font-size: var(--text-5xl);
+  }
+
+  h3 {
+    font-size: var(--text-4xl);
+  }
+
+  h4 {
+    font-size: var(--text-3xl);
+  }
+
+  h5 {
+    font-size: var(--text-2xl);
+  }
+
+  h6 {
+    font-size: var(--text-xl);
+  }
 
   html {
     scroll-behavior: smooth;
@@ -335,15 +353,19 @@
   .bg-olive {
     background-color: hsl(var(--olive));
   }
+
   .text-olive {
     color: hsl(var(--olive));
   }
+
   .bg-sage {
     background-color: hsl(var(--sage));
   }
+
   .bg-champagne {
     background-color: hsl(var(--champagne));
   }
+
   .bg-warm-stone {
     background-color: hsl(var(--warm-stone));
   }
@@ -368,7 +390,9 @@
   }
 
   @keyframes reveal-right {
-    to { clip-path: inset(0 0 0 0); }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
   }
 
   .mask-image-cinematic {

@@ -1,12 +1,13 @@
 import { SEO } from "@/components/seo";
 import { useLanguage } from "@/i18n";
 import { BaseLayout } from "@/layout/base-layout";
+import { whatsappHref } from "@/lib/site";
 import heroImg from "@assets/images/61.png";
 import { motion, useInView } from "framer-motion";
 import { ClipboardList, FlaskConical, ScanFace, Sparkles } from "lucide-react";
 import { useRef, useState } from "react";
-import CtaSection from "../Home/sections/cta/CtaSection";
 import LuxuryLabel from "../Home/components/LuxuryLabel";
+import CtaSection from "../Home/sections/cta/CtaSection";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -163,7 +164,9 @@ export default function Consulta() {
               {/* CTA */}
               <div className="flex flex-col md:flex-row items-start justify-start gap-4 mb-4">
                 <a
-                  href="https://wa.me/593980163009"
+                  href={whatsappHref(
+                    "Hola, quiero agendar una valoracion. Mi nombre es ..",
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-14 px-10 rounded-full bg-primary text-white flex items-center justify-center uppercase tracking-[0.25em] text-xs font-semibold"

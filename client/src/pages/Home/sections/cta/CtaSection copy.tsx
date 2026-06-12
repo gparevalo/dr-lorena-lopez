@@ -2,6 +2,7 @@ import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n";
 import { fadeUp, staggerContainer } from "@/lib/animations";
+import { whatsappHref } from "@/lib/site";
 import fondo from "@assets/images/fondo.png";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
@@ -90,7 +91,9 @@ export default function CtaSection() {
                 className="relative z-10 w-full justify-between mt-auto"
               >
                 <a
-                  href="https://wa.me/593980163009"
+                  href={whatsappHref(
+                    "Hola, quiero agendar una valoracion. Mi nombre es ..",
+                  )}
                   target="_blank"
                   rel="noopener"
                 >

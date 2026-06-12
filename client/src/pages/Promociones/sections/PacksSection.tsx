@@ -20,7 +20,7 @@ export default function PacksSection({
           Seleccionamos productos y protocolos complementarios para ayudarte a
           prolongar y maximizar los beneficios de tu tratamiento.
         </p>
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {packs.map((pack) => (
             <motion.div
               key={pack.id}
@@ -66,17 +66,10 @@ export default function PacksSection({
 
               {/* FOOTER */}
 
-              <div className="pt-6 border-t border-black/5 flex items-center justify-between">
-                <div>
-                  <p className="text-xs text-black/40 uppercase tracking-[0.2em]">
-                    Programa personalizado
-                  </p>
-
-                  <p className="font-heading text-2xl text-black">Consulta</p>
-                </div>
+              <div className="pt-6 border-t border-black/5   items-center justify-between">
                 <button
                   onClick={() => setSelectedProgram(pack)}
-                  className="flex items-center justify-center gap-2 whitespace-nowrap h-12 px-6 rounded-full bg-primary text-white text-xs uppercase tracking-[0.25em] font-semibold"
+                  className="flex w-full items-center justify-center gap-2 whitespace-nowrap h-12 px-6 rounded-full bg-primary text-white text-xs uppercase tracking-[0.25em] font-semibold"
                 >
                   Solicitar
                   <ArrowRight className="w-4 h-4 shrink-0" />

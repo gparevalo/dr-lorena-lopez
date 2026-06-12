@@ -14,10 +14,7 @@ export default function Tratamientos() {
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
-  });
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-
+  }); 
   return (
     <BaseLayout>
       <SEO

@@ -25,11 +25,11 @@ export default function PatientStoriesSection() {
 
   return (
     <UnifiedSection
-      id="historias"
-      dark={false}
+      id="historias" 
       withGrid={false}
       withGlow={true}
-      className=""
+      dark={false}
+      className="bg-[#f8f8f6]"
     >
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}

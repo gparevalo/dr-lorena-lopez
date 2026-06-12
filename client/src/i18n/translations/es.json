@@ -13,7 +13,7 @@
     "internacionales": "Pacientes Internacionales",
     "nosotros": "Sobre Mí",
     "contacto": "Contacto",
-    "agendar": "Agendar",
+    "agendar": "Contacto",
     "language_toggle": "Español / EN"
   },
   "hero": {
@@ -22,7 +22,7 @@
     "headline_2": "se construye con",
     "headline_3": "precisión médica",
     "subtitle": "Tratamientos médicos que trabajan con tu estructura, no contra ella, para revelar una piel más equilibrada y natural.",
-    "cta_primary": "Agendar",
+    "cta_primary": "Aplicar a valoración premium",
     "cta_secondary": "Explorar Tratamientos",
     "credential_1": "Especialización Internacional",
     "credential_2": "Enfoque Preventivo",
@@ -66,7 +66,7 @@
     ]
   },
   "treatments": {
-    "label": "Tratamientos Exclusivos",
+    "label": "Tratamientos",
     "title": "Procedimientos de alta precisión",
     "subtitle": "Cada procedimiento es una oportunidad para resaltar lo mejor de ti, mediante técnicas avanzadas y una visión médica centrada en la armonía facial y corporal.",
     "cta": "Ver todos los tratamientos",

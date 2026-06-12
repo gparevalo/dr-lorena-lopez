@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n";
+import { whatsappHref } from "@/lib/site";
 import { motion } from "framer-motion";
 import { ArrowRight, CalendarDays, Crown, Flower } from "lucide-react";
 
@@ -137,7 +138,9 @@ export default function HeroHomeFinal() {
           >
             {/* PRIMARY CTA */}{" "}
             <a
-              href="https://wa.me/593980163009"
+              href={whatsappHref(
+                "Hola, quiero agendar una valoracion. Mi nombre es ..",
+              )}
               target="_blank"
               rel="noopener"
               className="w-full sm:w-auto"

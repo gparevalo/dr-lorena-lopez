@@ -67,14 +67,13 @@ export function HighTicketHero({
           {/* ───────────────── TITLE ───────────────── */}
           <motion.h2
             variants={fadeUp}
-            className="font-heading mb-10 text-black leading-none tracking-tighter text-7xl "
+            className="font-heading mb-10 text-black leading-none tracking-tighter text-6xl "
           >
-            {title}
-            {title2 && (
-              <span className="block mt-1 font-serif italic text-primary text-5xl sm:text-6xl lg:text-7xl">
-                {title2}
-              </span>
-            )}
+            {" "}
+            <span className="block mt-1 font-serif italic text-primary text-8xl  ">
+              {title}
+            </span>
+            {title2 && <div className="mt-6"> {title2}</div>}
           </motion.h2>
 
           {/* ───────────────── DESCRIPTION ───────────────── */}
@@ -89,7 +88,7 @@ export function HighTicketHero({
 
           {/* ───────────────── EXTRA CONTENT ───────────────── */}
           {children && (
-            <motion.div variants={fadeUp} className="mt-12">
+            <motion.div variants={fadeUp} className="mt-2">
               {children}
             </motion.div>
           )}

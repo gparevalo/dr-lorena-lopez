@@ -8,7 +8,7 @@ export default function LongeviLift() {
   const { t } = useLanguage();
   return (
     <>
-      <section className="overflow-hidden pb-0">
+      <section className="overflow-hidden pb-0 pt-20">
         <div className="mx-auto max-w-[1440px] px-5 md:px-8 xl:px-12 6">
           {/* STATEMENT */}
           <motion.div

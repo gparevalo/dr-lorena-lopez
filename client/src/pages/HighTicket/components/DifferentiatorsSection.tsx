@@ -1,3 +1,4 @@
+import { whatsappHref } from "@/lib/site";
 import LuxuryLabel from "@/pages/Home/components/LuxuryLabel";
 import { motion } from "framer-motion";
 
@@ -38,26 +39,13 @@ export default function DifferentiatorsSection() {
           Cada decisión dentro del protocolo responde a una lógica clínica, no a
           una tendencia estética.
         </motion.p>
-
-        {/* BENEFICIOS */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {[
-            "Diagnóstico personalizado",
-            "Tratamiento adaptado a ti",
-            "Seguimiento profesional",
-          ].map((item) => (
-            <div
-              key={item}
-              className="bg-primary/[0.03] border border-primary/10 rounded-3xl px-6 py-6 backdrop-blur-md"
-            >
-              <p className="text-primary/80 text-sm tracking-wide">{item}</p>
-            </div>
-          ))}
-        </div>
+ 
         {/* CTA BUTTON (más fuerte visualmente) */}
         <div className="mt-20 flex justify-center">
           <a
-            href="https://wa.me/593980163009"
+            href={whatsappHref(
+              "Hola, quiero agendar una valoracion para el tratamiento LongeviLift 360. Mi nombre es ..",
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative h-16 px-14 rounded-full bg-primary text-white flex items-center justify-center uppercase tracking-[0.25em] text-xs font-semibold overflow-hidden"

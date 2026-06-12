@@ -1,6 +1,7 @@
 import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
 import { useLanguage } from "@/i18n";
 import { fadeUp } from "@/lib/animations";
+import { whatsappHref } from "@/lib/site";
 import LuxuryLabel from "@/pages/Home/components/LuxuryLabel";
 import fondo from "@assets/images/fondo.png";
 import { motion } from "framer-motion";
@@ -65,7 +66,9 @@ export default function CtaLongevilift() {
         {/* CTA BUTTON (más fuerte visualmente) */}
         <div className="mt-20 flex justify-center">
           <a
-            href="https://wa.me/593980163009"
+            href={whatsappHref(
+              "Hola, quiero agendar una valoracion para el tratamiento LongeviLift 360. Mi nombre es ..",
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative h-16 px-14 rounded-full bg-primary text-white flex items-center justify-center uppercase tracking-[0.25em] text-xs font-semibold overflow-hidden"

@@ -10,6 +10,7 @@ import PostTreatmentProtocolsSection from "./PostTreatmentProtocolsSection";
 export default function Promociones() {
   const { t } = useLanguage();
   const tp = t.tratamientosPage;
+
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,

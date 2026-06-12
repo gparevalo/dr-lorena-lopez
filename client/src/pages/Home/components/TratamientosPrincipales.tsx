@@ -23,7 +23,7 @@ export default function TratamientosPrincipales() {
           viewport={{ once: true }}
         >
           <motion.div variants={fadeUp} className="flex justify-center">
-            <LuxuryLabel >{t.treatments.label}</LuxuryLabel>
+            <LuxuryLabel>{t.treatments.label}</LuxuryLabel>
           </motion.div>
           <motion.h2
             variants={fadeUp}
@@ -66,7 +66,7 @@ export default function TratamientosPrincipales() {
             >
               <CalendarDays className="w-4 h-4" />
 
-              <a href="/consulta">{t.hero.cta_primary} consulta</a>
+              <a href="/consulta">{t.hero.cta_primary}</a>
             </button>
             <Button
               asChild

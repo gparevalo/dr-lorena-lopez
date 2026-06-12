@@ -1,10 +1,11 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
 import { ButtonResultados } from "./ButtonResultados";
 import { fadeUp } from "@/lib/animations";
+import { whatsappHref } from "@/lib/site";
 
 type Review = {
   id: string | number;
@@ -82,7 +83,7 @@ export const TestimonialSlider = ({
   return (
     <div
       className={cn(
-        "relative w-full min-h-[650px] md:min-h-[600px] overflow-hidden bg-background text-foreground p-8 md:p-0 pb-0",
+        "relative w-full min-h-[650px] md:min-h-[600px] overflow-hidden bg-white text-foreground p-8 md:p-0 pb-0",
         className,
       )}
     >
@@ -194,15 +195,31 @@ export const TestimonialSlider = ({
                     </div>
                   </>
                 )}
-                <div className="border-t border-black/5 mt-6 mb-2"></div>
-                <div className="mt-2 pt-6  w-full text-sm uppercase tracking-[0.3em] font-bold text-primary group-hover:text-primary transition-colors flex items-center gap-2">
-                  <Link href={`/tratamientos/${activeReview.slug}`}>
-                    Ver detalle{" "}
-                    <span className="w-4 h-px bg-current group-hover:w-8 transition-all" />
+                <div className="border-t border-black/5 mt-0 mb-2"></div>
+                <div className="mt-2 pt-6 w-full text-xs uppercase tracking-[0.3em] font-bold text-primary group-hover:text-primary transition-colors flex items-center gap-2">
+                  <a
+                    href={whatsappHref(
+                      "Hola, quiero aplicar al tratamiento " +
+                        activeReview.name +
+                        ". Mi nombre es ..",
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex  items-center gap-3  mt-0 px-10 py-4 bg-primary text-white rounded-full uppercase tracking-[0.2em] text-xs font-semibold mr-4"
+                  >
+                    <Calendar size={18} />
+                    Aplicar a valoración
+                  </a>
+                  <Link
+                    href={`/tratamientos/${activeReview.slug}`}
+                    className="flex flex-row"
+                  >
+                    Conocer el tratamiento{" "}
+                    <ArrowRight className="ml-3 w-4 h-4" />
                   </Link>
                 </div>
                 {/* NAVIGATION BUTTONS */}
-                <div className="flex items-center justify-start gap-3 mt-6">
+                <div className="flex items-center justify-start gap-3 mt-8">
                   <ButtonResultados
                     variant="outline"
                     size="icon"

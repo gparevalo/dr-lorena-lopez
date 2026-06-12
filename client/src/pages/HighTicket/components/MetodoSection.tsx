@@ -60,176 +60,148 @@ export default function MetodoInteractiveSection() {
           className="text-center max-w-4xl mx-auto mb-20"
         >
           <div className="flex justify-center">
-            <LuxuryLabel dark>El método LongeviLift 360</LuxuryLabel>
+            <LuxuryLabel dark>La estrategia</LuxuryLabel>
           </div>
 
           <motion.h2
             variants={fadeUp}
-            className="font-heading text-6xl mb-8 leading-none tracking-tighter text-white"
+            className="font-heading mb-10 text-white/90  leading-none tracking-tighter"
           >
-            Antes de rejuvenecer un rostro, debemos entender cómo está
-            envejeciendo.
+            La diferencia no está en hacer más. Está en saber qué hacer primero.
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
-            className="mt-10 text-white/50 text-lg leading-relaxed mx-auto mb-6 "
+            className="mt-10 text-white/70 text-xl leading-relaxed mx-auto mb-6 "
           >
-            LongeviLift 360 es un método médico de evaluación y planificación
-            facial que permite analizar el envejecimiento desde múltiples
-            dimensiones antes de definir cualquier tratamiento.
+            Cada fase de LongeviLift 360 responde a una lógica médica, no a una
+            tendencia estética. Antes de tratar, la Dra. Lore López evalúa cómo
+            está envejeciendo el rostro, qué estructuras han cambiado, qué
+            necesita la piel y cuál es el orden correcto para intervenir.
           </motion.p>
         </motion.div>
 
-        {/* GRID */}
-        <div className="grid lg:grid-cols-12 gap-10 items-start">
-          {/* LEFT - STEPS */}
-          <div className="lg:col-span-6 space-y-4">
-            {steps.map((step, index) => {
-              const isActive = active === index;
+        {/* EXPERIENCE */}
+        <div className="max-w-6xl mx-auto">
 
-              return (
-                <motion.div
-                  key={step.title}
-                  onMouseEnter={() => setActive(index)}
-                  onClick={() => setActive(index)}
-                  className={`cursor-pointer rounded-2xl border transition-all duration-300 p-6 backdrop-blur-md ${
-                    isActive
-                      ? "border-white/30 bg-white/10 shadow-[0_0_40px_rgba(255,255,255,0.05)]"
-                      : "border-white/10 bg-white/[0.03] hover:bg-white/[0.06]"
-                  }`}
-                >
-                  {isActive && (
-                    <div className="absolute inset-0 rounded-2xl bg-white/5 blur-xl" />
-                  )}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <span className="text-white/30 font-heading text-xl">
-                        0{index + 1}
-                      </span>
+          {/* TIMELINE */}
+          <div className="mt-14 mb-14">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {steps.map((step, index) => {
+                const isActive = active === index;
 
-                      <h3 className="font-heading text-xl md:text-2xl">
-                        {step.title}
-                      </h3>
+                return (
+                  <button
+                    key={step.title}
+                    onClick={() => setActive(index)}
+                    className="group text-left"
+                  >
+                    <div
+                      className={`h-px transition-all duration-300 mb-5 ${
+                        isActive ? "bg-white" : "bg-white/10"
+                      }`}
+                    />
+
+                    <div
+                      className={`text-md tracking-[0.35em] mb-3 transition-all ${
+                        isActive ? "text-white" : "text-white/30"
+                      }`}
+                    >
+                      0{index + 1}
                     </div>
 
-                    <span className="text-white/40 text-xl">
-                      {isActive ? "−" : "+"}
-                    </span>
-                  </div>
-
-                  {/* MOBILE EXPAND */}
-                  <AnimatePresence>
-                    {isActive && (
-                      <motion.p
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="text-white/70 leading-relaxed mt-4 lg:hidden"
-                      >
-                        {step.body}
-                      </motion.p>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              );
-            })}
+                    <h3
+                      className={`uppercase tracking-[0.18em] text-sm transition-all ${
+                        isActive
+                          ? "text-white"
+                          : "text-white/50 group-hover:text-white/80"
+                      }`}
+                    >
+                      {step.title}
+                    </h3>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
-          {/* RIGHT - DETAIL (DESKTOP ONLY) */}
-          <div className="lg:col-span-6 hidden lg:block">
-            <motion.div
-              key={active}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="sticky top-24 p-10 rounded-3xl border border-white/10 
-bg-gradient-to-b from-white/10 to-white/[0.02] backdrop-blur-xl 
-shadow-[0_0_80px_rgba(255,255,255,0.05)]"
-            >
-              <span className="text-white/30 font-heading text-5xl">
-                0{active + 1}
-              </span>
+          {/* TOP ROW */}
+          <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-stretch">
+            {/* ACTIVE STEP */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={active}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.35 }}
+                className="rounded-[32px] border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] backdrop-blur-xl p-8 md:p-12"
+              >
+                <span className="text-white/25 font-heading text-6xl">
+                  0{active + 1}
+                </span>
 
-              <h3 className="font-heading text-3xl mt-6 mb-6">
-                {steps[active].title}
+                <h3 className="font-heading text-white text-4xl md:text-5xl leading-none mt-6">
+                  {steps[active].title}
+                </h3>
+
+                <div className="w-20 h-px bg-white/20 mt-8 mb-8" />
+
+                <p className="text-white/75 text-lg md:text-2xl leading-relaxed max-w-2xl">
+                  {steps[active].body}
+                </p>
+
+                <div className="mt-10 pt-10 border-t border-white/10">
+                  <p className="text-white/45 text-sm uppercase tracking-[0.3em] mb-4">
+                    Dentro de LongeviLift 360
+                  </p>
+
+                  <p className="text-white/60 leading-relaxed">
+                    Cada fase forma parte de una estrategia progresiva diseñada
+                    para analizar, corregir, regenerar y mantener la armonía
+                    facial en el tiempo.
+                  </p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* FIXED QUESTION BLOCK */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 md:p-12 flex flex-col justify-center"
+            >
+              <p className="text-white/50 uppercase tracking-[0.35em] text-xs mb-6">
+                La mayoría pregunta
+              </p>
+
+              <h3 className="font-heading text-3xl md:text-4xl text-white/60 leading-tight">
+                ¿Qué tratamiento necesito?
               </h3>
 
-              <p className="text-white/70 text-lg leading-relaxed">
-                {steps[active].body}
+              <div className="w-px h-16 bg-white/15 my-6 mx-auto" />
+
+              <p className="text-white/50 uppercase tracking-[0.35em] text-xs mb-6">
+                LongeviLift pregunta
               </p>
 
-              <div className="mt-10 h-px bg-white/10" />
-
-              <p className="mt-8 text-white/40 text-sm leading-relaxed">
-                Cada fase es parte de un sistema clínico progresivo que analiza,
-                corrige y mantiene la armonía facial en el tiempo.
-              </p>
-            </motion.div>
-
-            {/* WRONG QUESTION */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <p className="mt-10 text-white/50 text-sm tracking-[0.3em] uppercase mb-4 text-center">
-                La verdadera pregunta no es:{" "}
-              </p>
-
-              <p className="text-3xl md:text-3xl font-heading text-center mt-4">
-                ¿Qué tratamiento necesito?
-              </p>
-            </motion.div>
-
-            {/* CORRECT QUESTION */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="hidden md:block"
-            >
-              <p className="mt-10 text-white/50 text-sm tracking-[0.3em] uppercase mb-4 text-center">
-                La verdadera pregunta es:
-              </p>
-              <p className="text-3xl md:text-5xl font-serif italic text-white text-center mt-4">
+              <h3 className="font-serif italic text-4xl md:text-6xl text-white leading-tight">
                 ¿Por qué mi rostro está cambiando?
+              </h3>
+
+              <p className="text-white/50 leading-relaxed mt-8">
+                Porque entender la causa permite definir el orden correcto de
+                cada decisión médica.
               </p>
             </motion.div>
           </div>
-        </div>
-        <div className="block md:hidden">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <p className="mt-10 text-white/50 text-sm tracking-[0.3em] uppercase mb-4 text-center">
-              La verdadera pregunta no es:{" "}
-            </p>
-
-            <p className="text-3xl md:text-3xl font-heading text-center mt-4">
-              ¿Qué tratamiento necesito?
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <p className="mt-10 text-white/50 text-sm tracking-[0.3em] uppercase mb-4 text-center">
-              La verdadera pregunta es:
-            </p>
-            <p className="text-3xl md:text-5xl font-serif italic text-white text-center mt-4">
-              ¿Por qué mi rostro está cambiando?
-            </p>
-          </motion.div>
         </div>
       </div>
 
       {/* BACKGROUND NUMBER */}
       <span className="absolute right-0 top-1/2 -translate-y-1/2 text-[420px] font-heading text-white/[0.03] pointer-events-none">
-        02
+        04
       </span>
     </section>
   );

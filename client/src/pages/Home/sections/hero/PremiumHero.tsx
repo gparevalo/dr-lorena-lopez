@@ -2,18 +2,19 @@ import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n";
 import { staggerContainer } from "@/lib/animations";
+import { whatsappHref } from "@/lib/site";
 import { motion } from "framer-motion";
 import { ArrowRight, CalendarDays, Crown } from "lucide-react";
 
 const quickLinks = [
   {
     title: "Antes y despues",
-    subtitle: "Protocolo de atención",
+    subtitle: "Estrategía de atención",
     href: "#tu-experiencia-completa",
   },
   {
-    title: "Plan completo",
-    subtitle: "Plan de rejuvenecimiento",
+    title: "Plan premium",
+    subtitle: "Plan signature",
     href: "/longevilift",
   },
 ];
@@ -75,11 +76,13 @@ export default function PremiumHero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="mt-14 flex flex-col sm:flex-row items-center md:items-start gap-4"
+              className="mt-14 flex flex-col items-center md:items-start gap-4"
             >
               {/* PRIMARY CTA */}{" "}
               <a
-                href="https://wa.me/593980163009"
+                href={whatsappHref(
+                  "Hola, quiero agendar una valoracion. Mi nombre es ..",
+                )}
                 target="_blank"
                 rel="noopener"
                 className="w-full sm:w-auto"
@@ -87,8 +90,6 @@ export default function PremiumHero() {
                 <button className="group relative overflow-hidden w-full sm:w-auto h-14 px-8 rounded-full bg-primary text-white uppercase text-xs font-black tracking-[0.22em] shadow-[0_10px_40px_rgba(0,0,0,0.25)] transition-all hover:scale-[1.02] flex items-center justify-center gap-3">
                   {/* SHINE EFFECT */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] duration-1000" />
-
-                  <CalendarDays className="w-4 h-4 relative z-10" />
 
                   <span className="relative z-10">{t.hero.cta_primary}</span>
                 </button>
@@ -115,7 +116,7 @@ export default function PremiumHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.35 }}
-              className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-4"
+              className="mt-6 flex flex-col sm:flex-row items-center sm:items-start gap-4"
             >
               {/* JOURNEY */}
 
@@ -134,12 +135,12 @@ export default function PremiumHero() {
                       <div className="text-center sm:text-left">
                         <p className="font-semibold text-sm">{item.subtitle}</p>
 
-                        <p className="text-primary/50 text-xs mt-1 pb-2 uppercase tracking-[0.18em]">
+                        <p className="text-primary/70 text-xs mt-1 pb-2 uppercase tracking-[0.18em]">
                           {item.title}
                         </p>
 
                         <div className="flex items-center gap-2 text-primary text-xs uppercase tracking-[0.25em] font-bold">
-                          Explorar
+                          Detalle
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </div>
                       </div>

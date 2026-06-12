@@ -10,10 +10,12 @@ import {
 } from "@/data/treatmentCarePlans";
 import { useLanguage } from "@/i18n";
 import { fadeUp } from "@/lib/animations";
-import PacksSection from "@/pages/Promociones/sections/PacksSection";
+import { whatsappHref } from "@/lib/site";
 import TimelineTreatment from "@/pages/Promociones/sections/TimelineTreatment";
 import { useMemo } from "react";
 import LuxuryLabel from "../../components/LuxuryLabel";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const inputClass =
   "w-full h-14 rounded-2xl border border-[#ECE8E2] bg-[#FAF9F7] px-5 outline-none transition-all focus:border-primary";
@@ -22,8 +24,7 @@ export default function ProductosSection() {
   const { t } = useLanguage();
   const tp = t.tratamientosPage;
 
-  const [selectedTreatment, setSelectedTreatment] =
-    useState("toxina-botulinica");
+  const [selectedTreatment, setSelectedTreatment] = useState("endolift");
 
   const [selectedProgram, setSelectedProgram] = useState<any>(null);
 
@@ -75,9 +76,6 @@ export default function ProductosSection() {
       data: treatmentPlan.maintenance,
     },
   ];
-  console.log("treatmentPlan", treatmentPlan);
-  console.log("stages", stages);
-  console.log("packs", packs);
 
   const detalleTratamientoVector = tp.treatments.filter(
     (item) => item.slug === selectedTreatment,
@@ -122,7 +120,7 @@ ${form.observaciones}
     <>
       <UnifiedSectionBlack
         id="productos-tratamiento"
-        className="bg-[#fdfdfd] mb-0 pb-0 "
+        className="bg-[#fff] pb-10 pb-0 "
         withGrid={false}
       >
         <div className="max-w-full mx-auto">
@@ -141,7 +139,7 @@ ${form.observaciones}
             className="text-center max-w-4xl mx-auto mb-4"
           >
             <motion.div variants={fadeUp} className="flex justify-center">
-              <LuxuryLabel >Cuidado integral</LuxuryLabel>
+              <LuxuryLabel>Cuidado integral</LuxuryLabel>
             </motion.div>
             <motion.h2
               variants={fadeUp}
@@ -186,20 +184,52 @@ ${form.observaciones}
             ))}
           </div>
 
-          <div className="min-h-[425px] relative mb-20 overflow-hidden p-0 md:space-y-6 md:bg-white md:rounded-[40px] md:border md:border-[#ECE8E2] md:p-10 md:shadow-[0_20px_60px_rgba(0,0,0,.04)]">
-            {/* etapas */}
-            <TimelineTreatment
-              treatmentPlan={treatmentPlan}
-              stages={stages}
-              name={detalleTratamiento?.name || ""}
-            />
+          {/* etapas */}
+          <TimelineTreatment
+            treatmentPlan={treatmentPlan}
+            stages={stages}
+            name={detalleTratamiento?.name || ""}
+          />
 
-            {/* PACKS */}
-            <PacksSection
-              packs={packs}
-              setSelectedProgram={setSelectedProgram}
-            />
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="mt-14 mb-32 flex flex-col md:flex-row items-center justify-center gap-4"
+          >
+            {/* PRIMARY CTA */}{" "}
+            <a
+              href={whatsappHref(
+                "Hola, quiero agendar una valoracion para el tratamiento " +
+                  detalleTratamiento?.name +
+                  ". Mi nombre es ..",
+              )}
+              target="_blank"
+              rel="noopener"
+              className="w-full sm:w-auto"
+            >
+              <button className="group relative overflow-hidden w-full sm:w-auto h-14 px-8 rounded-full bg-primary text-white uppercase text-xs font-black tracking-[0.22em] shadow-[0_10px_40px_rgba(0,0,0,0.25)] transition-all hover:scale-[1.02] flex items-center justify-center gap-3">
+                {/* SHINE EFFECT */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] duration-1000" />
+
+                <span className="relative z-10">{t.hero.cta_primary}</span>
+              </button>
+            </a>
+            <Button
+              asChild
+              variant="ghost"
+              className="group w-full sm:w-auto justify-center md:justify-start text-primary hover:bg-transparent px-2 h-14"
+            >
+              <a
+                href="/tratamientos"
+                className="flex items-center gap-3 uppercase text-[11px] font-bold tracking-[0.24em]"
+              >
+                {t.hero.cta_secondary}
+
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+            </Button>
+          </motion.div>
         </div>
       </UnifiedSectionBlack>
 

@@ -1,5 +1,5 @@
-import { UnifiedSectionBlack } from "@/components/layout/UnifiedSectionBlack";
 import { useLanguage } from "@/i18n";
+import { whatsappHref } from "@/lib/site";
 import fondo from "@assets/images/fondo.png";
 import { motion } from "framer-motion";
 import LuxuryLabel from "../../components/LuxuryLabel";
@@ -17,14 +17,17 @@ export default function CtaSection() {
   const { t } = useLanguage();
 
   return (
-    <UnifiedSectionBlack
+    <section
       id="contacto"
-      className="bg-black/[0.7] bg-cover bg-center relative py-0   md:py-0 "
+      className="bg-black/[0.7] bg-cover bg-center relative py-0   md:py-0 m-0"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${fondo})` }}
-      />
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={fondo}
+          alt=""
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
       <div className="absolute inset-0 bg-black/80" />
       <div className="relative z-10 max-w-6xl mx-auto text-center py-32">
         <motion.div variants={fadeUp} className="flex justify-center">
@@ -65,7 +68,9 @@ export default function CtaSection() {
         {/* CTA */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-4">
           <a
-            href="https://wa.me/593980163009"
+            href={whatsappHref(
+              "Hola, quiero agendar una valoracion. Mi nombre es ..",
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="h-14 px-10 rounded-full bg-primary text-white flex items-center justify-center uppercase tracking-[0.25em] text-xs font-semibold"
@@ -87,6 +92,6 @@ export default function CtaSection() {
         <div className="w-[120%] h-[120%] bg-[radial-gradient(circle_at_50%_50%,_rgba(107,140,78,0.1),_transparent_60%)]" />
       </div>
       <br />
-    </UnifiedSectionBlack>
+    </section>
   );
 }

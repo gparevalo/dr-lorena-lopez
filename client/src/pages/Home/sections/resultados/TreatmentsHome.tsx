@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import { motion } from "framer-motion";
-import { CalendarDays } from "lucide-react";
+import { ArrowRight, CalendarDays } from "lucide-react";
 import LuxuryLabel from "../../components/LuxuryLabel";
 import { TestimonialSlider } from "./TestimonialSlider";
+import { whatsappHref } from "@/lib/site";
 
 export default function TreatmentsHome() {
   const { t } = useLanguage();
@@ -13,10 +14,11 @@ export default function TreatmentsHome() {
   return (
     <UnifiedSectionBlack
       id="tratamientos"
-      className="bg-background  pt-32 pb-20"
+      className=" pt-32 pb-20"
       withGrid={false}
+      dark={false}
     >
-      <div className="text-center max-w-4xl mx-auto mb-20">
+      <div className="text-center max-w-4xl mx-auto mb-20  ">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -24,7 +26,7 @@ export default function TreatmentsHome() {
           viewport={{ once: true }}
         >
           <motion.div variants={fadeUp} className="flex justify-center">
-            <LuxuryLabel >{t.treatments.label}</LuxuryLabel>
+            <LuxuryLabel>{t.treatments.label}</LuxuryLabel>
           </motion.div>
           <motion.h2
             variants={fadeUp}
@@ -51,7 +53,7 @@ export default function TreatmentsHome() {
     text-white
     uppercase
     tracking-[0.25em]
-    text-xs
+    text-sm
     font-bold
     rounded-full
     shadow-xl
@@ -68,19 +70,24 @@ export default function TreatmentsHome() {
               <CalendarDays className="w-4 h-4" />
 
               <a
-                href="https://wa.me/593980163009"
+                href={whatsappHref(
+                  "Hola, quiero agendar una consulta para un tratamiento. Mi nombre es ..",
+                )}
                 target="_blank"
                 rel="noopener"
               >
-                {t.hero.cta_primary} consulta
+                {t.hero.cta_primary}
               </a>
             </button>
             <Button
               asChild
               variant="ghost"
-              className="px-8 text-[11px] uppercase tracking-[0.4em] text-primary"
+              className="px-8 text-xs uppercase tracking-[0.4em] text-primary"
             >
-              <a href="/tratamientos">{t.hero.cta_secondary}</a>
+              <a href="/tratamientos">
+                {t.hero.cta_secondary}
+                <ArrowRight size={18} />
+              </a>
             </Button>
           </motion.div>
         </motion.div>

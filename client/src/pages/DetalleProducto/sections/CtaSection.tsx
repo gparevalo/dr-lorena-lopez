@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n";
 import { fadeUp } from "@/lib/animations";
+import { whatsappHref } from "@/lib/site";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
@@ -40,7 +41,9 @@ export default function CtaSection({ detail }: CtaSectionProps) {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
-              href="https://wa.me/593980163009"
+              href={whatsappHref(
+                "Hola, quiero agendar una valoracion. Mi nombre es ..",
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="h-14 px-10 rounded-full bg-primary text-white flex items-center justify-center uppercase tracking-[0.25em] text-xs font-semibold"

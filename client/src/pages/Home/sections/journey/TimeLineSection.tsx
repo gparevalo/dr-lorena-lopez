@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n";
 import { fadeUp } from "@/lib/animations";
+import { whatsappHref } from "@/lib/site";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Link } from "wouter";
@@ -146,21 +147,23 @@ export default function TimeLineSection({
                   asChild
                   variant="editorial"
                   withShimmer
-                  className="w-full md:w-auto rounded-full "
+                  className="w-full md:w-auto rounded-full  uppercase text-sm "
                 >
                   <a
-                    href="https://wa.me/593980163009"
+                    href={whatsappHref(
+                      "Hola, quiero agendar una valoracion. Mi nombre es ..",
+                    )}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Calendar className="ml-3 w-4 h-4" />
-                    Agendar
+                    Aplicar a valoración 
                   </a>
                 </Button>
                 <Button
                   asChild
                   variant="ghost"
-                  className="w-full md:w-auto px-4 md:px-8 text-[11px] uppercase tracking-[0.15em] md:tracking-[0.3em] text-primary"
+                  className="w-full md:w-auto px-4 md:px-8 text-[11px] uppercase tracking-[0.15em] md:tracking-[0.3em] text-primary text-sm"
                 >
                   <Link href={step.href}>
                     Ver más packs o productos

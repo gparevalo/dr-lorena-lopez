@@ -99,7 +99,7 @@ export default function DetalleTratamientoSection({
                     <motion.ul
                       variants={fadeUp}
                       className={cn(
-                        "space-y-2 text-sm leading-relaxed ",
+                        "space-y-2 text-md leading-relaxed ",
                         "text-foreground/70",
                       )}
                     >
@@ -110,10 +110,16 @@ export default function DetalleTratamientoSection({
                         ))}
                     </motion.ul>
                   )}
+                </div>
 
+                <div className="mt-10 mb-10">
                   {/* CTA */}
-
-                  <Button asChild variant="editorial" withShimmer>
+                  <Button
+                    asChild
+                    variant="editorial"
+                    withShimmer
+                    className=" h-14 rounded-full bg-primary text-white uppercase text-xs font-black tracking-[0.22em] transition-all hover:scale-[1.02] flex items-center justify-center"
+                  >
                     <Link href={`/tratamientos/${detalleTratamiento.slug}`}>
                       {tp.cta || "Ver tratamiento"}
                       <ArrowRight className="ml-3 w-4 h-4" />
@@ -169,7 +175,7 @@ export default function DetalleTratamientoSection({
           </div>
           <div className="max-w-6xl items-center ">
             <div className="flex items-center justify-start mb-6  ">
-              <h3 className=" pl-12 font-heading text-4xl mt-3 py-4">
+              <h3 className="pl-12  font-heading text-3xl mt-3">
                 Tipo de tratamientos con laser
               </h3>
             </div>
